@@ -14,6 +14,7 @@ interface UserContextType {
   login: (userData: any) => void;
   logout: () => void;
   isAdmin: boolean;
+  signInWithProvider: (provider: "google" | "github") => Promise<void>;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -115,6 +116,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
+
   const logout = async () => {
     try {
       await supabase.auth.signOut();
@@ -124,12 +126,24 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  // OAuth sign-in logic
+  const signInWithProvider = async (provider: "google" | "github") => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({ provider });
+      if (error) throw error;
+      // User will be redirected to provider and back
+    } catch (error) {
+      console.error(`OAuth sign-in error (${provider}):`, error);
+    }
+  };
+
   const value = {
     user,
     loading,
     login,
     logout,
-    isAdmin: user?.role === "admin"
+    isAdmin: user?.role === "admin",
+    signInWithProvider,
   };
 
   return (

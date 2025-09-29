@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useUser } from "../../contexts/UserContext";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "../ui/dialog";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -21,6 +22,9 @@ export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps)
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+
+  // Get OAuth sign-in logic from UserContext
+  const { signInWithProvider } = useUser();
 
   // Login form state
   const [loginForm, setLoginForm] = useState({
@@ -154,6 +158,17 @@ export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps)
                 <h3>Sign in to your account</h3>
               </CardHeader>
               <CardContent>
+                <div className="flex flex-col gap-2 mb-4">
+                  <Button variant="outline" onClick={() => signInWithProvider("google")}>Sign in with Google</Button>
+                  <Button variant="outline" onClick={() => signInWithProvider("github")}>Sign in with GitHub</Button>
+                </div>
+                <div className="flex items-center my-4">
+                  <div className="flex items-center w-full justify-center my-4">
+                    <div className="flex-grow border-t-2 border-gray-300" />
+                    <span className="mx-4 text-sm font-bold text-gray-500 tracking-widest whitespace-nowrap">OR</span>
+                    <div className="flex-grow border-t-2 border-gray-300" />
+                  </div>
+                </div>
                 <form onSubmit={handleLogin} className="space-y-4">
                   <div>
                     <Label htmlFor="login-email">Email</Label>
@@ -207,6 +222,17 @@ export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps)
                 <h3>Create your account</h3>
               </CardHeader>
               <CardContent>
+                <div className="flex flex-col gap-2 mb-4">
+                  <Button variant="outline" onClick={() => signInWithProvider("google")}>Sign up with Google</Button>
+                  <Button variant="outline" onClick={() => signInWithProvider("github")}>Sign up with GitHub</Button>
+                </div>
+                <div className="flex items-center my-4">
+                  <div className="flex items-center w-full justify-center my-4">
+                    <div className="flex-grow border-t-2 border-gray-300" />
+                    <span className="mx-4 text-sm font-bold text-gray-500 tracking-widest whitespace-nowrap">OR</span>
+                    <div className="flex-grow border-t-2 border-gray-300" />
+                  </div>
+                </div>
                 <form onSubmit={handleSignup} className="space-y-4">
                   <div>
                     <Label htmlFor="signup-name">Full Name</Label>
