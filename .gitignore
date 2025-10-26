@@ -16,3 +16,6 @@ Thumbs.db
 
 # Supabase local artifacts
 .supabase/
+
+# Ignore pipeline cache
+somarec_data/cache/
