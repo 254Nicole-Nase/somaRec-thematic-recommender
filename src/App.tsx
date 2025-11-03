@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { supabase } from "./utils/supabase/client";
+// import { supabase } from "./utils/supabase/client";
 import { Navigation } from "./components/Navigation";
 import { HeroSection } from "./components/HeroSection";
 import { FeaturedBooks } from "./components/FeaturedBooks";
@@ -21,56 +21,38 @@ import { Grid, List, SlidersHorizontal, BookOpen, Users, Heart, Shield } from "l
 export type ViewMode = "home" | "search" | "detail" | "cbc" | "profile" | "admin";
 export type DisplayMode = "grid" | "list";
 
-// Sample data for demonstration
-const sampleBooks = [
-  {
-    id: "1",
-    title: "Weep Not, Child",
-    author: "Ngugi wa Thiong'o",
-    year: 1964,
-    genre: "Fiction",
-    language: "English",
-    themes: ["Postcolonial Identity", "Education & Growth", "Family Dynamics"],
-    cbcAlignment: "Form 1-2 Literature",
-    description: "A powerful novel about a boy's education during colonial Kenya.",
-    fullDescription: "Ngugi wa Thiong'o's debut novel tells the story of Njoroge, a young Kenyan boy whose life is shaped by the tumultuous period of the Mau Mau uprising. Through Njoroge's eyes, we see the devastating effects of colonialism on African families and communities, while also witnessing the transformative power of education and the enduring strength of the human spirit.",
-    publisher: "Heinemann",
-    pages: 154,
-    availability: "Available in print and digital formats. Commonly used in Kenyan secondary schools."
-  },
-  {
-    id: "2", 
-    title: "The River and the Source",
-    author: "Margaret Ogola",
-    year: 1994,
-    genre: "Fiction",
-    language: "English",
-    themes: ["Gender & Society", "Cultural Heritage", "Generational Change"],
-    cbcAlignment: "Form 3 Literature",
-    description: "A multi-generational saga of Kenyan women and their struggles.",
-    fullDescription: "This sweeping novel follows four generations of Kenyan women, from Akoko, a strong-willed woman in pre-colonial Kenya, to her descendants navigating the challenges of modern Africa. The story explores themes of tradition versus modernity, women's rights, and the enduring power of family bonds across time.",
-    publisher: "Focus Books",
-    pages: 286,
-    availability: "Widely available in East African bookstores and online platforms."
-  },
-  {
-    id: "3",
-    title: "Petals of Blood",
-    author: "Ngugi wa Thiong'o", 
-    year: 1977,
-    genre: "Fiction",
-    language: "English",
-    themes: ["Economic Development", "Social Justice", "Rural-Urban Migration"],
-    cbcAlignment: "Form 4 Literature",
-    description: "A critique of post-independence Kenya's economic policies.",
-    fullDescription: "Set in post-independence Kenya, this novel examines the corrupting influence of capitalism and neocolonialism on African society. Through the interconnected stories of four characters, Ngugi explores themes of economic exploitation, social inequality, and the betrayal of independence ideals.",
-    publisher: "Heinemann",
-    pages: 344,
-    availability: "Available in academic libraries and specialized bookstores."
-  }
-];
+
 
 function AppContent() {
+  const [allThemes, setAllThemes] = useState<string[]>([]);
+  const [quickThemes, setQuickThemes] = useState<string[]>([]);
+  // Fetch all themes for quick-pick
+  useEffect(() => {
+    const fetchThemes = async () => {
+      try {
+        const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+        const res = await fetch(`${API_URL}/api/themes`);
+        const data = await res.json();
+        setAllThemes(Array.isArray(data) ? data : []);
+        // Pick up to 8 random or first themes for quick-pick
+        const pickCount = 8;
+        let picked: string[] = [];
+        if (Array.isArray(data) && data.length > 0) {
+          if (data.length <= pickCount) {
+            picked = data;
+          } else {
+            // Shuffle and pick first N
+            picked = [...data].sort(() => 0.5 - Math.random()).slice(0, pickCount);
+          }
+        }
+        setQuickThemes(picked);
+      } catch {
+        setAllThemes([]);
+        setQuickThemes([]);
+      }
+    };
+    fetchThemes();
+  }, []);
   const { user, isAdmin } = useUser();
   const [currentView, setCurrentView] = useState<ViewMode>("home");
   const [selectedBook, setSelectedBook] = useState<any>(null);
@@ -85,21 +67,24 @@ function AppContent() {
     cbcLevels: [] as string[]
   });
 
+  const [books, setBooks] = useState<any[]>([]);
+  const [loadingBooks, setLoadingBooks] = useState(true);
+
   // Filter books based on search and filters
-  const filteredBooks = sampleBooks.filter(book => {
+  const filteredBooks = books.filter(book => {
     const matchesSearch = searchQuery === "" || 
-      book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      book.themes.some(theme => theme.toLowerCase().includes(searchQuery.toLowerCase()));
+      (book.title && book.title.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      (book.author && book.author.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      (Array.isArray(book.themes) && book.themes.some((theme: string) => theme && theme.toLowerCase().includes(searchQuery.toLowerCase())));
 
     const matchesThemes = filters.themes.length === 0 || 
-      filters.themes.some(theme => book.themes.includes(theme));
+      (Array.isArray(book.themes) && filters.themes.some(theme => book.themes.includes(theme)));
 
     const matchesLanguages = filters.languages.length === 0 ||
-      filters.languages.includes(book.language);
+      (book.language && filters.languages.includes(book.language));
 
     const matchesGenres = filters.genres.length === 0 ||
-      filters.genres.includes(book.genre);
+      (book.genre && filters.genres.includes(book.genre));
 
     const matchesCBC = filters.cbcLevels.length === 0 ||
       (book.cbcAlignment && filters.cbcLevels.some(level => book.cbcAlignment?.includes(level)));
@@ -113,7 +98,12 @@ function AppContent() {
   };
 
   const handleBookClick = (bookId: string) => {
-    const book = sampleBooks.find(b => b.id === bookId);
+    // Try to match by id, or fallback to composite key
+    let book = books.find(b => b.id === bookId);
+    if (!book) {
+      // Fallback: try to match by composite key
+      book = books.find(b => `${b.title}-${b.author}-${b.year}` === bookId);
+    }
     if (book) {
       setSelectedBook(book);
       setCurrentView("detail");
@@ -205,15 +195,21 @@ function AppContent() {
                 ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" 
                 : "space-y-4"
               }>
-                {filteredBooks.map((book) => (
-                  <BookCard
-                    key={book.id}
-                    book={book}
-                    onThemeClick={handleThemeSelect}
-                    onBookClick={handleBookClick}
-                    variant={displayMode}
-                  />
-                ))}
+                {filteredBooks.map((book) => {
+                  const key = book.id || `${book.title}-${book.author}-${book.year}`;
+                  return (
+                    <BookCard
+                      key={key}
+                      book={book}
+                      onThemeClick={handleThemeSelect}
+                      onBookClick={() => {
+                        const realId = book.id || `${book.title}-${book.author}-${book.year}`;
+                        handleBookClick(realId);
+                      }}
+                      variant={displayMode}
+                    />
+                  );
+                })}
               </div>
             ) : (
               <Card className="p-12 text-center">
@@ -230,22 +226,20 @@ function AppContent() {
       </div>
     </div>
   );
-  const [books, setBooks] = useState<any[]>([]);
-  const [loadingBooks, setLoadingBooks] = useState(true);
   useEffect(() => {
     const fetchBooks = async () => {
       setLoadingBooks(true);
-      // Fetch books with themes and curriculum tags
-      const { data, error } = await supabase
-        .from('books')
-        .select(`*, book_themes(theme_id, themes(name)), book_curriculum(curriculum_id, curriculum_tags(name))`);
-      if (!error && data) {
-        const booksWithTags = data.map((book: any) => ({
-          ...book,
-          themes: book.book_themes?.map((bt: any) => bt.themes?.name) || [],
-          curriculumTags: book.book_curriculum?.map((bc: any) => bc.curriculum_tags?.name) || [],
-        }));
-        setBooks(booksWithTags);
+      try {
+        const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+        const response = await fetch(`${API_URL}/api/books`);
+        if (response.ok) {
+          const data = await response.json();
+          setBooks(Array.isArray(data) ? data : []);
+        } else {
+          setBooks([]);
+        }
+      } catch (err) {
+        setBooks([]);
       }
       setLoadingBooks(false);
     };
@@ -259,10 +253,16 @@ function AppContent() {
       <HeroSection 
         onThemeSelect={handleThemeSelect}
         onSearchChange={handleSearch}
+        quickThemes={quickThemes}
       />
       <FeaturedBooks 
         onThemeClick={handleThemeSelect}
         onBookClick={handleBookClick}
+        onViewAll={() => {
+          clearFilters();
+          setSearchQuery("");
+          setCurrentView("search");
+        }}
       />
       {/* Quick Stats */}
       <section className="py-16 bg-muted/50">
@@ -305,15 +305,21 @@ function AppContent() {
                   ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" 
                   : "space-y-4"
                 }>
-                  {filteredBooks.map((book) => (
-                    <BookCard
-                      key={book.id}
-                      book={book}
-                      onThemeClick={handleThemeSelect}
-                      onBookClick={handleBookClick}
-                      variant={displayMode}
-                    />
-                  ))}
+                  {filteredBooks.map((book) => {
+                    const key = book.id || `${book.title}-${book.author}-${book.year}`;
+                    return (
+                      <BookCard
+                        key={key}
+                        book={book}
+                        onThemeClick={handleThemeSelect}
+                        onBookClick={() => {
+                          const realId = book.id || `${book.title}-${book.author}-${book.year}`;
+                          handleBookClick(realId);
+                        }}
+                        variant={displayMode}
+                      />
+                    );
+                  })}
                 </div>
               ) : (
                 <Card className="p-12 text-center">
@@ -335,17 +341,18 @@ function AppContent() {
   const renderDetailView = () => {
     if (!selectedBook) return null;
     
-    const recommendedBooks = sampleBooks
-      .filter(book => 
-        book.id !== selectedBook.id && 
-        book.themes.some(theme => selectedBook.themes.includes(theme))
-      )
-      .slice(0, 3);
+    // If BookDetail supports recommendedBooks, keep this. Otherwise, remove the prop.
+    // const recommendedBooks = books
+    //   .filter(book => 
+    //     book.id !== selectedBook.id && 
+    //     Array.isArray(book.themes) && Array.isArray(selectedBook.themes) &&
+    //     book.themes.some((theme: string) => selectedBook.themes.includes(theme))
+    //   )
+    //   .slice(0, 3);
 
     return (
       <BookDetail
         book={selectedBook}
-        recommendedBooks={recommendedBooks}
         onBack={() => setCurrentView("search")}
         onThemeClick={handleThemeSelect}
         onBookClick={handleBookClick}

@@ -25,7 +25,6 @@ import {
   X
 } from "lucide-react";
 import { useUser } from "../../contexts/UserContext";
-import { supabase } from "../../utils/supabase/client";
 
 interface Book {
   id: string;
@@ -100,18 +99,12 @@ export function AdminPanel() {
 
   const loadBooks = async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
-
-  const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/admin/books`, {
-        headers: {
-          'Authorization': `Bearer ${session.access_token}`
-        }
-      });
-
+  // @ts-ignore
+  const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+      const response = await fetch(`${API_URL}/api/books`);
       if (response.ok) {
         const data = await response.json();
-        setBooks(data.books || []);
+        setBooks(data || []);
       }
     } catch (err) {
       console.error('Error loading books:', err);
@@ -121,18 +114,12 @@ export function AdminPanel() {
 
   const loadUsers = async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
-
-  const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/admin/users`, {
-        headers: {
-          'Authorization': `Bearer ${session.access_token}`
-        }
-      });
-
+  // @ts-ignore
+  const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+      const response = await fetch(`${API_URL}/api/users`);
       if (response.ok) {
         const data = await response.json();
-        setUsers(data.users || []);
+        setUsers(data || []);
       }
     } catch (err) {
       console.error('Error loading users:', err);
@@ -144,38 +131,32 @@ export function AdminPanel() {
   const saveBook = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!isAdmin) return;
-
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
-
+  // @ts-ignore
+  const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
       const url = editingBook 
-        ? `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/admin/books/${editingBook.id}`
-        : `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/admin/books`;
-
+        ? `${API_URL}/api/books/${editingBook.id}`
+        : `${API_URL}/api/books`;
       const response = await fetch(url, {
         method: editingBook ? 'PUT' : 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${session.access_token}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(bookForm)
       });
-
       if (response.ok) {
         const data = await response.json();
         if (editingBook) {
-          setBooks(prev => prev.map(book => book.id === editingBook.id ? data.book : book));
+          setBooks(prev => prev.map(book => book.id === editingBook.id ? data : book));
           setSuccess('Book updated successfully');
         } else {
-          setBooks(prev => [...prev, data.book]);
+          setBooks(prev => [...prev, data]);
           setSuccess('Book created successfully');
         }
         resetBookForm();
         setShowBookDialog(false);
       } else {
-        const errorData = await response.json();
-        setError(errorData.error || 'Failed to save book');
+        setError('Failed to save book');
       }
     } catch (err) {
       console.error('Error saving book:', err);
@@ -185,18 +166,12 @@ export function AdminPanel() {
 
   const deleteBook = async (bookId: string) => {
     if (!isAdmin || !confirm('Are you sure you want to delete this book?')) return;
-
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
-
-  const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/admin/books/${bookId}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${session.access_token}`
-        }
+  // @ts-ignore
+  const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+      const response = await fetch(`${API_URL}/api/books/${bookId}`, {
+        method: 'DELETE'
       });
-
       if (response.ok) {
         setBooks(prev => prev.filter(book => book.id !== bookId));
         setSuccess('Book deleted successfully');
@@ -209,20 +184,16 @@ export function AdminPanel() {
 
   const toggleUserStatus = async (userId: string, isActive: boolean) => {
     if (!isAdmin) return;
-
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
-
-  const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/admin/users/${userId}/status`, {
+  // @ts-ignore
+  const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+      const response = await fetch(`${API_URL}/api/users/${userId}/status`, {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${session.access_token}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ isActive })
       });
-
       if (response.ok) {
         setUsers(prev => prev.map(u => u.id === userId ? { ...u, isActive } : u));
         setSuccess(`User ${isActive ? 'activated' : 'deactivated'} successfully`);
@@ -267,12 +238,15 @@ export function AdminPanel() {
   };
 
   const toggleTheme = (theme: string) => {
-    setBookForm(prev => ({
-      ...prev,
-      themes: prev.themes.includes(theme)
-        ? prev.themes.filter(t => t !== theme)
-        : [...prev.themes, theme]
-    }));
+    setBookForm(prev => {
+      const themesArr = Array.isArray(prev.themes) ? prev.themes : [];
+      return {
+        ...prev,
+        themes: themesArr.includes(theme)
+          ? themesArr.filter(t => t !== theme)
+          : [...themesArr, theme]
+      };
+    });
   };
 
   if (!isAdmin) {
@@ -421,7 +395,7 @@ export function AdminPanel() {
                             <div key={theme} className="flex items-center space-x-2">
                               <input
                                 type="checkbox"
-                                checked={bookForm.themes.includes(theme)}
+                                checked={Array.isArray(bookForm.themes) && bookForm.themes.includes(theme)}
                                 onChange={() => toggleTheme(theme)}
                                 className="rounded"
                               />
@@ -491,8 +465,8 @@ export function AdminPanel() {
                     <p>Loading books...</p>
                   </Card>
                 ) : books.length > 0 ? (
-                  books.map(book => (
-                    <Card key={book.id}>
+                  books.map((book, idx) => (
+                    <Card key={book.id || idx}>
                       <CardContent className="p-4">
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
@@ -506,7 +480,7 @@ export function AdminPanel() {
                             </div>
                             <p className="text-muted-foreground mb-2">by {book.author} ({book.year})</p>
                             <div className="flex flex-wrap gap-1 mb-2">
-                              {book.themes.slice(0, 3).map(theme => (
+                              {(Array.isArray(book.themes) ? book.themes : []).slice(0, 3).map(theme => (
                                 <Badge key={theme} variant="outline" className="text-xs">
                                   {theme}
                                 </Badge>
@@ -554,8 +528,8 @@ export function AdminPanel() {
             <div className="space-y-6">
               <h2 className="text-xl">Users ({users.length})</h2>
               <div className="space-y-4">
-                {users.map(user => (
-                  <Card key={user.id}>
+                {users.map((user, idx) => (
+                  <Card key={user.id || idx}>
                     <CardContent className="p-4">
                       <div className="flex items-center justify-between">
                         <div>
