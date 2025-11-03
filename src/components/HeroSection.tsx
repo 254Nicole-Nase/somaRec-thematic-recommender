@@ -4,23 +4,14 @@ import { Input } from "./ui/input";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+
 interface HeroSectionProps {
   onThemeSelect?: (theme: string) => void;
   onSearchChange?: (value: string) => void;
+  quickThemes?: string[];
 }
 
-const featuredThemes = [
-  "Postcolonial Identity",
-  "Environmental Stewardship", 
-  "Ubuntu Philosophy",
-  "Gender & Society",
-  "Cultural Heritage",
-  "Education & Growth",
-  "Economic Development",
-  "Social Justice"
-];
-
-export function HeroSection({ onThemeSelect, onSearchChange }: HeroSectionProps) {
+export function HeroSection({ onThemeSelect, onSearchChange, quickThemes = [] }: HeroSectionProps) {
   return (
     <section className="relative py-16 lg:py-24 bg-gradient-to-br from-background to-muted">
       {/* Background Pattern */}
@@ -63,23 +54,25 @@ export function HeroSection({ onThemeSelect, onSearchChange }: HeroSectionProps)
           </div>
 
           {/* Quick Theme Selection */}
-          <div className="space-y-4">
-            <h3 className="text-lg text-muted-foreground">
-              Quick-pick themes:
-            </h3>
-            <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
-              {featuredThemes.map((theme) => (
-                <Badge
-                  key={theme}
-                  variant="outline"
-                  className="px-4 py-2 cursor-pointer border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 text-sm lg:text-base"
-                  onClick={() => onThemeSelect?.(theme)}
-                >
-                  {theme}
-                </Badge>
-              ))}
+          {quickThemes.length > 0 && (
+            <div className="space-y-4">
+              <h3 className="text-lg text-muted-foreground">
+                Quick-pick themes:
+              </h3>
+              <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
+                {quickThemes.map((theme) => (
+                  <Badge
+                    key={theme}
+                    variant="outline"
+                    className="px-4 py-2 cursor-pointer border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 text-sm lg:text-base"
+                    onClick={() => onThemeSelect?.(theme)}
+                  >
+                    {theme}
+                  </Badge>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

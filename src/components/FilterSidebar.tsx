@@ -7,7 +7,6 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collap
 import { Filter, ChevronDown, X } from "lucide-react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { supabase } from "../utils/supabase/client";
 
 interface FilterSidebarProps {
   selectedFilters: {
@@ -27,21 +26,23 @@ const availableFilters = {
 
 export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters }: FilterSidebarProps) {
   const [themes, setThemes] = useState<string[]>([]);
-  const [curriculumTags, setCurriculumTags] = useState<string[]>([]);
   useEffect(() => {
-    const fetchFilters = async () => {
-      const { data: themeData } = await supabase.from("themes").select("name");
-      setThemes(themeData?.map((t: any) => t.name) || []);
-      const { data: curriculumData } = await supabase.from("curriculum_tags").select("name");
-      setCurriculumTags(curriculumData?.map((c: any) => c.name) || []);
+    const fetchThemes = async () => {
+      try {
+        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+        const themesRes = await fetch(`${API_URL}/api/themes`);
+        const themesJson = await themesRes.json();
+        setThemes(themesJson || []);
+      } catch (err) {
+        setThemes([]);
+      }
     };
-    fetchFilters();
+    fetchThemes();
   }, []);
   const [openSections, setOpenSections] = useState({
-    themes: true,
-    languages: true,
-    genres: true,
-    cbcLevels: true
+  themes: true,
+  languages: true,
+  genres: true
   });
 
   const toggleSection = (section: keyof typeof openSections) => {
@@ -56,7 +57,6 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
     const newValues = currentValues.includes(value)
       ? currentValues.filter(v => v !== value)
       : [...currentValues, value];
-    
     onFilterChange({
       ...selectedFilters,
       [category]: newValues
@@ -174,30 +174,7 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
 
         <Separator />
 
-        {/* Curriculum Tags Filter (dynamic) */}
-        <Collapsible open={openSections.cbcLevels} onOpenChange={() => toggleSection('cbcLevels')}>
-          <CollapsibleTrigger className="flex items-center justify-between w-full text-left">
-            <span className="font-medium">Curriculum Tags</span>
-            <ChevronDown className={`h-4 w-4 transition-transform ${openSections.cbcLevels ? 'rotate-180' : ''}`} />
-          </CollapsibleTrigger>
-          <CollapsibleContent className="space-y-2 mt-3">
-            {curriculumTags.map((tag) => (
-              <div key={tag} className="flex items-center space-x-2">
-                <Checkbox
-                  id={`cbc-${tag}`}
-                  checked={selectedFilters.cbcLevels.includes(tag)}
-                  onCheckedChange={() => handleFilterToggle('cbcLevels', tag)}
-                />
-                <label
-                  htmlFor={`cbc-${tag}`}
-                  className="text-sm cursor-pointer leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  {tag}
-                </label>
-              </div>
-            ))}
-          </CollapsibleContent>
-        </Collapsible>
+        {/* CBC/curriculum filter removed: not present in backend or data */}
       </CardContent>
     </Card>
   );

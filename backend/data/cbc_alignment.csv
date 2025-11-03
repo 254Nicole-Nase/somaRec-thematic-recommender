@@ -1,0 +1,18 @@
+the trial of dedan kimathi,Form 1-2,English,Literature,Justice,"['Justice', 'Ethical reasoning', 'Literary Analysis', 'Cultural Understanding', 'Communication Skills']",Historical play for justice, ethics, and literary analysis
+the river between,Form 1-2,English,Literature,Environment,"['Environmental stewardship', 'Critical thinking', 'Literary Analysis', 'Cultural Understanding', 'Communication Skills']",Novel for environmental, social, and literary themes
+going down river road,Form 1-2,English,Literature,Urbanization,"['Social awareness', 'Critical thinking', 'Communication Skills', 'Literary Analysis', 'Cultural Understanding']",Urban life, social issues, and communication
+the cockroach dance,Form 1-2,English,Literature,Urbanization,"['Social awareness', 'Problem solving', 'Cultural Understanding', 'Communication Skills', 'Literary Analysis']",Urban poverty, activism, and cultural context
+matigari a novel,Form 3-4,English,Literature,Resistance,"['Justice', 'Critical thinking', 'Advanced Analysis', 'Research Skills', 'Cultural Synthesis']",Novel for resistance, justice, and advanced analysis
+petals of blood,Form 3-4,English,Literature,Social Critique,"['Critical thinking', 'Social justice', 'Advanced Analysis', 'Research Skills']",Explores social justice, trauma, and advanced analysis
+black star nairobi,Form 3-4,English,Literature,Governance,"['Problem solving', 'Decision making', 'Cultural Synthesis']",Crime, governance, and global perspectives
+wizard of the crow,Form 3-4,English,Literature,Satire,"['Creative expression', 'Critical thinking', 'Advanced Analysis']",Satirical novel for advanced analysis and creative expression
+burying caesar,Form 3-4,English,Literature,War,"['Critical thinking', 'Social justice', 'Research Skills']",War novel for social justice, research, and history
+book_id,grade,learning_area,strand,sub_strand,competencies,notes
+# Example row:
+# 12345,Grade 4,English,Reading,Comprehension,"[""Identify main ideas"", ""Summarize text""]",Aligned for CBC pilot
+homecoming,Grade 7-9,English,Literature,Post-independence struggles,"['Critical thinking', 'Social awareness']",Explores post-independence themes and family conflict
+black star nairobi,Form 3-4,English,Literature,Governance,"['Problem solving', 'Decision making']",Crime and governance in modern Kenya
+dreams from my father,Grade 4-6,English,Reading,Identity,"['Self-awareness', 'Communication']",Memoir for understanding identity and family
+the trial of dedan kimathi,Form 1-2,English,Literature,Justice,"['Justice', 'Ethical reasoning']",Historical play for justice and ethics
+land without thunder,Grade 7-9,English,Short Stories,Culture,"['Cultural identity', 'Creative expression']",Short stories for cultural understanding
+the river between,Form 1-2,English,Literature,Environment,"['Environmental stewardship', 'Critical thinking']",Novel for environmental and social themes

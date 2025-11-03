@@ -38,7 +38,7 @@ export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps)
     email: "",
     password: "",
     confirmPassword: "",
-    role: "reader" as "reader" | "admin"
+    role: "reader" as "reader"
   });
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -258,30 +258,7 @@ export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps)
                     />
                   </div>
 
-                  {/* Role Selection */}
-                  <div>
-                    <Label>Account Type</Label>
-                    <div className="grid grid-cols-2 gap-2 mt-2">
-                      <Button
-                        type="button"
-                        variant={signupForm.role === "reader" ? "default" : "outline"}
-                        onClick={() => setSignupForm({...signupForm, role: "reader"})}
-                        className="flex items-center gap-2"
-                      >
-                        <User className="h-4 w-4" />
-                        Reader
-                      </Button>
-                      <Button
-                        type="button"
-                        variant={signupForm.role === "admin" ? "default" : "outline"}
-                        onClick={() => setSignupForm({...signupForm, role: "admin"})}
-                        className="flex items-center gap-2"
-                      >
-                        <Shield className="h-4 w-4" />
-                        Admin
-                      </Button>
-                    </div>
-                  </div>
+                  {/* Only allow reader role for signup */}
 
                   <div>
                     <Label htmlFor="signup-password">Password</Label>

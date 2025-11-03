@@ -16,6 +16,7 @@ import {
   Tag
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useState, useEffect } from "react";
 
 interface BookDetailProps {
   book: {
@@ -35,7 +36,6 @@ interface BookDetailProps {
     pages?: number;
     availability: string;
   };
-  recommendedBooks: any[];
   onBack: () => void;
   onThemeClick?: (theme: string) => void;
   onBookClick?: (bookId: string) => void;
@@ -43,11 +43,36 @@ interface BookDetailProps {
 
 export function BookDetail({ 
   book, 
-  recommendedBooks, 
   onBack, 
   onThemeClick,
   onBookClick 
 }: BookDetailProps) {
+  // State for recommendations
+  const [recommendedBooks, setRecommendedBooks] = useState<any[]>([]);
+  const [loadingRecommendations, setLoadingRecommendations] = useState(false);
+
+  // Fetch recommendations from backend
+  useEffect(() => {
+    const fetchRecommendations = async () => {
+      if (!book.id) return;
+      setLoadingRecommendations(true);
+      try {
+        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+        const response = await fetch(`${API_URL}/api/recommend?book_id=${book.id}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setRecommendedBooks(data || []);
+      } catch (e: any) {
+        console.error("An unexpected error occurred during recommendation fetch:", e);
+        setRecommendedBooks([]);
+      } finally {
+        setLoadingRecommendations(false);
+      }
+    };
+    fetchRecommendations();
+  }, [book.id]);
   const themeDescriptions: Record<string, string> = {
     "Postcolonial Identity": "Explores themes of identity, belonging, and cultural heritage in post-independence Africa.",
     "Environmental Stewardship": "Addresses humanity's relationship with nature and environmental conservation.",
@@ -166,36 +191,29 @@ export function BookDetail({
               <p className="text-lg leading-relaxed">{book.description}</p>
             </div>
 
-            <Separator />
-
             {/* Themes Section */}
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Tag className="h-5 w-5 text-primary" />
                 <h2 className="text-xl">Themes</h2>
               </div>
-              
-              <div className="space-y-4">
-                {book.themes.map((theme) => (
-                  <Card key={theme} className="p-4 hover:bg-muted/50 transition-colors">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-                      <Badge 
-                        variant="outline"
-                        className="w-fit cursor-pointer hover:bg-primary hover:text-primary-foreground border-primary/20"
-                        onClick={() => onThemeClick?.(theme)}
-                      >
-                        {theme}
-                      </Badge>
-                      <p className="text-sm text-muted-foreground flex-1">
-                        {themeDescriptions[theme] || "A significant theme explored in this work."}
-                      </p>
-                    </div>
-                  </Card>
-                ))}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {Array.isArray(book.themes) && book.themes.length > 0 ? (
+                  book.themes.map((theme) => (
+                    <Badge 
+                      key={theme}
+                      variant="outline"
+                      className="cursor-pointer hover:bg-primary hover:text-primary-foreground border-primary/20"
+                      onClick={() => onThemeClick?.(theme)}
+                    >
+                      {theme}
+                    </Badge>
+                  ))
+                ) : (
+                  <span className="text-muted-foreground">No themes available.</span>
+                )}
               </div>
             </div>
-
-            <Separator />
 
             {/* Extended Description */}
             {book.fullDescription && (
@@ -210,33 +228,39 @@ export function BookDetail({
               </>
             )}
 
-            {/* Availability */}
-            <div>
-              <h2 className="text-xl mb-4">Availability</h2>
-              <Card className="p-4 bg-muted/50">
-                <p className="text-sm">{book.availability}</p>
-              </Card>
+            {/* Publisher and Genre */}
+            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-4">
+              {book.publisher && (
+                <span><b>Publisher:</b> {book.publisher}</span>
+              )}
+              {book.genre && (
+                <span><b>Genre:</b> {book.genre}</span>
+              )}
             </div>
           </div>
         </div>
 
         {/* Recommended Books */}
-        {recommendedBooks.length > 0 && (
-          <div className="mt-16">
-            <h2 className="text-2xl mb-8">Recommended Next Reads</h2>
+        <div className="mt-16">
+          <h2 className="text-2xl mb-8">Recommended Next Reads</h2>
+          {loadingRecommendations ? (
+            <div className="text-center py-4">Loading recommendations...</div>
+          ) : recommendedBooks.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {recommendedBooks.slice(0, 3).map((book) => (
+              {recommendedBooks.map((recBook) => (
                 <BookCard
-                  key={book.id}
-                  book={book}
+                  key={recBook.id || `${recBook.title}-${recBook.author}-${recBook.year}`}
+                  book={recBook}
                   onThemeClick={onThemeClick}
                   onBookClick={onBookClick}
                   variant="grid"
                 />
               ))}
             </div>
-          </div>
-        )}
+          ) : (
+            <div className="text-muted-foreground text-center">No recommendations available.</div>
+          )}
+        </div>
       </div>
     </div>
   );

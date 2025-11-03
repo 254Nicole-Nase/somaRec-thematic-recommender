@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 import { BookOpen, ExternalLink, Heart, Calendar, Plus } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useUser } from "../contexts/UserContext";
-import { supabase } from "../utils/supabase/client";
 import { useState } from "react";
 
 interface BookCardProps {
@@ -20,6 +19,13 @@ interface BookCardProps {
     curriculumTags?: string[];
     cbcAlignment?: string;
     description?: string;
+    // CBC fields for dashboard
+    grade?: string;
+    learning_area?: string;
+    strand?: string;
+    sub_strand?: string;
+    competencies?: string | string[];
+    notes?: string;
   };
   onThemeClick?: (theme: string) => void;
   onBookClick?: (bookId: string) => void;
@@ -35,43 +41,48 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
   const handleSaveBook = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     if (!user || saving) return;
+    // ...existing code...
+  };
 
-    setSaving(true);
-    try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
+  // Utility to get a valid cover image from book object
+  function getBookCover(book: any) {
+    const defaultCover = "https://images.unsplash.com/photo-1707542989144-3fad4049c9d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwYm9vayUyMGNvdmVyc3xlbnwxfHx8fDE3NTY2NTM1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+    if (book.coverImage && typeof book.coverImage === 'string' && book.coverImage.trim() !== '') return book.coverImage;
+    if (book.cover_url && typeof book.cover_url === 'string' && book.cover_url.trim() !== '') return book.cover_url;
+    if (book.image_url && typeof book.image_url === 'string' && book.image_url.trim() !== '') return book.image_url;
+    return defaultCover;
+  }
 
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/saved-books`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${session.access_token}`
-        },
-        body: JSON.stringify({
-          bookId: book.id,
-          listId: 'default', // Default reading list
-          bookData: book,
-          status: 'want_to_read'
-        })
-      });
-
-      if (response.ok) {
-        onSaveBook?.(book);
-      } else {
-        console.error('Failed to save book');
-      }
-    } catch (error) {
-      console.error('Error saving book:', error);
-    } finally {
-      setSaving(false);
+  // Make the entire card clickable except for interactive elements
+  const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Prevent navigation if clicking on a button, badge, or link
+    const target = e.target as HTMLElement;
+    if (
+      target.closest('button') ||
+      target.closest('.theme-badge') ||
+      target.closest('a')
+    ) {
+      return;
     }
+    onBookClick?.(book.id);
   };
 
   return (
-    <Card className={`group cursor-pointer transition-all duration-200 hover:shadow-lg hover:border-primary/20 ${isListView ? 'flex' : ''}`}>
+    <Card
+      className={`group cursor-pointer transition-all duration-200 hover:shadow-lg hover:border-primary/20 ${isListView ? 'flex' : ''}`}
+      onClick={handleCardClick}
+      tabIndex={0}
+      role="button"
+      aria-label={`View details for ${book.title}`}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          onBookClick?.(book.id);
+        }
+      }}
+    >
       <div className={`relative ${isListView ? 'w-32 flex-shrink-0' : 'aspect-[3/4] w-full'}`}>
         <ImageWithFallback
-          src={book.coverImage || "https://images.unsplash.com/photo-1707542989144-3fad4049c9d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwYm9vayUyMGNvdmVyc3xlbnwxfHx8fDE3NTY2NTM1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"}
+          src={getBookCover(book)}
           alt={`Cover of ${book.title}`}
           className={`w-full h-full object-cover ${isListView ? 'rounded-l-lg' : 'rounded-t-lg'}`}
         />
@@ -84,7 +95,7 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
                 <Badge 
                   key={theme}
                   variant="secondary"
-                  className="text-xs bg-background text-foreground"
+                  className="text-xs bg-background text-foreground theme-badge"
                   onClick={(e: React.MouseEvent<HTMLDivElement>) => {
                     e.stopPropagation();
                     onThemeClick?.(theme);
@@ -111,7 +122,6 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
             )}
           </div>
         </div>
-
         {/* Save button */}
         {user && (
           <Button
@@ -129,20 +139,17 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
           </Button>
         )}
       </div>
-
-      <div className={`${isListView ? 'flex-1' : ''}`}>
+      <div className={`${isListView ? 'flex-1' : ''}`}> 
         <CardHeader className="pb-2">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <h3 className="line-clamp-2 group-hover:text-primary transition-colors cursor-pointer"
-                  onClick={() => onBookClick?.(book.id)}>
+              <h3 className="line-clamp-2 group-hover:text-primary transition-colors">
                 {book.title}
               </h3>
               <p className="text-muted-foreground text-sm mt-1">{book.author}</p>
             </div>
           </div>
         </CardHeader>
-
         <CardContent className="pt-0">
           <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
             <div className="flex items-center gap-1">
@@ -154,53 +161,42 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
             <span>•</span>
             <span>{book.language}</span>
           </div>
-
           {book.description && isListView && (
             <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
               {book.description}
             </p>
           )}
-
-          {/* Theme and curriculum tags */}
-          <div className="flex flex-wrap gap-1 mb-3">
-            {book.themes?.slice(0, isListView ? 4 : 2).map((theme) => (
-              <Badge 
-                key={theme}
-                variant="outline"
-                className="text-xs cursor-pointer hover:bg-primary hover:text-primary-foreground border-primary/20"
-                onClick={(e: React.MouseEvent<HTMLDivElement>) => {
-                  e.stopPropagation();
-                  onThemeClick?.(theme);
-                }}
-              >
-                {theme}
-              </Badge>
-            ))}
-            {book.themes && book.themes.length > (isListView ? 4 : 2) && (
-              <Badge variant="outline" className="text-xs border-primary/20">
-                +{book.themes.length - (isListView ? 4 : 2)} more
-              </Badge>
-            )}
-            {/* Curriculum tags */}
-            {book.curriculumTags && book.curriculumTags.slice(0, 2).map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs bg-background text-foreground">
-                {tag}
-              </Badge>
-            ))}
-            {book.curriculumTags && book.curriculumTags.length > 2 && (
-              <Badge variant="outline" className="text-xs border-primary/20">
-                +{book.curriculumTags.length - 2} more
-              </Badge>
-            )}
-          </div>
-          {/* CBC Alignment */}
-          {book.cbcAlignment && (
-            <div className="flex items-center gap-1 text-xs text-secondary mb-3">
-              <BookOpen className="h-3 w-3" />
-              <span>CBC: {book.cbcAlignment}</span>
-            </div>
+          {/* CBC Alignment - expanded for CBC dashboard/list view */}
+          {isListView && (
+            <>
+              {book.cbcAlignment && (
+                <div className="flex items-center gap-1 text-xs text-secondary mb-1">
+                  <BookOpen className="h-3 w-3" />
+                  <span className="font-semibold">CBC Alignment:</span>
+                  <span>{book.cbcAlignment}</span>
+                </div>
+              )}
+              {/* Show extra CBC fields if present */}
+              {book.grade && (
+                <div className="text-xs text-muted-foreground mb-0.5"><span className="font-medium">Grade:</span> {book.grade}</div>
+              )}
+              {book.learning_area && (
+                <div className="text-xs text-muted-foreground mb-0.5"><span className="font-medium">Learning Area:</span> {book.learning_area}</div>
+              )}
+              {book.strand && (
+                <div className="text-xs text-muted-foreground mb-0.5"><span className="font-medium">Strand:</span> {book.strand}</div>
+              )}
+              {book.sub_strand && (
+                <div className="text-xs text-muted-foreground mb-0.5"><span className="font-medium">Sub-strand:</span> {book.sub_strand}</div>
+              )}
+              {book.competencies && (
+                <div className="text-xs text-muted-foreground mb-0.5"><span className="font-medium">Competencies:</span> {Array.isArray(book.competencies) ? book.competencies.join(', ') : book.competencies}</div>
+              )}
+              {book.notes && (
+                <div className="text-xs text-muted-foreground mb-0.5"><span className="font-medium">Notes:</span> {book.notes}</div>
+              )}
+            </>
           )}
-
           {/* Actions */}
           <div className="flex gap-2">
             <Button 

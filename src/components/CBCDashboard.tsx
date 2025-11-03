@@ -12,7 +12,7 @@ import {
   Target,
   CheckCircle
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface CBCDashboardProps {
   onThemeClick?: (theme: string) => void;
@@ -47,70 +47,57 @@ const cbcCompetencies = {
   }
 };
 
-const alignedBooks = {
-  "Communication": [
-    {
-      id: "comm1",
-      title: "Weep Not, Child",
-      author: "Ngugi wa Thiong'o",
-      year: 1964,
-      genre: "Fiction",
-      language: "English",
-      themes: ["Education & Growth", "Family Dynamics", "Colonial Experience"],
-      cbcAlignment: "Form 1-2 Literature",
-      description: "Excellent for developing reading comprehension and discussion of educational themes."
-    },
-    {
-      id: "comm2", 
-      title: "The River and the Source",
-      author: "Margaret Ogola",
-      year: 1994,
-      genre: "Fiction",
-      language: "English",
-      themes: ["Gender & Society", "Cultural Heritage", "Generational Change"],
-      cbcAlignment: "Form 3 Literature",
-      description: "Rich narrative perfect for advanced literary analysis and cultural discussion."
-    }
-  ],
-  "Critical Thinking": [
-    {
-      id: "crit1",
-      title: "Petals of Blood",
-      author: "Ngugi wa Thiong'o",
-      year: 1977,
-      genre: "Fiction", 
-      language: "English",
-      themes: ["Economic Development", "Social Justice", "Political Criticism"],
-      cbcAlignment: "Form 4 Literature",
-      description: "Complex social commentary ideal for developing critical analysis skills."
-    }
-  ],
-  "Citizenship": [
-    {
-      id: "cit1",
-      title: "Mwangi wa Mutahi Stories",
-      author: "Mwangi wa Mutahi",
-      year: 1985,
-      genre: "Humor",
-      language: "Kiswahili/English",
-      themes: ["Cultural Heritage", "Social Commentary", "Oral Tradition"],
-      cbcAlignment: "Grade 7-9",
-      description: "Culturally rooted stories that strengthen national identity and values."
-    }
-  ]
-};
+// CBC-aligned books fetched from backend
+interface CBCBook {
+  book_id: string;
+  title: string;
+  author: string;
+  year: string;
+  genre: string;
+  language: string;
+  themes: string;
+  grade: string;
+  learning_area: string;
+  strand: string;
+  sub_strand: string;
+  competencies: string;
+  notes: string;
+}
 
 export function CBCDashboard({ onThemeClick, onBookClick }: CBCDashboardProps) {
   const [selectedLevel, setSelectedLevel] = useState<string>("");
   const [selectedCompetency, setSelectedCompetency] = useState<string>("");
   const [lessonPlan, setLessonPlan] = useState<string[]>([]);
+  const [cbcBooks, setCbcBooks] = useState<CBCBook[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const handleAddToLessonPlan = (bookId: string) => {
     setLessonPlan(prev => [...prev, bookId]);
   };
 
   const currentCompetencies = selectedLevel ? cbcCompetencies[selectedLevel as keyof typeof cbcCompetencies] : {};
-  const relevantBooks = selectedCompetency ? alignedBooks[selectedCompetency as keyof typeof alignedBooks] || [] : [];
+
+  // Fetch CBC-aligned books from backend when level/competency changes
+  useEffect(() => {
+    if (!selectedLevel || !selectedCompetency) {
+      setCbcBooks([]);
+      return;
+    }
+    setLoading(true);
+    // Map UI selection to backend filter params
+    const params = new URLSearchParams();
+    params.append('grade', selectedLevel);
+    params.append('competencies', selectedCompetency);
+    fetch(`/api/cbc/filter?${params.toString()}`)
+      .then(res => res.json())
+      .then(data => {
+        setCbcBooks(data);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [selectedLevel, selectedCompetency]);
+
+  const relevantBooks = cbcBooks;
 
   return (
     <div className="min-h-screen bg-background">
@@ -172,12 +159,13 @@ export function CBCDashboard({ onThemeClick, onBookClick }: CBCDashboardProps) {
                   <div>
                     <label className="text-sm font-medium mb-2 block">Learning Outcomes</label>
                     <div className="space-y-2">
-                      {currentCompetencies[selectedCompetency as keyof typeof currentCompetencies].map((outcome: string) => (
-                        <div key={outcome} className="flex items-center gap-2 text-sm">
-                          <CheckCircle className="h-4 w-4 text-secondary" />
-                          <span>{outcome}</span>
-                        </div>
-                      ))}
+                      {Array.isArray(currentCompetencies[selectedCompetency as keyof typeof currentCompetencies]) ?
+                        (currentCompetencies[selectedCompetency as keyof typeof currentCompetencies] as string[]).map((outcome: string) => (
+                          <div key={outcome} className="flex items-center gap-2 text-sm">
+                            <CheckCircle className="h-4 w-4 text-secondary" />
+                            <span>{outcome}</span>
+                          </div>
+                        )) : null}
                     </div>
                   </div>
                 )}
@@ -238,31 +226,55 @@ export function CBCDashboard({ onThemeClick, onBookClick }: CBCDashboardProps) {
                 </Card>
 
                 {/* Books Grid */}
-                {relevantBooks.length > 0 ? (
+                {loading ? (
+                  <div className="p-12 text-center text-muted-foreground">Loading CBC-aligned books...</div>
+                ) : relevantBooks.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {relevantBooks.map((book) => (
-                      <div key={book.id} className="relative">
-                        <BookCard
-                          book={book}
-                          onThemeClick={onThemeClick}
-                          onBookClick={onBookClick}
-                          variant="list"
-                        />
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          className="absolute top-2 right-2 h-8 px-2"
-                          onClick={() => handleAddToLessonPlan(book.id)}
-                          disabled={lessonPlan.includes(book.id)}
-                        >
-                          {lessonPlan.includes(book.id) ? (
-                            <CheckCircle className="h-3 w-3" />
-                          ) : (
-                            <Plus className="h-3 w-3" />
-                          )}
-                        </Button>
-                      </div>
-                    ))}
+                    {relevantBooks.map((book) => {
+                      // Convert CBCBook to BookCard props
+                      const id = book.book_id || `${book.title}-${book.author}`;
+                      // Try to parse themes as array, fallback to splitting by comma
+                      let themes: string[] = [];
+                      if (Array.isArray(book.themes)) {
+                        themes = book.themes as unknown as string[];
+                      } else if (typeof book.themes === 'string') {
+                        themes = book.themes.split(',').map(t => t.trim()).filter(Boolean);
+                      }
+                      const bookCardProps = {
+                        id,
+                        title: book.title,
+                        author: book.author,
+                        year: Number(book.year) || 0,
+                        genre: book.genre,
+                        language: book.language,
+                        themes,
+                        cbcAlignment: [book.grade, book.learning_area, book.strand, book.sub_strand].filter(Boolean).join(' | '),
+                        description: book.notes || '',
+                      };
+                      return (
+                        <div key={id} className="relative">
+                          <BookCard
+                            book={bookCardProps}
+                            onThemeClick={onThemeClick}
+                            onBookClick={onBookClick}
+                            variant="list"
+                          />
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="absolute top-2 right-2 h-8 px-2"
+                            onClick={() => handleAddToLessonPlan(id)}
+                            disabled={lessonPlan.includes(id)}
+                          >
+                            {lessonPlan.includes(id) ? (
+                              <CheckCircle className="h-3 w-3" />
+                            ) : (
+                              <Plus className="h-3 w-3" />
+                            )}
+                          </Button>
+                        </div>
+                      );
+                    })}
                   </div>
                 ) : (
                   <Card className="p-12 text-center">
