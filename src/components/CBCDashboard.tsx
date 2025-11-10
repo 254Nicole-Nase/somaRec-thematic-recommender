@@ -77,24 +77,180 @@ export function CBCDashboard({ onThemeClick, onBookClick }: CBCDashboardProps) {
 
   const currentCompetencies = selectedLevel ? cbcCompetencies[selectedLevel as keyof typeof cbcCompetencies] : {};
 
-  // Fetch CBC-aligned books from backend when level/competency changes
+  // Fetch CBC-aligned books from Supabase when level/competency changes
   useEffect(() => {
     if (!selectedLevel || !selectedCompetency) {
       setCbcBooks([]);
       return;
     }
     setLoading(true);
-    // Map UI selection to backend filter params
-    const params = new URLSearchParams();
-    params.append('grade', selectedLevel);
-    params.append('competencies', selectedCompetency);
-    fetch(`/api/cbc/filter?${params.toString()}`)
-      .then(res => res.json())
-      .then(data => {
-        setCbcBooks(data);
+    
+    const fetchCBCBooks = async () => {
+      try {
+        const { supabase } = await import('../utils/supabase/client');
+        
+        // Try to query book_curriculum table if it exists
+        let query = supabase
+          .from('book_curriculum')
+          .select('*')
+          .eq('grade', selectedLevel);
+        
+        // Filter by competency (check if competencies column contains the selected competency)
+        // Note: This assumes competencies is stored as an array or comma-separated string
+        const { data: curriculumData, error: curriculumError } = await query;
+        
+        // If table doesn't exist (400/404) or is empty, fall back to backend API
+        if (curriculumError) {
+          console.log('book_curriculum table error (will use backend API):', curriculumError);
+          // Don't throw - fall through to backend API fallback
+        }
+        
+        if (!curriculumError && curriculumData && curriculumData.length > 0) {
+          // Filter by competency in the frontend
+          // The selectedCompetency is the category name (e.g., "Critical Thinking")
+          // Get the list of competencies for this category (e.g., ["Problem solving", "Decision making", ...])
+          const competencyList = currentCompetencies[selectedCompetency as keyof typeof currentCompetencies];
+          const competencyValues = Array.isArray(competencyList) ? competencyList : [];
+          
+          // Filter curriculum entries where competencies array contains any of the competency values for this category
+          const filtered = curriculumData.filter((item: any) => {
+            const itemCompetencies = item.competencies || [];
+            
+            if (Array.isArray(itemCompetencies)) {
+              // Check if any of the item's competencies match any competency in the selected category
+              return itemCompetencies.some((itemComp: string) => {
+                if (!itemComp) return false;
+                // Normalize for comparison (trim, lowercase)
+                const normalizedItemComp = itemComp.trim().toLowerCase();
+                // Check against each competency in the category
+                return competencyValues.some((catComp: string) => {
+                  if (!catComp) return false;
+                  const normalizedCatComp = catComp.trim().toLowerCase();
+                  // Match if item competency contains category competency or vice versa
+                  return normalizedItemComp === normalizedCatComp ||
+                         normalizedItemComp.includes(normalizedCatComp) ||
+                         normalizedCatComp.includes(normalizedItemComp);
+                });
+              });
+            }
+            
+            // Fallback for string competencies
+            const compStr = String(itemCompetencies).toLowerCase();
+            return competencyValues.some((catComp: string) => 
+              catComp && compStr.includes(catComp.toLowerCase())
+            );
+          });
+          
+          // If no books match the competency filter, return empty array
+          if (filtered.length === 0) {
+            setCbcBooks([]);
+            setLoading(false);
+            return;
+          }
+          
+          // Fetch book details for each curriculum entry
+          const bookIds = filtered.map((item: any) => item.book_id).filter(Boolean);
+          
+          // Don't query if bookIds is empty (would cause 400 error)
+          if (bookIds.length === 0) {
+            setCbcBooks([]);
+            setLoading(false);
+            return;
+          }
+          
+          const { data: booksData, error: booksError } = await supabase
+            .from('books')
+            .select('id, title, author, description, cover_url, published_year, isbn10, isbn13')
+            .in('id', bookIds);
+          
+          if (booksError) {
+            console.error('Error fetching books:', booksError);
+            // Fall through to backend API fallback
+            throw booksError;
+          }
+          
+          // Create a map of book_id -> book data
+          const booksMap = new Map();
+          if (booksData) {
+            booksData.forEach((book: any) => {
+              booksMap.set(book.id, book);
+            });
+          }
+          
+          // Map to CBCBook format
+          const mappedBooks = filtered
+            .map((item: any) => {
+              const book = booksMap.get(item.book_id);
+              // Only include books that were found in the books table
+              if (!book) {
+                return null;
+              }
+              
+              const competencies = item.competencies || [];
+              const compStr = Array.isArray(competencies) 
+                ? competencies.join(', ') 
+                : String(competencies);
+              
+              return {
+                book_id: book.id || item.book_id || '',
+                title: book.title || '',
+                author: book.author || '',
+                year: book.published_year ? String(book.published_year) : '',
+                genre: '', // Genre not in books table - can be added later if needed
+                language: '', // Language not in books table - can be added later if needed
+                themes: '', // Will be populated from themes table if needed
+                grade: item.grade || selectedLevel,
+                learning_area: item.learning_area || '',
+                strand: item.strand || '',
+                sub_strand: item.sub_strand || '',
+                competencies: compStr,
+                notes: item.notes || ''
+              };
+            })
+            .filter((book: any) => book !== null); // Remove null entries
+          
+          setCbcBooks(mappedBooks);
+          setLoading(false);
+        } else {
+          // Fallback to backend API if Supabase table doesn't exist or query fails
+          const params = new URLSearchParams();
+          params.append('grade', selectedLevel);
+          params.append('competencies', selectedCompetency);
+          
+          const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+          const res = await fetch(`${API_URL}/api/cbc/filter?${params.toString()}`);
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          const data = await res.json();
+          setCbcBooks(Array.isArray(data) ? data : []);
+          setLoading(false);
+        }
+      } catch (err) {
+        console.error('Error loading CBC books:', err);
+        // Fallback to backend API
+        try {
+          const params = new URLSearchParams();
+          params.append('grade', selectedLevel);
+          params.append('competencies', selectedCompetency);
+          
+          const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+          const res = await fetch(`${API_URL}/api/cbc/filter?${params.toString()}`);
+          if (res.ok) {
+            const data = await res.json();
+            setCbcBooks(Array.isArray(data) ? data : []);
+          } else {
+            setCbcBooks([]);
+          }
+        } catch (fallbackErr) {
+          console.error('Fallback API also failed:', fallbackErr);
+          setCbcBooks([]);
+        }
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      }
+    };
+    
+    fetchCBCBooks();
   }, [selectedLevel, selectedCompetency]);
 
   const relevantBooks = cbcBooks;

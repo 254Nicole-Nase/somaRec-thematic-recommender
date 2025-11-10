@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import { supabase } from "./utils/supabase/client";
 import { Navigation } from "./components/Navigation";
 import { HeroSection } from "./components/HeroSection";
@@ -26,27 +25,68 @@ export type DisplayMode = "grid" | "list";
 function AppContent() {
   const [allThemes, setAllThemes] = useState<string[]>([]);
   const [quickThemes, setQuickThemes] = useState<string[]>([]);
-  // Fetch all themes for quick-pick
+  // Fetch all themes for quick-pick from Supabase
   useEffect(() => {
     const fetchThemes = async () => {
       try {
-        const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
-        const res = await fetch(`${API_URL}/api/themes`);
-        const data = await res.json();
-        setAllThemes(Array.isArray(data) ? data : []);
-        // Pick up to 8 random or first themes for quick-pick
-        const pickCount = 8;
-        let picked: string[] = [];
-        if (Array.isArray(data) && data.length > 0) {
-          if (data.length <= pickCount) {
-            picked = data;
+        // Try Supabase first
+        const { supabase } = await import('./utils/supabase/client');
+        const { data: themesData, error } = await supabase
+          .from('themes')
+          .select('name')
+          .order('name');
+        
+        if (!error && themesData && themesData.length > 0) {
+          const themeNames = themesData.map((t: any) => {
+            // Handle different possible column names
+            return t.name || t.theme || t.title || t.value || '';
+          }).filter(Boolean);
+          setAllThemes(themeNames);
+          // Pick up to 8 random or first themes for quick-pick
+          const pickCount = 8;
+          let picked: string[] = [];
+          if (themeNames.length <= pickCount) {
+            picked = themeNames;
           } else {
             // Shuffle and pick first N
-            picked = [...data].sort(() => 0.5 - Math.random()).slice(0, pickCount);
+            picked = [...themeNames].sort(() => 0.5 - Math.random()).slice(0, pickCount);
+          }
+          setQuickThemes(picked);
+        } else {
+          // Log error for debugging
+          if (error) {
+            console.log('Themes table error (using backend API fallback):', error);
+            console.log('Themes table structure check - error details:', {
+              message: error.message,
+              code: error.code,
+              details: error.details,
+              hint: error.hint
+            });
+          }
+          // Fallback to backend API if Supabase fails
+          try {
+            const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+            const res = await fetch(`${API_URL}/api/themes`);
+            const data = await res.json();
+            setAllThemes(Array.isArray(data) ? data : []);
+            const pickCount = 8;
+            let picked: string[] = [];
+            if (Array.isArray(data) && data.length > 0) {
+              if (data.length <= pickCount) {
+                picked = data;
+              } else {
+                picked = [...data].sort(() => 0.5 - Math.random()).slice(0, pickCount);
+              }
+            }
+            setQuickThemes(picked);
+          } catch (fallbackError) {
+            console.error('Backend API fallback also failed:', fallbackError);
+            setAllThemes([]);
+            setQuickThemes([]);
           }
         }
-        setQuickThemes(picked);
-      } catch {
+      } catch (err) {
+        console.error('Error loading themes:', err);
         setAllThemes([]);
         setQuickThemes([]);
       }
@@ -69,14 +109,69 @@ function AppContent() {
 
   const [books, setBooks] = useState<any[]>([]);
   const [loadingBooks, setLoadingBooks] = useState(true);
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
+  const [displayedResults, setDisplayedResults] = useState(10); // Show top 10 initially
+  const INITIAL_RESULTS = 10;
+  const LOAD_MORE_INCREMENT = 10;
+
+  // Semantic search using FAISS-based API (Voronoi clustering)
+  useEffect(() => {
+    const performSemanticSearch = async () => {
+      if (!searchQuery.trim()) {
+        setSearchResults([]);
+        setIsSearching(false);
+        setDisplayedResults(INITIAL_RESULTS);
+        return;
+      }
+
+      setIsSearching(true);
+      setSearchError(null);
+      setDisplayedResults(INITIAL_RESULTS); // Reset to initial when new search
+      
+      try {
+        const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+        // Fetch top 50 results (we'll display them progressively)
+        const response = await fetch(
+          `${API_URL}/api/search?q=${encodeURIComponent(searchQuery)}&top_k=50`
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          // Results are already sorted by similarity score (highest first)
+          // This is from FAISS IVF (Voronoi) clustering - most semantically similar first
+          setSearchResults(Array.isArray(data) ? data : []);
+        } else {
+          const errorData = await response.json().catch(() => ({}));
+          setSearchError(errorData.error || "Search failed");
+          setSearchResults([]);
+        }
+      } catch (err) {
+        setSearchError("Failed to perform semantic search");
+        setSearchResults([]);
+      } finally {
+        setIsSearching(false);
+      }
+    };
+
+    // Debounce search to avoid too many API calls
+    const timeoutId = setTimeout(performSemanticSearch, 500);
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery]);
 
   // Filter books based on search and filters
-  const filteredBooks = books.filter(book => {
-    const matchesSearch = searchQuery === "" || 
-      (book.title && book.title.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      (book.author && book.author.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      (Array.isArray(book.themes) && book.themes.some((theme: string) => theme && theme.toLowerCase().includes(searchQuery.toLowerCase())));
-
+  // If there's a search query, use semantic search results; otherwise use all books
+  const booksToFilter = searchQuery.trim() ? searchResults : books;
+  
+  // Get displayed books (for "Load More" functionality)
+  const displayedBooks = booksToFilter.slice(0, displayedResults);
+  const hasMoreResults = booksToFilter.length > displayedResults;
+  
+  const filteredBooks = displayedBooks.filter(book => {
+    // If we're using semantic search results, they're already filtered by relevance
+    // So we only need to apply theme/language/genre/CBC filters
+    
     const matchesThemes = filters.themes.length === 0 || 
       (Array.isArray(book.themes) && filters.themes.some(theme => book.themes.includes(theme)));
 
@@ -89,7 +184,7 @@ function AppContent() {
     const matchesCBC = filters.cbcLevels.length === 0 ||
       (book.cbcAlignment && filters.cbcLevels.some(level => book.cbcAlignment?.includes(level)));
 
-    return matchesSearch && matchesThemes && matchesLanguages && matchesGenres && matchesCBC;
+    return matchesThemes && matchesLanguages && matchesGenres && matchesCBC;
   });
 
   const handleThemeSelect = (theme: string) => {
@@ -97,16 +192,55 @@ function AppContent() {
     setCurrentView("search");
   };
 
-  const handleBookClick = (bookId: string) => {
-    // Try to match by id, or fallback to composite key
+  const handleBookClick = async (bookId: string) => {
+    // First try to find in current books array (backend CSV IDs)
     let book = books.find(b => b.id === bookId);
+    
+    // If not found, it might be a Supabase UUID - try to fetch from Supabase
     if (!book) {
-      // Fallback: try to match by composite key
+      try {
+        // Check if it looks like a UUID (Supabase book ID)
+        const isUUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(bookId);
+        if (isUUID) {
+          // Try to fetch from Supabase
+          const { supabase } = await import('./utils/supabase/client');
+          const { data: supabaseBook } = await supabase
+            .from('books')
+            .select('*')
+            .eq('id', bookId)
+            .single();
+          
+          if (supabaseBook) {
+            // Map Supabase book to frontend format
+            book = {
+              id: supabaseBook.id,
+              title: supabaseBook.title || '',
+              author: supabaseBook.author || '',
+              year: supabaseBook.published_year || new Date().getFullYear(),
+              genre: 'Unknown',
+              language: 'English',
+              coverImage: supabaseBook.cover_url || '',
+              themes: [],
+              description: supabaseBook.description || '',
+              availability: 'Available'
+            };
+          }
+        }
+      } catch (err) {
+        console.error('Error fetching book from Supabase:', err);
+      }
+    }
+    
+    // Fallback: try to match by composite key
+    if (!book) {
       book = books.find(b => `${b.title}-${b.author}-${b.year}` === bookId);
     }
+    
     if (book) {
       setSelectedBook(book);
       setCurrentView("detail");
+    } else {
+      console.warn('Book not found:', bookId);
     }
   };
 
@@ -137,7 +271,20 @@ function AppContent() {
                 {searchQuery ? `Results for "${searchQuery}"` : "Browse Literature"}
               </h1>
               <p className="text-muted-foreground">
-                {filteredBooks.length} book{filteredBooks.length !== 1 ? 's' : ''} found
+                {isSearching ? (
+                  "Searching using FAISS Voronoi clustering..."
+                ) : searchError ? (
+                  <span className="text-destructive">{searchError}</span>
+                ) : (
+                  <>
+                    Showing {filteredBooks.length} of {booksToFilter.length} most relevant results
+                    {searchQuery.trim() && (
+                      <span className="ml-2 text-xs">
+                        (ranked by semantic similarity)
+                      </span>
+                    )}
+                  </>
+                )}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -220,6 +367,18 @@ function AppContent() {
                 </p>
                 <Button onClick={clearFilters}>Clear filters</Button>
               </Card>
+            )}
+            {/* Load More Button */}
+            {!isSearching && hasMoreResults && filteredBooks.length > 0 && (
+              <div className="mt-8 text-center">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => setDisplayedResults(prev => prev + LOAD_MORE_INCREMENT)}
+                >
+                  Load More Results ({booksToFilter.length - displayedResults} remaining)
+                </Button>
+              </div>
             )}
           </div>
         </div>

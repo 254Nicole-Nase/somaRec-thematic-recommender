@@ -19,25 +19,122 @@ interface FilterSidebarProps {
   onClearFilters: () => void;
 }
 
-const availableFilters = {
-  languages: ["English", "Kiswahili", "Kikuyu", "Luo", "Kalenjin"],
-  genres: ["Fiction", "Poetry", "Drama", "Non-fiction", "Biography", "Humor", "Essays"],
-};
+// Filters will be loaded from backend
 
 export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters }: FilterSidebarProps) {
   const [themes, setThemes] = useState<string[]>([]);
+  const [languages, setLanguages] = useState<string[]>([]);
+  const [genres, setGenres] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const fetchThemes = async () => {
+    const fetchFilters = async () => {
       try {
-        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-        const themesRes = await fetch(`${API_URL}/api/themes`);
-        const themesJson = await themesRes.json();
-        setThemes(themesJson || []);
+        setLoading(true);
+        
+        // Helper function to fetch with timeout
+        const fetchWithTimeout = (url: string, timeout = 5000) => {
+          return Promise.race([
+            fetch(url),
+            new Promise<Response>((_, reject) =>
+              setTimeout(() => reject(new Error('Request timeout')), timeout)
+            ),
+          ]);
+        };
+
+        // Try Supabase for themes first
+        const { supabase } = await import('../utils/supabase/client');
+        
+        // Fetch themes from Supabase (with timeout handling)
+        let themesResult;
+        try {
+          themesResult = await Promise.race([
+            supabase.from('themes').select('name').order('name'),
+            new Promise<any>((_, reject) =>
+              setTimeout(() => reject(new Error('Themes query timeout')), 5000)
+            ),
+          ]);
+        } catch (themeError) {
+          console.warn('Themes query failed or timed out:', themeError);
+          themesResult = { error: themeError, data: null };
+        }
+        
+        // Set themes from Supabase
+        if (!themesResult.error && themesResult.data && themesResult.data.length > 0) {
+          const themeNames = themesResult.data.map((t: any) => {
+            // Handle different possible column names
+            return t.name || t.theme || t.title || t.value || '';
+          }).filter(Boolean);
+          setThemes(themeNames);
+        } else {
+          // Log error for debugging
+          if (themesResult.error) {
+            console.log('Themes table error (using backend API fallback):', themesResult.error);
+          }
+          // Fallback to backend API for themes
+          try {
+            const themesRes = await fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/themes`, 3000);
+            if (themesRes.ok) {
+              const themesJson = await themesRes.json();
+              setThemes(Array.isArray(themesJson) ? themesJson : []);
+            } else {
+              setThemes([]);
+            }
+          } catch (fallbackError) {
+            console.warn('Backend API fallback also failed:', fallbackError);
+            setThemes([]);
+          }
+        }
+        
+        // Languages and genres from backend API (with timeout and error handling)
+        try {
+          const [languagesRes, genresRes] = await Promise.allSettled([
+            fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/languages`, 3000),
+            fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/genres`, 3000),
+          ]);
+          
+          // Handle languages
+          if (languagesRes.status === 'fulfilled' && languagesRes.value.ok) {
+            try {
+              const languagesJson = await languagesRes.value.json();
+              setLanguages(Array.isArray(languagesJson) ? languagesJson : []);
+            } catch (e) {
+              console.warn('Error parsing languages JSON:', e);
+              setLanguages([]);
+            }
+          } else {
+            console.warn('Languages API failed:', languagesRes.status === 'rejected' ? languagesRes.reason : 'Request failed');
+            setLanguages([]);
+          }
+          
+          // Handle genres
+          if (genresRes.status === 'fulfilled' && genresRes.value.ok) {
+            try {
+              const genresJson = await genresRes.value.json();
+              setGenres(Array.isArray(genresJson) ? genresJson : []);
+            } catch (e) {
+              console.warn('Error parsing genres JSON:', e);
+              setGenres([]);
+            }
+          } else {
+            console.warn('Genres API failed:', genresRes.status === 'rejected' ? genresRes.reason : 'Request failed');
+            setGenres([]);
+          }
+        } catch (apiError) {
+          console.warn('Error fetching languages/genres:', apiError);
+          setLanguages([]);
+          setGenres([]);
+        }
       } catch (err) {
+        console.error('Error loading filters:', err);
         setThemes([]);
+        setLanguages([]);
+        setGenres([]);
+      } finally {
+        setLoading(false);
       }
     };
-    fetchThemes();
+    fetchFilters();
   }, []);
   const [openSections, setOpenSections] = useState({
   themes: true,
@@ -100,7 +197,10 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
             <ChevronDown className={`h-4 w-4 transition-transform ${openSections.themes ? 'rotate-180' : ''}`} />
           </CollapsibleTrigger>
           <CollapsibleContent className="space-y-2 mt-3">
-            {themes.map((theme) => (
+            {loading ? (
+              <div className="text-sm text-muted-foreground">Loading themes...</div>
+            ) : themes.length > 0 ? (
+              themes.map((theme) => (
               <div key={theme} className="flex items-center space-x-2">
                 <Checkbox
                   id={`theme-${theme}`}
@@ -114,7 +214,12 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
                   {theme}
                 </label>
               </div>
-            ))}
+              ))
+            ) : (
+              <div className="text-sm text-muted-foreground">
+                No themes available. Use semantic search to discover books by topic!
+              </div>
+            )}
           </CollapsibleContent>
         </Collapsible>
 
@@ -127,7 +232,10 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
             <ChevronDown className={`h-4 w-4 transition-transform ${openSections.languages ? 'rotate-180' : ''}`} />
           </CollapsibleTrigger>
           <CollapsibleContent className="space-y-2 mt-3">
-            {availableFilters.languages.map((language) => (
+            {loading ? (
+              <div className="text-sm text-muted-foreground">Loading languages...</div>
+            ) : languages.length > 0 ? (
+              languages.map((language) => (
               <div key={language} className="flex items-center space-x-2">
                 <Checkbox
                   id={`language-${language}`}
@@ -141,7 +249,10 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
                   {language}
                 </label>
               </div>
-            ))}
+              ))
+            ) : (
+              <div className="text-sm text-muted-foreground">No languages available</div>
+            )}
           </CollapsibleContent>
         </Collapsible>
 
@@ -154,7 +265,10 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
             <ChevronDown className={`h-4 w-4 transition-transform ${openSections.genres ? 'rotate-180' : ''}`} />
           </CollapsibleTrigger>
           <CollapsibleContent className="space-y-2 mt-3">
-            {availableFilters.genres.map((genre) => (
+            {loading ? (
+              <div className="text-sm text-muted-foreground">Loading genres...</div>
+            ) : genres.length > 0 ? (
+              genres.map((genre) => (
               <div key={genre} className="flex items-center space-x-2">
                 <Checkbox
                   id={`genre-${genre}`}
@@ -168,7 +282,10 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
                   {genre}
                 </label>
               </div>
-            ))}
+              ))
+            ) : (
+              <div className="text-sm text-muted-foreground">No genres available</div>
+            )}
           </CollapsibleContent>
         </Collapsible>
 

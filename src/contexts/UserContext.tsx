@@ -29,38 +29,39 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       try {
         const { data: { session } } = await supabase.auth.getSession();
         if (session?.user) {
-          // Try to fetch user profile from server
+          // Try to fetch user profile from profiles table (RLS will ensure user can only see their own)
           try {
-            const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/profile`, {
-              headers: {
-                'Authorization': `Bearer ${session.access_token}`
-              }
-            });
+            const { data: profile, error: profileError } = await supabase
+              .from('profiles')
+              .select('id, email, name, role, is_admin')
+              .eq('id', session.user.id)
+              .single();
             
-            if (response.ok) {
-              const profile = await response.json();
+            if (profile && !profileError) {
+              // Use profile from database
               setUser({
                 id: session.user.id,
-                email: session.user.email || '',
-                name: profile.name,
-                role: profile.role
+                email: profile.email || session.user.email || '',
+                name: profile.name || session.user.user_metadata?.name || 'User',
+                role: (profile.is_admin ? 'admin' : profile.role) || session.user.user_metadata?.role || 'reader'
               });
             } else {
-              // Fallback to user metadata if server is unavailable
+              // Fallback to user metadata if profile doesn't exist
+              console.warn('Profile not found, using user metadata:', profileError);
               setUser({
                 id: session.user.id,
                 email: session.user.email || '',
-                name: session.user.user_metadata?.name || 'User',
+                name: session.user.user_metadata?.name || session.user.user_metadata?.full_name || 'User',
                 role: session.user.user_metadata?.role || 'reader'
               });
             }
           } catch (fetchError) {
-            console.warn('Server unavailable, using fallback user data:', fetchError);
+            console.warn('Error fetching profile, using fallback user data:', fetchError);
             // Fallback to user metadata
             setUser({
               id: session.user.id,
               email: session.user.email || '',
-              name: session.user.user_metadata?.name || 'User',
+              name: session.user.user_metadata?.name || session.user.user_metadata?.full_name || 'User',
               role: session.user.user_metadata?.role || 'reader'
             });
           }
@@ -78,6 +79,26 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (event === 'SIGNED_OUT') {
         setUser(null);
+      } else if (event === 'SIGNED_IN' && session?.user) {
+        // Refresh user profile when signed in
+        try {
+          const { data: profile } = await supabase
+            .from('profiles')
+            .select('id, email, name, role, is_admin')
+            .eq('id', session.user.id)
+            .single();
+          
+          if (profile) {
+            setUser({
+              id: session.user.id,
+              email: profile.email || session.user.email || '',
+              name: profile.name || session.user.user_metadata?.name || 'User',
+              role: (profile.is_admin ? 'admin' : profile.role) || session.user.user_metadata?.role || 'reader'
+            });
+          }
+        } catch (error) {
+          console.warn('Error refreshing profile on sign in:', error);
+        }
       }
     });
 
@@ -85,33 +106,36 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const login = async (userData: any) => {
-    // Try to fetch user profile from server
+    // Try to fetch user profile from profiles table
     try {
-  const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/make-server-8f661324/profile`, {
-        headers: {
-          'Authorization': `Bearer ${userData.access_token || userData.session?.access_token}`
+      const userId = userData.id || userData.user?.id;
+      if (userId) {
+        const { data: profile, error: profileError } = await supabase
+          .from('profiles')
+          .select('id, email, name, role, is_admin')
+          .eq('id', userId)
+          .single();
+        
+        if (profile && !profileError) {
+          // Use profile from database
+          setUser({
+            id: userId,
+            email: profile.email || userData.email,
+            name: profile.name || userData.user_metadata?.name || 'User',
+            role: (profile.is_admin ? 'admin' : profile.role) || userData.user_metadata?.role || 'reader'
+          });
+          return;
         }
-      });
-      
-      if (response.ok) {
-        const profile = await response.json();
-        setUser({
-          id: userData.id,
-          email: userData.email,
-          name: profile.name,
-          role: profile.role
-        });
-        return;
       }
     } catch (error) {
-      console.warn('Server unavailable during login, using fallback data:', error);
+      console.warn('Error fetching profile during login, using fallback data:', error);
     }
     
-    // Fallback user data when server is unavailable
+    // Fallback user data when profile is unavailable
     setUser({
-      id: userData.id,
-      email: userData.email,
-      name: userData.user_metadata?.name || 'User',
+      id: userData.id || userData.user?.id,
+      email: userData.email || userData.user?.email,
+      name: userData.user_metadata?.name || userData.user_metadata?.full_name || 'User',
       role: userData.user_metadata?.role || 'reader'
     });
   };

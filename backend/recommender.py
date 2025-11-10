@@ -1,7 +1,11 @@
 
-
 import pandas as pd
 import numpy as np
+import os
+import faiss
+from sentence_transformers import SentenceTransformer
+from tqdm import tqdm
+
 def clean_nans(obj):
     """Recursively replace NaN/None in dicts/lists for JSON serialization."""
     if isinstance(obj, float) and (np.isnan(obj) or obj is None):
@@ -13,133 +17,202 @@ def clean_nans(obj):
     if isinstance(obj, list):
         return [clean_nans(x) for x in obj]
     return obj
-import ast
-import re
-from sentence_transformers import SentenceTransformer
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.neighbors import NearestNeighbors
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from scipy.sparse import hstack, csr_matrix
 
 # --- Global Variables to hold models and data ---
 DF = pd.DataFrame()
 INDICES = dict()
-NN_MODEL = None
-FEATURE_PIPELINE = None
-X_HYBRID = None
-
-def normalize_text(text):
-    """Cleans text for TF-IDF."""
-    if pd.isna(text): return ""
-    text = str(text).lower().strip()
-    text = re.sub(r'[^\w\s]', '', text)
-    text = re.sub(r'\s+', ' ', text)
-    return text
+MODEL = None
+INDEX_IVF = None
+BOOK_EMBEDDINGS = None
 
 def load_models_and_data():
     """
     This function runs ONCE on server startup.
-    It loads the CSV and trains the complete hybrid model from 'part5'.
+    It loads the CSV, generates embeddings, and builds a FAISS IVF (Voronoi) index.
+    This enables semantic search using sentence similarity and unsupervised clustering.
     """
-    global DF, INDICES, NN_MODEL, FEATURE_PIPELINE, X_HYBRID
-    import os
+    global DF, INDICES, MODEL, INDEX_IVF, BOOK_EMBEDDINGS
+    
     print("--- Loading data... ---")
-
-    # Always load from kenyan_works_with_themes.csv, which includes the 'themes' column
+    
+    # Load from kenyan_works_augmented.csv
     try:
-        DF = pd.read_csv(os.path.join(os.path.dirname(__file__), 'data', 'kenyan_works_with_themes.csv'))
+        csv_path = os.path.join(os.path.dirname(__file__), 'data', 'kenyan_works_augmented.csv')
+        DF = pd.read_csv(csv_path)
+        print(f"[OK] Loaded {len(DF)} books from kenyan_works_augmented.csv")
     except FileNotFoundError:
-        print("FATAL ERROR: data/kenyan_works_with_themes.csv not found.")
+        print(f"FATAL ERROR: {csv_path} not found.")
         return
-
-    # --- 1. Preprocess Data (from part5) ---
+    
+    # Fill missing values
+    DF['title'] = DF['title'].fillna('')
+    DF['author'] = DF['author'].fillna('')
     DF['description'] = DF['description'].fillna('')
-    DF['summary'] = DF['summary'].fillna('') if 'summary' in DF.columns else ''
-    DF['source_text'] = DF['title'].fillna('') + ' ' + DF['summary'] + ' ' + DF['description']
-    DF['genre'] = DF['genre'].fillna('Unknown') if 'genre' in DF.columns else 'Unknown'
-    DF['cbc_alignment'] = DF['cbc_alignment'].fillna('None') if 'cbc_alignment' in DF.columns else 'None'
-
-    # Safely parse the 'themes' column (it's a string list)
-    if 'themes' in DF.columns:
-        DF['themes'] = DF['themes'].apply(
-            lambda x: ast.literal_eval(x) if pd.notna(x) else []
-        )
-
+    
+    # Create combined text for embedding (title + author + description)
+    DF['combined_text'] = (
+        DF['title'].fillna('') + " by " +
+        DF['author'].fillna('') + ". " +
+        DF['description'].fillna('')
+    )
+    
     # Create the ID-to-index mapping
-    DF = DF.reset_index(drop=True) # Ensure index is 0, 1, 2...
+    DF = DF.reset_index(drop=True)
     if 'id' in DF.columns:
         INDICES = pd.Series(DF.index, index=DF['id']).to_dict()
     else:
-        INDICES = {i: i for i in range(len(DF))}
-
+        # Create IDs from index if not present
+        DF['id'] = DF.index.astype(str)
+        INDICES = {str(i): i for i in range(len(DF))}
+    
     print(f"Loaded {len(DF)} book records.")
-
-    # --- 2. Build Feature Pipelines (from part5) ---
-    print("--- Building feature pipelines... ---")
-
-    # Text Embedding Pipeline (Sentence Transformer)
-    st_model = SentenceTransformer('all-MiniLM-L6-v2')
-
-    # Metadata Pipeline (TF-IDF for description, OHE for genre/cbc)
-    text_transformer = TfidfVectorizer(stop_words='english', max_features=100, preprocessor=normalize_text)
-    categorical_transformer = OneHotEncoder(handle_unknown='ignore')
-
-    # Combine metadata transformers
-    metadata_preprocessor = ColumnTransformer(
-        transformers=[
-            ('tfidf_desc', text_transformer, 'description'),
-            ('ohe_genre', categorical_transformer, ['genre', 'cbc_alignment'])
-        ],
-        remainder='drop'
+    
+    # --- 2. Load Sentence Transformer Model ---
+    print("--- Loading Sentence Transformer model... ---")
+    MODEL = SentenceTransformer('all-MiniLM-L6-v2')
+    print("[OK] Model loaded.")
+    
+    # --- 3. Generate Embeddings ---
+    print("--- Generating embeddings (this may take a minute)... ---")
+    BOOK_EMBEDDINGS = MODEL.encode(
+        DF['combined_text'].tolist(),
+        show_progress_bar=True,
+        convert_to_numpy=True,
+        normalize_embeddings=True
     )
+    print(f"[OK] Generated embeddings shape: {BOOK_EMBEDDINGS.shape}")
+    
+    # --- 4. Build FAISS IVF (Voronoi) Index ---
+    print("--- Building FAISS IVF (Voronoi) index... ---")
+    d = BOOK_EMBEDDINGS.shape[1]  # Embedding dimension
+    n_books = len(BOOK_EMBEDDINGS)
+    
+    # Dynamically adjust nlist based on dataset size
+    # FAISS recommends at least 39 points per cluster for good clustering
+    # So nlist should be <= n_books / 39
+    max_nlist = max(1, n_books // 39)
+    # Use a reasonable range: 10-25 for small datasets, up to 50 for larger ones
+    if n_books < 100:
+        nlist = min(10, max_nlist)
+    elif n_books < 500:
+        nlist = min(15, max_nlist)
+    elif n_books < 1000:
+        nlist = min(25, max_nlist)
+    else:
+        nlist = min(50, max_nlist)
+    
+    # Ensure nlist is at least 1
+    nlist = max(1, nlist)
+    
+    print(f"[INFO] Using {nlist} clusters for {n_books} books (recommended: <= {max_nlist})")
+    
+    # Define the base quantizer (FlatIP because embeddings are normalized)
+    quantizer = faiss.IndexFlatIP(d)
+    
+    # Create the IVF (Voronoi partitioned) index
+    index_ivf = faiss.IndexIVFFlat(quantizer, d, nlist, faiss.METRIC_INNER_PRODUCT)
+    
+    # Train the index (performs unsupervised KMeans clustering internally)
+    print("[TRAINING] Training FAISS IVF index (unsupervised clustering)...")
+    index_ivf.train(BOOK_EMBEDDINGS.astype('float32'))
+    print("[OK] Training complete.")
+    
+    # Add all book embeddings to the index
+    index_ivf.add(BOOK_EMBEDDINGS.astype('float32'))
+    print(f"[OK] Indexed {index_ivf.ntotal} books into {nlist} clusters.")
+    
+    # Set search depth (how many clusters to probe per search)
+    # Adjust nprobe based on nlist: use ~30-50% of clusters
+    nprobe = max(1, min(8, nlist // 2))
+    index_ivf.nprobe = nprobe
+    print(f"[INFO] Using nprobe = {index_ivf.nprobe} for semantic matching.")
+    
+    INDEX_IVF = index_ivf
+    
+    print("[SUCCESS] Backend is ready to serve semantic recommendations.")
 
-    # --- 3. Create Hybrid Feature Matrix (X_hybrid) ---
-    print("--- Calculating all feature matrices... ---")
-
-    # 3a. Calculate Sentence Transformer embeddings
-    print("Calculating SentenceTransformer embeddings (this may take a minute)...")
-    X_text = st_model.encode(DF['source_text'].tolist(), show_progress_bar=True)
-
-    # 3b. Calculate Metadata features
-    print("Calculating metadata features...")
-    X_meta = metadata_preprocessor.fit_transform(DF)
-
-    # 3c. Combine into Hybrid Matrix
-    print("Combining into hybrid matrix...")
-    X_HYBRID = hstack([csr_matrix(X_text), X_meta]).tocsr()
-
-    # --- 4. Train the KNN Model (from part5) ---
-    print("--- Training Nearest Neighbors model... ---")
-    NN_MODEL = NearestNeighbors(n_neighbors=10, metric='cosine', algorithm='brute')
-    NN_MODEL.fit(X_HYBRID)
-
-    print("✅✅✅ Backend is ready to serve recommendations. ✅✅✅")
+def semantic_search(query: str, top_k: int = 10):
+    """
+    Performs semantic search using FAISS IVF (Voronoi) clustering.
+    This is NOT filtering - it uses sentence similarity to find semantically similar books.
+    
+    Args:
+        query: Any search query (e.g., "Kikuyu culture", "colonialism", "love and betrayal")
+        top_k: Number of results to return
+    
+    Returns:
+        List of book dictionaries with similarity scores
+    """
+    if INDEX_IVF is None or MODEL is None:
+        raise Exception("Models are not loaded.")
+    
+    if DF.empty:
+        return []
+    
+    # Encode query to vector
+    query_vec = MODEL.encode(
+        [query],
+        convert_to_numpy=True,
+        normalize_embeddings=True
+    ).astype('float32')
+    
+    # Search in FAISS IVF index
+    D, I = INDEX_IVF.search(query_vec, top_k)
+    
+    # Fetch top results
+    results = DF.iloc[I[0]].copy()
+    results['similarity_score'] = D[0]
+    
+    # Convert to dict format
+    results_dict = results.replace({np.nan: None}).to_dict('records')
+    
+    # Add similarity score to each result
+    for i, result in enumerate(results_dict):
+        result['similarity_score'] = float(D[0][i])
+    
+    return [clean_nans(r) for r in results_dict]
 
 def get_recommendations_by_id(book_id, limit=6):
     """
-    Finds a book by its UUID and returns similar books.
+    Finds a book by its ID and returns semantically similar books.
+    Uses the same FAISS IVF index for consistency.
     """
-    if NN_MODEL is None or X_HYBRID is None:
+    if INDEX_IVF is None or MODEL is None:
         raise Exception("Models are not loaded.")
-
+    
+    if DF.empty:
+        return []
+    
+    # Find the book by ID
     if book_id not in INDICES:
-        return [] # Book ID not found
-
-    # 1. Get the index and feature vector for the source book
+        return []  # Book ID not found
+    
     idx = INDICES[book_id]
-    feature_vector = X_HYBRID[idx]
-
-    # 2. Find nearest neighbors
-    distances, indices = NN_MODEL.kneighbors(feature_vector, n_neighbors=limit+1)
-
-    # 3. Get the actual DataFrame indices (and skip the first one - itself)
-    book_indices = indices.flatten()[1:]
-
-    # 4. Return the full book data for the recommendations, replacing NaN with None
-    recs_df = DF.iloc[book_indices].replace({np.nan: None})
-    recs = recs_df.to_dict('records')
+    
+    # Get the book's embedding
+    book_embedding = BOOK_EMBEDDINGS[idx:idx+1].astype('float32')
+    
+    # Search for similar books (limit+1 to exclude the book itself)
+    D, I = INDEX_IVF.search(book_embedding, limit + 1)
+    
+    # Filter out the book itself
+    result_indices = [i for i in I[0] if i != idx][:limit]
+    result_scores = [D[0][i] for i, idx_val in enumerate(I[0]) if idx_val != idx][:limit]
+    
+    if not result_indices:
+        return []
+    
+    # Get the actual DataFrame rows
+    recs_df = DF.iloc[result_indices].copy()
+    recs_df['similarity_score'] = result_scores
+    
+    # Convert to dict format
+    recs = recs_df.replace({np.nan: None}).to_dict('records')
+    
+    # Add similarity scores
+    for i, rec in enumerate(recs):
+        rec['similarity_score'] = float(result_scores[i])
+    
     return [clean_nans(r) for r in recs]
 
 def get_all_books():

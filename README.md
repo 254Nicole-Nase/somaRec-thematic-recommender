@@ -1,96 +1,237 @@
-
 # SomaRec: Kenyan Literature Recommendation System
 
-SomaRec is a robust, full-stack book recommendation platform for Kenyan literature, built with a Flask backend and a modern React (Vite) frontend. Supabase is used **only for authentication** (login/signup); all book and user data is managed by the Flask backend. The system supports advanced search, filtering, CBC curriculum alignment, and secure admin features.
+SomaRec is a robust, full-stack book recommendation platform for Kenyan literature, built with a modern React (Vite) frontend, Flask backend for semantic search, and Supabase for data persistence and authentication. The system supports advanced semantic search, filtering, CBC curriculum alignment, reading lists, and secure admin features.
 
 ## Key Features
 
-- **User Authentication:** Secure login/signup via Supabase Auth (students and admins; admin sign-up is restricted for security).
-- **Book Browsing & Search:** Browse, search, and filter books by title, author, language, genre, and dynamically loaded themes.
-- **Theme Filtering:** All book themes are loaded from real backend data (not hardcoded), and users can filter or quick-pick themes.
-- **CBC Dashboard:** Dedicated dashboard for Competency-Based Curriculum (CBC) alignment, merging curated CBC data with main book data. Every CBC competency/level combination is guaranteed to have at least one book.
-- **Admin Panel:** Secure admin-only dashboard for managing books and users (access controlled; no public admin sign-up).
+- **User Authentication:** Secure login/signup via Supabase Auth (students and admins; admin access is role-based).
+- **Book Browsing & Search:** Browse, search, and filter books using FAISS-based semantic search with IVF (Voronoi) clustering for intelligent topic-based discovery.
+- **Theme Filtering:** All book themes are loaded from Supabase database, and users can filter or quick-pick themes.
+- **CBC Dashboard:** Dedicated dashboard for Competency-Based Curriculum (CBC) alignment, with books aligned to specific competencies and learning outcomes.
+- **Reading Lists (My Library):** Save books to personalized reading lists, track reading status (to-read, reading, completed), and manage multiple lists.
+- **Admin Panel:** Forest Admin-style dashboard with:
+  - **Books Management:** Full CRUD operations, search, filtering, pagination, bulk actions, and CSV export
+  - **Users Management:** User role and status management with RLS policies
+  - **Analytics Dashboard:** Comprehensive analytics with charts for users, books, reading lists, themes, grades, and publication years
 - **Modern UI/UX:** Responsive, accessible, and educator-friendly interface based on Figma wireframes.
-- **Backend API:** RESTful Flask API for all book/user/CBC CRUD, search, and filter operations. All navigation, search, and filter features use real backend data.
-- **Data Integrity:** CBC alignment and book data are robustly merged; unmatched CBC entries are logged for easy debugging.
-- **Security:** All sensitive operations are protected; Supabase is used only for authentication, not for book/user CRUD.
+
+## Architecture
+
+### Data Storage (Supabase)
+- **Books:** Stored in Supabase `books` table (509+ books)
+- **Themes:** Stored in Supabase `themes` table (59+ themes)
+- **Reading Lists:** Stored in Supabase `reading_lists` table with Row Level Security (RLS)
+- **CBC Alignment:** Stored in Supabase `book_curriculum` table
+- **User Profiles:** Stored in Supabase `profiles` table with RLS policies
+- **Authentication:** Supabase Auth for user management
+
+### Backend (Flask)
+- **Semantic Search:** FAISS-based semantic search using IVF (Voronoi) clustering
+- **Search API:** `/api/search` endpoint for semantic book discovery
+- **Book Recommendations:** Similarity-based recommendations using sentence embeddings
+
+### Frontend (React + Vite)
+- **Components:** Modern React components with TypeScript
+- **UI Library:** Shadcn UI components
+- **Charts:** Recharts for analytics visualization
+- **State Management:** React Context for user state
 
 ## Project Structure
 
 ```
 ├── backend/
-│   ├── app.py              # Flask API (all endpoints)
-│   ├── recommender.py      # Book data/model logic (loads kenyan_works_with_themes.csv)
-│   ├── cbc_alignment.py    # CBC alignment logic (merges cbc_alignment.csv with book data)
+│   ├── app.py              # Flask API (semantic search endpoints)
+│   ├── recommender.py      # FAISS-based semantic search logic
+│   ├── cbc_alignment.py    # CBC alignment logic
 │   ├── data/
-│   │   ├── kenyan_works_with_themes.csv  # Main book data (with themes)
-│   │   └── cbc_alignment.csv             # CBC alignment data (all competencies covered)
+│   │   └── kenyan_works_augmented.csv  # Book data for semantic search
+│   └── requirements.txt    # Python dependencies
 ├── src/
-│   ├── components/         # React UI (BookCard, CBCDashboard, AdminPanel, etc.)
-│   ├── contexts/           # React context for user/session
-│   ├── styles/             # CSS
-│   ├── utils/              # Helpers
-│   └── App.tsx             # Main app logic
-├── package.json            # Frontend dependencies
-├── vite.config.ts          # Vite config
-├── index.html              # App entry point
+│   ├── components/         # React UI components
+│   │   ├── admin/         # Admin panel components
+│   │   ├── auth/          # Authentication components
+│   │   └── ui/            # Shadcn UI components
+│   ├── contexts/          # React context (UserContext)
+│   ├── utils/             # Utility functions
+│   └── App.tsx            # Main app logic
+├── supabase/
+│   └── migrations/        # Database migrations
+├── package.json           # Frontend dependencies
+├── vite.config.ts         # Vite config
+└── index.html             # App entry point
 ```
 
 ## Setup Instructions
 
-1. **Clone the repository**
-  ```sh
-  git clone <repo-url>
-  cd <project-folder>
-  ```
-2. **Install frontend dependencies**
-  ```sh
-  npm install
-  ```
-3. **Set up environment variables**
-  - Copy `.env.example` to `.env` and add your Supabase project URL and anon key:
-    ```env
-    VITE_SUPABASE_URL=your-supabase-url
-    VITE_SUPABASE_ANON_KEY=your-anon-key
-    VITE_API_URL=http://localhost:5000
-    ```
-4. **Install backend dependencies**
-  ```sh
-  pip install -r backend/requirements.txt
-  ```
-5. **Run the backend (Flask API)**
-  ```sh
-  python backend/app.py
-  ```
-6. **Run the frontend (React/Vite)**
-  ```sh
-  npm run dev
-  ```
-  - The app will start on `http://localhost:3000/` (or another port if 3000 is busy).
+### Prerequisites
+- **Node.js** (v18 or higher)
+- **Python** (v3.8 or higher)
+- **Supabase account** and project
+- **npm** or **yarn** package manager
+- **pip** Python package manager
 
-## Major Implementation Milestones
+### 1. Clone the repository
+```sh
+git clone <repo-url>
+cd <project-folder>
+```
 
-- Removed all legacy Supabase CRUD; Flask backend now handles all book/user data.
-- Implemented robust REST API for books, users, search, recommendations, themes, and CBC endpoints.
-- Integrated CBC dashboard: merges curated CBC alignment data with main book data, with guaranteed coverage for all competencies/levels.
-- Dynamic theme filtering and quick-pick themes, based on real backend data.
-- Secure admin access: admin sign-up removed, only existing admins can access admin panel.
-- All navigation, search, and filter features use real backend data (no hardcoded lists).
-- Defensive UI: BookCard, BookDetail, and CBCDashboard robust to missing data and errors.
-- Data integrity: unmatched CBC book_ids are logged for easy debugging.
+### 2. Install frontend dependencies
+```sh
+npm install
+```
+
+### 3. Set up environment variables
+Create a `.env` file in the root directory (you can copy from `.env.example`):
+```env
+VITE_SUPABASE_URL=your-supabase-project-url
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+VITE_API_URL=http://localhost:5000
+
+# Optional: For admin operations (uploading books, generating CBC data)
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
+
+**Where to find these values:**
+- `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`: Supabase Dashboard → Settings → API
+- `SUPABASE_SERVICE_ROLE_KEY`: Supabase Dashboard → Settings → API → service_role key (secret)
+  - ⚠️ **Important**: Never commit this key or use it in frontend code!
+
+### 4. Set up Supabase database
+You need to create the following tables in your Supabase database. You can either:
+
+**Option A: Use Supabase SQL Editor** (Recommended)
+1. Go to your Supabase Dashboard → SQL Editor
+2. Create the following tables with appropriate RLS policies:
+   - `books` - Book catalog
+   - `themes` - Literary themes
+   - `reading_lists` - User reading lists
+   - `book_curriculum` - CBC curriculum alignment
+   - `profiles` - User profiles with admin functions
+
+**Option B: Use Migration Files** (If available)
+If you have migration files, run them in order through the Supabase SQL Editor.
+
+**Required Tables:**
+- **Books**: `id` (UUID), `title`, `author`, `published_year`, `description`, `cover_url`, `created_at`
+- **Themes**: `id` (UUID), `name`
+- **Reading Lists**: `id` (UUID), `user_id` (UUID), `book_id` (UUID, nullable), `list_id` (UUID, nullable), `name` (text, nullable), `status`, `created_at`
+- **Book Curriculum**: `id` (UUID), `book_id` (UUID), `grade`, `learning_area`, `strand`, `sub_strand`, `competencies` (text[])
+- **Profiles**: `id` (UUID), `email`, `name`, `role`, `is_admin`, `is_active`, `created_at`, `updated_at`
+
+**Note**: Make sure to enable Row Level Security (RLS) on all tables and create appropriate policies.
+
+### 5. Install backend dependencies
+```sh
+pip install -r backend/requirements.txt
+```
+
+### 6. Run the backend (Flask API)
+```sh
+python backend/app.py
+```
+The backend will start on `http://localhost:5000` and load the FAISS semantic search model.
+
+### 7. Run the frontend (React/Vite)
+```sh
+npm run dev
+```
+The app will start on `http://localhost:3000` (or another port if 3000 is busy).
+
+## Database Schema
+
+### Books Table
+- `id` (UUID): Primary key
+- `title` (text): Book title
+- `author` (text): Book author
+- `published_year` (integer): Publication year
+- `description` (text): Book description
+- `cover_url` (text): Cover image URL
+- `created_at` (timestamp): Creation timestamp
+
+### Themes Table
+- `id` (UUID): Primary key
+- `name` (text): Theme name
+
+### Reading Lists Table
+- `id` (UUID): Primary key
+- `user_id` (UUID): Foreign key to auth.users
+- `book_id` (UUID): Foreign key to books (nullable for list collections)
+- `list_id` (UUID): Foreign key to list collection (nullable)
+- `name` (text): List name (nullable for book entries)
+- `status` (text): Reading status (to-read, reading, completed)
+- `created_at` (timestamp): Creation timestamp
+
+### Book Curriculum Table
+- `id` (UUID): Primary key
+- `book_id` (UUID): Foreign key to books
+- `grade` (text): Grade level
+- `learning_area` (text): Learning area
+- `strand` (text): Strand
+- `sub_strand` (text): Sub-strand
+- `competencies` (text[]): Array of competencies
+
+### Profiles Table
+- `id` (UUID): Primary key (references auth.users)
+- `email` (text): User email
+- `name` (text): User name
+- `role` (text): User role (reader, admin)
+- `is_admin` (boolean): Admin status
+- `is_active` (boolean): Active status
+- `created_at` (timestamp): Creation timestamp
+- `updated_at` (timestamp): Last update timestamp
 
 ## Security & Best Practices
 
-- Supabase is used **only for authentication**; all other data is managed by Flask backend.
-- No secrets or `.env` files are committed to GitHub.
-- Use `.gitignore` to exclude `node_modules/`, build output, and editor/OS files.
-- Test as anon, regular user, and admin to verify access control.
+- **Row Level Security (RLS):** All Supabase tables have RLS policies enabled
+- **Authentication:** Supabase Auth handles user authentication and session management
+- **Admin Access:** Admin functions are protected by database-level RLS policies
+- **Environment Variables:** No secrets committed to GitHub
+- **Error Handling:** Comprehensive error handling throughout the application
+- **Type Safety:** TypeScript for type safety in the frontend
+
+## Major Implementation Milestones
+
+- ✅ Migrated from CSV to Supabase for data persistence
+- ✅ Implemented FAISS-based semantic search with IVF clustering
+- ✅ Created comprehensive admin panel with DataTable components
+- ✅ Implemented reading lists with RLS policies
+- ✅ Integrated CBC curriculum alignment
+- ✅ Built analytics dashboard with Recharts
+- ✅ Implemented user management with role-based access control
+- ✅ Fixed authentication timeout issues
+- ✅ Added comprehensive error handling and loading states
 
 ## Development Notes
 
 - All experimental features and tests should be done in a separate branch before merging.
-- For admin access, add your user to the admin table in Supabase or set `is_admin` in your profile.
-- CBC and book data are in `backend/data/` and can be updated as needed.
+- For admin access, set `is_admin = true` in the `profiles` table for your user.
+- Book data can be uploaded to Supabase using `backend/upload_books_to_supabase.py`.
+  - Requires `SUPABASE_SERVICE_ROLE_KEY` in `.env` file
+  - Run: `python backend/upload_books_to_supabase.py`
+- CBC alignment data can be generated using `backend/generate_sample_cbc_data.py`.
+  - Requires `SUPABASE_SERVICE_ROLE_KEY` in `.env` file (recommended)
+  - Run: `python backend/generate_sample_cbc_data.py`
+- Make sure your Supabase database has RLS policies configured correctly.
+- The backend Flask API is only needed for semantic search (`/api/search` endpoint).
+- All other data operations (CRUD) are handled directly through Supabase client.
+
+## API Endpoints
+
+### Backend (Flask)
+- `GET /api/search?q=<query>&top_k=<number>` - Semantic search for books (FAISS-based)
+  - Example: `GET /api/search?q=Kikuyu%20books&top_k=10`
+  - Returns: Array of books with similarity scores
+- `GET /api/books` - Get all books (fallback, primarily uses Supabase)
+- `GET /api/themes` - Get all themes (fallback, primarily uses Supabase)
+- `GET /api/genres` - Get all genres (fallback)
+- `GET /api/cbc/filter?grade=<grade>&competency=<competency>` - Filter CBC-aligned books
+
+### Supabase
+- All CRUD operations are performed directly through Supabase client
+- RLS policies ensure data security and access control
+- Tables: `books`, `themes`, `reading_lists`, `book_curriculum`, `profiles`
+- Authentication: Supabase Auth handles login/signup
 
 ## Credits
 
@@ -99,6 +240,7 @@ SomaRec is a robust, full-stack book recommendation platform for Kenyan literatu
 - Contributors: See GitHub history
 
 ---
+
 For questions or improvements, open an issue or contact the project owner.
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/blswXyO9)
