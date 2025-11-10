@@ -1,0 +1,21 @@
+# Node dependencies
+node_modules/
+dist/
+.env
+*.log
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build output
+.next/
+.turbo/
+
+# Supabase local artifacts
+.supabase/
+
+# Ignore pipeline cache
+somarec_data/cache/
