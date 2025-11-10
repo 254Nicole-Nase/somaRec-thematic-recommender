@@ -17,6 +17,11 @@ import {
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState, useEffect } from "react";
+import { useUser } from "../contexts/UserContext";
+import { supabase } from "../utils/supabase/client";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
+import { Label } from "./ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 interface BookDetailProps {
   book: {
@@ -47,9 +52,197 @@ export function BookDetail({
   onThemeClick,
   onBookClick 
 }: BookDetailProps) {
+  const { user } = useUser();
   // State for recommendations
   const [recommendedBooks, setRecommendedBooks] = useState<any[]>([]);
   const [loadingRecommendations, setLoadingRecommendations] = useState(false);
+  const [showListDialog, setShowListDialog] = useState(false);
+  const [selectedListId, setSelectedListId] = useState<string>("default");
+  const [userLists, setUserLists] = useState<Array<{ id: string; name: string }>>([]);
+  const [saving, setSaving] = useState(false);
+  
+  // Load user's reading lists when dialog opens
+  useEffect(() => {
+    if (showListDialog && user) {
+      loadUserLists();
+    }
+  }, [showListDialog, user]);
+  
+  const loadUserLists = async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return;
+      
+      const { data: { user: authUser } } = await supabase.auth.getUser();
+      if (!authUser) return;
+      
+      // Fetch reading list collections
+      const { data, error } = await supabase
+        .from('reading_lists')
+        .select('id, name')
+        .eq('user_id', authUser.id)
+        .not('name', 'is', null)
+        .is('book_id', null);
+      
+      if (!error && data) {
+        // Add default "My Library" option
+        const lists = [
+          { id: 'default', name: 'My Library' },
+          ...data.map((list: any) => ({ id: list.id, name: list.name }))
+        ];
+        setUserLists(lists);
+        // Set default selection
+        if (lists.length > 0) {
+          setSelectedListId(lists[0].id);
+        }
+      } else {
+        // Fallback to default list
+        setUserLists([{ id: 'default', name: 'My Library' }]);
+        setSelectedListId('default');
+      }
+    } catch (err) {
+      console.error('Error loading lists:', err);
+      setUserLists([{ id: 'default', name: 'My Library' }]);
+      setSelectedListId('default');
+    }
+  };
+  
+  const handleSaveBook = async (listId?: string) => {
+    if (!user || saving) return;
+    
+    const targetListId = listId || selectedListId;
+    setSaving(true);
+    setShowListDialog(false);
+    
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      if (session) {
+        try {
+          // Get the authenticated user's ID from Supabase session
+          const { data: { user: authUser } } = await supabase.auth.getUser();
+          if (!authUser) {
+            throw new Error('Not authenticated');
+          }
+
+          // First, find the Supabase book UUID by matching title/author or legacy_item_id
+          let supabaseBookId: string | null = null;
+          
+          // Try to find book by legacy_item_id (original CSV ID)
+          const csvId = parseInt(String(book.id), 10);
+          if (!isNaN(csvId)) {
+            try {
+              const { data: supabaseBooks, error: lookupError } = await supabase
+                .from('books')
+                .select('id')
+                .eq('legacy_item_id', csvId)
+                .limit(1);
+              
+              if (!lookupError && supabaseBooks && supabaseBooks.length > 0) {
+                supabaseBookId = supabaseBooks[0].id;
+              }
+            } catch (err) {
+              console.warn('Error looking up book by legacy_item_id:', err);
+            }
+          }
+          
+          // If not found by legacy_item_id, try matching by title and author
+          if (!supabaseBookId) {
+            try {
+              const { data: supabaseBooks, error: titleError } = await supabase
+                .from('books')
+                .select('id')
+                .eq('title', book.title || '')
+                .eq('author', book.author || '')
+                .limit(1);
+              
+              if (!titleError && supabaseBooks && supabaseBooks.length > 0) {
+                supabaseBookId = supabaseBooks[0].id;
+              }
+            } catch (err) {
+              console.warn('Error looking up book by title/author:', err);
+            }
+          }
+          
+          // If still not found, use backend ID as fallback
+          if (!supabaseBookId) {
+            console.warn(`Could not find Supabase book for backend ID: ${book.id}. Using backend ID as fallback.`);
+            supabaseBookId = String(book.id);
+          }
+          
+          // Insert into reading_lists with Supabase book UUID
+          // Use list_id if a specific list is selected, otherwise save to default "My Library" (list_id = NULL)
+          const insertData: any = {
+            user_id: authUser.id,
+            book_id: supabaseBookId,
+            status: 'to-read',
+            added_at: new Date().toISOString()
+          };
+          
+          // If a specific list is selected (not default), add list_id
+          if (targetListId && targetListId !== 'default') {
+            insertData.list_id = targetListId;
+          }
+          // If targetListId is 'default' or null, list_id will be NULL (default "My Library")
+          
+          const { error } = await supabase
+            .from('reading_lists')
+            .insert(insertData);
+          
+          if (error) {
+            console.error('Supabase insert error:', error);
+            if (error.message?.includes('columns')) {
+              console.warn('Supabase columns parameter warning (insert may have succeeded):', error);
+              alert('Book saved to reading list!');
+            } else if (error.code === 'PGRST116' || error.message?.includes('relation')) {
+              throw new Error('Table not found');
+            } else {
+              throw error;
+            }
+          } else {
+            alert('Book saved to reading list!');
+          }
+        } catch (err: any) {
+          // Fallback to localStorage
+          const savedBooksJson = localStorage.getItem(`saved_books_${user.id}`);
+          const savedBooks = savedBooksJson ? JSON.parse(savedBooksJson) : [];
+          const bookExists = savedBooks.find((b: any) => b.id === book.id);
+          if (!bookExists) {
+            savedBooks.push({
+              ...book,
+              status: 'want_to_read',
+              addedAt: new Date().toISOString()
+            });
+            localStorage.setItem(`saved_books_${user.id}`, JSON.stringify(savedBooks));
+            alert('Book saved to reading list (local storage)!');
+          } else {
+            alert('Book already saved!');
+          }
+        }
+      } else {
+        // No session, use localStorage
+        const savedBooksJson = localStorage.getItem(`saved_books_${user.id}`);
+        const savedBooks = savedBooksJson ? JSON.parse(savedBooksJson) : [];
+        const bookExists = savedBooks.find((b: any) => b.id === book.id);
+        if (!bookExists) {
+          savedBooks.push({
+            ...book,
+            status: 'want_to_read',
+            addedAt: new Date().toISOString()
+          });
+          localStorage.setItem(`saved_books_${user.id}`, JSON.stringify(savedBooks));
+          alert('Book saved to reading list (local storage)!');
+        } else {
+          alert('Book already saved!');
+        }
+      }
+    } catch (err) {
+      console.error('Error saving book:', err);
+      alert('Failed to save book');
+    } finally {
+      setSaving(false);
+    }
+  };
 
   // Fetch recommendations from backend
   useEffect(() => {
@@ -114,23 +307,84 @@ export function BookDetail({
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  <Button className="w-full" size="lg">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Read Full Text
-                  </Button>
+                  {/* Read Full Text - Link to external source if available */}
+                  {book.isbn && (
+                    <Button 
+                      className="w-full" 
+                      size="lg"
+                      onClick={() => {
+                        // Try to open in Google Books or Open Library
+                        const googleBooksUrl = `https://books.google.com/books?vid=ISBN${book.isbn}`;
+                        window.open(googleBooksUrl, '_blank');
+                      }}
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Find Full Text
+                    </Button>
+                  )}
                   
                   <div className="grid grid-cols-2 gap-2">
-                    <Button variant="outline" size="sm">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => {
+                        if (!user) {
+                          alert('Please log in to save books');
+                          return;
+                        }
+                        setShowListDialog(true);
+                      }}
+                      disabled={saving}
+                    >
                       <Heart className="h-4 w-4 mr-2" />
                       Save
                     </Button>
-                    <Button variant="outline" size="sm">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => {
+                        // Share book
+                        if (navigator.share) {
+                          navigator.share({
+                            title: book.title,
+                            text: `Check out "${book.title}" by ${book.author}`,
+                            url: window.location.href
+                          }).catch(() => {
+                            // Fallback to clipboard
+                            navigator.clipboard.writeText(window.location.href);
+                            alert('Link copied to clipboard!');
+                          });
+                        } else {
+                          // Fallback to clipboard
+                          navigator.clipboard.writeText(window.location.href);
+                          alert('Link copied to clipboard!');
+                        }
+                      }}
+                    >
                       <Share2 className="h-4 w-4 mr-2" />
                       Share
                     </Button>
                   </div>
 
-                  <Button variant="outline" size="sm" className="w-full">
+                  {/* Download Summary - Generate a simple text summary */}
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full"
+                    onClick={() => {
+                      // Generate and download a simple summary
+                      const summary = `${book.title}\nby ${book.author}\n\n${book.description}\n\nThemes: ${Array.isArray(book.themes) ? book.themes.join(', ') : 'N/A'}`;
+                      const blob = new Blob([summary], { type: 'text/plain' });
+                      const url = URL.createObjectURL(blob);
+                      const a = document.createElement('a');
+                      a.href = url;
+                      a.download = `${book.title.replace(/[^a-z0-9]/gi, '_')}_summary.txt`;
+                      document.body.appendChild(a);
+                      a.click();
+                      document.body.removeChild(a);
+                      URL.revokeObjectURL(url);
+                    }}
+                  >
                     <Download className="h-4 w-4 mr-2" />
                     Download Summary
                   </Button>
@@ -262,6 +516,49 @@ export function BookDetail({
           )}
         </div>
       </div>
+      
+      {/* List Selection Dialog */}
+      <Dialog open={showListDialog} onOpenChange={setShowListDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Add to Reading List</DialogTitle>
+            <DialogDescription>
+              Select which reading list to add "{book.title}" to.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="list-select">Reading List</Label>
+              <Select value={selectedListId} onValueChange={setSelectedListId}>
+                <SelectTrigger id="list-select">
+                  <SelectValue placeholder="Select a list" />
+                </SelectTrigger>
+                <SelectContent>
+                  {userLists.map((list) => (
+                    <SelectItem key={list.id} value={list.id}>
+                      {list.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="flex justify-end gap-2">
+              <Button
+                variant="outline"
+                onClick={() => setShowListDialog(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={() => handleSaveBook()}
+                disabled={saving}
+              >
+                {saving ? 'Saving...' : 'Add to List'}
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

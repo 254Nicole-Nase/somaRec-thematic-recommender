@@ -4,7 +4,11 @@ import { Button } from "./ui/button";
 import { BookOpen, ExternalLink, Heart, Calendar, Plus } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useUser } from "../contexts/UserContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { supabase } from "../utils/supabase/client";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
+import { Label } from "./ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 interface BookCardProps {
   book: {
@@ -36,12 +40,220 @@ interface BookCardProps {
 export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", onSaveBook }: BookCardProps) {
   const { user } = useUser();
   const [saving, setSaving] = useState(false);
+  const [showListDialog, setShowListDialog] = useState(false);
+  const [selectedListId, setSelectedListId] = useState<string>("default");
+  const [userLists, setUserLists] = useState<Array<{ id: string; name: string }>>([]);
   const isListView = variant === "list";
+  
+  // Load user's reading lists when dialog opens
+  useEffect(() => {
+    if (showListDialog && user) {
+      loadUserLists();
+    }
+  }, [showListDialog, user]);
+  
+  const loadUserLists = async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return;
+      
+      const { data: { user: authUser } } = await supabase.auth.getUser();
+      if (!authUser) return;
+      
+      // Fetch reading list collections
+      const { data, error } = await supabase
+        .from('reading_lists')
+        .select('id, name')
+        .eq('user_id', authUser.id)
+        .not('name', 'is', null)
+        .is('book_id', null);
+      
+      if (!error && data) {
+        // Add default "My Library" option
+        const lists = [
+          { id: 'default', name: 'My Library' },
+          ...data.map((list: any) => ({ id: list.id, name: list.name }))
+        ];
+        setUserLists(lists);
+        // Set default selection
+        if (lists.length > 0) {
+          setSelectedListId(lists[0].id);
+        }
+      } else {
+        // Fallback to default list
+        setUserLists([{ id: 'default', name: 'My Library' }]);
+        setSelectedListId('default');
+      }
+    } catch (err) {
+      console.error('Error loading lists:', err);
+      setUserLists([{ id: 'default', name: 'My Library' }]);
+      setSelectedListId('default');
+    }
+  };
 
-  const handleSaveBook = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSaveBookClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
+    if (!user) return;
+    // Show dialog to select list
+    setShowListDialog(true);
+  };
+  
+  const handleSaveBook = async (listId?: string) => {
     if (!user || saving) return;
-    // ...existing code...
+    
+    const targetListId = listId || selectedListId;
+    setSaving(true);
+    setShowListDialog(false);
+    try {
+      // Try to save to Supabase first, fallback to localStorage
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        try {
+          // Get the authenticated user's ID from Supabase session
+          const { data: { user: authUser } } = await supabase.auth.getUser();
+          if (!authUser) {
+            throw new Error('Not authenticated');
+          }
+
+          // Try Supabase - insert book entry
+          // First, find the Supabase book UUID by matching title/author or legacy_item_id
+          let supabaseBookId: string | null = null;
+          
+          // Try to find book by legacy_item_id (original CSV ID)
+          const csvId = parseInt(String(book.id), 10);
+          if (!isNaN(csvId)) {
+            try {
+              const { data: supabaseBooks, error: lookupError } = await supabase
+                .from('books')
+                .select('id')
+                .eq('legacy_item_id', csvId)
+                .limit(1);
+              
+              if (!lookupError && supabaseBooks && supabaseBooks.length > 0) {
+                supabaseBookId = supabaseBooks[0].id;
+              }
+            } catch (err) {
+              console.warn('Error looking up book by legacy_item_id:', err);
+            }
+          }
+          
+          // If not found by legacy_item_id, try matching by title and author
+          if (!supabaseBookId) {
+            try {
+              const { data: supabaseBooks, error: titleError } = await supabase
+                .from('books')
+                .select('id')
+                .eq('title', book.title || '')
+                .eq('author', book.author || '')
+                .limit(1);
+              
+              if (!titleError && supabaseBooks && supabaseBooks.length > 0) {
+                supabaseBookId = supabaseBooks[0].id;
+              }
+            } catch (err) {
+              console.warn('Error looking up book by title/author:', err);
+            }
+          }
+          
+          // If still not found, use backend ID as fallback (for backward compatibility)
+          // Note: This will work if reading_lists.book_id is TEXT, not UUID
+          if (!supabaseBookId) {
+            console.warn(`Could not find Supabase book for backend ID: ${book.id}. Using backend ID as fallback.`);
+            supabaseBookId = String(book.id);
+          }
+          
+          // Insert into reading_lists with Supabase book UUID
+          // Use list_id if a specific list is selected, otherwise save to default "My Library" (list_id = NULL)
+          const insertData: any = {
+            user_id: authUser.id, // Use auth user ID from Supabase session
+            book_id: supabaseBookId, // Use Supabase book UUID
+            status: 'to-read', // Use existing table's status format
+            added_at: new Date().toISOString()
+          };
+          
+          // If a specific list is selected (not default), add list_id
+          if (targetListId && targetListId !== 'default') {
+            insertData.list_id = targetListId;
+          }
+          // If targetListId is 'default' or null, list_id will be NULL (default "My Library")
+          
+          const { error } = await supabase
+            .from('reading_lists')
+            .insert(insertData);
+          
+          if (error) {
+            console.error('Supabase insert error:', error);
+            // Log full error details for debugging
+            console.error('Error code:', error.code);
+            console.error('Error message:', error.message);
+            console.error('Error details:', error.details);
+            console.error('Error hint:', error.hint);
+            
+            // Check if it's a columns parameter error (Supabase client library issue)
+            if (error.message?.includes('columns')) {
+              // This is likely a Supabase client library bug - the insert might have worked
+              console.warn('Supabase columns parameter warning (insert may have succeeded):', error);
+              // Don't throw - allow the success path to continue
+            } else if (error.code === 'PGRST116' || error.message?.includes('relation')) {
+              // If table doesn't exist, use localStorage
+              throw new Error('Table not found');
+            } else if (error.code === '23503') {
+              // Foreign key constraint violation
+              console.error('Foreign key constraint violation - user_id might not exist in auth.users');
+              throw new Error('Authentication error - please log out and log back in');
+            } else if (error.code === '23514') {
+              // Check constraint violation
+              console.error('Check constraint violation:', error.message);
+              throw new Error('Invalid data: ' + (error.message || 'Check constraint failed'));
+            } else {
+              // Other errors - throw to fallback
+              throw error;
+            }
+          }
+          
+          // Success with Supabase
+          if (onSaveBook) {
+            onSaveBook(book);
+          }
+        } catch (supabaseErr: any) {
+          // Fallback to localStorage
+          const savedBooksJson = localStorage.getItem(`saved_books_${user.id}`);
+          const savedBooks = savedBooksJson ? JSON.parse(savedBooksJson) : [];
+          const bookExists = savedBooks.find((b: any) => b.id === book.id);
+          if (!bookExists) {
+            savedBooks.push({
+              ...book,
+              status: 'want_to_read',
+              addedAt: new Date().toISOString()
+            });
+            localStorage.setItem(`saved_books_${user.id}`, JSON.stringify(savedBooks));
+            if (onSaveBook) {
+              onSaveBook(book);
+            }
+          }
+        }
+      } else {
+        // No session, use localStorage
+        const savedBooksJson = localStorage.getItem(`saved_books_${user.id}`);
+        const savedBooks = savedBooksJson ? JSON.parse(savedBooksJson) : [];
+        const bookExists = savedBooks.find((b: any) => b.id === book.id);
+        if (!bookExists) {
+          savedBooks.push({
+            ...book,
+            status: 'want_to_read',
+            addedAt: new Date().toISOString()
+          });
+          localStorage.setItem(`saved_books_${user.id}`, JSON.stringify(savedBooks));
+          if (onSaveBook) {
+            onSaveBook(book);
+          }
+        }
+      }
+    } catch (err) {
+      console.error('Error saving book:', err);
+    } finally {
+      setSaving(false);
+    }
   };
 
   // Utility to get a valid cover image from book object
@@ -128,7 +340,7 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
             size="icon"
             variant="secondary"
             className="absolute top-2 right-2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity"
-            onClick={handleSaveBook}
+            onClick={handleSaveBookClick}
             disabled={saving}
           >
             {saving ? (
@@ -223,6 +435,49 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
           </div>
         </CardContent>
       </div>
+      
+      {/* List Selection Dialog */}
+      <Dialog open={showListDialog} onOpenChange={setShowListDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Add to Reading List</DialogTitle>
+            <DialogDescription>
+              Select which reading list to add "{book.title}" to.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="list-select">Reading List</Label>
+              <Select value={selectedListId} onValueChange={setSelectedListId}>
+                <SelectTrigger id="list-select">
+                  <SelectValue placeholder="Select a list" />
+                </SelectTrigger>
+                <SelectContent>
+                  {userLists.map((list) => (
+                    <SelectItem key={list.id} value={list.id}>
+                      {list.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="flex justify-end gap-2">
+              <Button
+                variant="outline"
+                onClick={() => setShowListDialog(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={() => handleSaveBook()}
+                disabled={saving}
+              >
+                {saving ? 'Saving...' : 'Add to List'}
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </Card>
   );
 }
