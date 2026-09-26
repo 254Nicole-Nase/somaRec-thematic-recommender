@@ -364,14 +364,24 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
         </CardHeader>
         <CardContent className="pt-0">
           <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-            <div className="flex items-center gap-1">
-              <Calendar className="h-3 w-3" />
-              <span>{book.year}</span>
-            </div>
-            <span>•</span>
-            <span>{book.genre}</span>
-            <span>•</span>
-            <span>{book.language}</span>
+            {book.year > 0 && (
+              <div className="flex items-center gap-1">
+                <Calendar className="h-3 w-3" />
+                <span>{book.year}</span>
+              </div>
+            )}
+            {book.genre && (
+              <>
+                <span>•</span>
+                <span>{book.genre}</span>
+              </>
+            )}
+            {book.language && book.language !== "Unknown" && (
+              <>
+                {(book.year > 0 || book.genre) && <span>•</span>}
+                <span>{book.language}</span>
+              </>
+            )}
           </div>
           {book.description && isListView && (
             <p className="text-sm text-muted-foreground line-clamp-2 mb-3">

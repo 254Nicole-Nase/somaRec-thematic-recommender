@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import { BookCard } from "./BookCard";
+import { BookReviews } from "./BookReviews";
 import { 
   ArrowLeft, 
   ExternalLink, 
@@ -39,7 +40,11 @@ interface BookDetailProps {
     isbn?: string;
     publisher?: string;
     pages?: number;
-    availability: string;
+    availability?: string;
+    access_type?: "read" | "find";
+    license?: string;
+    theme_source?: string;
+    where_to_find?: Array<{ label: string; url: string; kind: string }>;
   };
   onBack: () => void;
   onThemeClick?: (theme: string) => void;
@@ -56,6 +61,7 @@ export function BookDetail({
   // State for recommendations
   const [recommendedBooks, setRecommendedBooks] = useState<any[]>([]);
   const [loadingRecommendations, setLoadingRecommendations] = useState(false);
+  const [authorBooks, setAuthorBooks] = useState<any[]>([]);
   const [showListDialog, setShowListDialog] = useState(false);
   const [selectedListId, setSelectedListId] = useState<string>("default");
   const [userLists, setUserLists] = useState<Array<{ id: string; name: string }>>([]);
@@ -128,9 +134,14 @@ export function BookDetail({
           // First, find the Supabase book UUID by matching title/author or legacy_item_id
           let supabaseBookId: string | null = null;
           
-          // Try to find book by legacy_item_id (original CSV ID)
-          const csvId = parseInt(String(book.id), 10);
-          if (!isNaN(csvId)) {
+          // Books from the API already carry the catalog UUID shared with Supabase.
+          if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(String(book.id))) {
+            supabaseBookId = String(book.id);
+          }
+
+          // Older numeric CSV ids: look up by legacy_item_id.
+          const csvId = /^\d+$/.test(String(book.id)) ? parseInt(String(book.id), 10) : NaN;
+          if (!supabaseBookId && !isNaN(csvId)) {
             try {
               const { data: supabaseBooks, error: lookupError } = await supabase
                 .from('books')
@@ -251,21 +262,33 @@ export function BookDetail({
       setLoadingRecommendations(true);
       try {
         const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-        const response = await fetch(`${API_URL}/api/recommend?book_id=${book.id}`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setRecommendedBooks(data || []);
+        const [similarRes, authorRes] = await Promise.all([
+          fetch(`${API_URL}/api/books/${encodeURIComponent(book.id)}/similar?top_k=6&exclude_same_author=1`),
+          fetch(`${API_URL}/api/books/${encodeURIComponent(book.id)}/by-author?top_k=6`),
+        ]);
+        setRecommendedBooks(similarRes.ok ? (await similarRes.json()) || [] : []);
+        setAuthorBooks(authorRes.ok ? (await authorRes.json()) || [] : []);
       } catch (e: any) {
         console.error("An unexpected error occurred during recommendation fetch:", e);
         setRecommendedBooks([]);
+        setAuthorBooks([]);
       } finally {
         setLoadingRecommendations(false);
       }
     };
     fetchRecommendations();
   }, [book.id]);
+  const whereToFind =
+    book.where_to_find && book.where_to_find.length > 0
+      ? book.where_to_find
+      : [
+          {
+            label: "Open Library",
+            url: `https://openlibrary.org/search?q=${encodeURIComponent(`${book.title} ${book.author}`)}`,
+            kind: "find",
+          },
+        ];
+
   const themeDescriptions: Record<string, string> = {
     "Postcolonial Identity": "Explores themes of identity, belonging, and cultural heritage in post-independence Africa.",
     "Environmental Stewardship": "Addresses humanity's relationship with nature and environmental conservation.",
@@ -307,22 +330,24 @@ export function BookDetail({
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  {/* Read Full Text - Link to external source if available */}
-                  {book.isbn && (
-                    <Button 
-                      className="w-full" 
-                      size="lg"
-                      onClick={() => {
-                        // Try to open in Google Books or Open Library
-                        const googleBooksUrl = `https://books.google.com/books?vid=ISBN${book.isbn}`;
-                        window.open(googleBooksUrl, '_blank');
-                      }}
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Find Full Text
-                    </Button>
+                  {/* Where to read or get the book. Only openly licensed texts get a "Read free" link. */}
+                  {whereToFind.length > 0 && (
+                    <div className="space-y-2">
+                      {whereToFind.map((link, i) => (
+                        <Button
+                          key={link.url}
+                          className="w-full"
+                          size={i === 0 ? "lg" : "sm"}
+                          variant={i === 0 ? "default" : "outline"}
+                          onClick={() => window.open(link.url, "_blank", "noopener,noreferrer")}
+                        >
+                          {link.kind === "read" ? <BookOpen className="h-4 w-4 mr-2" /> : <ExternalLink className="h-4 w-4 mr-2" />}
+                          {link.label}
+                        </Button>
+                      ))}
+                    </div>
                   )}
-                  
+
                   <div className="grid grid-cols-2 gap-2">
                     <Button 
                       variant="outline" 
@@ -404,10 +429,12 @@ export function BookDetail({
                     <span>Language: {book.language}</span>
                   </div>
                   
-                  <div className="flex items-center gap-2">
-                    <BookOpen className="h-4 w-4 text-muted-foreground" />
-                    <span>Genre: {book.genre}</span>
-                  </div>
+                  {book.genre && (
+                    <div className="flex items-center gap-2">
+                      <BookOpen className="h-4 w-4 text-muted-foreground" />
+                      <span>Genre: {book.genre}</span>
+                    </div>
+                  )}
 
                   {book.pages && (
                     <div className="flex items-center gap-2">
@@ -464,9 +491,14 @@ export function BookDetail({
                     </Badge>
                   ))
                 ) : (
-                  <span className="text-muted-foreground">No themes available.</span>
+                  <span className="text-muted-foreground">Not tagged yet: this book needs a fuller description before themes can be detected.</span>
                 )}
               </div>
+              {Array.isArray(book.themes) && book.themes.length > 0 && (
+                <p className="text-xs text-muted-foreground">
+                  Themes are detected automatically from the book's description and may not be perfect.
+                </p>
+              )}
             </div>
 
             {/* Extended Description */}
@@ -494,9 +526,24 @@ export function BookDetail({
           </div>
         </div>
 
+        <div className="mt-16">
+          <BookReviews bookId={book.id} />
+        </div>
+
+        {authorBooks.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-2xl mb-8">More by {book.author}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {authorBooks.map((other) => (
+                <BookCard key={other.id} book={other} onThemeClick={onThemeClick} onBookClick={onBookClick} variant="grid" />
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Recommended Books */}
         <div className="mt-16">
-          <h2 className="text-2xl mb-8">Recommended Next Reads</h2>
+          <h2 className="text-2xl mb-8">Readers who like this may also enjoy</h2>
           {loadingRecommendations ? (
             <div className="text-center py-4">Loading recommendations...</div>
           ) : recommendedBooks.length > 0 ? (
