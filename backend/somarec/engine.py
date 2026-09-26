@@ -1,8 +1,11 @@
 """Hybrid search and recommendation over the SomaRec catalog.
 
-Ranking = Reciprocal Rank Fusion of
+Ranking = weighted Reciprocal Rank Fusion of
   * BM25 keyword scores (exact titles, author names, rare words), and
   * dense cosine similarity from a multilingual sentence encoder (meaning/themes).
+Keyword ranks weigh more, and a query that is exactly a book's title always puts
+that book first: the known-item evaluation showed equal weights let near-miss
+semantic matches push the book a reader named down the list.
 
 Search is exact (FAISS IndexFlatIP, or plain numpy if FAISS isn't installed).
 With a few hundred to a few hundred thousand books, exact search is fast enough
@@ -18,11 +21,14 @@ import numpy as np
 from .bm25 import BM25
 from .catalog import book_to_api
 from .encoders import cached_document_embeddings
-from .themes import ThemeTagger
+from .text import fold_key
+from .themes import MIN_DESCRIPTION_CHARS, ThemeTagger
 
 log = logging.getLogger(__name__)
 
 RRF_K = 60
+KEYWORD_WEIGHT = 1.0
+SEMANTIC_WEIGHT = float(os.getenv("SOMAREC_SEMANTIC_WEIGHT", 0.5))
 CANDIDATES = 100
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "..", ".cache")
 
@@ -69,6 +75,11 @@ class SearchEngine:
             min_dense_score if min_dense_score is not None else os.getenv("SOMAREC_MIN_DENSE_SCORE", 0.20)
         )
         self.id_to_index = {bid: i for i, bid in enumerate(self.books["id"])}
+        self.title_index = {}
+        for i, title in enumerate(self.books["title"]):
+            for key in {fold_key(title), fold_key(str(title).split(":")[0].split("(")[0])}:
+                if key:
+                    self.title_index.setdefault(key, []).append(i)
         self.bm25 = BM25([_keyword_text(r) for _, r in self.books.iterrows()])
 
         self.vectors = None
@@ -101,7 +112,10 @@ class SearchEngine:
         tags = self.tagger.tag(self.vectors, self.books["description"].tolist())
         self.books["themes"] = [[name for name, _ in t] for t in tags]
         self.books["theme_scores"] = [dict(t) for t in tags]
-        self.books["theme_source"] = ["model" if t else "insufficient_text" for t in tags]
+        self.books["theme_source"] = [
+            "model" if t else ("insufficient_text" if len(d or "") < MIN_DESCRIPTION_CHARS else "no_confident_theme")
+            for t, d in zip(tags, self.books["description"])
+        ]
 
     # --------------------------------------------------------------- ranking
     def _keyword_ranking(self, query: str):
@@ -118,13 +132,16 @@ class SearchEngine:
         ]
 
     @staticmethod
-    def _fuse(*rankings):
+    def _fuse(*rankings, pinned=()):
         fused, parts = {}, {}
-        for name, ranking in rankings:
+        for name, ranking, weight in rankings:
             for rank, (i, score) in enumerate(ranking):
-                fused[i] = fused.get(i, 0.0) + 1.0 / (RRF_K + rank + 1)
+                fused[i] = fused.get(i, 0.0) + weight / (RRF_K + rank + 1)
                 parts.setdefault(i, {})[name] = {"rank": rank + 1, "score": round(score, 4)}
-        order = sorted(fused, key=lambda i: -fused[i])
+        for i in pinned:
+            parts.setdefault(i, {})["exact_title"] = True
+            fused.setdefault(i, 0.0)
+        order = sorted(fused, key=lambda i: (i not in pinned, -fused[i]))
         return [(i, fused[i], parts[i]) for i in order]
 
     def rank(self, query: str, mode: str = "hybrid"):
@@ -136,13 +153,14 @@ class SearchEngine:
             raise ValueError(f"unknown mode {mode!r}")
         if self.encoder is None:
             mode = "keyword"
-        rankings = []
+        rankings, pinned = [], ()
         if mode in ("hybrid", "keyword"):
-            rankings.append(("keyword", self._keyword_ranking(query)))
+            rankings.append(("keyword", self._keyword_ranking(query), KEYWORD_WEIGHT))
+            pinned = tuple(self.title_index.get(fold_key(query), ()))
         if mode in ("hybrid", "dense"):
             qv = self.encoder.encode_queries([query])[0]
-            rankings.append(("semantic", self._dense_ranking(qv)))
-        return self._fuse(*rankings)
+            rankings.append(("semantic", self._dense_ranking(qv), SEMANTIC_WEIGHT))
+        return self._fuse(*rankings, pinned=pinned)
 
     # ---------------------------------------------------------------- public
     def search(self, query: str, top_k: int = 10, mode: str = "hybrid", language=None, theme=None):

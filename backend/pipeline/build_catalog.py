@@ -12,6 +12,8 @@ What it fixes:
   * unresolved Wikidata placeholders ("Q24937606") are dropped
   * duplicate works are merged, keeping the richest record
   * languages are normalised; missing ones are guessed and labelled as guesses
+  * missing descriptions/covers are filled from backend/data/open_library_enrichment.csv
+    (written by enrich_open_library.py; nothing is fetched here)
   * hand-checked fixes in backend/data/corrections.csv are applied last
     ("language" means the language of the listed edition, not the original)
 
@@ -170,6 +172,34 @@ def build(raw: pd.DataFrame, legacy_themes: dict):
     return df, stats
 
 
+def apply_enrichment(df: pd.DataFrame, path: str):
+    """Fill only what is missing: a short description, an empty cover or work key."""
+    counts = Counter()
+    if not os.path.exists(path):
+        return df, counts
+    extra = pd.read_csv(path, dtype=str).fillna("").set_index("id")
+    for i, book_id_ in df["id"].items():
+        if book_id_ not in extra.index:
+            continue
+        found = extra.loc[book_id_]
+        description = clean_space(found["description"]).lstrip(">").strip()
+        if len(df.at[i, "description"]) < 50 and len(description) >= 50:
+            # Open Library sometimes only has a translation's blurb (e.g. Spanish for
+            # "Decolonising the Mind"); skip text that isn't in the book's language.
+            book_language = df.at[i, "language"]
+            if book_language in ("English", "Kiswahili") and guess_language(description) != book_language:
+                counts["descriptions_skipped_wrong_language"] += 1
+            else:
+                df.at[i, "description"] = description
+                counts["descriptions_from_open_library"] += 1
+        if not df.at[i, "cover_url"] and found["cover_url"]:
+            df.at[i, "cover_url"] = found["cover_url"]
+            counts["covers_from_open_library"] += 1
+        if not df.at[i, "ol_work_key"] and found["ol_work_key"]:
+            df.at[i, "ol_work_key"] = found["ol_work_key"]
+    return df, counts
+
+
 def apply_corrections(df: pd.DataFrame, path: str):
     """Apply hand-checked field fixes. A correction that no longer matches a book fails
     loudly, so stale entries get noticed when the harvest changes."""
@@ -194,13 +224,18 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--input", default=os.path.join(DATA_DIR, "kenyan_works_augmented.csv"))
     parser.add_argument("--themes", default=os.path.join(DATA_DIR, "kenyan_works_with_themes.csv"))
+    parser.add_argument("--enrichment", default=os.path.join(DATA_DIR, "open_library_enrichment.csv"))
     parser.add_argument("--corrections", default=os.path.join(DATA_DIR, "corrections.csv"))
     parser.add_argument("--output", default=os.path.join(DATA_DIR, "catalog.csv"))
     args = parser.parse_args()
 
     raw = pd.read_csv(args.input)
     df, stats = build(raw, load_legacy_themes(args.themes))
+    df, enriched = apply_enrichment(df, args.enrichment)
+    stats.update(enriched)
     df, stats["corrections_applied"] = apply_corrections(df, args.corrections)
+    stats["missing_description"] = int((df["description"].str.len() < 50).sum())
+    stats["missing_cover"] = int((df["cover_url"] == "").sum())
     df.to_csv(args.output, index=False)
 
     print(f"Wrote {len(df)} books to {os.path.normpath(args.output)}")

@@ -39,3 +39,34 @@ def test_shipped_corrections_all_apply():
     corrections = os.path.join(os.path.dirname(__file__), "..", "data", "corrections.csv")
     df, applied = apply_corrections(catalog, corrections)
     assert applied > 0
+
+
+def test_enrichment_fills_only_missing_fields(tmp_path):
+    from build_catalog import apply_enrichment
+
+    df = _catalog()
+    df.loc[0, "cover_url"] = "https://example.org/existing.jpg"
+    path = tmp_path / "enrichment.csv"
+    long_desc = "A novel of post-independence Kenya following four lives in the village of Ilmorog."
+    pd.DataFrame([{"id": df.loc[0, "id"], "title": "", "author": "", "ol_work_key": "/works/OL1W",
+                   "description": long_desc, "cover_url": "https://covers.openlibrary.org/b/id/1-L.jpg",
+                   "checked_at": ""}]).to_csv(path, index=False)
+    out, counts = apply_enrichment(df, str(path))
+    assert out.loc[0, "description"] == long_desc
+    assert out.loc[0, "cover_url"] == "https://example.org/existing.jpg"
+    assert out.loc[0, "ol_work_key"] == "/works/OL1W"
+    assert counts["descriptions_from_open_library"] == 1 and counts["covers_from_open_library"] == 0
+
+
+def test_enrichment_skips_description_in_another_language(tmp_path):
+    from build_catalog import apply_enrichment
+
+    df = _catalog()
+    df.loc[0, "language"] = "English"
+    path = tmp_path / "enrichment.csv"
+    spanish = ">Descolonizar la mente es una referencia ineludible en el debate lingüístico de los estudios poscoloniales."
+    pd.DataFrame([{"id": df.loc[0, "id"], "title": "", "author": "", "ol_work_key": "", "description": spanish,
+                   "cover_url": "", "checked_at": ""}]).to_csv(path, index=False)
+    out, counts = apply_enrichment(df, str(path))
+    assert out.loc[0, "description"] == ""
+    assert counts["descriptions_skipped_wrong_language"] == 1

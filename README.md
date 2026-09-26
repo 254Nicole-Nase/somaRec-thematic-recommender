@@ -106,7 +106,7 @@ python backend/evaluation/evaluate.py pool --models sentence-transformers/paraph
 python backend/evaluation/evaluate.py score judgments_rater1.csv judgments_rater2.csv
 ```
 
-Keyword-only results (no model) are in `backend/evaluation/results_known_item_offline.md`.
+Results with the models are in `backend/evaluation/results_known_item.md` (summary and interpretation in `docs/REPORT_REVISIONS.md`, section 5.4). `backend/evaluation/judgments_template.csv` is the sheet for raters, already generated.
 
 ## Content and copyright
 

@@ -72,3 +72,21 @@ def test_clean_space_normalises_unicode_and_repairs_mojibake():
         "Lévi-Strauss and Aimé Césaire, Thiong’o"
     )
     assert clean_space("Ngũgĩ") == "Ngũgĩ"
+
+
+def test_theme_tagging_does_not_let_a_broad_theme_win_everywhere():
+    import numpy as np
+
+    from somarec.themes import ThemeTagger
+
+    class StubEncoder:
+        def encode_queries(self, texts):
+            # "broad" sits close to every book; "war" and "love" are specific.
+            return np.array([[1, 0, 0], [0.6, 0.8, 0], [0.6, 0, 0.8]], dtype="float32")
+
+    tagger = ThemeTagger(StubEncoder(), names=["broad", "war", "love"], glosses=["", "", ""], min_z=1.0)
+    docs = np.array([[0.9, 0.44, 0], [0.9, 0, 0.44]] + [[1, 0, 0]] * 6, dtype="float32")
+    tags = tagger.tag(docs, ["x" * 100] * len(docs))
+    assert [t for t, _ in tags[0]] == ["war"]
+    assert [t for t, _ in tags[1]] == ["love"]
+    assert all("broad" not in [t for t, _ in row] for row in tags)

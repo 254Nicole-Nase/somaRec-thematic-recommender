@@ -34,3 +34,4 @@ backend/.cache/
 
 # Evaluation working files (generate with evaluate.py pool)
 backend/evaluation/judgments_*.csv
+!backend/evaluation/judgments_template.csv
