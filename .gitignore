@@ -1,6 +1,7 @@
 # Node dependencies
 node_modules/
 dist/
+build/
 .env
 *.log
 
@@ -19,3 +20,17 @@ Thumbs.db
 
 # Ignore pipeline cache
 somarec_data/cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/.cache/
+.pytest_cache/
+
+# Notebook / dev-server leftovers
+.ipynb_checkpoints/
+.vite/
+
+# Evaluation working files (generate with evaluate.py pool)
+backend/evaluation/judgments_*.csv
