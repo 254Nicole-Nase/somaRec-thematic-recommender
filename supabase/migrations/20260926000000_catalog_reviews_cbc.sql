@@ -5,7 +5,7 @@
 -- 1. Books: fields the cleaned catalog provides (backend/data/catalog.csv)
 -- ---------------------------------------------------------------------------
 alter table public.books add column if not exists language text;
-alter table public.books add column if not exists language_source text;      -- 'metadata' | 'guessed'
+alter table public.books add column if not exists language_source text;      -- 'metadata' | 'guessed' | 'curated'
 alter table public.books add column if not exists themes text[] default '{}';  -- nullable: the admin form sends null for no themes
 alter table public.books add column if not exists theme_source text;         -- 'model' | 'legacy_top3' | 'curated'
 alter table public.books add column if not exists publisher text;

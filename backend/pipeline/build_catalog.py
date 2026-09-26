@@ -12,6 +12,8 @@ What it fixes:
   * unresolved Wikidata placeholders ("Q24937606") are dropped
   * duplicate works are merged, keeping the richest record
   * languages are normalised; missing ones are guessed and labelled as guesses
+  * hand-checked fixes in backend/data/corrections.csv are applied last
+    ("language" means the language of the listed edition, not the original)
 
 Run:  python backend/pipeline/build_catalog.py
 """
@@ -168,15 +170,37 @@ def build(raw: pd.DataFrame, legacy_themes: dict):
     return df, stats
 
 
+def apply_corrections(df: pd.DataFrame, path: str):
+    """Apply hand-checked field fixes. A correction that no longer matches a book fails
+    loudly, so stale entries get noticed when the harvest changes."""
+    if not os.path.exists(path):
+        return df, 0
+    fixes = pd.read_csv(path, dtype=str).fillna("")
+    editable = set(CATALOG_COLUMNS) - {"id"}
+    for _, fix in fixes.iterrows():
+        target = book_id(fix["title"], fix["author"])
+        if fix["field"] not in editable:
+            raise ValueError(f"corrections.csv: cannot edit field {fix['field']!r}")
+        mask = df["id"] == target
+        if not mask.any():
+            raise ValueError(f"corrections.csv: no book {fix['title']!r} by {fix['author']!r}")
+        df.loc[mask, fix["field"]] = fix["value"]
+        if fix["field"] == "language":
+            df.loc[mask, "language_source"] = "curated"
+    return df, len(fixes)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--input", default=os.path.join(DATA_DIR, "kenyan_works_augmented.csv"))
     parser.add_argument("--themes", default=os.path.join(DATA_DIR, "kenyan_works_with_themes.csv"))
+    parser.add_argument("--corrections", default=os.path.join(DATA_DIR, "corrections.csv"))
     parser.add_argument("--output", default=os.path.join(DATA_DIR, "catalog.csv"))
     args = parser.parse_args()
 
     raw = pd.read_csv(args.input)
     df, stats = build(raw, load_legacy_themes(args.themes))
+    df, stats["corrections_applied"] = apply_corrections(df, args.corrections)
     df.to_csv(args.output, index=False)
 
     print(f"Wrote {len(df)} books to {os.path.normpath(args.output)}")

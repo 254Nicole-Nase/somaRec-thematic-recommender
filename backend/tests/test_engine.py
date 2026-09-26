@@ -13,6 +13,7 @@ def test_text_helpers():
     assert not is_wikidata_placeholder("Q is for Quarry")
     assert guess_language("", title="Sauti ya dhiki") == "Kiswahili"
     assert guess_language("", title="Muthoni wa Kirima, Mau Mau woman field marshal") is None
+    assert guess_language("An English description of the novel", title="Caitaani mũtharaba-inĩ") == "Gikuyu"
 
 
 def test_keyword_search_finds_exact_title_and_folded_author(books):

@@ -76,11 +76,14 @@ def tokenize(text: str) -> list:
 
 
 def guess_language(text: str, title: str = ""):
-    """Return 'Kiswahili', 'English' or None from function-word counts.
+    """Return 'Gikuyu', 'Kiswahili', 'English' or None.
 
     The title is checked first because many Kiswahili books in the harvest
-    carry an English description (e.g. "Sauti ya dhiki").
+    carry an English description (e.g. "Sauti ya dhiki"). Gikuyu spelling uses
+    ũ and ĩ, which Kiswahili and English never do ("Caitaani mũtharaba-inĩ").
     """
+    if re.search("[ũĩŨĨ]", unicodedata.normalize("NFC", title or "")):
+        return "Gikuyu"
     title_tokens = tokenize(title)
     if title_tokens:
         # "wa" is skipped here: it is common in Gikuyu names ("Muthoni wa Kirima").
