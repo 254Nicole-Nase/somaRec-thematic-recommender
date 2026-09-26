@@ -1,5 +1,5 @@
 from somarec.engine import SearchEngine
-from somarec.text import book_id, fold_key, guess_language, is_wikidata_placeholder
+from somarec.text import book_id, clean_space, fold_key, guess_language, is_wikidata_placeholder
 
 
 def test_book_id_is_stable_across_spelling_variants():
@@ -63,3 +63,11 @@ def test_theme_tagging_is_thresholded(books, encoder, tmp_path):
         assert len(row["themes"]) <= 3
         if len(row["description"]) < 80:
             assert row["themes"] == []
+
+
+def test_clean_space_normalises_unicode_and_repairs_mojibake():
+    assert clean_space("Ngũgi  wa\nThiong'o") == "Ngũgi wa Thiong'o"
+    assert clean_space("L\x8evi-Strauss and Aim\x8e C\x8esaire, ThiongÕo") == (
+        "Lévi-Strauss and Aimé Césaire, Thiong’o"
+    )
+    assert clean_space("Ngũgĩ") == "Ngũgĩ"

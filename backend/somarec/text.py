@@ -1,6 +1,7 @@
 """Text normalisation helpers shared by the catalog pipeline and the search engine."""
 
 import re
+import unicodedata
 import uuid
 
 from unidecode import unidecode
@@ -27,10 +28,27 @@ _ENGLISH_WORDS = {
 }
 
 
+_C1_CONTROLS_RE = re.compile("[\x80-\x9f]")
+
+
+def fix_mac_roman_mojibake(text: str) -> str:
+    """Repair text that was Mac Roman bytes decoded as Latin-1 ("L\x8evi-Strauss",
+    "ThiongÕo"). C1 control characters never occur in real text, so they are the signal."""
+    if not _C1_CONTROLS_RE.search(text):
+        return text
+    try:
+        return text.encode("latin-1").decode("mac_roman")
+    except UnicodeEncodeError:
+        return _C1_CONTROLS_RE.sub("", text)
+
+
 def clean_space(text) -> str:
+    """Collapse whitespace, repair Mac Roman mojibake and normalise to NFC, so "ũ" is
+    one code point whether the source stored it precomposed or as "u" + combining tilde."""
     if text is None:
         return ""
-    return re.sub(r"\s+", " ", str(text)).strip()
+    text = fix_mac_roman_mojibake(re.sub(r"\s+", " ", str(text)).strip())
+    return unicodedata.normalize("NFC", text)
 
 
 def fix_apostrophes(text: str) -> str:

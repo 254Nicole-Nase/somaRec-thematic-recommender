@@ -6,7 +6,7 @@
 -- ---------------------------------------------------------------------------
 alter table public.books add column if not exists language text;
 alter table public.books add column if not exists language_source text;      -- 'metadata' | 'guessed'
-alter table public.books add column if not exists themes text[] not null default '{}';
+alter table public.books add column if not exists themes text[] default '{}';  -- nullable: the admin form sends null for no themes
 alter table public.books add column if not exists theme_source text;         -- 'model' | 'legacy_top3' | 'curated'
 alter table public.books add column if not exists publisher text;
 alter table public.books add column if not exists ol_work_key text;
@@ -62,7 +62,7 @@ drop policy if exists "Users delete their own reviews" on public.reviews;
 create policy "Users delete their own reviews" on public.reviews
   for delete to authenticated using (auth.uid() = user_id);
 
-create or replace view public.book_rating_summary as
+create or replace view public.book_rating_summary with (security_invoker = true) as
   select book_id, count(*)::int as ratings, round(avg(rating)::numeric, 2) as average_rating
   from public.reviews
   group by book_id;

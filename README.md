@@ -45,11 +45,12 @@ npm run dev               # http://localhost:3000
 ```
 
 ### 2. Database
-Run the SQL in `supabase/migrations/` in the Supabase SQL editor. The latest migration:
-- adds catalog columns to `books` (language, themes, access type/licence …)
-- creates the `reviews` table with RLS
-- adds `status`/`source`/`reviewed_by` to `book_curriculum`
-- **deletes the old randomly generated CBC rows**
+Run the files in `supabase/migrations/` in filename order, either with `supabase db push` or in the SQL editor:
+1. `…_base_schema.sql` creates profiles (with a sign-up trigger), books, themes, reading lists and CBC alignment tables, all with RLS. It is safe on a project that already has them.
+2. `…_catalog_reviews_cbc.sql` adds catalog columns to `books` (language, themes, access type/licence …), creates `reviews`, and adds `status`/`source`/`reviewed_by` to `book_curriculum`. **It deletes the old randomly generated CBC rows.**
+3. `…_security_hardening.sql` moves `is_admin()` out of the public API and tightens policies. It fixes the Supabase advisor warnings.
+
+To make yourself an admin after signing up, run `update public.profiles set is_admin = true where email = 'you@example.com';` in the SQL editor.
 
 Then sync the catalog:
 ```sh
