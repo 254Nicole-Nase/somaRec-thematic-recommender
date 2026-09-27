@@ -90,6 +90,31 @@ cd backend && pytest -q
 | GET | `/api/cbc?learning_area=&focus=&level=` | `{reviewed: [...], suggested: [...]}` |
 | POST | `/api/admin/reindex` | header `Authorization: Bearer $SOMAREC_ADMIN_TOKEN` |
 
+## Deployment
+
+Two parts, both deployed from `main`:
+
+| Part | Host | How |
+|---|---|---|
+| Website (React) | Vercel | Import the GitHub repo in Vercel; it redeploys on every push. `vercel.json` sets the build. |
+| Search API (Flask + model) | Hugging Face Space (free CPU, Docker) | `.github/workflows/deploy-api.yml` uploads `backend/` whenever it changes. |
+
+The API needs ~1 GB of Python packages and ~1 GB of RAM, which is more than Vercel functions allow, so it runs on a Space.
+
+**One-time setup**
+1. Hugging Face: create an access token with *write* permission (Settings → Access Tokens).
+2. GitHub repo → Settings → Secrets and variables → Actions → New repository secret: `HF_TOKEN` = that token.
+   Optionally add a variable `HF_SPACE` (default `nasengo/somarec-api`).
+3. GitHub → Actions → *Deploy search API* → Run workflow. The first build takes ~10 minutes.
+   Check `https://nasengo-somarec-api.hf.space/api/health`.
+4. Vercel → Add New → Project → import this repo. Under Environment Variables add:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY` (the publishable key)
+   - `VITE_API_URL` = `https://nasengo-somarec-api.hf.space`
+5. Supabase → Authentication → URL Configuration: set the Site URL to your Vercel address (e.g. `https://somarec.vercel.app`) so sign-up emails link back to the live site.
+
+Free Spaces sleep after 48 hours without visits; the first search after that takes a minute or two while it wakes up.
+
 ## Evaluating search quality
 
 `backend/evaluation/evaluate.py` compares TF-IDF, BM25, dense-only, hybrid, and the original MiniLM + IVF setup.
