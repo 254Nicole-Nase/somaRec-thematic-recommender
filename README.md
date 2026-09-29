@@ -45,11 +45,12 @@ npm run dev               # http://localhost:3000
 ```
 
 ### 2. Database
-Run the SQL in `supabase/migrations/` in the Supabase SQL editor. The latest migration:
-- adds catalog columns to `books` (language, themes, access type/licence …)
-- creates the `reviews` table with RLS
-- adds `status`/`source`/`reviewed_by` to `book_curriculum`
-- **deletes the old randomly generated CBC rows**
+Run the files in `supabase/migrations/` in filename order, either with `supabase db push` or in the SQL editor:
+1. `…_base_schema.sql` creates profiles (with a sign-up trigger), books, themes, reading lists and CBC alignment tables, all with RLS. It is safe on a project that already has them.
+2. `…_catalog_reviews_cbc.sql` adds catalog columns to `books` (language, themes, access type/licence …), creates `reviews`, and adds `status`/`source`/`reviewed_by` to `book_curriculum`. **It deletes the old randomly generated CBC rows.**
+3. `…_security_hardening.sql` moves `is_admin()` out of the public API and tightens policies. It fixes the Supabase advisor warnings.
+
+To make yourself an admin after signing up, run `update public.profiles set is_admin = true where email = 'you@example.com';` in the SQL editor.
 
 Then sync the catalog:
 ```sh
@@ -89,6 +90,31 @@ cd backend && pytest -q
 | GET | `/api/cbc?learning_area=&focus=&level=` | `{reviewed: [...], suggested: [...]}` |
 | POST | `/api/admin/reindex` | header `Authorization: Bearer $SOMAREC_ADMIN_TOKEN` |
 
+## Deployment
+
+Two parts, both deployed from `main`:
+
+| Part | Host | How |
+|---|---|---|
+| Website (React) | Vercel | Import the GitHub repo in Vercel; it redeploys on every push. `vercel.json` sets the build. |
+| Search API (Flask + model) | Hugging Face Space (free CPU, Docker) | `.github/workflows/deploy-api.yml` uploads `backend/` whenever it changes. |
+
+The API needs ~1 GB of Python packages and ~1 GB of RAM, which is more than Vercel functions allow, so it runs on a Space.
+
+**One-time setup**
+1. Hugging Face: create an access token with *write* permission (Settings → Access Tokens).
+2. GitHub repo → Settings → Secrets and variables → Actions → New repository secret: `HF_TOKEN` = that token.
+   Optionally add a variable `HF_SPACE` (default `nasengo/somarec-api`).
+3. GitHub → Actions → *Deploy search API* → Run workflow. The first build takes ~10 minutes.
+   Check `https://nasengo-somarec-api.hf.space/api/health`.
+4. Vercel → Add New → Project → import this repo. Under Environment Variables add:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY` (the publishable key)
+   - `VITE_API_URL` = `https://nasengo-somarec-api.hf.space`
+5. Supabase → Authentication → URL Configuration: set the Site URL to your Vercel address (e.g. `https://somarec.vercel.app`) so sign-up emails link back to the live site.
+
+Free Spaces sleep after 48 hours without visits; the first search after that takes a minute or two while it wakes up.
+
 ## Evaluating search quality
 
 `backend/evaluation/evaluate.py` compares TF-IDF, BM25, dense-only, hybrid, and the original MiniLM + IVF setup.
@@ -105,7 +131,7 @@ python backend/evaluation/evaluate.py pool --models sentence-transformers/paraph
 python backend/evaluation/evaluate.py score judgments_rater1.csv judgments_rater2.csv
 ```
 
-Keyword-only results (no model) are in `backend/evaluation/results_known_item_offline.md`.
+Results with the models are in `backend/evaluation/results_known_item.md` (summary and interpretation in `docs/REPORT_REVISIONS.md`, section 5.4). `backend/evaluation/judgments_template.csv` is the sheet for raters, already generated.
 
 ## Content and copyright
 

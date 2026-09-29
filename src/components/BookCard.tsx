@@ -301,7 +301,9 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
         {/* Hover overlay with themes and curriculum tags */}
         <div className={`absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center p-4 ${isListView ? 'rounded-l-lg' : 'rounded-t-lg'}`}>
           <div className="text-center">
-            <p className="text-primary-foreground text-sm mb-2">Themes:</p>
+            <p className="text-primary-foreground text-sm mb-2">
+              {book.themes?.length ? "Themes:" : "Themes not tagged yet"}
+            </p>
             <div className="flex flex-wrap gap-1 justify-center mb-2">
               {book.themes?.slice(0, 3).map((theme) => (
                 <Badge 

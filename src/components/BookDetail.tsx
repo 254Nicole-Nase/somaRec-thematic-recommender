@@ -491,7 +491,11 @@ export function BookDetail({
                     </Badge>
                   ))
                 ) : (
-                  <span className="text-muted-foreground">Not tagged yet: this book needs a fuller description before themes can be detected.</span>
+                  <span className="text-muted-foreground">
+                    {book.theme_source === "no_confident_theme"
+                      ? "Not tagged yet: no theme stood out clearly in this book's description."
+                      : "Not tagged yet: this book needs a fuller description before themes can be detected."}
+                  </span>
                 )}
               </div>
               {Array.isArray(book.themes) && book.themes.length > 0 && (
