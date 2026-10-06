@@ -1,0 +1,31 @@
+query_id,query,type,who
+T01,books about the Mau Mau uprising,thematic,student
+T02,stories about colonial land loss in Kenya,thematic,teacher
+T03,life in Nairobi slums,thematic,reader
+T04,novels about corruption after independence,thematic,teacher
+T05,women's struggles in a traditional society,thematic,teacher
+T06,a boy who wants to go to school,thematic,student
+T07,political prisoners and detention,thematic,reader
+T08,poetry about freedom and oppression,thematic,teacher
+T09,African folktales for young children,thematic,teacher
+T10,animal stories for children,thematic,teacher
+T11,books about language and African identity,thematic,student
+T12,crime thriller set in Kenya,thematic,reader
+T13,coming of age story,thematic,reader
+T14,Kenyan history for secondary school,thematic,teacher
+T15,love and marriage across generations,thematic,reader
+T16,migration and life abroad,thematic,reader
+T17,memoir of growing up in Kenya,thematic,reader
+T18,environment and wildlife conservation,thematic,teacher
+T19,unemployed youth in the city,thematic,student
+T20,religion and tradition in conflict,thematic,teacher
+T21,Swahili coast culture and poetry,thematic,reader
+T22,book about the white settlers in Kenya,thematic,reader
+T23,satire of Kenyan politics,thematic,reader
+T24,a play for drama class,thematic,teacher
+T25,ethnic conflict and reconciliation,thematic,teacher
+K01,hadithi za watoto,kiswahili,teacher
+K02,mashairi ya Kiswahili,kiswahili,teacher
+K03,riwaya kuhusu siasa na ufisadi,kiswahili,student
+K04,maisha ya vijijini,kiswahili,reader
+K05,haki na dhuluma,kiswahili,student

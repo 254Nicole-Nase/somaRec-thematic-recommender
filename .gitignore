@@ -1,0 +1,37 @@
+# Node dependencies
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build output
+.next/
+.turbo/
+
+# Supabase local artifacts
+.supabase/
+
+# Ignore pipeline cache
+somarec_data/cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/.cache/
+.pytest_cache/
+
+# Notebook / dev-server leftovers
+.ipynb_checkpoints/
+.vite/
+
+# Evaluation working files (generate with evaluate.py pool)
+backend/evaluation/judgments_*.csv
+!backend/evaluation/judgments_template.csv

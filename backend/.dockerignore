@@ -1,0 +1,6 @@
+.cache/
+__pycache__/
+**/__pycache__/
+tests/
+evaluation/judgments_*.csv
+.env
