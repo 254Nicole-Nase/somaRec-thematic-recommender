@@ -116,12 +116,14 @@ Results for 200 books (seed 42); the full table is in `backend/evaluation/result
 | BM25 keyword | 0.98 / 0.99 | 0.88 / 0.93 | 0.89 / 0.94 |
 | hybrid, multilingual MiniLM-L12 (**app default**) | 0.98 / 0.99 | 0.60 / 0.71 | 0.65 / 0.74 |
 | hybrid, multilingual-e5-small | 0.98 / 0.99 | 0.53 / 0.65 | 0.75 / 0.84 |
+| hybrid, gte-small (**deployed**) | 0.98 / 0.99 | 0.82 / 0.89 | 0.74 / 0.83 |
 
 What to say about it:
 - **IVF cost recall.** Same model, same books: the original IVF index finds the right book first 72% of the time for an exact title, exact search 79%. At a few hundred books exact search is instant, so IVF brings no benefit.
 - **Embeddings alone are bad at finding a book you can name.** Every dense-only system is well below plain BM25. That is why the app is hybrid, and why an exact title now always ranks first.
 - **Known-item search can't show what embeddings are for.** Hybrid still trails BM25 on partial titles and phrases, because this test rewards exact word overlap. The case for the model is thematic, cross-language queries ("growing up during the Mau Mau emergency", Kiswahili queries), which part (b) measures. How much weight the meaning score gets (`SOMAREC_SEMANTIC_WEIGHT`, default 0.5) should be set from part (b), not from this table.
-- **Model choice.** The two multilingual models are close; e5-small is better on description phrases, MiniLM-L12 on partial titles. Keep MiniLM-L12 unless part (b) says otherwise.
+- **Model choice.** The two multilingual models are close; e5-small is better on description phrases, MiniLM-L12 on partial titles.
+- **What is deployed, and why.** The live site runs search as a Supabase Edge Function with Supabase's built-in **gte-small** model, because free Python hosting large enough for the multilingual model is no longer available (Hugging Face Spaces now need a paid plan). gte-small is English-only. On this test it beats every multilingual model, and in spot checks it gives better English thematic results (e.g. *Me Katilili* for "women fighting for independence"). But it does not understand Kiswahili queries. "ufisadi serikalini" (corruption in government) finds *Lords of Impunity* with the multilingual model and unrelated Kiswahili titles with gte-small. Kiswahili keyword matching still works. Report this as a deliberate cost/coverage trade-off, and use part (b)'s Kiswahili queries to measure it.
 
 **Theme tagging.** Themes are now assigned by comparing each book with a short gloss of every theme and keeping a theme only when the book scores clearly above that theme's catalog average (z-score ≥ 1.5, at most 3). Raw similarity let broad themes win everywhere: in the original labels "Wealth and materialism" was on 163 of 490 books; with raw scores "Ethnic diversity" took over (98 books); with per-theme normalisation no theme is on more than 15 books. 235 books get themes; 203 have no usable description and 52 had no theme that stood out, and all of these are shown as "not tagged yet" rather than guessed. Report the tagger as a first pass that teachers correct, not as ground truth.
 

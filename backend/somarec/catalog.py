@@ -8,6 +8,7 @@ way every book is keyed by the same UUID the frontend and reading lists use.
 import json
 import logging
 import os
+import re
 from urllib.parse import quote_plus
 
 import pandas as pd
@@ -105,8 +106,10 @@ def where_to_find(row) -> list:
             label += f" ({row['license']})"
         links.append({"label": label, "url": row["access_url"], "kind": row["access_type"] or "find"})
     query = quote_plus(f"{row['title']} {row['author']}".strip())
-    if row["ol_work_key"]:
-        links.append({"label": "Open Library", "url": f"https://openlibrary.org/works/{row['ol_work_key']}", "kind": "find"})
+    # Keys come both as "OL123W" and "/works/OL123W".
+    work = re.sub(r"^/?works/", "", row["ol_work_key"] or "")
+    if work:
+        links.append({"label": "Open Library", "url": f"https://openlibrary.org/works/{work}", "kind": "find"})
     else:
         links.append({"label": "Open Library", "url": f"https://openlibrary.org/search?q={query}", "kind": "find"})
     isbn = row["isbn13"] or row["isbn10"]

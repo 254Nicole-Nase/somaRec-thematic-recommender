@@ -69,3 +69,12 @@ def test_reindex_requires_token(client, monkeypatch):
     assert client.post("/api/admin/reindex").status_code == 403
     monkeypatch.setenv("SOMAREC_ADMIN_TOKEN", "secret")
     assert client.post("/api/admin/reindex", headers={"Authorization": "Bearer wrong"}).status_code == 401
+
+
+def test_open_library_link_handles_both_work_key_forms():
+    from somarec.catalog import where_to_find
+
+    base = {"access_url": "", "access_type": "find", "license": "", "title": "T", "author": "A", "isbn13": "", "isbn10": ""}
+    for key in ("OL56150W", "/works/OL56150W"):
+        links = where_to_find({**base, "ol_work_key": key})
+        assert links[0]["url"] == "https://openlibrary.org/works/OL56150W"
