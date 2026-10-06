@@ -17,6 +17,15 @@ interface LoginModalProps {
   onLoginSuccess: (user: any) => void;
 }
 
+// Social sign-in buttons are shown only for providers switched on in Supabase
+// (Authentication > Sign In / Providers). List them in VITE_AUTH_PROVIDERS, e.g. "google,github".
+const PROVIDER_LABELS = { google: "Google", github: "GitHub" } as const;
+type OAuthProvider = keyof typeof PROVIDER_LABELS;
+const OAUTH_PROVIDERS = (import.meta.env.VITE_AUTH_PROVIDERS ?? "")
+  .split(",")
+  .map((p) => p.trim().toLowerCase())
+  .filter((p): p is OAuthProvider => p in PROVIDER_LABELS);
+
 export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps) {
   const [activeTab, setActiveTab] = useState("login");
   const [loading, setLoading] = useState(false);
@@ -158,17 +167,22 @@ export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps)
                 <h3>Sign in to your account</h3>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-col gap-2 mb-4">
-                  <Button variant="outline" onClick={() => signInWithProvider("google")}>Sign in with Google</Button>
-                  <Button variant="outline" onClick={() => signInWithProvider("github")}>Sign in with GitHub</Button>
-                </div>
-                <div className="flex items-center my-4">
-                  <div className="flex items-center w-full justify-center my-4">
-                    <div className="flex-grow border-t-2 border-gray-300" />
-                    <span className="mx-4 text-sm font-bold text-gray-500 tracking-widest whitespace-nowrap">OR</span>
-                    <div className="flex-grow border-t-2 border-gray-300" />
-                  </div>
-                </div>
+                {OAUTH_PROVIDERS.length > 0 && (
+                  <>
+                    <div className="flex flex-col gap-2 mb-4">
+                      {OAUTH_PROVIDERS.map((provider) => (
+                        <Button key={provider} variant="outline" onClick={() => signInWithProvider(provider)}>
+                          Sign in with {PROVIDER_LABELS[provider]}
+                        </Button>
+                      ))}
+                    </div>
+                    <div className="flex items-center w-full justify-center my-8">
+                      <div className="flex-grow border-t-2 border-gray-300" />
+                      <span className="mx-4 text-sm font-bold text-gray-500 tracking-widest whitespace-nowrap">OR</span>
+                      <div className="flex-grow border-t-2 border-gray-300" />
+                    </div>
+                  </>
+                )}
                 <form onSubmit={handleLogin} className="space-y-4">
                   <div>
                     <Label htmlFor="login-email">Email</Label>
@@ -222,17 +236,22 @@ export function LoginModal({ isOpen, onClose, onLoginSuccess }: LoginModalProps)
                 <h3>Create your account</h3>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-col gap-2 mb-4">
-                  <Button variant="outline" onClick={() => signInWithProvider("google")}>Sign up with Google</Button>
-                  <Button variant="outline" onClick={() => signInWithProvider("github")}>Sign up with GitHub</Button>
-                </div>
-                <div className="flex items-center my-4">
-                  <div className="flex items-center w-full justify-center my-4">
-                    <div className="flex-grow border-t-2 border-gray-300" />
-                    <span className="mx-4 text-sm font-bold text-gray-500 tracking-widest whitespace-nowrap">OR</span>
-                    <div className="flex-grow border-t-2 border-gray-300" />
-                  </div>
-                </div>
+                {OAUTH_PROVIDERS.length > 0 && (
+                  <>
+                    <div className="flex flex-col gap-2 mb-4">
+                      {OAUTH_PROVIDERS.map((provider) => (
+                        <Button key={provider} variant="outline" onClick={() => signInWithProvider(provider)}>
+                          Sign up with {PROVIDER_LABELS[provider]}
+                        </Button>
+                      ))}
+                    </div>
+                    <div className="flex items-center w-full justify-center my-8">
+                      <div className="flex-grow border-t-2 border-gray-300" />
+                      <span className="mx-4 text-sm font-bold text-gray-500 tracking-widest whitespace-nowrap">OR</span>
+                      <div className="flex-grow border-t-2 border-gray-300" />
+                    </div>
+                  </>
+                )}
                 <form onSubmit={handleSignup} className="space-y-4">
                   <div>
                     <Label htmlFor="signup-name">Full Name</Label>
