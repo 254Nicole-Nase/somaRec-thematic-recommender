@@ -112,11 +112,12 @@ function AppContent() {
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState<string | null>(null);
+  const [searchMode, setSearchMode] = useState<string | null>(null);
   const [displayedResults, setDisplayedResults] = useState(10); // Show top 10 initially
   const INITIAL_RESULTS = 10;
   const LOAD_MORE_INCREMENT = 10;
 
-  // Semantic search using FAISS-based API (Voronoi clustering)
+  // Hybrid search: BM25 keywords + multilingual embeddings, fused with RRF
   useEffect(() => {
     const performSemanticSearch = async () => {
       if (!searchQuery.trim()) {
@@ -140,7 +141,6 @@ function AppContent() {
         if (response.ok) {
           const data = await response.json();
           // Results are already sorted by similarity score (highest first)
-          // This is from FAISS IVF (Voronoi) clustering - most semantically similar first
           setSearchResults(Array.isArray(data) ? data : []);
         } else {
           const errorData = await response.json().catch(() => ({}));
@@ -148,7 +148,7 @@ function AppContent() {
           setSearchResults([]);
         }
       } catch (err) {
-        setSearchError("Failed to perform semantic search");
+        setSearchError("Search is unavailable. Is the SomaRec API running?");
         setSearchResults([]);
       } finally {
         setIsSearching(false);
@@ -272,7 +272,7 @@ function AppContent() {
               </h1>
               <p className="text-muted-foreground">
                 {isSearching ? (
-                  "Searching using FAISS Voronoi clustering..."
+                  "Searching..."
                 ) : searchError ? (
                   <span className="text-destructive">{searchError}</span>
                 ) : (
@@ -280,7 +280,11 @@ function AppContent() {
                     Showing {filteredBooks.length} of {booksToFilter.length} most relevant results
                     {searchQuery.trim() && (
                       <span className="ml-2 text-xs">
-                        (ranked by semantic similarity)
+                        {searchMode === "hybrid"
+                          ? "(ranked by keyword and meaning match)"
+                          : searchMode === "keyword"
+                            ? "(keyword match only: meaning-based search is offline)"
+                            : ""}
                       </span>
                     )}
                   </>
@@ -390,6 +394,10 @@ function AppContent() {
       setLoadingBooks(true);
       try {
         const API_URL = (import.meta as any).env.VITE_API_URL || "http://localhost:5000";
+        fetch(`${API_URL}/api/health`)
+          .then((r) => (r.ok ? r.json() : null))
+          .then((h) => setSearchMode(h?.mode ?? null))
+          .catch(() => setSearchMode(null));
         const response = await fetch(`${API_URL}/api/books`);
         if (response.ok) {
           const data = await response.json();
@@ -429,17 +437,19 @@ function AppContent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <Card className="p-6">
               <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl mb-2">500+</h3>
+              <h3 className="text-2xl mb-2">{books.length || "–"}</h3>
               <p className="text-muted-foreground">Kenyan Literary Works</p>
             </Card>
             <Card className="p-6">
               <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl mb-2">50+</h3>
-              <p className="text-muted-foreground">Featured Authors</p>
+              <h3 className="text-2xl mb-2">
+                {new Set(books.map((b) => b.author).filter(Boolean)).size || "–"}
+              </h3>
+              <p className="text-muted-foreground">Authors</p>
             </Card>
             <Card className="p-6">
               <Heart className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl mb-2">15</h3>
+              <h3 className="text-2xl mb-2">{allThemes.length || "–"}</h3>
               <p className="text-muted-foreground">Literary Themes</p>
             </Card>
           </div>

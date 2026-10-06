@@ -101,24 +101,29 @@ Add a subsection "5.4.x Retrieval evaluation" with two parts.
 
 **(a) Known-item search (automatic).** Run:
 ```
-python backend/evaluation/evaluate.py known-item \
-  --models all-MiniLM-L6-v2 sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 \
-  --original all-MiniLM-L6-v2 --out evaluation/results_known_item.md
+python backend/evaluation/evaluate.py known-item --sample 200 \
+  --models sentence-transformers/all-MiniLM-L6-v2 \
+           sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 intfloat/multilingual-e5-small \
+  --original sentence-transformers/all-MiniLM-L6-v2 --out backend/evaluation/results_known_item.md
 ```
-Numbers already produced without an embedding model (100 books, seed 42):
+Results for 200 books (seed 42); the full table is in `backend/evaluation/results_known_item.md`. Hit@1 / MRR:
 
-| query type | system | Hit@1 | Hit@10 | MRR |
-|---|---|---|---|---|
-| exact title | TF-IDF | 0.76 | 0.98 | 0.85 |
-| exact title | BM25 | 0.93 | 0.98 | 0.95 |
-| first two title words + author surname | TF-IDF | 0.50 | 0.97 | 0.65 |
-| first two title words + author surname | BM25 | 0.86 | 1.00 | 0.92 |
-| phrase from description | TF-IDF | 0.90 | 1.00 | 0.95 |
-| phrase from description | BM25 | 0.90 | 1.00 | 0.94 |
+| system | exact title | first two title words + surname | phrase from description |
+|---|---|---|---|
+| **original: MiniLM-L6 + FAISS IVF** | 0.72 / 0.77 | 0.48 / 0.57 | 0.44 / 0.53 |
+| same model, exact search (no IVF) | 0.79 / 0.84 | 0.50 / 0.61 | 0.46 / 0.55 |
+| TF-IDF | 0.77 / 0.87 | 0.50 / 0.65 | 0.88 / 0.93 |
+| BM25 keyword | 0.98 / 0.99 | 0.88 / 0.93 | 0.89 / 0.94 |
+| hybrid, multilingual MiniLM-L12 (**app default**) | 0.98 / 0.99 | 0.60 / 0.71 | 0.65 / 0.74 |
+| hybrid, multilingual-e5-small | 0.98 / 0.99 | 0.53 / 0.65 | 0.75 / 0.84 |
 
-Add the embedding rows from your run. The interesting comparisons are:
-- **original IVF MiniLM-L6 vs dense multilingual:** does the new model help?
-- **dense vs hybrid:** does adding BM25 fix title searches?
+What to say about it:
+- **IVF cost recall.** Same model, same books: the original IVF index finds the right book first 72% of the time for an exact title, exact search 79%. At a few hundred books exact search is instant, so IVF brings no benefit.
+- **Embeddings alone are bad at finding a book you can name.** Every dense-only system is well below plain BM25. That is why the app is hybrid, and why an exact title now always ranks first.
+- **Known-item search can't show what embeddings are for.** Hybrid still trails BM25 on partial titles and phrases, because this test rewards exact word overlap. The case for the model is thematic, cross-language queries ("growing up during the Mau Mau emergency", Kiswahili queries), which part (b) measures. How much weight the meaning score gets (`SOMAREC_SEMANTIC_WEIGHT`, default 0.5) should be set from part (b), not from this table.
+- **Model choice.** The two multilingual models are close; e5-small is better on description phrases, MiniLM-L12 on partial titles. Keep MiniLM-L12 unless part (b) says otherwise.
+
+**Theme tagging.** Themes are now assigned by comparing each book with a short gloss of every theme and keeping a theme only when the book scores clearly above that theme's catalog average (z-score ≥ 1.5, at most 3). Raw similarity let broad themes win everywhere: in the original labels "Wealth and materialism" was on 163 of 490 books; with raw scores "Ethnic diversity" took over (98 books); with per-theme normalisation no theme is on more than 15 books. 235 books get themes; 203 have no usable description and 52 had no theme that stood out, and all of these are shown as "not tagged yet" rather than guessed. Report the tagger as a first pass that teachers correct, not as ground truth.
 
 **(b) Thematic relevance (human judgments).** This answers research question iv.
 1. Run `evaluate.py pool --models …` to produce a shuffled sheet of the top 10 from every system for the 30 queries in `queries.csv`, which include 5 in Kiswahili.

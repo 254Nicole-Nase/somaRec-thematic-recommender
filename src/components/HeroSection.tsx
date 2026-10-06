@@ -63,11 +63,13 @@ export function HeroSection({ onThemeSelect, onSearchChange, quickThemes = [] }:
                 {quickThemes.map((theme) => (
                   <Badge
                     key={theme}
+                    asChild
                     variant="outline"
                     className="px-4 py-2 cursor-pointer border-2 border-primary/20 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 text-sm lg:text-base"
-                    onClick={() => onThemeSelect?.(theme)}
                   >
-                    {theme}
+                    <button type="button" onClick={() => onThemeSelect?.(theme)}>
+                      {theme}
+                    </button>
                   </Badge>
                 ))}
               </div>

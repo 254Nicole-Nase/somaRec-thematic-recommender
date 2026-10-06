@@ -5,7 +5,7 @@ they can be uploaded to Supabase (and reviewed/corrected there).
 
 Books whose description is too short are left untagged instead of guessed.
 
-Run:  python backend/pipeline/tag_themes.py [--min-score 0.30]
+Run:  python backend/pipeline/tag_themes.py [--min-z 1.5]
 """
 
 import argparse
@@ -22,11 +22,12 @@ from somarec.engine import SearchEngine  # noqa: E402
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--min-score", type=float, default=None, help="similarity threshold (default 0.30)")
+    parser.add_argument("--min-z", type=float, default=None,
+                        help="how far above a theme's catalog average a book must score (default 1.5)")
     parser.add_argument("--model", default=None, help="sentence-transformers model name")
     args = parser.parse_args()
-    if args.min_score is not None:
-        os.environ["SOMAREC_THEME_MIN_SCORE"] = str(args.min_score)
+    if args.min_z is not None:
+        os.environ["SOMAREC_THEME_MIN_Z"] = str(args.min_z)
 
     catalog = load_csv()
     engine = SearchEngine(catalog, encoder=SentenceEncoder(args.model))
@@ -39,7 +40,8 @@ def main():
     out.to_csv(CATALOG_CSV, index=False)
 
     tagged = (out["theme_source"] == "model").sum()
-    print(f"Tagged {tagged} of {len(out)} books; {(out['theme_source'] == 'insufficient_text').sum()} lack enough text.")
+    print(f"Tagged {tagged} of {len(out)} books; {(out['theme_source'] == 'insufficient_text').sum()} lack enough text, "
+          f"{(out['theme_source'] == 'no_confident_theme').sum()} have text but no theme stood out.")
 
 
 if __name__ == "__main__":
