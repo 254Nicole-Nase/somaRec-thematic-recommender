@@ -153,7 +153,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   // OAuth sign-in logic
   const signInWithProvider = async (provider: "google" | "github") => {
     try {
-      const { error } = await supabase.auth.signInWithOAuth({ provider });
+      // Come back to the site the person started from (production or a preview deployment).
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider,
+        options: { redirectTo: window.location.origin },
+      });
       if (error) throw error;
       // User will be redirected to provider and back
     } catch (error) {

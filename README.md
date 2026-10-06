@@ -112,6 +112,12 @@ The Flask API in `backend/` is still the reference implementation for local deve
 2. Supabase → Authentication → URL Configuration: set the Site URL to your Vercel address, so sign-up emails link to the live site.
 3. To let GitHub redeploy the search function, create a token at supabase.com/dashboard/account/tokens. Save it as the `SUPABASE_ACCESS_TOKEN` repository secret. Manual alternative: `supabase functions deploy somarec-api --no-verify-jwt`.
 
+**Google / GitHub sign-in (optional).** Email sign-up works out of the box. To add "Sign in with Google":
+1. In Google Cloud Console → APIs & Services → Credentials, create an *OAuth client ID* (type: Web application). Add `https://<project-ref>.supabase.co/auth/v1/callback` as the authorised redirect URI.
+2. In Supabase → Authentication → Sign In / Providers → Google, switch it on and paste the client ID and secret.
+3. In Supabase → Authentication → URL Configuration, add your site addresses (e.g. `https://somarec.vercel.app/**`) to the redirect URLs.
+4. In Vercel, set `VITE_AUTH_PROVIDERS=google`, then redeploy. The button appears only for providers listed there. GitHub works the same way, using a GitHub OAuth App.
+
 Free Supabase projects pause after a week with no activity; restore them from the dashboard.
 
 ## Evaluating search quality
