@@ -13,12 +13,38 @@ interface FeaturedBooksProps {
 
 
 
+const FEATURED_COUNT = 12;
+
+// A daily-rotating showcase: books with a cover, a real description and themes,
+// one per author, so the home page isn't just the first authors alphabetically.
+function pickFeatured(all: any[]): any[] {
+  const complete = all.filter(
+    (b) => b.cover_url && (b.description || "").length >= 80 && (b.themes || []).length > 0,
+  );
+  const pool = complete.length >= FEATURED_COUNT ? complete : all;
+  const day = Math.floor(Date.now() / 86_400_000);
+  const score = (id: string) => {
+    let h = day;
+    for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+    return h;
+  };
+  const seenAuthors = new Set<string>();
+  const picked = [];
+  for (const book of [...pool].sort((a, b) => score(a.id) - score(b.id))) {
+    if (seenAuthors.has(book.author)) continue;
+    seenAuthors.add(book.author);
+    picked.push(book);
+    if (picked.length >= FEATURED_COUNT) break;
+  }
+  return picked;
+}
+
 export function FeaturedBooks({ onThemeClick, onBookClick, onViewAll }: FeaturedBooksProps) {
   const [books, setBooks] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const booksPerView = 3;
+  const booksPerView = 4;
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -32,7 +58,7 @@ export function FeaturedBooks({ onThemeClick, onBookClick, onViewAll }: Featured
           throw new Error('Failed to load books from API.');
         }
         const data = await response.json();
-        setBooks(data || []);
+        setBooks(pickFeatured(Array.isArray(data) ? data : []));
       } catch (err: any) {
         setError(err.message);
         setBooks([]);
@@ -91,7 +117,7 @@ export function FeaturedBooks({ onThemeClick, onBookClick, onViewAll }: Featured
         ) : error ? (
           <div className="text-center py-8 text-red-500">{error}</div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
             {visibleBooks.map((book) => {
               const key = book.id || `${book.title}-${book.author}-${book.year}`;
               return (

@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import type { User as AuthUser } from "@supabase/supabase-js";
 import { supabase } from "../utils/supabase/client";
 
 interface User {
@@ -24,85 +25,64 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user has an active session
-    const checkSession = async () => {
+    let active = true;
+
+    const loadProfile = async (authUser: AuthUser) => {
+      const fallback: User = {
+        id: authUser.id,
+        email: authUser.email || "",
+        name: authUser.user_metadata?.name || authUser.user_metadata?.full_name || "User",
+        role: authUser.user_metadata?.role || "reader",
+      };
       try {
-        const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user) {
-          // Try to fetch user profile from profiles table (RLS will ensure user can only see their own)
-          try {
-            const { data: profile, error: profileError } = await supabase
-              .from('profiles')
-              .select('id, email, name, role, is_admin')
-              .eq('id', session.user.id)
-              .single();
-            
-            if (profile && !profileError) {
-              // Use profile from database
-              setUser({
-                id: session.user.id,
-                email: profile.email || session.user.email || '',
-                name: profile.name || session.user.user_metadata?.name || 'User',
-                role: (profile.is_admin ? 'admin' : profile.role) || session.user.user_metadata?.role || 'reader'
-              });
-            } else {
-              // Fallback to user metadata if profile doesn't exist
-              console.warn('Profile not found, using user metadata:', profileError);
-              setUser({
-                id: session.user.id,
-                email: session.user.email || '',
-                name: session.user.user_metadata?.name || session.user.user_metadata?.full_name || 'User',
-                role: session.user.user_metadata?.role || 'reader'
-              });
-            }
-          } catch (fetchError) {
-            console.warn('Error fetching profile, using fallback user data:', fetchError);
-            // Fallback to user metadata
-            setUser({
-              id: session.user.id,
-              email: session.user.email || '',
-              name: session.user.user_metadata?.name || session.user.user_metadata?.full_name || 'User',
-              role: session.user.user_metadata?.role || 'reader'
-            });
-          }
+        // RLS lets a user read only their own profile row.
+        const { data: profile, error } = await supabase
+          .from("profiles")
+          .select("id, email, name, role, is_admin")
+          .eq("id", authUser.id)
+          .single();
+        if (!active) return;
+        if (profile && !error) {
+          setUser({
+            id: authUser.id,
+            email: profile.email || fallback.email,
+            name: profile.name || fallback.name,
+            role: (profile.is_admin ? "admin" : profile.role) || fallback.role,
+          });
+        } else {
+          console.warn("Profile not found, using account details:", error);
+          setUser(fallback);
         }
       } catch (error) {
-        console.error('Error checking session:', error);
+        console.warn("Error fetching profile, using account details:", error);
+        if (active) setUser(fallback);
       } finally {
-        setLoading(false);
+        if (active) setLoading(false);
       }
     };
 
-    checkSession();
-
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      if (event === 'SIGNED_OUT') {
+    // Fires INITIAL_SESSION on page load, then SIGNED_IN / TOKEN_REFRESHED / SIGNED_OUT.
+    // The callback must not await Supabase calls: supabase-js holds its auth lock while
+    // it runs (for example when it refreshes the token after the tab comes back into
+    // view), so a query here deadlocks every later Supabase call, including sign-in.
+    // Profile loading is therefore deferred until after the callback returns.
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (!session?.user) {
         setUser(null);
-      } else if (event === 'SIGNED_IN' && session?.user) {
-        // Refresh user profile when signed in
-        try {
-          const { data: profile } = await supabase
-            .from('profiles')
-            .select('id, email, name, role, is_admin')
-            .eq('id', session.user.id)
-            .single();
-          
-          if (profile) {
-            setUser({
-              id: session.user.id,
-              email: profile.email || session.user.email || '',
-              name: profile.name || session.user.user_metadata?.name || 'User',
-              role: (profile.is_admin ? 'admin' : profile.role) || session.user.user_metadata?.role || 'reader'
-            });
-          }
-        } catch (error) {
-          console.warn('Error refreshing profile on sign in:', error);
-        }
+        setLoading(false);
+        return;
       }
+      if (event === "TOKEN_REFRESHED") return; // same person, nothing to reload
+      const authUser = session.user;
+      setTimeout(() => {
+        if (active) loadProfile(authUser);
+      }, 0);
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
   }, []);
 
   const login = async (userData: any) => {
