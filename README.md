@@ -92,28 +92,27 @@ cd backend && pytest -q
 
 ## Deployment
 
-Two parts, both deployed from `main`:
+Everything runs on free tiers, deployed from `main`:
 
 | Part | Host | How |
 |---|---|---|
 | Website (React) | Vercel | Import the GitHub repo in Vercel; it redeploys on every push. `vercel.json` sets the build. |
-| Search API (Flask + model) | Hugging Face Space (free CPU, Docker) | `.github/workflows/deploy-api.yml` uploads `backend/` whenever it changes. |
+| Search API | Supabase Edge Function `somarec-api` | `supabase/functions/somarec-api/`; `.github/workflows/deploy-functions.yml` deploys it when it changes. |
+| Data, accounts, reviews | Supabase (Postgres) | `supabase/migrations/` |
 
-The API needs ~1 GB of Python packages and ~1 GB of RAM, which is more than Vercel functions allow, so it runs on a Space.
+The Edge Function serves the same `/api/*` routes as `backend/app.py`, ported to TypeScript (`engine.ts`, tested against the Python engine). It uses Supabase's built-in **gte-small** embedding model, which is English-only: Kiswahili queries are matched by keywords, not by meaning. Book vectors are stored in `book_embeddings`; new or edited books are embedded automatically, a few per request.
+
+The Flask API in `backend/` is still the reference implementation for local development, evaluation and the data pipeline. `backend/Dockerfile` can run it on any container host that offers about 1 GB of RAM.
 
 **One-time setup**
-1. Hugging Face: create an access token with *write* permission (Settings → Access Tokens).
-2. GitHub repo → Settings → Secrets and variables → Actions → New repository secret: `HF_TOKEN` = that token.
-   Optionally add a variable `HF_SPACE` (default `nasengo/somarec-api`).
-3. GitHub → Actions → *Deploy search API* → Run workflow. The first build takes ~10 minutes.
-   Check `https://nasengo-somarec-api.hf.space/api/health`.
-4. Vercel → Add New → Project → import this repo. Under Environment Variables add:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY` (the publishable key)
-   - `VITE_API_URL` = `https://nasengo-somarec-api.hf.space`
-5. Supabase → Authentication → URL Configuration: set the Site URL to your Vercel address (e.g. `https://somarec.vercel.app`) so sign-up emails link back to the live site.
+1. Vercel → Add New → Project → import this repo. Add these environment variables:
+   - `VITE_SUPABASE_URL` = `https://<project-ref>.supabase.co`
+   - `VITE_SUPABASE_ANON_KEY` = the publishable key
+   - `VITE_API_URL` = `https://<project-ref>.supabase.co/functions/v1/somarec-api`
+2. Supabase → Authentication → URL Configuration: set the Site URL to your Vercel address, so sign-up emails link to the live site.
+3. To let GitHub redeploy the search function, create a token at supabase.com/dashboard/account/tokens. Save it as the `SUPABASE_ACCESS_TOKEN` repository secret. Manual alternative: `supabase functions deploy somarec-api --no-verify-jwt`.
 
-Free Spaces sleep after 48 hours without visits; the first search after that takes a minute or two while it wakes up.
+Free Supabase projects pause after a week with no activity; restore them from the dashboard.
 
 ## Evaluating search quality
 

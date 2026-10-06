@@ -30,3 +30,12 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+
+  search-function:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --experimental-transform-types --no-warnings --test supabase/functions/somarec-api/engine.test.ts

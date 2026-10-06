@@ -73,7 +73,7 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
           }
           // Fallback to backend API for themes
           try {
-            const themesRes = await fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/themes`, 3000);
+            const themesRes = await fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/themes`, 15000);
             if (themesRes.ok) {
               const themesJson = await themesRes.json();
               setThemes(Array.isArray(themesJson) ? themesJson : []);
@@ -89,8 +89,8 @@ export function FilterSidebar({ selectedFilters, onFilterChange, onClearFilters 
         // Languages and genres from backend API (with timeout and error handling)
         try {
           const [languagesRes, genresRes] = await Promise.allSettled([
-            fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/languages`, 3000),
-            fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/genres`, 3000),
+            fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/languages`, 15000),
+            fetchWithTimeout(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/genres`, 15000),
           ]);
           
           // Handle languages
