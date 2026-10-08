@@ -33,7 +33,7 @@ function Stars({ value, onChange, size = 5 }: { value: number; onChange?: (v: nu
           aria-label={`${n} star${n > 1 ? "s" : ""}`}
           className={onChange ? "cursor-pointer" : "cursor-default"}
         >
-          <Star className={`${dims} ${n <= value ? "fill-amber-400 text-amber-400" : "text-muted-foreground"}`} />
+          <Star className={`${dims} ${n <= value ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground"}`} />
         </button>
       ))}
     </div>

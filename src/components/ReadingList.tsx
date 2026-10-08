@@ -50,6 +50,12 @@ interface SavedBook {
   coverImage?: string;
 }
 
+const STATUS_LABELS: Record<string, string> = {
+  want_to_read: "Want to read",
+  reading: "Reading",
+  completed: "Completed",
+};
+
 export function ReadingList({ onThemeClick, onBookClick }: { 
   onThemeClick?: (theme: string) => void;
   onBookClick?: (bookId: string) => void;
@@ -57,6 +63,30 @@ export function ReadingList({ onThemeClick, onBookClick }: {
   const { user } = useUser();
   const [lists, setLists] = useState<ReadingList[]>([]);
   const [savedBooks, setSavedBooks] = useState<SavedBook[]>([]);
+  // Books per list ("default" = My Library), counted across all lists, not just the one on screen.
+  const [listCounts, setListCounts] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    if (!user?.id) return;
+    let cancelled = false;
+    supabase
+      .from('reading_lists')
+      .select('list_id')
+      .eq('user_id', user.id)
+      .not('book_id', 'is', null)
+      .then(({ data }) => {
+        if (cancelled || !data) return;
+        const counts: Record<string, number> = {};
+        for (const row of data as { list_id: string | null }[]) {
+          const key = row.list_id ?? 'default';
+          counts[key] = (counts[key] ?? 0) + 1;
+        }
+        setListCounts(counts);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [user?.id, savedBooks]);
   const [selectedList, setSelectedList] = useState<string>("all");
   const [selectedStatus, setSelectedStatus] = useState<string>("all"); // Track selected status tab
   const [loading, setLoading] = useState(true);
@@ -429,7 +459,7 @@ export function ReadingList({ onThemeClick, onBookClick }: {
         // Reload to revert optimistic update (without showing loading)
         loadSavedBooks(false);
       } else {
-        setSuccess(`Book marked as ${status.replace('_', ' ')}`);
+        setSuccess(`Book marked as ${(STATUS_LABELS[status] ?? status).toLowerCase()}`);
         setTimeout(() => setSuccess(null), 3000);
       }
     } catch (err) {
@@ -657,7 +687,7 @@ export function ReadingList({ onThemeClick, onBookClick }: {
                   onClick={() => setSelectedList('all')}
                 >
                   <BookOpen className="h-4 w-4 mr-2" />
-                  All Books ({savedBooks.length})
+                  All Books ({Object.values(listCounts).reduce((a, b) => a + b, 0)})
                 </Button>
                 
                 {lists.map(list => (
@@ -668,7 +698,7 @@ export function ReadingList({ onThemeClick, onBookClick }: {
                     onClick={() => setSelectedList(list.id)}
                   >
                     <Heart className="h-4 w-4 mr-2" />
-                    {list.name} ({list.bookCount})
+                    {list.name} ({listCounts[list.id] ?? 0})
                   </Button>
                 ))}
               </CardContent>
@@ -707,7 +737,7 @@ export function ReadingList({ onThemeClick, onBookClick }: {
                                 className="flex items-center gap-1"
                               >
                                 {getStatusIcon(book.status)}
-                                {book.status.replace('_', ' ')}
+                                {STATUS_LABELS[book.status] ?? book.status}
                               </Badge>
                             </div>
                             
@@ -852,7 +882,7 @@ export function ReadingList({ onThemeClick, onBookClick }: {
                               </div>
                               <Badge variant={getStatusColor(book.status)} className="flex items-center gap-1">
                                 {getStatusIcon(book.status)}
-                                {book.status.replace('_', ' ')}
+                                {STATUS_LABELS[book.status] ?? book.status}
                               </Badge>
                             </div>
                             
