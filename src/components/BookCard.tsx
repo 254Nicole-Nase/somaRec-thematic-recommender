@@ -177,10 +177,28 @@ export function BookCard({ book, onThemeClick, onBookClick, variant = "grid", on
           }
           // If targetListId is 'default' or null, list_id will be NULL (default "My Library")
           
+          // Don't add the same book to the same list twice.
+          let existing = supabase
+            .from('reading_lists')
+            .select('id')
+            .eq('user_id', insertData.user_id)
+            .eq('book_id', insertData.book_id);
+          existing = insertData.list_id ? existing.eq('list_id', insertData.list_id) : existing.is('list_id', null);
+          const { data: already } = await existing.limit(1);
+          if (already && already.length > 0) {
+            alert('This book is already in that reading list.');
+            return;
+          }
+
           const { error } = await supabase
             .from('reading_lists')
             .insert(insertData);
           
+          if (error?.code === '23505') {
+            // Unique index reading_lists_one_book_per_list: already in this list.
+            alert('This book is already in that reading list.');
+            return;
+          }
           if (error) {
             console.error('Supabase insert error:', error);
             // Log full error details for debugging
