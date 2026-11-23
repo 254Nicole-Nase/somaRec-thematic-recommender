@@ -52,12 +52,7 @@ Run the files in `supabase/migrations/` in filename order, either with `supabase
 
 To make yourself an admin after signing up, run `update public.profiles set is_admin = true where email = 'you@example.com';` in the SQL editor.
 
-Then sync the catalog:
-```sh
-python backend/upload_books_to_supabase.py          # dry run
-python backend/upload_books_to_supabase.py --apply
-```
-Books already in Supabase keep their ids and get updated metadata. If your database had books before this change, set `SOMAREC_CATALOG_SOURCE=supabase` so the API serves the same ids.
+For catalog changes, run the [offline import preview](docs/IMPORT_PREVIEW.md) against a saved baseline first. The legacy uploader still has a separate write option. It can bypass review safeguards, so keep it outside the preview workflow. If your database already has books, set `SOMAREC_CATALOG_SOURCE=supabase` so the API serves the same IDs.
 
 ### 3. Search API
 ```sh

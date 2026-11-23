@@ -52,7 +52,7 @@ Start with **teachers and book lovers**. Teachers bring whole classes, and book 
 ## Roadmap
 
 ### Phase 1: Make the catalog trustworthy (next 4–6 weeks)
-- [ ] Run the multilingual model locally: `pipeline/tag_themes.py`, then `upload_books_to_supabase.py --apply`.
+- [ ] Run the multilingual tagger locally, then review the field-level diff with the [offline import preview](IMPORT_PREVIEW.md).
 - [ ] Fix bad descriptions. The Google Books enrichment matched some books to the wrong record. Add an admin "flag wrong description" button, and prefer Open Library work descriptions.
 - [ ] Decide the inclusion rule (Kenyan author, or set in Kenya) and review the ~40 borderline records via `curation_status`.
 - [ ] Recruit 2–3 teachers to review CBC alignments for the 30–50 most-taught books (KICD approved lists and set books first), and add them to `book_curriculum` with `status = 'reviewed'`.
