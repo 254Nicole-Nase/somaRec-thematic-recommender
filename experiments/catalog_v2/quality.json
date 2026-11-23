@@ -1,0 +1,1327 @@
+{
+  "confirmed_legacy_bad_enrichment": [
+    {
+      "legacy_id": "2e82404b-146f-5806-84cc-45ff33b3809e",
+      "source": "https://books.google.com/books?id=ywEKyvOO_S0C",
+      "title": "Juices"
+    },
+    {
+      "legacy_id": "32f01a5b-6786-56cc-9d74-7c3182193b2d",
+      "source": "https://books.google.com/books?id=440TmWXToLAC",
+      "title": "Olduvai Gorge"
+    }
+  ],
+  "counts": {
+    "corroborated": 30,
+    "editions": 97,
+    "forms": {
+      "children": 3,
+      "drama": 1,
+      "fiction": 13,
+      "memoir": 5,
+      "nonfiction": 4,
+      "poetry": 4
+    },
+    "legacy_overlap_works": 23,
+    "multiple_legacy_candidates": 1,
+    "people": 17,
+    "quarantined": 2,
+    "with_edition_languages": 25,
+    "with_editions": 25,
+    "with_isbn": 23,
+    "works": 30
+  },
+  "cross_work_identifier_collisions": {},
+  "duplicate_edition_candidates": {
+    "9780143106692": [
+      "ol:OL25237962M",
+      "ol:OL25237963M"
+    ],
+    "9780143106760": [
+      "ol:OL25238395M",
+      "ol:OL25238396M"
+    ],
+    "9780307263483": [
+      "ol:OL15606734M",
+      "ol:OL9652384M"
+    ],
+    "9780307275202": [
+      "ol:OL23189567M",
+      "ol:OL9819535M"
+    ],
+    "9780316337229": [
+      "ol:OL23242823M",
+      "ol:OL2707574M"
+    ],
+    "9780435080167": [
+      "ol:OL2711888M",
+      "ol:OL48115396M"
+    ],
+    "9780435900366": [
+      "ol:OL22244130M",
+      "ol:OL22589200M"
+    ],
+    "9780852555019": [
+      "ol:OL22147032M",
+      "ol:OL8281826M"
+    ],
+    "9789966463609": [
+      "ol:OL13212044M",
+      "ol:OL19946974M"
+    ]
+  },
+  "findings": [
+    {
+      "issues": [
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL10243W"
+      ],
+      "rejected_editions": [
+        "OL10248555M",
+        "OL21943020M",
+        "OL22004530M",
+        "OL35311069M",
+        "OL45875858M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q7171660"
+      ],
+      "work_id": "petals-of-blood"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL10242W",
+        "OL43236052W",
+        "OL46508917W"
+      ],
+      "rejected_editions": [
+        "OL24711322M",
+        "OL35615011M",
+        "OL35628423M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q4657149"
+      ],
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL10246W",
+        "OL43330382W"
+      ],
+      "rejected_editions": [
+        "OL12681794M",
+        "OL28548523M",
+        "OL35377526M",
+        "OL47270993M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q7760989"
+      ],
+      "work_id": "the-river-between"
+    },
+    {
+      "issues": [
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL10245W"
+      ],
+      "rejected_editions": [
+        "OL18102087M",
+        "OL26347916M",
+        "OL36651994M",
+        "OL47127097M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q3953479"
+      ],
+      "work_id": "weep-not-child"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL19974522W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "dust"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q109535196"
+      ],
+      "work_id": "the-dragonfly-sea"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "open_library_identity_unresolved"
+      ],
+      "open_library_title_author_candidates": [
+        "OL1790002W",
+        "OL25097406W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q125423260"
+      ],
+      "work_id": "coming-to-birth"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "open_library_identity_unresolved"
+      ],
+      "open_library_title_author_candidates": [
+        "OL3830683W",
+        "OL12836036W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [
+        "Q141608696"
+      ],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q125686757"
+      ],
+      "work_id": "going-down-river-road"
+    },
+    {
+      "issues": [
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL24509246W"
+      ],
+      "rejected_editions": [
+        "OL34182671M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q132339845"
+      ],
+      "work_id": "the-house-of-rust"
+    },
+    {
+      "issues": [
+        "provider_contributor_roles_unresolved",
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL1013174W"
+      ],
+      "rejected_editions": [
+        "OL47276912M",
+        "OL62674326M",
+        "OL9202032M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "the-river-and-the-source"
+    },
+    {
+      "issues": [
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL17582696W"
+      ],
+      "rejected_editions": [
+        "OL35377543M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q17019582"
+      ],
+      "work_id": "black-star-nairobi"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL7086421W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "sauti-ya-dhiki"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL2615858W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "juices"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL2615855W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "silent-voices"
+    },
+    {
+      "issues": [
+        "wikidata_edition_not_work"
+      ],
+      "open_library_title_author_candidates": [
+        "OL5783602W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [
+        "Q90900593"
+      ],
+      "wikidata_title_author_candidates": [],
+      "work_id": "maua-kwenye-jua-la-asubuhi"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL3451029W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q125548023"
+      ],
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "issues": [
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL19393891W"
+      ],
+      "rejected_editions": [
+        "OL341560M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q7513978"
+      ],
+      "work_id": "siku-njema"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL16689060W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "kidagaa-kimemwozea"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL7197414W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "jua-na-upepo"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "open_library_identity_unresolved",
+        "no_unambiguous_provider_match"
+      ],
+      "open_library_title_author_candidates": [
+        "OL3694391W",
+        "OL12204173W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [
+        "OL3694381W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "quarantined",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "greedy-zebra"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL3694392W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [
+        "OL3694382W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "hot-hippo"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "open_library_identity_unresolved",
+        "no_unambiguous_provider_match"
+      ],
+      "open_library_title_author_candidates": [
+        "OL3694389W",
+        "OL24856740W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [
+        "OL3694386W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "quarantined",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "tricky-tortoise"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL16485105W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "laughing-giraffe"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates"
+      ],
+      "open_library_title_author_candidates": [
+        "OL4436882W",
+        "OL38021151W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q7882412"
+      ],
+      "work_id": "unbowed"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "open_library_identity_unresolved"
+      ],
+      "open_library_title_author_candidates": [
+        "OL16645421W",
+        "OL21180102W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q57315581"
+      ],
+      "work_id": "one-day-i-will-write-about-this-place"
+    },
+    {
+      "issues": [
+        "provider_contributor_roles_unresolved",
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL16599914W"
+      ],
+      "rejected_editions": [
+        "OL27365324M",
+        "OL27790865M",
+        "OL47221329M",
+        "OL59250227M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q141582963"
+      ],
+      "work_id": "in-the-house-of-the-interpreter"
+    },
+    {
+      "issues": [
+        "provider_contributor_roles_unresolved",
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL15189963W"
+      ],
+      "rejected_editions": [
+        "OL26115289M",
+        "OL27487717M",
+        "OL33297837M",
+        "OL47221334M",
+        "OL47221350M",
+        "OL60621916M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q123824686"
+      ],
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL32308684W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [],
+      "work_id": "mirrors-of-my-life"
+    },
+    {
+      "issues": [
+        "open_library_work_candidates",
+        "wikidata_edition_not_work"
+      ],
+      "open_library_title_author_candidates": [
+        "OL4436879W",
+        "OL18775028W",
+        "OL26197370W",
+        "OL15599397W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [
+        "Q42187778"
+      ],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [
+        "Q134430393"
+      ],
+      "wikidata_title_author_candidates": [],
+      "work_id": "the-challenge-for-africa"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL15909202W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q141201136"
+      ],
+      "work_id": "replenishing-the-earth"
+    },
+    {
+      "issues": [
+        "provider_contributor_roles_unresolved",
+        "edition_identity_or_isbn_needs_review"
+      ],
+      "open_library_title_author_candidates": [
+        "OL7986924W"
+      ],
+      "rejected_editions": [
+        "OL35425805M",
+        "OL44235073M",
+        "OL47152118M",
+        "OL47221186M"
+      ],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q17006875"
+      ],
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "issues": [],
+      "open_library_title_author_candidates": [
+        "OL15286149W"
+      ],
+      "rejected_editions": [],
+      "rejected_open_library_search_hits": [],
+      "rejected_wikidata_candidates": [],
+      "request_errors": [],
+      "status": "included",
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q141582773"
+      ],
+      "work_id": "something-torn-and-new"
+    }
+  ],
+  "work_comparison": [
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [
+        {
+          "author": "Ngũgĩ wa Thiong'o",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "0f29d741-0543-5e50-8e23-43d5f43638dc",
+          "language": "English",
+          "language_source": "curated",
+          "title": "Petals of Blood"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Petals of Blood",
+      "v2_editions": 7,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "petals-of-blood"
+    },
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [
+        {
+          "author": "Ngũgĩ wa Thiong'o",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "180644e1-cddb-531c-ad77-445f731a690b",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "A Grain of Wheat"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "A Grain of Wheat",
+      "v2_editions": 9,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [
+        {
+          "author": "Ngũgĩ wa Thiong'o",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "389ebafe-c4b8-5fed-a76c-40c5f0a5e66d",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "The River Between"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "The River Between",
+      "v2_editions": 8,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "the-river-between"
+    },
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [
+        {
+          "author": "Ngũgĩ wa Thiong'o",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "8f5c0b1b-2dfc-5cc8-86bb-002c07433950",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "Weep Not, Child"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Weep Not, Child",
+      "v2_editions": 8,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "weep-not-child"
+    },
+    {
+      "author": "Yvonne Adhiambo Owuor",
+      "legacy_candidates": [
+        {
+          "author": "Yvonne Adhiambo Owuor",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "86861147-6018-5346-92ea-4673e0e436cb",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "Dust"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Dust",
+      "v2_editions": 6,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": true,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "dust"
+    },
+    {
+      "author": "Yvonne Adhiambo Owuor",
+      "legacy_candidates": [
+        {
+          "author": "Yvonne Adhiambo Owuor",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "60226a8f-7a51-52ba-8f72-0b32dd2c952a",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "Dragonfly Sea"
+        },
+        {
+          "author": "Yvonne Adhiambo Owuor",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "5518c25a-782b-57ac-9901-5e06b133ca71",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "The Dragonfly Sea"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "The Dragonfly Sea",
+      "v2_editions": 0,
+      "v2_has_isbn": false,
+      "v2_has_synopsis": false,
+      "v2_languages": [],
+      "work_id": "the-dragonfly-sea"
+    },
+    {
+      "author": "Marjorie Oludhe Macgoye",
+      "legacy_candidates": [
+        {
+          "author": "Marjorie Oludhe Macgoye",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "591c043c-4e7d-5849-8983-90c4edc0bdd0",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "Coming to birth"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Coming to Birth",
+      "v2_editions": 0,
+      "v2_has_isbn": false,
+      "v2_has_synopsis": false,
+      "v2_languages": [],
+      "work_id": "coming-to-birth"
+    },
+    {
+      "author": "Meja Mwangi",
+      "legacy_candidates": [
+        {
+          "author": "Meja Mwangi",
+          "genre": null,
+          "has_isbn": true,
+          "has_synopsis": true,
+          "id": "d8e6da9c-33c5-5413-b0a4-efd338c5c438",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "Going Down River Road"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Going Down River Road",
+      "v2_editions": 0,
+      "v2_has_isbn": false,
+      "v2_has_synopsis": false,
+      "v2_languages": [],
+      "work_id": "going-down-river-road"
+    },
+    {
+      "author": "Khadija Abdalla Bajaber",
+      "legacy_candidates": [
+        {
+          "author": "Khadija Abdalla Bajaber",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "0ed0461d-bc86-5843-802a-7b9e786e46f8",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "The House of Rust"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "The House of Rust",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "the-house-of-rust"
+    },
+    {
+      "author": "Margaret A. Ogola",
+      "legacy_candidates": [],
+      "mapping_status": "no_title_author_candidate",
+      "title": "The River and the Source",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": true,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "the-river-and-the-source"
+    },
+    {
+      "author": "Mũkoma wa Ngũgĩ",
+      "legacy_candidates": [
+        {
+          "author": "Mũkoma wa Ngũgĩ",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "a958aad8-7c61-552f-a231-505b291bdd7d",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "Black Star Nairobi"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Black Star Nairobi",
+      "v2_editions": 3,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "black-star-nairobi"
+    },
+    {
+      "author": "Abdilatif Abdalla",
+      "legacy_candidates": [
+        {
+          "author": "Abdilatif Abdalla",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "0116bc56-196c-58b5-a38d-bc18c84148dd",
+          "language": "Kiswahili",
+          "language_source": "guessed",
+          "title": "Sauti ya dhiki"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Sauti ya dhiki",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": true,
+      "v2_languages": [
+        "swa"
+      ],
+      "work_id": "sauti-ya-dhiki"
+    },
+    {
+      "author": "Jared Angira",
+      "legacy_candidates": [
+        {
+          "author": "Jared Angira",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "2e82404b-146f-5806-84cc-45ff33b3809e",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "Juices"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Juices",
+      "v2_editions": 2,
+      "v2_has_isbn": false,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "juices"
+    },
+    {
+      "author": "Jared Angira",
+      "legacy_candidates": [
+        {
+          "author": "Jared Angira",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": false,
+          "id": "a166eada-bdbf-540c-9772-7f694dbf767e",
+          "language": null,
+          "language_source": null,
+          "title": "Silent voices; poems"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Silent Voices",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "silent-voices"
+    },
+    {
+      "author": "Kithaka wa Mberia",
+      "legacy_candidates": [
+        {
+          "author": "Kithaka wa Mberia",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "cac3254d-7c4b-5fb3-b6c3-250c91d09d7d",
+          "language": "Kiswahili",
+          "language_source": "guessed",
+          "title": "Maua kwenye jua la asubuhi"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Maua kwenye jua la asubuhi",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "swa"
+      ],
+      "work_id": "maua-kwenye-jua-la-asubuhi"
+    },
+    {
+      "author": "Francis D. Imbuga",
+      "legacy_candidates": [
+        {
+          "author": "Francis D. Imbuga",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "5658fe46-7767-571d-817e-4e7027b37de6",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "Betrayal in the City"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Betrayal in the City",
+      "v2_editions": 4,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "author": "Ken Walibora",
+      "legacy_candidates": [
+        {
+          "author": "Ken Waliaula",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": false,
+          "id": "50f2db12-7844-55a3-9cc7-a6f981eaf48a",
+          "language": "Kiswahili",
+          "language_source": "metadata",
+          "title": "Siku Njema"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Siku Njema",
+      "v2_editions": 0,
+      "v2_has_isbn": false,
+      "v2_has_synopsis": false,
+      "v2_languages": [],
+      "work_id": "siku-njema"
+    },
+    {
+      "author": "Ken Walibora",
+      "legacy_candidates": [],
+      "mapping_status": "no_title_author_candidate",
+      "title": "Kidagaa Kimemwozea",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "swa"
+      ],
+      "work_id": "kidagaa-kimemwozea"
+    },
+    {
+      "author": "Anne Matindi",
+      "legacy_candidates": [
+        {
+          "author": "Anne Matindi",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": false,
+          "id": "bff89cd2-677c-5bf5-aabb-9320e0262d29",
+          "language": "Kiswahili",
+          "language_source": "guessed",
+          "title": "Jua na Upepo"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Jua na Upepo",
+      "v2_editions": 1,
+      "v2_has_isbn": false,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "swa"
+      ],
+      "work_id": "jua-na-upepo"
+    },
+    {
+      "author": "Mwenye Hadithi",
+      "legacy_candidates": [],
+      "mapping_status": "no_title_author_candidate",
+      "title": "Hot Hippo",
+      "v2_editions": 6,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "hot-hippo"
+    },
+    {
+      "author": "Mwenye Hadithi",
+      "legacy_candidates": [
+        {
+          "author": "Mwenye Hadithi",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "f1016962-04e0-57ba-b136-8aa368337c68",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "Laughing Giraffe"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Laughing Giraffe",
+      "v2_editions": 2,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "laughing-giraffe"
+    },
+    {
+      "author": "Wangari Maathai",
+      "legacy_candidates": [
+        {
+          "author": "Wangari Muta Maathai",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "6dcb5a33-850b-508b-8e47-0b1bbe7942e8",
+          "language": "English",
+          "language_source": "metadata",
+          "title": "Unbowed"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Unbowed",
+      "v2_editions": 11,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": true,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "unbowed"
+    },
+    {
+      "author": "Binyavanga Wainaina",
+      "legacy_candidates": [
+        {
+          "author": "Binyavanga Wainaina",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "c6b4e757-61c2-5e71-a28e-8c351cb1a35a",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "One day I will write about this place"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "One Day I Will Write About This Place",
+      "v2_editions": 0,
+      "v2_has_isbn": false,
+      "v2_has_synopsis": false,
+      "v2_languages": [],
+      "work_id": "one-day-i-will-write-about-this-place"
+    },
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [
+        {
+          "author": "Ngũgĩ wa Thiong'o",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "fa71c6e7-bb69-5ca2-89c8-557c3f981d08",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "In the house of the interpreter"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "In the House of the Interpreter",
+      "v2_editions": 3,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "in-the-house-of-the-interpreter"
+    },
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [
+        {
+          "author": "Ngũgĩ wa Thiong'o",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": true,
+          "id": "2d9fdbf5-a255-5d3f-834b-dec1e10fe982",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "Dreams in a Time of War"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Dreams in a Time of War",
+      "v2_editions": 6,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "author": "Rebeka Njau",
+      "legacy_candidates": [
+        {
+          "author": "Rebeka Njau",
+          "genre": null,
+          "has_isbn": false,
+          "has_synopsis": false,
+          "id": "65aa4b79-f599-5838-93a1-70fb33c98379",
+          "language": "English",
+          "language_source": "guessed",
+          "title": "Mirrors of my life"
+        }
+      ],
+      "mapping_status": "manual_review",
+      "title": "Mirrors of My Life",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "mirrors-of-my-life"
+    },
+    {
+      "author": "Wangari Maathai",
+      "legacy_candidates": [],
+      "mapping_status": "no_title_author_candidate",
+      "title": "The Challenge for Africa",
+      "v2_editions": 2,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "the-challenge-for-africa"
+    },
+    {
+      "author": "Wangari Maathai",
+      "legacy_candidates": [],
+      "mapping_status": "no_title_author_candidate",
+      "title": "Replenishing the Earth",
+      "v2_editions": 1,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "replenishing-the-earth"
+    },
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [],
+      "mapping_status": "no_title_author_candidate",
+      "title": "Decolonising the Mind",
+      "v2_editions": 8,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": true,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "author": "Ngũgĩ wa Thiong'o",
+      "legacy_candidates": [],
+      "mapping_status": "no_title_author_candidate",
+      "title": "Something Torn and New",
+      "v2_editions": 3,
+      "v2_has_isbn": true,
+      "v2_has_synopsis": false,
+      "v2_languages": [
+        "eng"
+      ],
+      "work_id": "something-torn-and-new"
+    }
+  ]
+}
