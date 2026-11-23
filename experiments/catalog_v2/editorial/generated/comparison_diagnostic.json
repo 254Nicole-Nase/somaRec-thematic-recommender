@@ -1,0 +1,1225 @@
+{
+  "baseline_commit": "fa10c736fda32378db233094e9d8efe63034696c",
+  "mode": "diagnostic",
+  "queries": [
+    {
+      "added": [],
+      "after": [
+        "dust"
+      ],
+      "before": [
+        "dust"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "dust"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": true,
+        "place_terms": [],
+        "required": [],
+        "terms": []
+      },
+      "is_empty": false,
+      "query": "Dust",
+      "query_id": "q01",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "petals-of-blood"
+      ],
+      "before": [
+        "petals-of-blood"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "petals-of-blood"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": true,
+        "place_terms": [],
+        "required": [],
+        "terms": []
+      },
+      "is_empty": false,
+      "query": "Petals of Blood",
+      "query_id": "q02",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "sauti-ya-dhiki"
+      ],
+      "before": [
+        "sauti-ya-dhiki"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "sauti-ya-dhiki"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": true,
+        "place_terms": [],
+        "required": [],
+        "terms": []
+      },
+      "is_empty": false,
+      "query": "Sauti ya Dhiki",
+      "query_id": "q03",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "kidagaa-kimemwozea"
+      ],
+      "before": [
+        "kidagaa-kimemwozea"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "kidagaa-kimemwozea"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": true,
+        "place_terms": [],
+        "required": [],
+        "terms": []
+      },
+      "is_empty": false,
+      "query": "Kidagaa kimemwozea",
+      "query_id": "q04",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "unbowed"
+      ],
+      "before": [
+        "unbowed",
+        "replenishing-the-earth",
+        "the-challenge-for-africa"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [
+            "synopsis"
+          ],
+          "previous_rank": 1,
+          "work_id": "unbowed"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "author"
+          ],
+          "previous_rank": 2,
+          "work_id": "replenishing-the-earth"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "author"
+          ],
+          "previous_rank": 3,
+          "work_id": "the-challenge-for-africa"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": true,
+        "place_terms": [],
+        "required": [],
+        "terms": []
+      },
+      "is_empty": false,
+      "query": "Unbowed Wangari Maathai",
+      "query_id": "q05",
+      "removed": [
+        "replenishing-the-earth",
+        "the-challenge-for-africa"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "the-dragonfly-sea"
+      ],
+      "before": [
+        "the-dragonfly-sea",
+        "the-house-of-rust"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "the-dragonfly-sea"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "major_subjects",
+            "synopsis"
+          ],
+          "previous_rank": 2,
+          "work_id": "the-house-of-rust"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": true,
+        "place_terms": [],
+        "required": [],
+        "terms": []
+      },
+      "is_empty": false,
+      "query": "The Dragonfly Sea",
+      "query_id": "q06",
+      "removed": [
+        "the-house-of-rust"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "dust",
+        "petals-of-blood",
+        "one-day-i-will-write-about-this-place",
+        "sauti-ya-dhiki",
+        "the-river-and-the-source"
+      ],
+      "before": [
+        "dust",
+        "petals-of-blood",
+        "one-day-i-will-write-about-this-place",
+        "the-river-and-the-source",
+        "sauti-ya-dhiki"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "dust"
+        },
+        {
+          "current_rank": 2,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 2,
+          "work_id": "petals-of-blood"
+        },
+        {
+          "current_rank": 3,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 3,
+          "work_id": "one-day-i-will-write-about-this-place"
+        },
+        {
+          "current_rank": 5,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 4,
+          "work_id": "the-river-and-the-source"
+        },
+        {
+          "current_rank": 4,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 5,
+          "work_id": "sauti-ya-dhiki"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "kenya"
+        ],
+        "required": [],
+        "terms": [
+          "family",
+          "kenya",
+          "political",
+          "secrets",
+          "violence"
+        ]
+      },
+      "is_empty": false,
+      "query": "family secrets and political violence in Kenya",
+      "query_id": "q07",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "unbowed",
+        "the-river-and-the-source"
+      ],
+      "before": [
+        "unbowed",
+        "the-river-and-the-source"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [
+            "primary_genre"
+          ],
+          "previous_rank": 1,
+          "work_id": "unbowed"
+        },
+        {
+          "current_rank": 2,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 2,
+          "work_id": "the-river-and-the-source"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "activism",
+          "environment",
+          "grassroots",
+          "organizing",
+          "women"
+        ]
+      },
+      "is_empty": false,
+      "query": "grassroots environmental activism and women organizing",
+      "query_id": "q08",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "the-river-and-the-source",
+        "unbowed"
+      ],
+      "before": [
+        "the-river-and-the-source",
+        "unbowed"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [
+            "narrative_setting"
+          ],
+          "previous_rank": 1,
+          "work_id": "the-river-and-the-source"
+        },
+        {
+          "current_rank": 2,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 2,
+          "work_id": "unbowed"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "across",
+          "change",
+          "generations",
+          "social",
+          "women"
+        ]
+      },
+      "is_empty": false,
+      "query": "women and social change across generations",
+      "query_id": "q09",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "sauti-ya-dhiki"
+      ],
+      "before": [
+        "sauti-ya-dhiki",
+        "juices",
+        "silent-voices",
+        "dust",
+        "petals-of-blood"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [
+            "genres/prison-poetry"
+          ],
+          "fields_removed": [
+            "literary_form",
+            "primary_genre"
+          ],
+          "previous_rank": 1,
+          "work_id": "sauti-ya-dhiki"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 2,
+          "work_id": "juices"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 3,
+          "work_id": "silent-voices"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "major_subjects",
+            "synopsis",
+            "themes"
+          ],
+          "previous_rank": 4,
+          "work_id": "dust"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "major_subjects",
+            "mood_tone",
+            "themes"
+          ],
+          "previous_rank": 5,
+          "work_id": "petals-of-blood"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "genre",
+            "prison-poetry"
+          ]
+        ],
+        "terms": [
+          "political",
+          "repression"
+        ]
+      },
+      "is_empty": false,
+      "query": "prison poetry and political repression",
+      "query_id": "q10",
+      "removed": [
+        "juices",
+        "silent-voices",
+        "dust",
+        "petals-of-blood"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "decolonising-the-mind",
+        "one-day-i-will-write-about-this-place"
+      ],
+      "before": [
+        "decolonising-the-mind",
+        "the-river-and-the-source",
+        "one-day-i-will-write-about-this-place",
+        "dust",
+        "petals-of-blood"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [
+            "primary_genre"
+          ],
+          "previous_rank": 1,
+          "work_id": "decolonising-the-mind"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "narrative_setting"
+          ],
+          "previous_rank": 2,
+          "work_id": "the-river-and-the-source"
+        },
+        {
+          "current_rank": 2,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 3,
+          "work_id": "one-day-i-will-write-about-this-place"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "primary_genre"
+          ],
+          "previous_rank": 4,
+          "work_id": "dust"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "primary_genre"
+          ],
+          "previous_rank": 5,
+          "work_id": "petals-of-blood"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "african",
+          "colonial",
+          "identity",
+          "language",
+          "literary"
+        ]
+      },
+      "is_empty": false,
+      "query": "colonial language and African literary identity",
+      "query_id": "q11",
+      "removed": [
+        "the-river-and-the-source",
+        "dust",
+        "petals-of-blood"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "one-day-i-will-write-about-this-place"
+      ],
+      "before": [
+        "one-day-i-will-write-about-this-place",
+        "the-house-of-rust"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [
+            "genres/memoir"
+          ],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "one-day-i-will-write-about-this-place"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "synopsis"
+          ],
+          "previous_rank": 2,
+          "work_id": "the-house-of-rust"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "kenya"
+        ],
+        "required": [
+          [
+            "genre",
+            "memoir"
+          ]
+        ],
+        "terms": [
+          "growing",
+          "kenya",
+          "up"
+        ]
+      },
+      "is_empty": false,
+      "query": "Kenyan memoirs about growing up",
+      "query_id": "q12",
+      "removed": [
+        "the-house-of-rust"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [
+        "jua-na-upepo"
+      ],
+      "after": [
+        "jua-na-upepo"
+      ],
+      "before": [],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [
+            "audiences/children",
+            "language",
+            "literary_form"
+          ],
+          "fields_removed": [],
+          "previous_rank": null,
+          "work_id": "jua-na-upepo"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "audience",
+            "children"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": [
+          "story"
+        ]
+      },
+      "is_empty": false,
+      "query": "hadithi za watoto",
+      "query_id": "q13",
+      "removed": [],
+      "was_empty": true
+    },
+    {
+      "added": [],
+      "after": [
+        "sauti-ya-dhiki"
+      ],
+      "before": [
+        "sauti-ya-dhiki",
+        "jua-na-upepo",
+        "kidagaa-kimemwozea",
+        "maua-kwenye-jua-la-asubuhi"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [
+            "synopsis"
+          ],
+          "previous_rank": 1,
+          "work_id": "sauti-ya-dhiki"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "language"
+          ],
+          "previous_rank": 2,
+          "work_id": "jua-na-upepo"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "language"
+          ],
+          "previous_rank": 3,
+          "work_id": "kidagaa-kimemwozea"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "language"
+          ],
+          "previous_rank": 4,
+          "work_id": "maua-kwenye-jua-la-asubuhi"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "form",
+            "poetry"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": []
+      },
+      "is_empty": false,
+      "query": "mashairi ya Kiswahili",
+      "query_id": "q14",
+      "removed": [
+        "jua-na-upepo",
+        "kidagaa-kimemwozea",
+        "maua-kwenye-jua-la-asubuhi"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [],
+      "before": [
+        "betrayal-in-the-city"
+      ],
+      "changes": [
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 1,
+          "work_id": "betrayal-in-the-city"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "form",
+            "play"
+          ]
+        ],
+        "terms": [
+          "leadership"
+        ]
+      },
+      "is_empty": true,
+      "query": "tamthilia kuhusu uongozi",
+      "query_id": "q15",
+      "removed": [
+        "betrayal-in-the-city"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "the-house-of-rust"
+      ],
+      "before": [
+        "the-house-of-rust",
+        "the-dragonfly-sea"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [
+            "literary_form"
+          ],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "the-house-of-rust"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "title"
+          ],
+          "previous_rank": 2,
+          "work_id": "the-dragonfly-sea"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "mombasa"
+        ],
+        "required": [
+          [
+            "form",
+            "novel"
+          ]
+        ],
+        "terms": [
+          "mombasa",
+          "sea",
+          "voyage"
+        ]
+      },
+      "is_empty": false,
+      "query": "novels about Mombasa and sea voyages",
+      "query_id": "q16",
+      "removed": [
+        "the-dragonfly-sea"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [
+        "petals-of-blood"
+      ],
+      "after": [
+        "petals-of-blood",
+        "the-river-and-the-source"
+      ],
+      "before": [
+        "the-river-and-the-source",
+        "the-house-of-rust",
+        "unbowed",
+        "siku-njema",
+        "the-dragonfly-sea"
+      ],
+      "changes": [
+        {
+          "current_rank": 2,
+          "fields_added": [
+            "narrative_setting"
+          ],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "the-river-and-the-source"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form",
+            "synopsis"
+          ],
+          "previous_rank": 2,
+          "work_id": "the-house-of-rust"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "synopsis"
+          ],
+          "previous_rank": 3,
+          "work_id": "unbowed"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 4,
+          "work_id": "siku-njema"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 5,
+          "work_id": "the-dragonfly-sea"
+        },
+        {
+          "current_rank": 1,
+          "fields_added": [
+            "literary_form",
+            "major_subjects",
+            "narrative_setting",
+            "synopsis"
+          ],
+          "fields_removed": [],
+          "previous_rank": null,
+          "work_id": "petals-of-blood"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "kenya",
+          "rural",
+          "village"
+        ],
+        "required": [
+          [
+            "form",
+            "novel"
+          ]
+        ],
+        "terms": [
+          "change",
+          "economic",
+          "kenya",
+          "rural",
+          "village"
+        ]
+      },
+      "is_empty": false,
+      "query": "Kenyan novel about economic change in a rural village",
+      "query_id": "q17",
+      "removed": [
+        "the-house-of-rust",
+        "unbowed",
+        "siku-njema",
+        "the-dragonfly-sea"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [],
+      "before": [
+        "kidagaa-kimemwozea"
+      ],
+      "changes": [
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 1,
+          "work_id": "kidagaa-kimemwozea"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "form",
+            "novel"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": [
+          "change",
+          "family",
+          "social"
+        ]
+      },
+      "is_empty": true,
+      "query": "riwaya kuhusu familia na mabadiliko ya jamii",
+      "query_id": "q18",
+      "removed": [
+        "kidagaa-kimemwozea"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "sauti-ya-dhiki"
+      ],
+      "before": [
+        "sauti-ya-dhiki"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [
+            "genres/prison-poetry",
+            "language",
+            "major_subjects",
+            "synopsis"
+          ],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 1,
+          "work_id": "sauti-ya-dhiki"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "genre",
+            "prison-poetry"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": [
+          "repression"
+        ]
+      },
+      "is_empty": false,
+      "query": "ushairi wa gerezani na ukandamizaji",
+      "query_id": "q19",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "unbowed"
+      ],
+      "before": [
+        "mirrors-of-my-life",
+        "dreams-in-a-time-of-war",
+        "in-the-house-of-the-interpreter",
+        "unbowed",
+        "one-day-i-will-write-about-this-place"
+      ],
+      "changes": [
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 1,
+          "work_id": "mirrors-of-my-life"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 2,
+          "work_id": "dreams-in-a-time-of-war"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form"
+          ],
+          "previous_rank": 3,
+          "work_id": "in-the-house-of-the-interpreter"
+        },
+        {
+          "current_rank": 1,
+          "fields_added": [
+            "themes"
+          ],
+          "fields_removed": [
+            "primary_genre"
+          ],
+          "previous_rank": 4,
+          "work_id": "unbowed"
+        },
+        {
+          "current_rank": null,
+          "fields_added": [],
+          "fields_removed": [
+            "literary_form",
+            "primary_genre"
+          ],
+          "previous_rank": 5,
+          "work_id": "one-day-i-will-write-about-this-place"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "genre",
+            "memoir"
+          ]
+        ],
+        "terms": [
+          "environment"
+        ]
+      },
+      "is_empty": false,
+      "query": "memoir kuhusu mazingira",
+      "query_id": "q20",
+      "removed": [
+        "mirrors-of-my-life",
+        "dreams-in-a-time-of-war",
+        "in-the-house-of-the-interpreter",
+        "one-day-i-will-write-about-this-place"
+      ],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "the-river-and-the-source",
+        "the-river-between",
+        "going-down-river-road"
+      ],
+      "before": [
+        "going-down-river-road",
+        "the-river-between",
+        "the-river-and-the-source"
+      ],
+      "changes": [
+        {
+          "current_rank": 3,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "going-down-river-road"
+        },
+        {
+          "current_rank": 2,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 2,
+          "work_id": "the-river-between"
+        },
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 3,
+          "work_id": "the-river-and-the-source"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "river"
+        ]
+      },
+      "is_empty": false,
+      "query": "the river",
+      "query_id": "q21",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [
+        "sauti-ya-dhiki"
+      ],
+      "before": [
+        "sauti-ya-dhiki"
+      ],
+      "changes": [
+        {
+          "current_rank": 1,
+          "fields_added": [],
+          "fields_removed": [],
+          "previous_rank": 1,
+          "work_id": "sauti-ya-dhiki"
+        }
+      ],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "sauti"
+        ]
+      },
+      "is_empty": false,
+      "query": "sauti",
+      "query_id": "q22",
+      "removed": [],
+      "was_empty": false
+    },
+    {
+      "added": [],
+      "after": [],
+      "before": [],
+      "changes": [],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "mechanics",
+          "orbital",
+          "propulsion",
+          "spacecraft"
+        ]
+      },
+      "is_empty": true,
+      "query": "orbital mechanics for spacecraft propulsion",
+      "query_id": "q23",
+      "removed": [],
+      "was_empty": true
+    },
+    {
+      "added": [],
+      "after": [],
+      "before": [],
+      "changes": [],
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "injini",
+          "trekta",
+          "urekebishaji"
+        ]
+      },
+      "is_empty": true,
+      "query": "urekebishaji wa injini za trekta",
+      "query_id": "q24",
+      "removed": [],
+      "was_empty": true
+    }
+  ]
+}

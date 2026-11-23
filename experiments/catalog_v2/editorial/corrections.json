@@ -1,0 +1,222 @@
+{
+  "petals-of-blood": {
+    "mood_tone": {
+      "existing": [
+        "suspenseful"
+      ],
+      "value": [
+        "suspense in the murder inquiry",
+        "impassioned political critique"
+      ],
+      "replaces": "1cf89f466f2b19001619f2473ab0e594f2be657e7d26596b305f723bb7b2cd58",
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "reason": "The author site limits suspense to the investigation and cites criticism describing the wider political register."
+    },
+    "major_subjects": {
+      "existing": [
+        "murder investigation",
+        "foreign ownership"
+      ],
+      "value": [
+        "murder investigation",
+        "political leadership in independent Kenya",
+        "economic transformation of a rural community"
+      ],
+      "replaces": "21e5eab5cca251174db24eacfe971e269fae31c48c06d9354347b4ac01723cb9",
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/",
+        "https://www.journals.codesria.org/index.php/ad/en/article/download/1995/2044/5041"
+      ],
+      "reason": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject. A CODESRIA study traces changes from subsistence agriculture to industry and financial dependence."
+    },
+    "themes": {
+      "existing": [
+        "political disillusionment",
+        "leadership and public trust"
+      ],
+      "value": [
+        "political disillusionment",
+        "corruption of power"
+      ],
+      "replaces": "2e0df1f60af05378223a433e9c72e19397bf55bed4332ad91c2a4908e0b608f5",
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "reason": "The author description and attributed Sunday Times review support these readings."
+    },
+    "narrative_setting": {
+      "existing": [
+        "rural Kenya after independence"
+      ],
+      "value": [
+        "Ilmorog, Kenya after independence",
+        "rural village developing into an industrial town"
+      ],
+      "replaces": "28ff940867a4142a2e7f090778ee6b4ffd34e100c7200d39bf3807624dcda6c0",
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/",
+        "https://iiste.org/Journals/index.php/RHSS/article/download/30272/31087"
+      ],
+      "reason": "The study identifies the Ilmorog community; the author establishes the historical context. The same study describes its rural community becoming an industrial town."
+    },
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "reason": "The author calls the work a novel."
+    }
+  },
+  "the-river-and-the-source": {
+    "narrative_setting": {
+      "existing": [
+        "Luo communities in Kenya"
+      ],
+      "value": [
+        "Kenya across precolonial, colonial and post-independence periods",
+        "Luo and Kikuyu communities"
+      ],
+      "replaces": "244251bf711ae92b5432380b602d43daa37f82561f8109c4c9e7b9b877941cef",
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/",
+        "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/399bc51f-d8ed-4eab-9239-103b4f3a49b9/content"
+      ],
+      "reason": "The Nairobi study identifies the periods and communities on page 90; the distributor identifies the initial Luo setting. Neither claim requires a generation count."
+    },
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "a9ffbfcc84c616def2fce6c5eb8f66fdad871386977d0b04870753a6c3655399",
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ],
+      "reason": "The distributor identifies the form explicitly."
+    }
+  },
+  "sauti-ya-dhiki": {
+    "themes": {
+      "existing": [
+        "political repression",
+        "ukandamizaji wa kisiasa",
+        "voice under confinement"
+      ],
+      "value": [
+        "voice under confinement"
+      ],
+      "replaces": "55869781685ff092de8c884a1a94dbe7ebbc5c9aaaf33284cea4badb5bf7c9f1",
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+      ],
+      "reason": "The study analyses polyphony during imprisonment. The translated repression tags duplicated one concept."
+    },
+    "major_subjects": {
+      "existing": [
+        "imprisonment",
+        "mashairi ya gerezani"
+      ],
+      "value": [
+        "imprisonment",
+        "political repression"
+      ],
+      "replaces": "7f9ebc08f60a3ef7eb30d6a0701423a88af0cacda6695fac9cd8ebd1764750e9",
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+      ],
+      "reason": "The abstract connects imprisonment with sedition and political authority. Prison poetry belongs in classification."
+    }
+  },
+  "maua-kwenye-jua-la-asubuhi": {
+    "literary_form": {
+      "existing": "poetry",
+      "value": "play",
+      "replaces": "292a54ab281fdc9aa0f452eeab9d635dcc4a4c3f6e3e2b4a7ab7f8d50421caae",
+      "evidence": [
+        "https://africanbookscollective.com/books/doa/",
+        "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
+      ],
+      "reason": "The distributor bibliography calls this work tamthilia; the university record identifies the play version."
+    }
+  },
+  "hot-hippo": {
+    "literary_form": {
+      "existing": "children",
+      "value": "picture book",
+      "replaces": "06ca1d97f7bb541a02bf4708e9ce06f9dd3f96b3c3da4aab87eaa9b1027f7ebe",
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+      ],
+      "reason": "Hachette classifies this illustrated title as a picture storybook."
+    }
+  },
+  "laughing-giraffe": {
+    "literary_form": {
+      "existing": "children",
+      "value": "picture book",
+      "replaces": "06ca1d97f7bb541a02bf4708e9ce06f9dd3f96b3c3da4aab87eaa9b1027f7ebe",
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+      ],
+      "reason": "Hachette classifies this illustrated title as a picture storybook."
+    }
+  },
+  "jua-na-upepo": {
+    "literary_form": {
+      "existing": "children",
+      "value": "story collection",
+      "replaces": "81fc2bff0b2f929aa6c12cd404d4bf53f7b724e24fb01eefcc9fde09c300f4c4",
+      "evidence": [
+        "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+        "https://openlibrary.org/books/OL22801465M"
+      ],
+      "reason": "The library gives the expanded title including other stories; the linked edition records the same subtitle."
+    }
+  },
+  "the-dragonfly-sea": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/545470/the-dragonfly-sea-by-yvonne-adhiambo-owuor/"
+      ],
+      "reason": "Publisher identifies Owuor’s novel. The Wikidata work candidate and both legacy links remain pending."
+    }
+  },
+  "siku-njema": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "9b1b5b700c17cec9aa2526f8d3cf3b0f59311d715b05d389eebd1dd30ee1e466",
+      "evidence": [
+        "https://journals.mmust.ac.ke/index.php/jk/article/view/12"
+      ],
+      "reason": "Literary scholarship identifies Walibora’s work as a riwaya."
+    }
+  },
+  "the-house-of-rust": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ],
+      "reason": "The distributor labels this a novel."
+    }
+  },
+  "one-day-i-will-write-about-this-place": {
+    "literary_form": {
+      "existing": "memoir",
+      "value": "memoir",
+      "replaces": "c72b6c5b28ff66986510c4e0155faa3042c9ac194665a6d47e8f3816a188e672",
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ],
+      "reason": "Retain the form and replace the earlier Graywolf URL with Granta’s attributable listing and memoir description."
+    }
+  }
+}

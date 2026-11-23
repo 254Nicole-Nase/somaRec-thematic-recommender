@@ -52,7 +52,7 @@ Start with **teachers and book lovers**. Teachers bring whole classes, and book 
 ## Roadmap
 
 ### Phase 1: Make the catalog trustworthy (next 4–6 weeks)
-- [ ] Run the multilingual model locally: `pipeline/tag_themes.py`, then `upload_books_to_supabase.py --apply`.
+- [ ] Run the multilingual tagger locally, then review the field-level diff with the [offline import preview](IMPORT_PREVIEW.md).
 - [ ] Fix bad descriptions. The Google Books enrichment matched some books to the wrong record. Add an admin "flag wrong description" button, and prefer Open Library work descriptions.
 - [ ] Decide the inclusion rule (Kenyan author, or set in Kenya) and review the ~40 borderline records via `curation_status`.
 - [ ] Recruit 2–3 teachers to review CBC alignments for the 30–50 most-taught books (KICD approved lists and set books first), and add them to `book_curriculum` with `status = 'reviewed'`.
@@ -104,3 +104,13 @@ Start with **teachers and book lovers**. Teachers bring whole classes, and book 
 | Copyright complaints | Only host openly licensed / permitted texts; takedown contact on every page |
 | Low engagement | Start with teachers (they bring classes); seed reviews from a book club |
 | Model doesn't handle Kenyan languages beyond Kiswahili | Rely on keyword search plus human tagging for Gikuyu, Dholuo, etc.; evaluate before claiming support |
+
+## Offline Catalog V2 checkpoint
+
+Phase 5A adds an independently reviewable bilingual vocabulary, per-work genre and audience assertions, and source-backed editorial replacements for the frozen sample. Reviewers should check Kiswahili terminology, proposed classifications and unresolved identity questions before deciding the scope of Phase 5B. Expansion remains blocked by the existing editorial and relevance gates. [Taxonomy design](GENRE_TAXONOMY_DESIGN.md) · [Editorial findings](CATALOG_V2_CORRECTIONS.md)
+
+## Phase 5B.1 independent review checkpoint
+
+The 24 development searches and their historical rankings are frozen. Fifteen prospective reader searches are sealed. Eleven literary-form replacements are available in a separate offline pilot input. The next decision is an independent seven-assertion review and interpretation of the approved-only smoke checks once real decisions exist. Phase 5C and catalog expansion remain pending. [Integrity and form audit](CATALOG_V2_EVALUATION_INTEGRITY.md) · [Approval packet and instructions](CATALOG_V2_APPROVAL_PILOT.md)
+
+Phase 5B.2 designates the sealed A set for open-world discovery and abstention. The positive B set awaits independent authorship and sealing. The seven-ballot worksheet and approved-only smoke command are ready for genuine review. [Protocol and readiness checklist](CATALOG_V2_BALANCED_EVALUATION.md)

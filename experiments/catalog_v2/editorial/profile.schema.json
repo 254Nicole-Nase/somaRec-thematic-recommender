@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SomaRec literary profiles",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "profiles"],
+  "properties": {
+    "version": {"const": 1},
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["work_id", "fields"],
+        "properties": {
+          "work_id": {"type": "string", "minLength": 1},
+          "taxonomy_version": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/assertion"
+                },
+                {
+                  "properties": {
+                    "value": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "category_id",
+                        "display"
+                      ],
+                      "properties": {
+                        "category_id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9-]*$"
+                        },
+                        "display": {
+                          "enum": [
+                            "primary",
+                            "secondary"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "audiences": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/assertion"
+                },
+                {
+                  "properties": {
+                    "value": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "category_id",
+                        "display"
+                      ],
+                      "properties": {
+                        "category_id": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9-]*$"
+                        },
+                        "display": {
+                          "type": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["primary_genre", "literary_form", "themes", "narrative_setting", "mood_tone", "major_subjects", "language", "original_language", "synopsis"],
+            "properties": {
+              "primary_genre": {"$ref": "#/$defs/text"},
+              "literary_form": {"$ref": "#/$defs/text"},
+              "themes": {"$ref": "#/$defs/terms"},
+              "narrative_setting": {"$ref": "#/$defs/terms"},
+              "mood_tone": {"$ref": "#/$defs/terms"},
+              "major_subjects": {"$ref": "#/$defs/terms"},
+              "language": {"$ref": "#/$defs/terms"},
+              "original_language": {"$ref": "#/$defs/text"},
+              "synopsis": {"$ref": "#/$defs/text"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "text": {
+      "allOf": [
+        {"$ref": "#/$defs/assertion"},
+        {"properties": {"value": {"type": ["string", "null"], "minLength": 1}}}
+      ]
+    },
+    "terms": {
+      "allOf": [
+        {"$ref": "#/$defs/assertion"},
+        {"properties": {"value": {"type": ["array", "null"], "minItems": 1, "items": {"type": "string", "minLength": 1}}}}
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "format": "uri", "pattern": "^https?://"}
+    },
+    "assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status", "origin", "evidence", "note", "fingerprint"],
+      "properties": {
+        "value": {},
+        "status": {"enum": ["unknown", "needs_review", "conflicting", "verified"]},
+        "origin": {"enum": [null, "automated_candidate", "editorial_proposal"]},
+        "evidence": {"$ref": "#/$defs/evidence"},
+        "note": {"type": ["string", "null"]},
+        "fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "human_decision": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["work_id", "field", "fingerprint", "status", "reviewer", "evidence", "note"],
+          "properties": {
+            "work_id": {"type": "string"},
+            "field": {"type": "string"},
+            "fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "status": {"enum": ["needs_review", "conflicting", "verified"]},
+            "reviewer": {"type": "string", "minLength": 1},
+            "evidence": {"$ref": "#/$defs/evidence", "minItems": 1},
+            "note": {"type": "string", "minLength": 1}
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"value": {"not": {"type": "null"}}}},
+          "then": {"properties": {"evidence": {"minItems": 1}, "origin": {"type": "string"}}}
+        },
+        {
+          "if": {"properties": {"status": {"const": "verified"}}},
+          "then": {"required": ["human_decision"], "properties": {"value": {"not": {"type": "null"}}}}
+        },
+        {
+          "if": {"properties": {"status": {"const": "unknown"}}},
+          "then": {"properties": {"value": {"type": "null"}, "origin": {"type": "null"}}}
+        }
+      ]
+    }
+  }
+}

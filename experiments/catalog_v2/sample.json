@@ -1,0 +1,4474 @@
+{
+  "as_of": "2026-11-23",
+  "editions": [
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL30586750M"
+        }
+      ],
+      "edition_id": "ol:OL30586750M",
+      "isbn13": "9781784873363",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2018",
+      "publishers": [
+        "Vintage"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL30586750M",
+        "languages": "https://openlibrary.org/books/OL30586750M",
+        "publish_date": "https://openlibrary.org/books/OL30586750M",
+        "publishers": "https://openlibrary.org/books/OL30586750M",
+        "title": "https://openlibrary.org/books/OL30586750M",
+        "work_id": "https://openlibrary.org/books/OL30586750M"
+      },
+      "title": "Petals of Blood",
+      "translation_of": null,
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL33560255M"
+        }
+      ],
+      "edition_id": "ol:OL33560255M",
+      "isbn13": "9781473549883",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2018",
+      "publishers": [
+        "Penguin Random House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL33560255M",
+        "languages": "https://openlibrary.org/books/OL33560255M",
+        "publish_date": "https://openlibrary.org/books/OL33560255M",
+        "publishers": "https://openlibrary.org/books/OL33560255M",
+        "title": "https://openlibrary.org/books/OL33560255M",
+        "work_id": "https://openlibrary.org/books/OL33560255M"
+      },
+      "title": "Petals of Blood",
+      "translation_of": null,
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL44208085M"
+        }
+      ],
+      "edition_id": "ol:OL44208085M",
+      "isbn13": "9780525482352",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1978",
+      "publishers": [
+        "Penguin Publishing Group"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL44208085M",
+        "languages": "https://openlibrary.org/books/OL44208085M",
+        "publish_date": "https://openlibrary.org/books/OL44208085M",
+        "publishers": "https://openlibrary.org/books/OL44208085M",
+        "title": "https://openlibrary.org/books/OL44208085M",
+        "work_id": "https://openlibrary.org/books/OL44208085M"
+      },
+      "title": "Petals of Blood",
+      "translation_of": null,
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL21418433M"
+        }
+      ],
+      "edition_id": "ol:OL21418433M",
+      "isbn13": "9780435908355",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL21418433M",
+        "languages": "https://openlibrary.org/books/OL21418433M",
+        "publish_date": "https://openlibrary.org/books/OL21418433M",
+        "publishers": "https://openlibrary.org/books/OL21418433M",
+        "title": "https://openlibrary.org/books/OL21418433M",
+        "work_id": "https://openlibrary.org/books/OL21418433M"
+      },
+      "title": "Petals of blood",
+      "translation_of": null,
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL17728444M"
+        }
+      ],
+      "edition_id": "ol:OL17728444M",
+      "isbn13": "9780525485209",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1978",
+      "publishers": [
+        "Dutton"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL17728444M",
+        "languages": "https://openlibrary.org/books/OL17728444M",
+        "publish_date": "https://openlibrary.org/books/OL17728444M",
+        "publishers": "https://openlibrary.org/books/OL17728444M",
+        "title": "https://openlibrary.org/books/OL17728444M",
+        "work_id": "https://openlibrary.org/books/OL17728444M"
+      },
+      "title": "Petals of blood",
+      "translation_of": null,
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL21487687M"
+        }
+      ],
+      "edition_id": "ol:OL21487687M",
+      "isbn13": "9780435906467",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1977",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL21487687M",
+        "languages": "https://openlibrary.org/books/OL21487687M",
+        "publish_date": "https://openlibrary.org/books/OL21487687M",
+        "publishers": "https://openlibrary.org/books/OL21487687M",
+        "title": "https://openlibrary.org/books/OL21487687M",
+        "work_id": "https://openlibrary.org/books/OL21487687M"
+      },
+      "title": "Petals of blood",
+      "translation_of": null,
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL15447854M"
+        }
+      ],
+      "edition_id": "ol:OL15447854M",
+      "isbn13": "9780140153514",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1991",
+      "publishers": [
+        "Penguin Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL15447854M",
+        "languages": "https://openlibrary.org/books/OL15447854M",
+        "publish_date": "https://openlibrary.org/books/OL15447854M",
+        "publishers": "https://openlibrary.org/books/OL15447854M",
+        "title": "https://openlibrary.org/books/OL15447854M",
+        "work_id": "https://openlibrary.org/books/OL15447854M"
+      },
+      "title": "Petals of blood",
+      "translation_of": null,
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL43755498M"
+        }
+      ],
+      "edition_id": "ol:OL43755498M",
+      "isbn13": "9780949932754",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1984",
+      "publishers": [
+        "Zimbabwe Pub. House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL43755498M",
+        "languages": "https://openlibrary.org/books/OL43755498M",
+        "publish_date": "https://openlibrary.org/books/OL43755498M",
+        "publishers": "https://openlibrary.org/books/OL43755498M",
+        "title": "https://openlibrary.org/books/OL43755498M",
+        "work_id": "https://openlibrary.org/books/OL43755498M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL32101051M"
+        }
+      ],
+      "edition_id": "ol:OL32101051M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1967",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL32101051M",
+        "publish_date": "https://openlibrary.org/books/OL32101051M",
+        "publishers": "https://openlibrary.org/books/OL32101051M",
+        "title": "https://openlibrary.org/books/OL32101051M",
+        "work_id": "https://openlibrary.org/books/OL32101051M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL25238395M"
+        }
+      ],
+      "edition_id": "ol:OL25238395M",
+      "isbn13": "9780143106760",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2012",
+      "publishers": [
+        "Penguin Classics"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL25238395M",
+        "languages": "https://openlibrary.org/books/OL25238395M",
+        "publish_date": "https://openlibrary.org/books/OL25238395M",
+        "publishers": "https://openlibrary.org/books/OL25238395M",
+        "title": "https://openlibrary.org/books/OL25238395M",
+        "work_id": "https://openlibrary.org/books/OL25238395M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL25238396M"
+        }
+      ],
+      "edition_id": "ol:OL25238396M",
+      "isbn13": "9780143106760",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2012",
+      "publishers": [
+        "Penguin Classics"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL25238396M",
+        "languages": "https://openlibrary.org/books/OL25238396M",
+        "publish_date": "https://openlibrary.org/books/OL25238396M",
+        "publishers": "https://openlibrary.org/books/OL25238396M",
+        "title": "https://openlibrary.org/books/OL25238396M",
+        "work_id": "https://openlibrary.org/books/OL25238396M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL22244130M"
+        }
+      ],
+      "edition_id": "ol:OL22244130M",
+      "isbn13": "9780435900366",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL22244130M",
+        "languages": "https://openlibrary.org/books/OL22244130M",
+        "publish_date": "https://openlibrary.org/books/OL22244130M",
+        "publishers": "https://openlibrary.org/books/OL22244130M",
+        "title": "https://openlibrary.org/books/OL22244130M",
+        "work_id": "https://openlibrary.org/books/OL22244130M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL17134780M"
+        }
+      ],
+      "edition_id": "ol:OL17134780M",
+      "isbn13": "9780435909871",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "Heinemann Educational"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL17134780M",
+        "languages": "https://openlibrary.org/books/OL17134780M",
+        "publish_date": "https://openlibrary.org/books/OL17134780M",
+        "publishers": "https://openlibrary.org/books/OL17134780M",
+        "title": "https://openlibrary.org/books/OL17134780M",
+        "work_id": "https://openlibrary.org/books/OL17134780M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL14458897M"
+        }
+      ],
+      "edition_id": "ol:OL14458897M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1968",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL14458897M",
+        "publish_date": "https://openlibrary.org/books/OL14458897M",
+        "publishers": "https://openlibrary.org/books/OL14458897M",
+        "title": "https://openlibrary.org/books/OL14458897M",
+        "work_id": "https://openlibrary.org/books/OL14458897M"
+      },
+      "title": "A grain of wheat.",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL13673139M"
+        }
+      ],
+      "edition_id": "ol:OL13673139M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1975",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL13673139M",
+        "publish_date": "https://openlibrary.org/books/OL13673139M",
+        "publishers": "https://openlibrary.org/books/OL13673139M",
+        "title": "https://openlibrary.org/books/OL13673139M",
+        "work_id": "https://openlibrary.org/books/OL13673139M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL22589200M"
+        }
+      ],
+      "edition_id": "ol:OL22589200M",
+      "isbn13": "9780435900366",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1978",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL22589200M",
+        "languages": "https://openlibrary.org/books/OL22589200M",
+        "publish_date": "https://openlibrary.org/books/OL22589200M",
+        "publishers": "https://openlibrary.org/books/OL22589200M",
+        "title": "https://openlibrary.org/books/OL22589200M",
+        "work_id": "https://openlibrary.org/books/OL22589200M"
+      },
+      "title": "A grain of wheat",
+      "translation_of": null,
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL47019099M"
+        }
+      ],
+      "edition_id": "ol:OL47019099M",
+      "isbn13": "9789966460028",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2004",
+      "publishers": [
+        "East African Educational Publishers"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL47019099M",
+        "languages": "https://openlibrary.org/books/OL47019099M",
+        "publish_date": "https://openlibrary.org/books/OL47019099M",
+        "publishers": "https://openlibrary.org/books/OL47019099M",
+        "title": "https://openlibrary.org/books/OL47019099M",
+        "work_id": "https://openlibrary.org/books/OL47019099M"
+      },
+      "title": "The River Between",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL19984696M"
+        }
+      ],
+      "edition_id": "ol:OL19984696M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": null,
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL19984696M",
+        "publishers": "https://openlibrary.org/books/OL19984696M",
+        "title": "https://openlibrary.org/books/OL19984696M",
+        "work_id": "https://openlibrary.org/books/OL19984696M"
+      },
+      "title": "The river between..",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL23317454M"
+        }
+      ],
+      "edition_id": "ol:OL23317454M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1975",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL23317454M",
+        "publish_date": "https://openlibrary.org/books/OL23317454M",
+        "publishers": "https://openlibrary.org/books/OL23317454M",
+        "title": "https://openlibrary.org/books/OL23317454M",
+        "work_id": "https://openlibrary.org/books/OL23317454M"
+      },
+      "title": "The river between",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL19774431M"
+        }
+      ],
+      "edition_id": "ol:OL19774431M",
+      "isbn13": "9780435905484",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1965",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL19774431M",
+        "languages": "https://openlibrary.org/books/OL19774431M",
+        "publish_date": "https://openlibrary.org/books/OL19774431M",
+        "publishers": "https://openlibrary.org/books/OL19774431M",
+        "title": "https://openlibrary.org/books/OL19774431M",
+        "work_id": "https://openlibrary.org/books/OL19774431M"
+      },
+      "title": "The river between",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL22433616M"
+        }
+      ],
+      "edition_id": "ol:OL22433616M",
+      "isbn13": "9780141187037",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2002",
+      "publishers": [
+        "Penguin in association with Heinemann African writers series"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL22433616M",
+        "languages": "https://openlibrary.org/books/OL22433616M",
+        "publish_date": "https://openlibrary.org/books/OL22433616M",
+        "publishers": "https://openlibrary.org/books/OL22433616M",
+        "title": "https://openlibrary.org/books/OL22433616M",
+        "work_id": "https://openlibrary.org/books/OL22433616M"
+      },
+      "title": "The river between",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL18963611M"
+        }
+      ],
+      "edition_id": "ol:OL18963611M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1975",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL18963611M",
+        "publish_date": "https://openlibrary.org/books/OL18963611M",
+        "publishers": "https://openlibrary.org/books/OL18963611M",
+        "title": "https://openlibrary.org/books/OL18963611M",
+        "work_id": "https://openlibrary.org/books/OL18963611M"
+      },
+      "title": "The river between",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL13536548M"
+        }
+      ],
+      "edition_id": "ol:OL13536548M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1970",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL13536548M",
+        "publish_date": "https://openlibrary.org/books/OL13536548M",
+        "publishers": "https://openlibrary.org/books/OL13536548M",
+        "title": "https://openlibrary.org/books/OL13536548M",
+        "work_id": "https://openlibrary.org/books/OL13536548M"
+      },
+      "title": "The river between.",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL18348508M"
+        }
+      ],
+      "edition_id": "ol:OL18348508M",
+      "isbn13": "9780435900175",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1965",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL18348508M",
+        "languages": "https://openlibrary.org/books/OL18348508M",
+        "publish_date": "https://openlibrary.org/books/OL18348508M",
+        "publishers": "https://openlibrary.org/books/OL18348508M",
+        "title": "https://openlibrary.org/books/OL18348508M",
+        "work_id": "https://openlibrary.org/books/OL18348508M"
+      },
+      "title": "The river between",
+      "translation_of": null,
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL59041461M"
+        }
+      ],
+      "edition_id": "ol:OL59041461M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1992",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL59041461M",
+        "publish_date": "https://openlibrary.org/books/OL59041461M",
+        "publishers": "https://openlibrary.org/books/OL59041461M",
+        "title": "https://openlibrary.org/books/OL59041461M",
+        "work_id": "https://openlibrary.org/books/OL59041461M"
+      },
+      "title": "Weep Not, Child",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL48110831M"
+        }
+      ],
+      "edition_id": "ol:OL48110831M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1967",
+      "publishers": [
+        "Heinemann Educational Books Ltd"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL48110831M",
+        "publish_date": "https://openlibrary.org/books/OL48110831M",
+        "publishers": "https://openlibrary.org/books/OL48110831M",
+        "title": "https://openlibrary.org/books/OL48110831M",
+        "work_id": "https://openlibrary.org/books/OL48110831M"
+      },
+      "title": "Weep not, child",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL40363904M"
+        }
+      ],
+      "edition_id": "ol:OL40363904M",
+      "isbn13": "9780143026242",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2010",
+      "publishers": [
+        "Penguin Books, Limited"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL40363904M",
+        "languages": "https://openlibrary.org/books/OL40363904M",
+        "publish_date": "https://openlibrary.org/books/OL40363904M",
+        "publishers": "https://openlibrary.org/books/OL40363904M",
+        "title": "https://openlibrary.org/books/OL40363904M",
+        "work_id": "https://openlibrary.org/books/OL40363904M"
+      },
+      "title": "Weep Not, Child",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL25237963M"
+        }
+      ],
+      "edition_id": "ol:OL25237963M",
+      "isbn13": "9780143106692",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2012",
+      "publishers": [
+        "Penguin Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL25237963M",
+        "languages": "https://openlibrary.org/books/OL25237963M",
+        "publish_date": "https://openlibrary.org/books/OL25237963M",
+        "publishers": "https://openlibrary.org/books/OL25237963M",
+        "title": "https://openlibrary.org/books/OL25237963M",
+        "work_id": "https://openlibrary.org/books/OL25237963M"
+      },
+      "title": "Weep not, child",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL25237962M"
+        }
+      ],
+      "edition_id": "ol:OL25237962M",
+      "isbn13": "9780143106692",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2012",
+      "publishers": [
+        "Penguin Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL25237962M",
+        "languages": "https://openlibrary.org/books/OL25237962M",
+        "publish_date": "https://openlibrary.org/books/OL25237962M",
+        "publishers": "https://openlibrary.org/books/OL25237962M",
+        "title": "https://openlibrary.org/books/OL25237962M",
+        "work_id": "https://openlibrary.org/books/OL25237962M"
+      },
+      "title": "Weep not, child",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL21487698M"
+        }
+      ],
+      "edition_id": "ol:OL21487698M",
+      "isbn13": null,
+      "languages": [],
+      "publish_date": "1977",
+      "publishers": [],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "publish_date": "https://openlibrary.org/books/OL21487698M",
+        "title": "https://openlibrary.org/books/OL21487698M",
+        "work_id": "https://openlibrary.org/books/OL21487698M"
+      },
+      "title": "Weep not, child",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL18174304M"
+        }
+      ],
+      "edition_id": "ol:OL18174304M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1964",
+      "publishers": [
+        "Heinemann Educ"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL18174304M",
+        "publish_date": "https://openlibrary.org/books/OL18174304M",
+        "publishers": "https://openlibrary.org/books/OL18174304M",
+        "title": "https://openlibrary.org/books/OL18174304M",
+        "work_id": "https://openlibrary.org/books/OL18174304M"
+      },
+      "title": "Weep not, Child.",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL43100799M"
+        }
+      ],
+      "edition_id": "ol:OL43100799M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1966-01-01",
+      "publishers": [
+        "Heinemann Educational Books LTD"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL43100799M",
+        "publish_date": "https://openlibrary.org/books/OL43100799M",
+        "publishers": "https://openlibrary.org/books/OL43100799M",
+        "title": "https://openlibrary.org/books/OL43100799M",
+        "work_id": "https://openlibrary.org/books/OL43100799M"
+      },
+      "title": "Weep not, child",
+      "translation_of": null,
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL38844610M"
+        }
+      ],
+      "edition_id": "ol:OL38844610M",
+      "isbn13": "9780345802545",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2014",
+      "publishers": [
+        "Knopf Doubleday Publishing Group",
+        "Vintage"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL38844610M",
+        "languages": "https://openlibrary.org/books/OL38844610M",
+        "publish_date": "https://openlibrary.org/books/OL38844610M",
+        "publishers": "https://openlibrary.org/books/OL38844610M",
+        "title": "https://openlibrary.org/books/OL38844610M",
+        "work_id": "https://openlibrary.org/books/OL38844610M"
+      },
+      "title": "Dust",
+      "translation_of": null,
+      "work_id": "dust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL35508594M"
+        }
+      ],
+      "edition_id": "ol:OL35508594M",
+      "isbn13": "9781306299930",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2014",
+      "publishers": [
+        "Knopf Incorporated, Alfred A."
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL35508594M",
+        "languages": "https://openlibrary.org/books/OL35508594M",
+        "publish_date": "https://openlibrary.org/books/OL35508594M",
+        "publishers": "https://openlibrary.org/books/OL35508594M",
+        "title": "https://openlibrary.org/books/OL35508594M",
+        "work_id": "https://openlibrary.org/books/OL35508594M"
+      },
+      "title": "Dust",
+      "translation_of": null,
+      "work_id": "dust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL34623455M"
+        }
+      ],
+      "edition_id": "ol:OL34623455M",
+      "isbn13": "9781783781317",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2015",
+      "publishers": [
+        "Granta Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL34623455M",
+        "languages": "https://openlibrary.org/books/OL34623455M",
+        "publish_date": "https://openlibrary.org/books/OL34623455M",
+        "publishers": "https://openlibrary.org/books/OL34623455M",
+        "title": "https://openlibrary.org/books/OL34623455M",
+        "work_id": "https://openlibrary.org/books/OL34623455M"
+      },
+      "title": "Dust",
+      "translation_of": null,
+      "work_id": "dust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL30967420M"
+        }
+      ],
+      "edition_id": "ol:OL30967420M",
+      "isbn13": "9789966159830",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2013",
+      "publishers": [
+        "Kwani Trust"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL30967420M",
+        "languages": "https://openlibrary.org/books/OL30967420M",
+        "publish_date": "https://openlibrary.org/books/OL30967420M",
+        "publishers": "https://openlibrary.org/books/OL30967420M",
+        "title": "https://openlibrary.org/books/OL30967420M",
+        "work_id": "https://openlibrary.org/books/OL30967420M"
+      },
+      "title": "Dust",
+      "translation_of": null,
+      "work_id": "dust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL28272050M"
+        }
+      ],
+      "edition_id": "ol:OL28272050M",
+      "isbn13": "9781783781027",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2014",
+      "publishers": [],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL28272050M",
+        "languages": "https://openlibrary.org/books/OL28272050M",
+        "publish_date": "https://openlibrary.org/books/OL28272050M",
+        "title": "https://openlibrary.org/books/OL28272050M",
+        "work_id": "https://openlibrary.org/books/OL28272050M"
+      },
+      "title": "Dust",
+      "translation_of": null,
+      "work_id": "dust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL27154696M"
+        }
+      ],
+      "edition_id": "ol:OL27154696M",
+      "isbn13": "9780307961204",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2014",
+      "publishers": [
+        "Alfred A. Knopf"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL27154696M",
+        "languages": "https://openlibrary.org/books/OL27154696M",
+        "publish_date": "https://openlibrary.org/books/OL27154696M",
+        "publishers": "https://openlibrary.org/books/OL27154696M",
+        "title": "https://openlibrary.org/books/OL27154696M",
+        "work_id": "https://openlibrary.org/books/OL27154696M"
+      },
+      "title": "Dust",
+      "translation_of": null,
+      "work_id": "dust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL32478788M"
+        }
+      ],
+      "edition_id": "ol:OL32478788M",
+      "isbn13": "9781644450680",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "Oct 19, 2021",
+      "publishers": [
+        "Graywolf Press"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL32478788M",
+        "languages": "https://openlibrary.org/books/OL32478788M",
+        "publish_date": "https://openlibrary.org/books/OL32478788M",
+        "publishers": "https://openlibrary.org/books/OL32478788M",
+        "title": "https://openlibrary.org/books/OL32478788M",
+        "work_id": "https://openlibrary.org/books/OL32478788M"
+      },
+      "title": "The House of Rust",
+      "translation_of": null,
+      "work_id": "the-house-of-rust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL1267994M"
+        }
+      ],
+      "edition_id": "ol:OL1267994M",
+      "isbn13": "9789966882059",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1994",
+      "publishers": [
+        "Focus Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL1267994M",
+        "languages": "https://openlibrary.org/books/OL1267994M",
+        "publish_date": "https://openlibrary.org/books/OL1267994M",
+        "publishers": "https://openlibrary.org/books/OL1267994M",
+        "title": "https://openlibrary.org/books/OL1267994M",
+        "work_id": "https://openlibrary.org/books/OL1267994M"
+      },
+      "title": "The river and the source",
+      "translation_of": null,
+      "work_id": "the-river-and-the-source"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL28961508M"
+        }
+      ],
+      "edition_id": "ol:OL28961508M",
+      "isbn13": "9783887473143",
+      "languages": [],
+      "publish_date": "Feb 25, 2015",
+      "publishers": [
+        "Transit Buchverlag GmbH"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL28961508M",
+        "publish_date": "https://openlibrary.org/books/OL28961508M",
+        "publishers": "https://openlibrary.org/books/OL28961508M",
+        "title": "https://openlibrary.org/books/OL28961508M",
+        "work_id": "https://openlibrary.org/books/OL28961508M"
+      },
+      "title": "Black Star Nairobi",
+      "translation_of": null,
+      "work_id": "black-star-nairobi"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL35501728M"
+        }
+      ],
+      "edition_id": "ol:OL35501728M",
+      "isbn13": "9781306909600",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2013",
+      "publishers": [
+        "Melville House Publishing"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL35501728M",
+        "languages": "https://openlibrary.org/books/OL35501728M",
+        "publish_date": "https://openlibrary.org/books/OL35501728M",
+        "publishers": "https://openlibrary.org/books/OL35501728M",
+        "title": "https://openlibrary.org/books/OL35501728M",
+        "work_id": "https://openlibrary.org/books/OL35501728M"
+      },
+      "title": "Black Star Nairobi",
+      "translation_of": null,
+      "work_id": "black-star-nairobi"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL26185860M"
+        }
+      ],
+      "edition_id": "ol:OL26185860M",
+      "isbn13": "9781612192109",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2013",
+      "publishers": [
+        "TURNAROUND"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL26185860M",
+        "languages": "https://openlibrary.org/books/OL26185860M",
+        "publish_date": "https://openlibrary.org/books/OL26185860M",
+        "publishers": "https://openlibrary.org/books/OL26185860M",
+        "title": "https://openlibrary.org/books/OL26185860M",
+        "work_id": "https://openlibrary.org/books/OL26185860M"
+      },
+      "title": "Black Star Nairobi",
+      "translation_of": null,
+      "work_id": "black-star-nairobi"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL5182139M"
+        }
+      ],
+      "edition_id": "ol:OL5182139M",
+      "isbn13": "9780195723199",
+      "languages": [
+        "swa"
+      ],
+      "publish_date": "1973",
+      "publishers": [
+        "Oxford University Press"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL5182139M",
+        "languages": "https://openlibrary.org/books/OL5182139M",
+        "publish_date": "https://openlibrary.org/books/OL5182139M",
+        "publishers": "https://openlibrary.org/books/OL5182139M",
+        "title": "https://openlibrary.org/books/OL5182139M",
+        "work_id": "https://openlibrary.org/books/OL5182139M"
+      },
+      "title": "Sauti ya dhiki",
+      "translation_of": null,
+      "work_id": "sauti-ya-dhiki"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL4927528M"
+        }
+      ],
+      "edition_id": "ol:OL4927528M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1970",
+      "publishers": [
+        "East African Pub. House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL4927528M",
+        "publish_date": "https://openlibrary.org/books/OL4927528M",
+        "publishers": "https://openlibrary.org/books/OL4927528M",
+        "title": "https://openlibrary.org/books/OL4927528M",
+        "work_id": "https://openlibrary.org/books/OL4927528M"
+      },
+      "title": "Juices",
+      "translation_of": null,
+      "work_id": "juices"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL13772229M"
+        }
+      ],
+      "edition_id": "ol:OL13772229M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1970",
+      "publishers": [
+        "East African Publishing House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL13772229M",
+        "publish_date": "https://openlibrary.org/books/OL13772229M",
+        "publishers": "https://openlibrary.org/books/OL13772229M",
+        "title": "https://openlibrary.org/books/OL13772229M",
+        "work_id": "https://openlibrary.org/books/OL13772229M"
+      },
+      "title": "Juices.",
+      "translation_of": null,
+      "work_id": "juices"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL5449331M"
+        }
+      ],
+      "edition_id": "ol:OL5449331M",
+      "isbn13": "9780435901110",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1972",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL5449331M",
+        "languages": "https://openlibrary.org/books/OL5449331M",
+        "publish_date": "https://openlibrary.org/books/OL5449331M",
+        "publishers": "https://openlibrary.org/books/OL5449331M",
+        "title": "https://openlibrary.org/books/OL5449331M",
+        "work_id": "https://openlibrary.org/books/OL5449331M"
+      },
+      "title": "Silent voices; poems.",
+      "translation_of": null,
+      "work_id": "silent-voices"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL3360215M"
+        }
+      ],
+      "edition_id": "ol:OL3360215M",
+      "isbn13": "9789966962249",
+      "languages": [
+        "swa"
+      ],
+      "publish_date": "2004",
+      "publishers": [
+        "Marimba Publications"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL3360215M",
+        "languages": "https://openlibrary.org/books/OL3360215M",
+        "publish_date": "https://openlibrary.org/books/OL3360215M",
+        "publishers": "https://openlibrary.org/books/OL3360215M",
+        "title": "https://openlibrary.org/books/OL3360215M",
+        "work_id": "https://openlibrary.org/books/OL3360215M"
+      },
+      "title": "Maua kwenye jua la asubuhi",
+      "translation_of": null,
+      "work_id": "maua-kwenye-jua-la-asubuhi"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL13212044M"
+        }
+      ],
+      "edition_id": "ol:OL13212044M",
+      "isbn13": "9789966463609",
+      "languages": [],
+      "publish_date": "1987",
+      "publishers": [
+        "East African Educational Publishers"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL13212044M",
+        "publish_date": "https://openlibrary.org/books/OL13212044M",
+        "publishers": "https://openlibrary.org/books/OL13212044M",
+        "title": "https://openlibrary.org/books/OL13212044M",
+        "work_id": "https://openlibrary.org/books/OL13212044M"
+      },
+      "title": "Betrayal in the City",
+      "translation_of": null,
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL45304471M"
+        }
+      ],
+      "edition_id": "ol:OL45304471M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2003",
+      "publishers": [
+        "Alexander Street Press"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL45304471M",
+        "publish_date": "https://openlibrary.org/books/OL45304471M",
+        "publishers": "https://openlibrary.org/books/OL45304471M",
+        "title": "https://openlibrary.org/books/OL45304471M",
+        "work_id": "https://openlibrary.org/books/OL45304471M"
+      },
+      "title": "Betrayal in the city",
+      "translation_of": null,
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL19946974M"
+        }
+      ],
+      "edition_id": "ol:OL19946974M",
+      "isbn13": "9789966463609",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1987",
+      "publishers": [
+        "Heinemann Kenya"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL19946974M",
+        "languages": "https://openlibrary.org/books/OL19946974M",
+        "publish_date": "https://openlibrary.org/books/OL19946974M",
+        "publishers": "https://openlibrary.org/books/OL19946974M",
+        "title": "https://openlibrary.org/books/OL19946974M",
+        "work_id": "https://openlibrary.org/books/OL19946974M"
+      },
+      "title": "Betrayal in the city",
+      "translation_of": null,
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL4712665M"
+        }
+      ],
+      "edition_id": "ol:OL4712665M",
+      "isbn13": null,
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1976",
+      "publishers": [
+        "East African Pub. House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL4712665M",
+        "publish_date": "https://openlibrary.org/books/OL4712665M",
+        "publishers": "https://openlibrary.org/books/OL4712665M",
+        "title": "https://openlibrary.org/books/OL4712665M",
+        "work_id": "https://openlibrary.org/books/OL4712665M"
+      },
+      "title": "Betrayal in the city",
+      "translation_of": null,
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL25362197M"
+        }
+      ],
+      "edition_id": "ol:OL25362197M",
+      "isbn13": "9789966002860",
+      "languages": [
+        "swa"
+      ],
+      "publish_date": "2012",
+      "publishers": [
+        "Target Publications"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL25362197M",
+        "languages": "https://openlibrary.org/books/OL25362197M",
+        "publish_date": "https://openlibrary.org/books/OL25362197M",
+        "publishers": "https://openlibrary.org/books/OL25362197M",
+        "title": "https://openlibrary.org/books/OL25362197M",
+        "work_id": "https://openlibrary.org/books/OL25362197M"
+      },
+      "title": "Kidagaa kimemwozea",
+      "translation_of": null,
+      "work_id": "kidagaa-kimemwozea"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL22801465M"
+        }
+      ],
+      "edition_id": "ol:OL22801465M",
+      "isbn13": null,
+      "languages": [
+        "swa"
+      ],
+      "publish_date": "1968",
+      "publishers": [
+        "East African Pub. House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "languages": "https://openlibrary.org/books/OL22801465M",
+        "publish_date": "https://openlibrary.org/books/OL22801465M",
+        "publishers": "https://openlibrary.org/books/OL22801465M",
+        "title": "https://openlibrary.org/books/OL22801465M",
+        "work_id": "https://openlibrary.org/books/OL22801465M"
+      },
+      "title": "Jua na Upepo",
+      "translation_of": null,
+      "work_id": "jua-na-upepo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL51571185M"
+        }
+      ],
+      "edition_id": "ol:OL51571185M",
+      "isbn13": "9780340739778",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1999",
+      "publishers": [
+        "Hodder & Stoughton"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL51571185M",
+        "languages": "https://openlibrary.org/books/OL51571185M",
+        "publish_date": "https://openlibrary.org/books/OL51571185M",
+        "publishers": "https://openlibrary.org/books/OL51571185M",
+        "title": "https://openlibrary.org/books/OL51571185M",
+        "work_id": "https://openlibrary.org/books/OL51571185M"
+      },
+      "title": "Hot Hippo",
+      "translation_of": null,
+      "work_id": "hot-hippo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL2707574M"
+        }
+      ],
+      "edition_id": "ol:OL2707574M",
+      "isbn13": "9780316337229",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "Little, Brown"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL2707574M",
+        "languages": "https://openlibrary.org/books/OL2707574M",
+        "publish_date": "https://openlibrary.org/books/OL2707574M",
+        "publishers": "https://openlibrary.org/books/OL2707574M",
+        "title": "https://openlibrary.org/books/OL2707574M",
+        "work_id": "https://openlibrary.org/books/OL2707574M"
+      },
+      "title": "Hot Hippo",
+      "translation_of": null,
+      "work_id": "hot-hippo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL17221612M"
+        }
+      ],
+      "edition_id": "ol:OL17221612M",
+      "isbn13": "9780340486245",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1988",
+      "publishers": [
+        "Hodder and Stoughton"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL17221612M",
+        "languages": "https://openlibrary.org/books/OL17221612M",
+        "publish_date": "https://openlibrary.org/books/OL17221612M",
+        "publishers": "https://openlibrary.org/books/OL17221612M",
+        "title": "https://openlibrary.org/books/OL17221612M",
+        "work_id": "https://openlibrary.org/books/OL17221612M"
+      },
+      "title": "Hot hippo.",
+      "translation_of": null,
+      "work_id": "hot-hippo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL9611401M"
+        }
+      ],
+      "edition_id": "ol:OL9611401M",
+      "isbn13": "9780316337182",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "April 1994",
+      "publishers": [
+        "Little Brown & Co (Juv Pap)"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL9611401M",
+        "languages": "https://openlibrary.org/books/OL9611401M",
+        "publish_date": "https://openlibrary.org/books/OL9611401M",
+        "publishers": "https://openlibrary.org/books/OL9611401M",
+        "title": "https://openlibrary.org/books/OL9611401M",
+        "work_id": "https://openlibrary.org/books/OL9611401M"
+      },
+      "title": "Hot Hippo",
+      "translation_of": null,
+      "work_id": "hot-hippo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL17512648M"
+        }
+      ],
+      "edition_id": "ol:OL17512648M",
+      "isbn13": "9780340381953",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "Hodder and Stoughton"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL17512648M",
+        "languages": "https://openlibrary.org/books/OL17512648M",
+        "publish_date": "https://openlibrary.org/books/OL17512648M",
+        "publishers": "https://openlibrary.org/books/OL17512648M",
+        "title": "https://openlibrary.org/books/OL17512648M",
+        "work_id": "https://openlibrary.org/books/OL17512648M"
+      },
+      "title": "Hot hippo",
+      "translation_of": null,
+      "work_id": "hot-hippo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL23242823M"
+        }
+      ],
+      "edition_id": "ol:OL23242823M",
+      "isbn13": "9780316337229",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "Little, Brown"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL23242823M",
+        "languages": "https://openlibrary.org/books/OL23242823M",
+        "publish_date": "https://openlibrary.org/books/OL23242823M",
+        "publishers": "https://openlibrary.org/books/OL23242823M",
+        "title": "https://openlibrary.org/books/OL23242823M",
+        "work_id": "https://openlibrary.org/books/OL23242823M"
+      },
+      "title": "Hot Hippo",
+      "translation_of": null,
+      "work_id": "hot-hippo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL36186806M"
+        }
+      ],
+      "edition_id": "ol:OL36186806M",
+      "isbn13": "9780340945193",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2008",
+      "publishers": [
+        "Hachette Children's Group"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL36186806M",
+        "languages": "https://openlibrary.org/books/OL36186806M",
+        "publish_date": "https://openlibrary.org/books/OL36186806M",
+        "publishers": "https://openlibrary.org/books/OL36186806M",
+        "title": "https://openlibrary.org/books/OL36186806M",
+        "work_id": "https://openlibrary.org/books/OL36186806M"
+      },
+      "title": "Laughing Giraffe",
+      "translation_of": null,
+      "work_id": "laughing-giraffe"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL25185107M"
+        }
+      ],
+      "edition_id": "ol:OL25185107M",
+      "isbn13": "9780340945209",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2009",
+      "publishers": [
+        "Hodder Children's Books",
+        "Hodder & Stoughton"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL25185107M",
+        "languages": "https://openlibrary.org/books/OL25185107M",
+        "publish_date": "https://openlibrary.org/books/OL25185107M",
+        "publishers": "https://openlibrary.org/books/OL25185107M",
+        "title": "https://openlibrary.org/books/OL25185107M",
+        "work_id": "https://openlibrary.org/books/OL25185107M"
+      },
+      "title": "Laughing Giraffe",
+      "translation_of": null,
+      "work_id": "laughing-giraffe"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL46965690M"
+        }
+      ],
+      "edition_id": "ol:OL46965690M",
+      "isbn13": "9781439559840",
+      "languages": [],
+      "publish_date": "2008-10-08",
+      "publishers": [],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL46965690M",
+        "publish_date": "https://openlibrary.org/books/OL46965690M",
+        "title": "https://openlibrary.org/books/OL46965690M",
+        "work_id": "https://openlibrary.org/books/OL46965690M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL40381431M"
+        }
+      ],
+      "edition_id": "ol:OL40381431M",
+      "isbn13": "9781448106318",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2011",
+      "publishers": [
+        "Penguin Random House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL40381431M",
+        "languages": "https://openlibrary.org/books/OL40381431M",
+        "publish_date": "https://openlibrary.org/books/OL40381431M",
+        "publishers": "https://openlibrary.org/books/OL40381431M",
+        "title": "https://openlibrary.org/books/OL40381431M",
+        "work_id": "https://openlibrary.org/books/OL40381431M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL40344008M"
+        }
+      ],
+      "edition_id": "ol:OL40344008M",
+      "isbn13": "9780434016303",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1999",
+      "publishers": [
+        "Penguin Random House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL40344008M",
+        "languages": "https://openlibrary.org/books/OL40344008M",
+        "publish_date": "https://openlibrary.org/books/OL40344008M",
+        "publishers": "https://openlibrary.org/books/OL40344008M",
+        "title": "https://openlibrary.org/books/OL40344008M",
+        "work_id": "https://openlibrary.org/books/OL40344008M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL38212002M"
+        }
+      ],
+      "edition_id": "ol:OL38212002M",
+      "isbn13": "9780434016310",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2006",
+      "publishers": [
+        "William Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL38212002M",
+        "languages": "https://openlibrary.org/books/OL38212002M",
+        "publish_date": "https://openlibrary.org/books/OL38212002M",
+        "publishers": "https://openlibrary.org/books/OL38212002M",
+        "title": "https://openlibrary.org/books/OL38212002M",
+        "work_id": "https://openlibrary.org/books/OL38212002M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL28432936M"
+        }
+      ],
+      "edition_id": "ol:OL28432936M",
+      "isbn13": "9780099493099",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2007",
+      "publishers": [
+        "Penguin Random House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL28432936M",
+        "languages": "https://openlibrary.org/books/OL28432936M",
+        "publish_date": "https://openlibrary.org/books/OL28432936M",
+        "publishers": "https://openlibrary.org/books/OL28432936M",
+        "title": "https://openlibrary.org/books/OL28432936M",
+        "work_id": "https://openlibrary.org/books/OL28432936M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL24296609M"
+        }
+      ],
+      "edition_id": "ol:OL24296609M",
+      "isbn13": "9780307492333",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2008",
+      "publishers": [
+        "Knopf Doubleday Publishing Group"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL24296609M",
+        "languages": "https://openlibrary.org/books/OL24296609M",
+        "publish_date": "https://openlibrary.org/books/OL24296609M",
+        "publishers": "https://openlibrary.org/books/OL24296609M",
+        "title": "https://openlibrary.org/books/OL24296609M",
+        "work_id": "https://openlibrary.org/books/OL24296609M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL15606734M"
+        }
+      ],
+      "edition_id": "ol:OL15606734M",
+      "isbn13": "9780307263483",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2006",
+      "publishers": [
+        "Knopf",
+        "Alfred A. Knopf"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL15606734M",
+        "languages": "https://openlibrary.org/books/OL15606734M",
+        "publish_date": "https://openlibrary.org/books/OL15606734M",
+        "publishers": "https://openlibrary.org/books/OL15606734M",
+        "title": "https://openlibrary.org/books/OL15606734M",
+        "work_id": "https://openlibrary.org/books/OL15606734M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL7507083M"
+        }
+      ],
+      "edition_id": "ol:OL7507083M",
+      "isbn13": "9780434015429",
+      "languages": [],
+      "publish_date": "2007",
+      "publishers": [
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL7507083M",
+        "publish_date": "https://openlibrary.org/books/OL7507083M",
+        "publishers": "https://openlibrary.org/books/OL7507083M",
+        "title": "https://openlibrary.org/books/OL7507083M",
+        "work_id": "https://openlibrary.org/books/OL7507083M"
+      },
+      "title": "UNBOWED ",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL9652384M"
+        }
+      ],
+      "edition_id": "ol:OL9652384M",
+      "isbn13": "9780307263483",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "October 3, 2006",
+      "publishers": [
+        "Knopf"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL9652384M",
+        "languages": "https://openlibrary.org/books/OL9652384M",
+        "publish_date": "https://openlibrary.org/books/OL9652384M",
+        "publishers": "https://openlibrary.org/books/OL9652384M",
+        "title": "https://openlibrary.org/books/OL9652384M",
+        "work_id": "https://openlibrary.org/books/OL9652384M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL9819535M"
+        }
+      ],
+      "edition_id": "ol:OL9819535M",
+      "isbn13": "9780307275202",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "September 4, 2007",
+      "publishers": [
+        "Anchor"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL9819535M",
+        "languages": "https://openlibrary.org/books/OL9819535M",
+        "publish_date": "https://openlibrary.org/books/OL9819535M",
+        "publishers": "https://openlibrary.org/books/OL9819535M",
+        "title": "https://openlibrary.org/books/OL9819535M",
+        "work_id": "https://openlibrary.org/books/OL9819535M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL23189567M"
+        }
+      ],
+      "edition_id": "ol:OL23189567M",
+      "isbn13": "9780307275202",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2007",
+      "publishers": [
+        "Anchor Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL23189567M",
+        "languages": "https://openlibrary.org/books/OL23189567M",
+        "publish_date": "https://openlibrary.org/books/OL23189567M",
+        "publishers": "https://openlibrary.org/books/OL23189567M",
+        "title": "https://openlibrary.org/books/OL23189567M",
+        "work_id": "https://openlibrary.org/books/OL23189567M"
+      },
+      "title": "Unbowed",
+      "translation_of": null,
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL27491246M"
+        }
+      ],
+      "edition_id": "ol:OL27491246M",
+      "isbn13": "9781101910511",
+      "languages": [],
+      "publish_date": "May 12, 2015",
+      "publishers": [
+        "Anchor"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL27491246M",
+        "publish_date": "https://openlibrary.org/books/OL27491246M",
+        "publishers": "https://openlibrary.org/books/OL27491246M",
+        "title": "https://openlibrary.org/books/OL27491246M",
+        "work_id": "https://openlibrary.org/books/OL27491246M"
+      },
+      "title": "In the House of the Interpreter",
+      "translation_of": null,
+      "work_id": "in-the-house-of-the-interpreter"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL28504957M"
+        }
+      ],
+      "edition_id": "ol:OL28504957M",
+      "isbn13": "9780099572244",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2013",
+      "publishers": [
+        "Penguin Random House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL28504957M",
+        "languages": "https://openlibrary.org/books/OL28504957M",
+        "publish_date": "https://openlibrary.org/books/OL28504957M",
+        "publishers": "https://openlibrary.org/books/OL28504957M",
+        "title": "https://openlibrary.org/books/OL28504957M",
+        "work_id": "https://openlibrary.org/books/OL28504957M"
+      },
+      "title": "In the House of the Interpreter",
+      "translation_of": null,
+      "work_id": "in-the-house-of-the-interpreter"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL25283289M"
+        }
+      ],
+      "edition_id": "ol:OL25283289M",
+      "isbn13": "9780307907691",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2012",
+      "publishers": [
+        "Pantheon Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL25283289M",
+        "languages": "https://openlibrary.org/books/OL25283289M",
+        "publish_date": "https://openlibrary.org/books/OL25283289M",
+        "publishers": "https://openlibrary.org/books/OL25283289M",
+        "title": "https://openlibrary.org/books/OL25283289M",
+        "work_id": "https://openlibrary.org/books/OL25283289M"
+      },
+      "title": "In the house of the interpreter",
+      "translation_of": null,
+      "work_id": "in-the-house-of-the-interpreter"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL37074008M"
+        }
+      ],
+      "edition_id": "ol:OL37074008M",
+      "isbn13": "9780307476210",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2011",
+      "publishers": [
+        "Anchor Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL37074008M",
+        "languages": "https://openlibrary.org/books/OL37074008M",
+        "publish_date": "https://openlibrary.org/books/OL37074008M",
+        "publishers": "https://openlibrary.org/books/OL37074008M",
+        "title": "https://openlibrary.org/books/OL37074008M",
+        "work_id": "https://openlibrary.org/books/OL37074008M"
+      },
+      "title": "Dreams in a time of war",
+      "translation_of": null,
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL35769247M"
+        }
+      ],
+      "edition_id": "ol:OL35769247M",
+      "isbn13": "9781407085432",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2010",
+      "publishers": [
+        "Penguin Random House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL35769247M",
+        "languages": "https://openlibrary.org/books/OL35769247M",
+        "publish_date": "https://openlibrary.org/books/OL35769247M",
+        "publishers": "https://openlibrary.org/books/OL35769247M",
+        "title": "https://openlibrary.org/books/OL35769247M",
+        "work_id": "https://openlibrary.org/books/OL35769247M"
+      },
+      "title": "Dreams in a Time of War",
+      "translation_of": null,
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL40383723M"
+        }
+      ],
+      "edition_id": "ol:OL40383723M",
+      "isbn13": "9781407085449",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2010",
+      "publishers": [
+        "Penguin Random House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL40383723M",
+        "languages": "https://openlibrary.org/books/OL40383723M",
+        "publish_date": "https://openlibrary.org/books/OL40383723M",
+        "publishers": "https://openlibrary.org/books/OL40383723M",
+        "title": "https://openlibrary.org/books/OL40383723M",
+        "work_id": "https://openlibrary.org/books/OL40383723M"
+      },
+      "title": "Dreams in A Time of War",
+      "translation_of": null,
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL27684861M"
+        }
+      ],
+      "edition_id": "ol:OL27684861M",
+      "isbn13": "9781846553776",
+      "languages": [],
+      "publish_date": "Mar 08, 2011",
+      "publishers": [
+        "Anchor",
+        "Harvill Secker"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL27684861M",
+        "publish_date": "https://openlibrary.org/books/OL27684861M",
+        "publishers": "https://openlibrary.org/books/OL27684861M",
+        "title": "https://openlibrary.org/books/OL27684861M",
+        "work_id": "https://openlibrary.org/books/OL27684861M"
+      },
+      "title": "Dreams in a Time of War",
+      "translation_of": null,
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL24547115M"
+        }
+      ],
+      "edition_id": "ol:OL24547115M",
+      "isbn13": "9780307378835",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2010",
+      "publishers": [
+        "Pantheon Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL24547115M",
+        "languages": "https://openlibrary.org/books/OL24547115M",
+        "publish_date": "https://openlibrary.org/books/OL24547115M",
+        "publishers": "https://openlibrary.org/books/OL24547115M",
+        "title": "https://openlibrary.org/books/OL24547115M",
+        "work_id": "https://openlibrary.org/books/OL24547115M"
+      },
+      "title": "Dreams in a time of war",
+      "translation_of": null,
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL24525247M"
+        }
+      ],
+      "edition_id": "ol:OL24525247M",
+      "isbn13": "9789966257567",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2010",
+      "publishers": [
+        "Kenway Publications"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL24525247M",
+        "languages": "https://openlibrary.org/books/OL24525247M",
+        "publish_date": "https://openlibrary.org/books/OL24525247M",
+        "publishers": "https://openlibrary.org/books/OL24525247M",
+        "title": "https://openlibrary.org/books/OL24525247M",
+        "work_id": "https://openlibrary.org/books/OL24525247M"
+      },
+      "title": "Dreams in a time of war",
+      "translation_of": null,
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL44058306M"
+        }
+      ],
+      "edition_id": "ol:OL44058306M",
+      "isbn13": "9789966980113",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2019",
+      "publishers": [
+        "Books Horizon"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL44058306M",
+        "languages": "https://openlibrary.org/books/OL44058306M",
+        "publish_date": "https://openlibrary.org/books/OL44058306M",
+        "publishers": "https://openlibrary.org/books/OL44058306M",
+        "title": "https://openlibrary.org/books/OL44058306M",
+        "work_id": "https://openlibrary.org/books/OL44058306M"
+      },
+      "title": "Mirrors of my life",
+      "translation_of": null,
+      "work_id": "mirrors-of-my-life"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL24262961M"
+        }
+      ],
+      "edition_id": "ol:OL24262961M",
+      "isbn13": "9780307378095",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2009",
+      "publishers": [
+        "Knopf Doubleday Publishing Group"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL24262961M",
+        "languages": "https://openlibrary.org/books/OL24262961M",
+        "publish_date": "https://openlibrary.org/books/OL24262961M",
+        "publishers": "https://openlibrary.org/books/OL24262961M",
+        "title": "https://openlibrary.org/books/OL24262961M",
+        "work_id": "https://openlibrary.org/books/OL24262961M"
+      },
+      "title": "The Challenge for Africa",
+      "translation_of": null,
+      "work_id": "the-challenge-for-africa"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL22560880M"
+        }
+      ],
+      "edition_id": "ol:OL22560880M",
+      "isbn13": "9780307377401",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2009",
+      "publishers": [
+        "Pantheon Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL22560880M",
+        "languages": "https://openlibrary.org/books/OL22560880M",
+        "publish_date": "https://openlibrary.org/books/OL22560880M",
+        "publishers": "https://openlibrary.org/books/OL22560880M",
+        "title": "https://openlibrary.org/books/OL22560880M",
+        "work_id": "https://openlibrary.org/books/OL22560880M"
+      },
+      "title": "The challenge for Africa",
+      "translation_of": null,
+      "work_id": "the-challenge-for-africa"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL24815611M"
+        }
+      ],
+      "edition_id": "ol:OL24815611M",
+      "isbn13": "9780307591142",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2010",
+      "publishers": [
+        "Doubleday"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL24815611M",
+        "languages": "https://openlibrary.org/books/OL24815611M",
+        "publish_date": "https://openlibrary.org/books/OL24815611M",
+        "publishers": "https://openlibrary.org/books/OL24815611M",
+        "title": "https://openlibrary.org/books/OL24815611M",
+        "work_id": "https://openlibrary.org/books/OL24815611M"
+      },
+      "title": "Replenishing the earth",
+      "translation_of": null,
+      "work_id": "replenishing-the-earth"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL34733781M"
+        }
+      ],
+      "edition_id": "ol:OL34733781M",
+      "isbn13": "9781787443976",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2011",
+      "publishers": [
+        "Boydell & Brewer, Limited"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL34733781M",
+        "languages": "https://openlibrary.org/books/OL34733781M",
+        "publish_date": "https://openlibrary.org/books/OL34733781M",
+        "publishers": "https://openlibrary.org/books/OL34733781M",
+        "title": "https://openlibrary.org/books/OL34733781M",
+        "work_id": "https://openlibrary.org/books/OL34733781M"
+      },
+      "title": "Decolonising the Mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL34754724M"
+        }
+      ],
+      "edition_id": "ol:OL34754724M",
+      "isbn13": "9781800100497",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2011",
+      "publishers": [
+        "Boydell & Brewer, Limited"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL34754724M",
+        "languages": "https://openlibrary.org/books/OL34754724M",
+        "publish_date": "https://openlibrary.org/books/OL34754724M",
+        "publishers": "https://openlibrary.org/books/OL34754724M",
+        "title": "https://openlibrary.org/books/OL34754724M",
+        "work_id": "https://openlibrary.org/books/OL34754724M"
+      },
+      "title": "Decolonising the Mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL36152403M"
+        }
+      ],
+      "edition_id": "ol:OL36152403M",
+      "isbn13": null,
+      "languages": [],
+      "publish_date": "1986",
+      "publishers": [
+        "East African Educational Publishers"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "publish_date": "https://openlibrary.org/books/OL36152403M",
+        "publishers": "https://openlibrary.org/books/OL36152403M",
+        "title": "https://openlibrary.org/books/OL36152403M",
+        "work_id": "https://openlibrary.org/books/OL36152403M"
+      },
+      "title": "Decolonising the mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL2711888M"
+        }
+      ],
+      "edition_id": "ol:OL2711888M",
+      "isbn13": "9780435080167",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "J. Currey",
+        "Heinemann"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL2711888M",
+        "languages": "https://openlibrary.org/books/OL2711888M",
+        "publish_date": "https://openlibrary.org/books/OL2711888M",
+        "publishers": "https://openlibrary.org/books/OL2711888M",
+        "title": "https://openlibrary.org/books/OL2711888M",
+        "work_id": "https://openlibrary.org/books/OL2711888M"
+      },
+      "title": "Decolonising the mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL48115396M"
+        }
+      ],
+      "edition_id": "ol:OL48115396M",
+      "isbn13": "9780435080167",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1991",
+      "publishers": [
+        "James Currey"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL48115396M",
+        "languages": "https://openlibrary.org/books/OL48115396M",
+        "publish_date": "https://openlibrary.org/books/OL48115396M",
+        "publishers": "https://openlibrary.org/books/OL48115396M",
+        "title": "https://openlibrary.org/books/OL48115396M",
+        "work_id": "https://openlibrary.org/books/OL48115396M"
+      },
+      "title": "Decolonising the mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL22147032M"
+        }
+      ],
+      "edition_id": "ol:OL22147032M",
+      "isbn13": "9780852555019",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1986",
+      "publishers": [
+        "Currey"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL22147032M",
+        "languages": "https://openlibrary.org/books/OL22147032M",
+        "publish_date": "https://openlibrary.org/books/OL22147032M",
+        "publishers": "https://openlibrary.org/books/OL22147032M",
+        "title": "https://openlibrary.org/books/OL22147032M",
+        "work_id": "https://openlibrary.org/books/OL22147032M"
+      },
+      "title": "Decolonising the mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL8281826M"
+        }
+      ],
+      "edition_id": "ol:OL8281826M",
+      "isbn13": "9780852555019",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1989",
+      "publishers": [
+        "James Currey Ltd"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL8281826M",
+        "languages": "https://openlibrary.org/books/OL8281826M",
+        "publish_date": "https://openlibrary.org/books/OL8281826M",
+        "publishers": "https://openlibrary.org/books/OL8281826M",
+        "title": "https://openlibrary.org/books/OL8281826M",
+        "work_id": "https://openlibrary.org/books/OL8281826M"
+      },
+      "title": "Decolonising the Mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL9431439M"
+        }
+      ],
+      "edition_id": "ol:OL9431439M",
+      "isbn13": "9780949225382",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "1994",
+      "publishers": [
+        "Zimbabwe Publishing House"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL9431439M",
+        "languages": "https://openlibrary.org/books/OL9431439M",
+        "publish_date": "https://openlibrary.org/books/OL9431439M",
+        "publishers": "https://openlibrary.org/books/OL9431439M",
+        "title": "https://openlibrary.org/books/OL9431439M",
+        "work_id": "https://openlibrary.org/books/OL9431439M"
+      },
+      "title": "Decolonising the Mind",
+      "translation_of": null,
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL61062775M"
+        }
+      ],
+      "edition_id": "ol:OL61062775M",
+      "isbn13": null,
+      "languages": [],
+      "publish_date": "2009",
+      "publishers": [
+        "Basic Civitas Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "publish_date": "https://openlibrary.org/books/OL61062775M",
+        "publishers": "https://openlibrary.org/books/OL61062775M",
+        "title": "https://openlibrary.org/books/OL61062775M",
+        "work_id": "https://openlibrary.org/books/OL61062775M"
+      },
+      "title": "Something Torn and New",
+      "translation_of": null,
+      "work_id": "something-torn-and-new"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL29593128M"
+        }
+      ],
+      "edition_id": "ol:OL29593128M",
+      "isbn13": "9780786744190",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2009",
+      "publishers": [
+        "Basic Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL29593128M",
+        "languages": "https://openlibrary.org/books/OL29593128M",
+        "publish_date": "https://openlibrary.org/books/OL29593128M",
+        "publishers": "https://openlibrary.org/books/OL29593128M",
+        "title": "https://openlibrary.org/books/OL29593128M",
+        "work_id": "https://openlibrary.org/books/OL29593128M"
+      },
+      "title": "Something Torn and New",
+      "translation_of": null,
+      "work_id": "something-torn-and-new"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/books/OL22684578M"
+        }
+      ],
+      "edition_id": "ol:OL22684578M",
+      "isbn13": "9780465009466",
+      "languages": [
+        "eng"
+      ],
+      "publish_date": "2008",
+      "publishers": [
+        "BasicCivitas Books"
+      ],
+      "review_status": "source_linked_candidate",
+      "source_fields": {
+        "isbn13": "https://openlibrary.org/books/OL22684578M",
+        "languages": "https://openlibrary.org/books/OL22684578M",
+        "publish_date": "https://openlibrary.org/books/OL22684578M",
+        "publishers": "https://openlibrary.org/books/OL22684578M",
+        "title": "https://openlibrary.org/books/OL22684578M",
+        "work_id": "https://openlibrary.org/books/OL22684578M"
+      },
+      "title": "Something torn and new",
+      "translation_of": null,
+      "work_id": "something-torn-and-new"
+    }
+  ],
+  "evidence_fingerprint": "05990fe690caa226e13479ab0ab0599153c4bffbf6f3bf3e9f176b49c7680763",
+  "people": [
+    {
+      "aliases": [],
+      "identity_evidence": "https://journals.sagepub.com/doi/10.1080/03064228308533570",
+      "name": "Abdilatif Abdalla",
+      "person_id": "abdilatif-abdalla",
+      "wikidata_id": null
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+      "name": "Anne Matindi",
+      "person_id": "anne-matindi",
+      "wikidata_id": null
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q864094",
+      "name": "Binyavanga Wainaina",
+      "person_id": "binyavanga-wainaina",
+      "wikidata_id": "Q864094"
+    },
+    {
+      "aliases": [
+        "F. D. Imbuga",
+        "Francis Imbuga"
+      ],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q5480672",
+      "name": "Francis D. Imbuga",
+      "person_id": "francis-imbuga",
+      "wikidata_id": "Q5480672"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://openlibrary.org/authors/OL380756A/Jared_Angira",
+      "name": "Jared Angira",
+      "person_id": "jared-angira",
+      "wikidata_id": null
+    },
+    {
+      "aliases": [
+        "Ken Waliaula"
+      ],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q28124309",
+      "name": "Ken Walibora",
+      "person_id": "ken-walibora",
+      "wikidata_id": "Q28124309"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q55584286",
+      "name": "Khadija Abdalla Bajaber",
+      "person_id": "khadija-abdalla-bajaber",
+      "wikidata_id": "Q55584286"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q123021121",
+      "name": "Kithaka wa Mberia",
+      "person_id": "kithaka-wa-mberia",
+      "wikidata_id": "Q123021121"
+    },
+    {
+      "aliases": [
+        "Margaret Ogola"
+      ],
+      "identity_evidence": "https://africanbookscollective.com/books/the-river-and-the-source/",
+      "name": "Margaret A. Ogola",
+      "person_id": "margaret-ogola",
+      "wikidata_id": null
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q4358032",
+      "name": "Marjorie Oludhe Macgoye",
+      "person_id": "marjorie-oludhe-macgoye",
+      "wikidata_id": "Q4358032"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q1918860",
+      "name": "Meja Mwangi",
+      "person_id": "meja-mwangi",
+      "wikidata_id": "Q1918860"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q6951143",
+      "name": "Mũkoma wa Ngũgĩ",
+      "person_id": "mukoma-wa-ngugi",
+      "wikidata_id": "Q6951143"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.paperlionltd.com/clients/bruce-hobson/",
+      "name": "Mwenye Hadithi",
+      "person_id": "mwenye-hadithi",
+      "wikidata_id": null
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q302910",
+      "name": "Ngũgĩ wa Thiong'o",
+      "person_id": "ngugi-wa-thiong-o",
+      "wikidata_id": "Q302910"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.bloomsbury.com/uk/author/rebeka-njau/",
+      "name": "Rebeka Njau",
+      "person_id": "rebeka-njau",
+      "wikidata_id": null
+    },
+    {
+      "aliases": [
+        "Wangari Muta Maathai"
+      ],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q46795",
+      "name": "Wangari Maathai",
+      "person_id": "wangari-maathai",
+      "wikidata_id": "Q46795"
+    },
+    {
+      "aliases": [],
+      "identity_evidence": "https://www.wikidata.org/wiki/Q513472",
+      "name": "Yvonne Adhiambo Owuor",
+      "person_id": "yvonne-adhiambo-owuor",
+      "wikidata_id": "Q513472"
+    }
+  ],
+  "seed_fingerprint": "8ae2a30a62bcbdd568f90e680e701751f091116bf05d2cd8cb5d4bb975006820",
+  "version": 1,
+  "works": [
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL10243W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL30586750M",
+        "ol:OL33560255M",
+        "ol:OL44208085M",
+        "ol:OL21418433M",
+        "ol:OL17728444M",
+        "ol:OL21487687M",
+        "ol:OL15447854M"
+      ],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL10243W",
+        "wikidata": "Q7171660"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL10243W",
+          "https://www.wikidata.org/wiki/Q7171660",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL10243W",
+          "https://www.wikidata.org/wiki/Q7171660",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Petals of Blood",
+      "title_aliases": [],
+      "work_id": "petals-of-blood"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL10242W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL43755498M",
+        "ol:OL32101051M",
+        "ol:OL25238395M",
+        "ol:OL25238396M",
+        "ol:OL22244130M",
+        "ol:OL17134780M",
+        "ol:OL14458897M",
+        "ol:OL13673139M",
+        "ol:OL22589200M"
+      ],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL10242W",
+        "wikidata": "Q4657149"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL10242W",
+          "https://www.wikidata.org/wiki/Q4657149",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL10242W",
+          "https://www.wikidata.org/wiki/Q4657149",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "A Grain of Wheat",
+      "title_aliases": [],
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL10246W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL47019099M",
+        "ol:OL19984696M",
+        "ol:OL23317454M",
+        "ol:OL19774431M",
+        "ol:OL22433616M",
+        "ol:OL18963611M",
+        "ol:OL13536548M",
+        "ol:OL18348508M"
+      ],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL10246W",
+        "wikidata": "Q7760989"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL10246W",
+          "https://www.wikidata.org/wiki/Q7760989",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL10246W",
+          "https://www.wikidata.org/wiki/Q7760989",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "The River Between",
+      "title_aliases": [],
+      "work_id": "the-river-between"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL10245W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL59041461M",
+        "ol:OL48110831M",
+        "ol:OL40363904M",
+        "ol:OL25237963M",
+        "ol:OL25237962M",
+        "ol:OL21487698M",
+        "ol:OL18174304M",
+        "ol:OL43100799M"
+      ],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL10245W",
+        "wikidata": "Q3953479"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL10245W",
+          "https://www.wikidata.org/wiki/Q3953479",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL10245W",
+          "https://www.wikidata.org/wiki/Q3953479",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Weep Not, Child",
+      "title_aliases": [],
+      "work_id": "weep-not-child"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL19974522W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "yvonne-adhiambo-owuor",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL38844610M",
+        "ol:OL35508594M",
+        "ol:OL34623455M",
+        "ol:OL30967420M",
+        "ol:OL28272050M",
+        "ol:OL27154696M"
+      ],
+      "form": {
+        "source_url": "https://openlibrary.org/works/OL19974522W",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL19974522W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q513472"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL19974522W",
+          "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL19974522W",
+          "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+        ]
+      },
+      "synopsis": {
+        "language": "en",
+        "reuse_basis": "original editorial wording based on bibliographic or publisher facts",
+        "source_url": "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/",
+        "status": "editorial_draft",
+        "text": "A killing in Nairobi brings a family back together and forces it to confront secrets entangled with Kenya’s political history."
+      },
+      "text_assets": [],
+      "themes": [],
+      "title": "Dust",
+      "title_aliases": [],
+      "work_id": "dust"
+    },
+    {
+      "access_links": [],
+      "contributors": [
+        {
+          "person_id": "yvonne-adhiambo-owuor",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": null,
+        "wikidata": "Q109535196"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q513472"
+      },
+      "source_fields": {
+        "author": [
+          "https://www.wikidata.org/wiki/Q109535196",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://www.wikidata.org/wiki/Q109535196",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "The Dragonfly Sea",
+      "title_aliases": [],
+      "work_id": "the-dragonfly-sea"
+    },
+    {
+      "access_links": [],
+      "contributors": [
+        {
+          "person_id": "marjorie-oludhe-macgoye",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [],
+      "form": {
+        "source_url": "https://www.wikidata.org/wiki/Q125423260",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": null,
+        "wikidata": "Q125423260"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q4358032"
+      },
+      "source_fields": {
+        "author": [
+          "https://www.wikidata.org/wiki/Q125423260",
+          "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=5111"
+        ],
+        "title": [
+          "https://www.wikidata.org/wiki/Q125423260",
+          "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=5111"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Coming to Birth",
+      "title_aliases": [],
+      "work_id": "coming-to-birth"
+    },
+    {
+      "access_links": [],
+      "contributors": [
+        {
+          "person_id": "meja-mwangi",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": null,
+        "wikidata": "Q125686757"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q1918860"
+      },
+      "source_fields": {
+        "author": [
+          "https://www.wikidata.org/wiki/Q125686757",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://www.wikidata.org/wiki/Q125686757",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Going Down River Road",
+      "title_aliases": [],
+      "work_id": "going-down-river-road"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL24509246W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "khadija-abdalla-bajaber",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL32478788M"
+      ],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL24509246W",
+        "wikidata": "Q132339845"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q55584286"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL24509246W",
+          "https://www.wikidata.org/wiki/Q132339845",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL24509246W",
+          "https://www.wikidata.org/wiki/Q132339845",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "The House of Rust",
+      "title_aliases": [],
+      "work_id": "the-house-of-rust"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL1013174W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "margaret-ogola",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL1267994M"
+      ],
+      "form": {
+        "source_url": "https://africanbookscollective.com/books/the-river-and-the-source/",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL1013174W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://africanbookscollective.com/books/the-river-and-the-source/"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL1013174W",
+          "https://africanbookscollective.com/books/the-river-and-the-source/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL1013174W",
+          "https://africanbookscollective.com/books/the-river-and-the-source/"
+        ]
+      },
+      "synopsis": {
+        "language": "en",
+        "reuse_basis": "original editorial wording based on bibliographic or publisher facts",
+        "source_url": "https://africanbookscollective.com/books/the-river-and-the-source/",
+        "status": "editorial_draft",
+        "text": "Four generations of Kenyan women navigate changing expectations of family and community."
+      },
+      "text_assets": [],
+      "themes": [],
+      "title": "The River and the Source",
+      "title_aliases": [],
+      "work_id": "the-river-and-the-source"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL17582696W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "mukoma-wa-ngugi",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL28961508M",
+        "ol:OL35501728M",
+        "ol:OL26185860M"
+      ],
+      "form": {
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL17582696W",
+        "wikidata": "Q17019582"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q6951143"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL17582696W",
+          "https://www.wikidata.org/wiki/Q17019582",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL17582696W",
+          "https://www.wikidata.org/wiki/Q17019582",
+          "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Black Star Nairobi",
+      "title_aliases": [],
+      "work_id": "black-star-nairobi"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL7086421W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "abdilatif-abdalla",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL5182139M"
+      ],
+      "form": {
+        "source_url": "https://ci.nii.ac.jp/ncid/BD05489832",
+        "status": "editorial_candidate",
+        "value": "poetry"
+      },
+      "identifiers": {
+        "open_library": "OL7086421W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://journals.sagepub.com/doi/10.1080/03064228308533570"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL7086421W",
+          "https://ci.nii.ac.jp/ncid/BD05489832"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL7086421W",
+          "https://ci.nii.ac.jp/ncid/BD05489832"
+        ]
+      },
+      "synopsis": {
+        "language": "en",
+        "reuse_basis": "original editorial wording based on bibliographic or publisher facts",
+        "source_url": "https://journals.sagepub.com/doi/10.1080/03064228308533570",
+        "status": "editorial_draft",
+        "text": "Written while Abdilatif Abdalla was imprisoned, this collection of Kiswahili poetry engages with repression and political struggle."
+      },
+      "text_assets": [],
+      "themes": [],
+      "title": "Sauti ya dhiki",
+      "title_aliases": [],
+      "work_id": "sauti-ya-dhiki"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL2615858W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "jared-angira",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL4927528M",
+        "ol:OL13772229M"
+      ],
+      "form": {
+        "source_url": "https://iucat.iu.edu/iuk/1905138",
+        "status": "editorial_candidate",
+        "value": "poetry"
+      },
+      "identifiers": {
+        "open_library": "OL2615858W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenya_publication",
+        "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL2615858W",
+          "https://iucat.iu.edu/iuk/1905138"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL2615858W",
+          "https://iucat.iu.edu/iuk/1905138"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Juices",
+      "title_aliases": [],
+      "work_id": "juices"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL2615855W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "jared-angira",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL5449331M"
+      ],
+      "form": {
+        "source_url": "https://library.au.int/silent-voices-poems-10",
+        "status": "editorial_candidate",
+        "value": "poetry"
+      },
+      "identifiers": {
+        "open_library": "OL2615855W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenya_linked_author",
+        "source_url": "https://npl.southbankcentre.co.uk/P10311UK/OPAC/Details/Record.aspx?BibCode=40859019"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL2615855W",
+          "https://library.au.int/silent-voices-poems-10"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL2615855W",
+          "https://library.au.int/silent-voices-poems-10"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Silent Voices",
+      "title_aliases": [
+        "Silent voices; poems"
+      ],
+      "work_id": "silent-voices"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL5783602W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "kithaka-wa-mberia",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL3360215M"
+      ],
+      "form": {
+        "source_url": "https://www.wikidata.org/wiki/Q90900593",
+        "status": "editorial_candidate",
+        "value": "poetry"
+      },
+      "identifiers": {
+        "open_library": "OL5783602W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q123021121"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL5783602W",
+          "https://www.wikidata.org/wiki/Q90900593"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL5783602W",
+          "https://www.wikidata.org/wiki/Q90900593"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Maua kwenye jua la asubuhi",
+      "title_aliases": [],
+      "work_id": "maua-kwenye-jua-la-asubuhi"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL3451029W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "francis-imbuga",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL13212044M",
+        "ol:OL45304471M",
+        "ol:OL19946974M",
+        "ol:OL4712665M"
+      ],
+      "form": {
+        "source_url": "https://openlibrary.org/works/OL3451029W",
+        "status": "editorial_candidate",
+        "value": "drama"
+      },
+      "identifiers": {
+        "open_library": "OL3451029W",
+        "wikidata": "Q125548023"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q5480672"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL3451029W",
+          "https://www.wikidata.org/wiki/Q125548023"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL3451029W",
+          "https://www.wikidata.org/wiki/Q125548023"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Betrayal in the City",
+      "title_aliases": [],
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL19393891W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ken-walibora",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [],
+      "form": {
+        "source_url": "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL19393891W",
+        "wikidata": "Q7513978"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q28124309"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL19393891W",
+          "https://www.wikidata.org/wiki/Q7513978",
+          "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL19393891W",
+          "https://www.wikidata.org/wiki/Q7513978",
+          "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Siku Njema",
+      "title_aliases": [],
+      "work_id": "siku-njema"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL16689060W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ken-walibora",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL25362197M"
+      ],
+      "form": {
+        "source_url": "https://library.daystar.ac.ke/bib/43380",
+        "status": "editorial_candidate",
+        "value": "fiction"
+      },
+      "identifiers": {
+        "open_library": "OL16689060W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL16689060W",
+          "https://library.daystar.ac.ke/bib/43380"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL16689060W",
+          "https://library.daystar.ac.ke/bib/43380"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Kidagaa Kimemwozea",
+      "title_aliases": [],
+      "work_id": "kidagaa-kimemwozea"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL7197414W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "anne-matindi",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL22801465M"
+      ],
+      "form": {
+        "source_url": "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+        "status": "editorial_candidate",
+        "value": "children"
+      },
+      "identifiers": {
+        "open_library": "OL7197414W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenya_publication",
+        "source_url": "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL7197414W",
+          "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL7197414W",
+          "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Jua na Upepo",
+      "title_aliases": [
+        "Jua na upepo, na hadithi nyingine"
+      ],
+      "work_id": "jua-na-upepo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL3694392W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "mwenye-hadithi",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL51571185M",
+        "ol:OL2707574M",
+        "ol:OL17221612M",
+        "ol:OL9611401M",
+        "ol:OL17512648M",
+        "ol:OL23242823M"
+      ],
+      "form": {
+        "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/",
+        "status": "editorial_candidate",
+        "value": "children"
+      },
+      "identifiers": {
+        "open_library": "OL3694392W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenya_linked_author",
+        "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL3694392W",
+          "https://www.paperlionltd.com/clients/bruce-hobson/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL3694392W",
+          "https://www.paperlionltd.com/clients/bruce-hobson/"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Hot Hippo",
+      "title_aliases": [],
+      "work_id": "hot-hippo"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL16485105W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "mwenye-hadithi",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL36186806M",
+        "ol:OL25185107M"
+      ],
+      "form": {
+        "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/",
+        "status": "editorial_candidate",
+        "value": "children"
+      },
+      "identifiers": {
+        "open_library": "OL16485105W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenya_linked_author",
+        "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL16485105W",
+          "https://www.paperlionltd.com/clients/bruce-hobson/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL16485105W",
+          "https://www.paperlionltd.com/clients/bruce-hobson/"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Laughing Giraffe",
+      "title_aliases": [],
+      "work_id": "laughing-giraffe"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL4436882W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "wangari-maathai",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL46965690M",
+        "ol:OL40381431M",
+        "ol:OL40344008M",
+        "ol:OL38212002M",
+        "ol:OL28432936M",
+        "ol:OL24296609M",
+        "ol:OL15606734M",
+        "ol:OL7507083M",
+        "ol:OL9652384M",
+        "ol:OL9819535M",
+        "ol:OL23189567M"
+      ],
+      "form": {
+        "source_url": "https://www.greenbeltmovement.org/books/",
+        "status": "editorial_candidate",
+        "value": "memoir"
+      },
+      "identifiers": {
+        "open_library": "OL4436882W",
+        "wikidata": "Q7882412"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q46795"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL4436882W",
+          "https://www.wikidata.org/wiki/Q7882412",
+          "https://www.greenbeltmovement.org/books/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL4436882W",
+          "https://www.wikidata.org/wiki/Q7882412",
+          "https://www.greenbeltmovement.org/books/"
+        ]
+      },
+      "synopsis": {
+        "language": "en",
+        "reuse_basis": "original editorial wording based on bibliographic or publisher facts",
+        "source_url": "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/",
+        "status": "editorial_draft",
+        "text": "Wangari Maathai traces her life from rural Kenya to the grassroots organising that grew into the Green Belt Movement."
+      },
+      "text_assets": [],
+      "themes": [],
+      "title": "Unbowed",
+      "title_aliases": [],
+      "work_id": "unbowed"
+    },
+    {
+      "access_links": [],
+      "contributors": [
+        {
+          "person_id": "binyavanga-wainaina",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [],
+      "form": {
+        "source_url": "https://www.graywolfpress.org/books/one-day-i-will-write-about-place",
+        "status": "editorial_candidate",
+        "value": "memoir"
+      },
+      "identifiers": {
+        "open_library": null,
+        "wikidata": "Q57315581"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q864094"
+      },
+      "source_fields": {
+        "author": [
+          "https://www.wikidata.org/wiki/Q57315581",
+          "https://www.graywolfpress.org/books/one-day-i-will-write-about-place"
+        ],
+        "title": [
+          "https://www.wikidata.org/wiki/Q57315581",
+          "https://www.graywolfpress.org/books/one-day-i-will-write-about-place"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "One Day I Will Write About This Place",
+      "title_aliases": [],
+      "work_id": "one-day-i-will-write-about-this-place"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL16599914W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL27491246M",
+        "ol:OL28504957M",
+        "ol:OL25283289M"
+      ],
+      "form": {
+        "source_url": "https://ngugiwathiongo.com/",
+        "status": "editorial_candidate",
+        "value": "memoir"
+      },
+      "identifiers": {
+        "open_library": "OL16599914W",
+        "wikidata": "Q141582963"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL16599914W",
+          "https://www.wikidata.org/wiki/Q141582963"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL16599914W",
+          "https://www.wikidata.org/wiki/Q141582963"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "In the House of the Interpreter",
+      "title_aliases": [],
+      "work_id": "in-the-house-of-the-interpreter"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL15189963W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL37074008M",
+        "ol:OL35769247M",
+        "ol:OL40383723M",
+        "ol:OL27684861M",
+        "ol:OL24547115M",
+        "ol:OL24525247M"
+      ],
+      "form": {
+        "source_url": "https://ngugiwathiongo.com/",
+        "status": "editorial_candidate",
+        "value": "memoir"
+      },
+      "identifiers": {
+        "open_library": "OL15189963W",
+        "wikidata": "Q123824686"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL15189963W",
+          "https://www.wikidata.org/wiki/Q123824686"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL15189963W",
+          "https://www.wikidata.org/wiki/Q123824686"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Dreams in a Time of War",
+      "title_aliases": [],
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL32308684W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "rebeka-njau",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL44058306M"
+      ],
+      "form": {
+        "source_url": "https://rebekanjau.com/",
+        "status": "editorial_candidate",
+        "value": "memoir"
+      },
+      "identifiers": {
+        "open_library": "OL32308684W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenya_linked_author",
+        "source_url": "https://www.bloomsbury.com/uk/author/rebeka-njau/"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL32308684W",
+          "https://rebekanjau.com/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL32308684W",
+          "https://rebekanjau.com/"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Mirrors of My Life",
+      "title_aliases": [],
+      "work_id": "mirrors-of-my-life"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL4436879W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "wangari-maathai",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL24262961M",
+        "ol:OL22560880M"
+      ],
+      "form": {
+        "source_url": "https://www.greenbeltmovement.org/books/",
+        "status": "editorial_candidate",
+        "value": "nonfiction"
+      },
+      "identifiers": {
+        "open_library": "OL4436879W",
+        "wikidata": null
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q46795"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL4436879W",
+          "https://www.greenbeltmovement.org/books/",
+          "https://www.penguinrandomhouse.com/books/104883/the-challenge-for-africa-by-wangari-maathai/9780307378095/",
+          "https://www.wikidata.org/wiki/Q134430393"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL4436879W",
+          "https://www.greenbeltmovement.org/books/",
+          "https://www.penguinrandomhouse.com/books/104883/the-challenge-for-africa-by-wangari-maathai/9780307378095/",
+          "https://www.wikidata.org/wiki/Q134430393"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "The Challenge for Africa",
+      "title_aliases": [],
+      "work_id": "the-challenge-for-africa"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL15909202W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "wangari-maathai",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL24815611M"
+      ],
+      "form": {
+        "source_url": "https://www.greenbeltmovement.org/books/",
+        "status": "editorial_candidate",
+        "value": "nonfiction"
+      },
+      "identifiers": {
+        "open_library": "OL15909202W",
+        "wikidata": "Q141201136"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q46795"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL15909202W",
+          "https://www.wikidata.org/wiki/Q141201136",
+          "https://www.greenbeltmovement.org/books/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL15909202W",
+          "https://www.wikidata.org/wiki/Q141201136",
+          "https://www.greenbeltmovement.org/books/"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Replenishing the Earth",
+      "title_aliases": [],
+      "work_id": "replenishing-the-earth"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL7986924W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL34733781M",
+        "ol:OL34754724M",
+        "ol:OL36152403M",
+        "ol:OL2711888M",
+        "ol:OL48115396M",
+        "ol:OL22147032M",
+        "ol:OL8281826M",
+        "ol:OL9431439M"
+      ],
+      "form": {
+        "source_url": "https://ngugiwathiongo.com/decolonising-the-mind/",
+        "status": "editorial_candidate",
+        "value": "nonfiction"
+      },
+      "identifiers": {
+        "open_library": "OL7986924W",
+        "wikidata": "Q17006875"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL7986924W",
+          "https://www.wikidata.org/wiki/Q17006875",
+          "https://ngugiwathiongo.com/decolonising-the-mind/"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL7986924W",
+          "https://www.wikidata.org/wiki/Q17006875",
+          "https://ngugiwathiongo.com/decolonising-the-mind/"
+        ]
+      },
+      "synopsis": {
+        "language": "en",
+        "reuse_basis": "original editorial wording based on bibliographic or publisher facts",
+        "source_url": "https://ngugiwathiongo.com/decolonising-the-mind/",
+        "status": "editorial_draft",
+        "text": "Ngũgĩ examines how the choice of language shapes African literature and theatre, drawing on his own practice as a writer."
+      },
+      "text_assets": [],
+      "themes": [],
+      "title": "Decolonising the Mind",
+      "title_aliases": [],
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "access_links": [
+        {
+          "kind": "catalog",
+          "url": "https://openlibrary.org/works/OL15286149W"
+        }
+      ],
+      "contributors": [
+        {
+          "person_id": "ngugi-wa-thiong-o",
+          "role": "author"
+        }
+      ],
+      "cover": null,
+      "edition_ids": [
+        "ol:OL61062775M",
+        "ol:OL29593128M",
+        "ol:OL22684578M"
+      ],
+      "form": {
+        "source_url": "https://www.wikidata.org/wiki/Q141582773",
+        "status": "editorial_candidate",
+        "value": "nonfiction"
+      },
+      "identifiers": {
+        "open_library": "OL15286149W",
+        "wikidata": "Q141582773"
+      },
+      "original_language": null,
+      "review_status": "corroborated",
+      "scope": {
+        "basis": "kenyan_author",
+        "source_url": "https://www.wikidata.org/wiki/Q302910"
+      },
+      "source_fields": {
+        "author": [
+          "https://openlibrary.org/works/OL15286149W",
+          "https://www.wikidata.org/wiki/Q141582773"
+        ],
+        "title": [
+          "https://openlibrary.org/works/OL15286149W",
+          "https://www.wikidata.org/wiki/Q141582773"
+        ]
+      },
+      "synopsis": null,
+      "text_assets": [],
+      "themes": [],
+      "title": "Something Torn and New",
+      "title_aliases": [
+        "Something Torn and New: An African Renaissance"
+      ],
+      "work_id": "something-torn-and-new"
+    }
+  ]
+}

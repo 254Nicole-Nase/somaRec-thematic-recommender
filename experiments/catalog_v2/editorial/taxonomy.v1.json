@@ -1,0 +1,434 @@
+{
+  "version": "1.0.0",
+  "categories": [
+    {
+      "id": "fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Fiction",
+        "sw": "Bunilizi"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "literary-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Literary fiction",
+        "sw": "Bunilizi za kifasihi"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "historical-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Historical fiction",
+        "sw": "Bunilizi za kihistoria"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "family-saga",
+      "dimension": "genre",
+      "labels": {
+        "en": "Family saga",
+        "sw": "Masimulizi ya vizazi vya familia"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "political-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Political fiction",
+        "sw": "Bunilizi za kisiasa"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "crime-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Crime fiction",
+        "sw": "Bunilizi za uhalifu"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "mystery",
+      "dimension": "genre",
+      "labels": {
+        "en": "Mystery fiction",
+        "sw": "Bunilizi za mafumbo"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "detective-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Detective fiction",
+        "sw": "Bunilizi za upelelezi"
+      },
+      "aliases": {},
+      "parents": [
+        "crime-fiction",
+        "mystery"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "romance",
+      "dimension": "genre",
+      "labels": {
+        "en": "Romance fiction",
+        "sw": "Bunilizi za mapenzi"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "speculative-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Speculative fiction",
+        "sw": "Bunilizi za kubuni ulimwengu mbadala"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "science-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Science fiction",
+        "sw": "Bunilizi za kisayansi"
+      },
+      "aliases": {},
+      "parents": [
+        "speculative-fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "fantasy",
+      "dimension": "genre",
+      "labels": {
+        "en": "Fantasy fiction",
+        "sw": "Bunilizi za fantasia"
+      },
+      "aliases": {},
+      "parents": [
+        "speculative-fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "magical-realism",
+      "dimension": "genre",
+      "labels": {
+        "en": "Magical realism",
+        "sw": "Uhalisia wa kichawi"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "coming-of-age-fiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Coming-of-age fiction",
+        "sw": "Bunilizi za kuelekea utu uzima"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "animal-story",
+      "dimension": "genre",
+      "labels": {
+        "en": "Animal story",
+        "sw": "Hadithi ya wanyama"
+      },
+      "aliases": {},
+      "parents": [
+        "fiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "nonfiction",
+      "dimension": "genre",
+      "labels": {
+        "en": "Nonfiction",
+        "sw": "Maandishi yasiyo ya kubuni"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "life-writing",
+      "dimension": "genre",
+      "labels": {
+        "en": "Life writing",
+        "sw": "Maandishi ya maisha"
+      },
+      "aliases": {},
+      "parents": [
+        "nonfiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "memoir",
+      "dimension": "genre",
+      "labels": {
+        "en": "Memoir",
+        "sw": "Kumbukumbu za maisha"
+      },
+      "aliases": {},
+      "parents": [
+        "life-writing"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "literary-criticism",
+      "dimension": "genre",
+      "labels": {
+        "en": "Literary criticism",
+        "sw": "Uhakiki wa fasihi"
+      },
+      "aliases": {},
+      "parents": [
+        "nonfiction"
+      ],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "prison-poetry",
+      "dimension": "genre",
+      "labels": {
+        "en": "Prison poetry",
+        "sw": "Ushairi wa gerezani"
+      },
+      "aliases": {
+        "sw": [
+          "mashairi ya gerezani"
+        ]
+      },
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "novel",
+      "dimension": "form",
+      "labels": {
+        "en": "Novel",
+        "sw": "Riwaya"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "poetry",
+      "dimension": "form",
+      "labels": {
+        "en": "Poetry",
+        "sw": "Ushairi"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": [
+        {
+          "scheme": "wikidata",
+          "uri": "https://www.wikidata.org/wiki/Q482",
+          "relation": "close"
+        }
+      ]
+    },
+    {
+      "id": "play",
+      "dimension": "form",
+      "labels": {
+        "en": "Play",
+        "sw": "Tamthilia"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "story-collection",
+      "dimension": "form",
+      "labels": {
+        "en": "Story collection",
+        "sw": "Mkusanyo wa hadithi"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "picture-book",
+      "dimension": "form",
+      "labels": {
+        "en": "Picture book",
+        "sw": "Kitabu cha picha"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "short-story",
+      "dimension": "form",
+      "labels": {
+        "en": "Short story",
+        "sw": "Hadithi fupi"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "essay",
+      "dimension": "form",
+      "labels": {
+        "en": "Essay",
+        "sw": "Insha"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "children",
+      "dimension": "audience",
+      "labels": {
+        "en": "Children",
+        "sw": "Watoto"
+      },
+      "aliases": {
+        "en": [
+          "child readers"
+        ],
+        "sw": [
+          "wasomaji watoto"
+        ]
+      },
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    },
+    {
+      "id": "adults",
+      "dimension": "audience",
+      "labels": {
+        "en": "Adults",
+        "sw": "Watu wazima"
+      },
+      "aliases": {},
+      "parents": [],
+      "status": "active",
+      "provenance": "SomaRec editorial vocabulary v1; provisional Kiswahili terminology.",
+      "mappings": []
+    }
+  ]
+}

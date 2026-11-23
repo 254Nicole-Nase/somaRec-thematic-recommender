@@ -1,0 +1,5 @@
+[
+  {"id":"pilot-form-1","query":"poetry","language":"en","kind":"genre"},
+  {"id":"pilot-form-2","query":"play","language":"en","kind":"genre"},
+  {"id":"pilot-form-3","query":"novel","language":"en","kind":"genre"}
+]

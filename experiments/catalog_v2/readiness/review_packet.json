@@ -1,0 +1,499 @@
+[
+  {
+    "additional_evidence": [],
+    "author": "Francis D. Imbuga",
+    "ballot_assertion": {
+      "evidence": [
+        "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-MARCdetail.pl?biblionumber=4939"
+      ],
+      "fingerprint": "a6b867f8523265cbd26629ca9a839d225ac154e20249be9f5bb3837e1ea91336",
+      "note": "Pwani University transcribes the subtitle a play and credits Francis Imbuga in MARC 245 for the 1976 Nairobi publication.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "play"
+    },
+    "edition_candidate_ids": [
+      "ol:OL13212044M",
+      "ol:OL45304471M",
+      "ol:OL19946974M",
+      "ol:OL4712665M"
+    ],
+    "evidence_note": "Read the title statement in MARC 245, including the subtitle and responsibility. The imprint identifies the 1976 edition.",
+    "field": "literary_form",
+    "frozen_assertion": {
+      "evidence": [
+        "https://openlibrary.org/works/OL3451029W"
+      ],
+      "fingerprint": "b85113ff551fe55235204ac9b8e92464c7c691eebdde7852d552c20d392246da",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "drama"
+    },
+    "isbn_conflicts": {
+      "9789966463609": [
+        "ol:OL13212044M",
+        "ol:OL19946974M"
+      ]
+    },
+    "legacy_mapping": {
+      "evidence": [
+        "https://github.com/254Nicole-Nase/somaRec-thematic-recommender/blob/9051bbb/backend/data/catalog.csv",
+        "https://openlibrary.org/works/OL3451029W",
+        "https://www.wikidata.org/wiki/Q125548023"
+      ],
+      "fingerprint": "69f6aaa299e59df69cbb2e59fdd10458de6635af7198718eaacf2e30f5345684",
+      "note": "Compare exact work and edition; retain all existing UUIDs until an explicit mapping review.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": [
+        "5658fe46-7767-571d-817e-4e7027b37de6"
+      ]
+    },
+    "source_candidates": {
+      "open_library_title_author_candidates": [
+        "OL3451029W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q125548023"
+      ]
+    },
+    "title": "Betrayal in the City",
+    "work_id": "betrayal-in-the-city",
+    "work_identity": {
+      "evidence": [
+        "https://openlibrary.org/works/OL3451029W",
+        "https://www.wikidata.org/wiki/Q125548023"
+      ],
+      "fingerprint": "51fa36aa7ab140a906999d3aa3d8159f68eec1187581e71c2e190fea26fda50b",
+      "note": "Check the work versus edition entity and the competing provider records.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": {
+        "open_library": "OL3451029W",
+        "wikidata": "Q125548023"
+      }
+    }
+  },
+  {
+    "additional_evidence": [],
+    "author": "Yvonne Adhiambo Owuor",
+    "ballot_assertion": {
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ],
+      "fingerprint": "f4a7ac2de25f7b077f034e002b901dc0184f2849a29f0744a1b555c947bb928c",
+      "note": "The publisher’s listing for Owuor includes attributed reviews explicitly calling Dust a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "edition_candidate_ids": [
+      "ol:OL38844610M",
+      "ol:OL35508594M",
+      "ol:OL34623455M",
+      "ol:OL30967420M",
+      "ol:OL28272050M",
+      "ol:OL27154696M"
+    ],
+    "evidence_note": "Check the named author and the reviews on the publisher page. Other works titled Dust cannot supply evidence.",
+    "field": "literary_form",
+    "frozen_assertion": {
+      "evidence": [
+        "https://openlibrary.org/works/OL19974522W"
+      ],
+      "fingerprint": "b1666031ab80211b754203cd8b2057e9c014d42c07f2fad0e0cbcad00f1965b1",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "isbn_conflicts": {},
+    "legacy_mapping": {
+      "evidence": [
+        "https://github.com/254Nicole-Nase/somaRec-thematic-recommender/blob/9051bbb/backend/data/catalog.csv",
+        "https://openlibrary.org/works/OL19974522W",
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ],
+      "fingerprint": "9a5a03d22b62ecc3d3166de10a239b582e3d246660ea9999c0cb98efbfa21216",
+      "note": "Compare exact work and edition; retain all existing UUIDs until an explicit mapping review.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": [
+        "86861147-6018-5346-92ea-4673e0e436cb"
+      ]
+    },
+    "source_candidates": {
+      "open_library_title_author_candidates": [
+        "OL19974522W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": []
+    },
+    "title": "Dust",
+    "work_id": "dust",
+    "work_identity": {
+      "evidence": [
+        "https://openlibrary.org/works/OL19974522W",
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ],
+      "fingerprint": "71a02fb71ccb65121697ada9fee5dfbfdabf43c01d5254548274ed84b21ed415",
+      "note": "Check the work versus edition entity and the competing provider records.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": {
+        "open_library": "OL19974522W"
+      }
+    }
+  },
+  {
+    "additional_evidence": [],
+    "author": "Jared Angira",
+    "ballot_assertion": {
+      "evidence": [
+        "https://iucat.iu.edu/iuk/1905138"
+      ],
+      "fingerprint": "890267796d56a6a8c2befeb2d5a1372fd13854e82008113bfbd0d200a2278dbb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "edition_candidate_ids": [
+      "ol:OL4927528M",
+      "ol:OL13772229M"
+    ],
+    "evidence_note": "Indiana University identifies Jared Angira and transcribes the subtitle [poems]. Two 1970 edition records still need reconciliation.",
+    "field": "literary_form",
+    "frozen_assertion": {
+      "evidence": [
+        "https://iucat.iu.edu/iuk/1905138"
+      ],
+      "fingerprint": "890267796d56a6a8c2befeb2d5a1372fd13854e82008113bfbd0d200a2278dbb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "isbn_conflicts": {},
+    "legacy_mapping": {
+      "evidence": [
+        "https://github.com/254Nicole-Nase/somaRec-thematic-recommender/blob/9051bbb/backend/data/catalog.csv",
+        "https://iucat.iu.edu/iuk/1905138",
+        "https://openlibrary.org/works/OL2615858W"
+      ],
+      "fingerprint": "6c5dceaa75f41951c17f07ab9146bfffe50fb9cf0f1abbc91ba1ec970511936a",
+      "note": "Compare exact work and edition; retain all existing UUIDs until an explicit mapping review.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": [
+        "2e82404b-146f-5806-84cc-45ff33b3809e"
+      ]
+    },
+    "source_candidates": {
+      "open_library_title_author_candidates": [
+        "OL2615858W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": []
+    },
+    "title": "Juices",
+    "work_id": "juices",
+    "work_identity": {
+      "evidence": [
+        "https://iucat.iu.edu/iuk/1905138",
+        "https://openlibrary.org/works/OL2615858W"
+      ],
+      "fingerprint": "3a6420cfb0558f48ac8b67c868daa10a3e80aef52f8ef2a99070a8d6ffa22135",
+      "note": "Check the work versus edition entity and the competing provider records.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": {
+        "open_library": "OL2615858W"
+      }
+    }
+  },
+  {
+    "additional_evidence": [],
+    "author": "Ken Walibora",
+    "ballot_assertion": {
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/4330c1b9-110a-401a-8727-fca14318495e"
+      ],
+      "fingerprint": "9e8262e616b2f1700d472b1ec588b74446a8a3437db354cea27748ba24a4faeb",
+      "note": "Kibabii University’s school edition record names Walibora and repeatedly identifies this work as a riwaya.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "edition_candidate_ids": [
+      "ol:OL25362197M"
+    ],
+    "evidence_note": "Check the use of riwaya for this title in the Kibabii University record. Toleo la Shule identifies the school edition.",
+    "field": "literary_form",
+    "frozen_assertion": {
+      "evidence": [
+        "https://library.daystar.ac.ke/bib/43380"
+      ],
+      "fingerprint": "a380cc65d91c68d660384157f1e661a34ab52e78de66f87ce3ec289134c6f1db",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "isbn_conflicts": {},
+    "legacy_mapping": {
+      "evidence": [],
+      "fingerprint": "2be07587365261d2efa32614c34c5a11df97bd3b36025e1c810349b8eeb9b649",
+      "note": "Compare exact work and edition; retain all existing UUIDs until an explicit mapping review.",
+      "origin": null,
+      "status": "unknown",
+      "value": null
+    },
+    "source_candidates": {
+      "open_library_title_author_candidates": [
+        "OL16689060W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": []
+    },
+    "title": "Kidagaa Kimemwozea",
+    "work_id": "kidagaa-kimemwozea",
+    "work_identity": {
+      "evidence": [
+        "https://library.daystar.ac.ke/bib/43380",
+        "https://openlibrary.org/works/OL16689060W"
+      ],
+      "fingerprint": "86501cde4ad5bf5933a8542d35b1b486736291aaaf2976de2a0cfe606eff563a",
+      "note": "Check the work versus edition entity and the competing provider records.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": {
+        "open_library": "OL16689060W"
+      }
+    }
+  },
+  {
+    "additional_evidence": [
+      "https://www.ceeol.com/search/article-detail?id=844018"
+    ],
+    "author": "Kithaka wa Mberia",
+    "ballot_assertion": {
+      "evidence": [
+        "https://africanbookscollective.com/books/doa/",
+        "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
+      ],
+      "fingerprint": "a43c0e55b36470072a1e79dbfb90686e7cd5901a67f0eac5663f22ebd322cc48",
+      "note": "The distributor bibliography calls this work tamthilia; the university record identifies the play version.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "play"
+    },
+    "edition_candidate_ids": [
+      "ol:OL3360215M"
+    ],
+    "evidence_note": "The distributor's bibliography designates the work tamthilia. The author independently identifies the 2004 play in a scholarly personal account. Distinguish book and video versions.",
+    "field": "literary_form",
+    "frozen_assertion": {
+      "evidence": [
+        "https://africanbookscollective.com/books/doa/",
+        "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
+      ],
+      "fingerprint": "a43c0e55b36470072a1e79dbfb90686e7cd5901a67f0eac5663f22ebd322cc48",
+      "note": "The distributor bibliography calls this work tamthilia; the university record identifies the play version.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "play"
+    },
+    "isbn_conflicts": {},
+    "legacy_mapping": {
+      "evidence": [
+        "https://github.com/254Nicole-Nase/somaRec-thematic-recommender/blob/9051bbb/backend/data/catalog.csv",
+        "https://openlibrary.org/works/OL5783602W",
+        "https://www.wikidata.org/wiki/Q90900593"
+      ],
+      "fingerprint": "073ffd5abf844664dabbafead18c3dc3e424f20871fe0aa90fc8c148b5995b7e",
+      "note": "Compare exact work and edition; retain all existing UUIDs until an explicit mapping review.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": [
+        "cac3254d-7c4b-5fb3-b6c3-250c91d09d7d"
+      ]
+    },
+    "source_candidates": {
+      "open_library_title_author_candidates": [
+        "OL5783602W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "wikidata_edition_candidates": [
+        "Q90900593"
+      ],
+      "wikidata_title_author_candidates": []
+    },
+    "title": "Maua kwenye jua la asubuhi",
+    "work_id": "maua-kwenye-jua-la-asubuhi",
+    "work_identity": {
+      "evidence": [
+        "https://openlibrary.org/works/OL5783602W",
+        "https://www.wikidata.org/wiki/Q90900593"
+      ],
+      "fingerprint": "113bd1214b729306a20938cbf01d54e2abcf8434a61b30fc6669c76a1c939bd2",
+      "note": "Check the work versus edition entity and the competing provider records.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": {
+        "open_library": "OL5783602W"
+      }
+    }
+  },
+  {
+    "additional_evidence": [],
+    "author": "Ngũgĩ wa Thiong'o",
+    "ballot_assertion": {
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "fingerprint": "ba582064d056f316b2c03b7ab5daef23ba765130b0e9eab5fa7e04c8da34a4a8",
+      "note": "The author calls the work a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "edition_candidate_ids": [
+      "ol:OL30586750M",
+      "ol:OL33560255M",
+      "ol:OL44208085M",
+      "ol:OL21418433M",
+      "ol:OL17728444M",
+      "ol:OL21487687M",
+      "ol:OL15447854M"
+    ],
+    "evidence_note": "The author's work page identifies this title as a novel. This ballot covers form alone.",
+    "field": "literary_form",
+    "frozen_assertion": {
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "fingerprint": "ba582064d056f316b2c03b7ab5daef23ba765130b0e9eab5fa7e04c8da34a4a8",
+      "note": "The author calls the work a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "isbn_conflicts": {},
+    "legacy_mapping": {
+      "evidence": [
+        "https://github.com/254Nicole-Nase/somaRec-thematic-recommender/blob/9051bbb/backend/data/catalog.csv",
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "https://openlibrary.org/works/OL10243W",
+        "https://www.wikidata.org/wiki/Q7171660"
+      ],
+      "fingerprint": "13b167800ec2fc00766e45ace7403d4717b733cc54b80e73b57537fb9ba12fe8",
+      "note": "Compare exact work and edition; retain all existing UUIDs until an explicit mapping review.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": [
+        "0f29d741-0543-5e50-8e23-43d5f43638dc"
+      ]
+    },
+    "source_candidates": {
+      "open_library_title_author_candidates": [
+        "OL10243W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": [
+        "Q7171660"
+      ]
+    },
+    "title": "Petals of Blood",
+    "work_id": "petals-of-blood",
+    "work_identity": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+        "https://openlibrary.org/works/OL10243W",
+        "https://www.wikidata.org/wiki/Q7171660"
+      ],
+      "fingerprint": "48480925bfe596a9ed08b0fc07fe4b7c99dbcc00b972167ba4c5ecae41b3c320",
+      "note": "Check the work versus edition entity and the competing provider records.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": {
+        "open_library": "OL10243W",
+        "wikidata": "Q7171660"
+      }
+    }
+  },
+  {
+    "additional_evidence": [],
+    "author": "Abdilatif Abdalla",
+    "ballot_assertion": {
+      "evidence": [
+        "https://ci.nii.ac.jp/ncid/BD05489832"
+      ],
+      "fingerprint": "8ae376e7fb5f8a942c8ed5ce16edf0f2d7cab2dba59821f55cb5bd9edde97bdb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "edition_candidate_ids": [
+      "ol:OL5182139M"
+    ],
+    "evidence_note": "CiNii describes poems in Swahili for the 2012 revised edition; the linked 1973 edition is a separate manifestation. Check the title-case variation.",
+    "field": "literary_form",
+    "frozen_assertion": {
+      "evidence": [
+        "https://ci.nii.ac.jp/ncid/BD05489832"
+      ],
+      "fingerprint": "8ae376e7fb5f8a942c8ed5ce16edf0f2d7cab2dba59821f55cb5bd9edde97bdb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "isbn_conflicts": {},
+    "legacy_mapping": {
+      "evidence": [
+        "https://ci.nii.ac.jp/ncid/BD05489832",
+        "https://github.com/254Nicole-Nase/somaRec-thematic-recommender/blob/9051bbb/backend/data/catalog.csv",
+        "https://openlibrary.org/works/OL7086421W"
+      ],
+      "fingerprint": "57230c828db7e35aafe978f47bb87cb508eb17a8925cc79177955c11bf95692f",
+      "note": "Compare exact work and edition; retain all existing UUIDs until an explicit mapping review.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": [
+        "0116bc56-196c-58b5-a38d-bc18c84148dd"
+      ]
+    },
+    "source_candidates": {
+      "open_library_title_author_candidates": [
+        "OL7086421W"
+      ],
+      "rejected_wikidata_candidates": [],
+      "wikidata_edition_candidates": [],
+      "wikidata_title_author_candidates": []
+    },
+    "title": "Sauti ya dhiki",
+    "work_id": "sauti-ya-dhiki",
+    "work_identity": {
+      "evidence": [
+        "https://ci.nii.ac.jp/ncid/BD05489832",
+        "https://openlibrary.org/works/OL7086421W"
+      ],
+      "fingerprint": "fbd1c48cbee62fb1696a7f0d83ce02d2f4d31411324e9d711b5631193fb1dd44",
+      "note": "Check the work versus edition entity and the competing provider records.",
+      "origin": "automated_candidate",
+      "status": "needs_review",
+      "value": {
+        "open_library": "OL7086421W"
+      }
+    }
+  }
+]

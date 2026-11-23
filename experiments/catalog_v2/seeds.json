@@ -1,0 +1,663 @@
+[
+  {
+    "work_id": "petals-of-blood",
+    "title": "Petals of Blood",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-00",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q7171660"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910"
+  },
+  {
+    "work_id": "a-grain-of-wheat",
+    "title": "A Grain of Wheat",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-01",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q4657149"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910"
+  },
+  {
+    "work_id": "the-river-between",
+    "title": "The River Between",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-02",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q7760989"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910"
+  },
+  {
+    "work_id": "weep-not-child",
+    "title": "Weep Not, Child",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-03",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q3953479"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910"
+  },
+  {
+    "work_id": "dust",
+    "title": "Dust",
+    "author": "Yvonne Adhiambo Owuor",
+    "person_id": "yvonne-adhiambo-owuor",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q513472"
+    },
+    "search_cache_key": "ol-05",
+    "search_author": "Yvonne Adhiambo Owuor",
+    "author_qid": "Q513472",
+    "form_source": "https://openlibrary.org/works/OL19974522W",
+    "person_evidence": "https://www.wikidata.org/wiki/Q513472",
+    "bibliography_url": "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/",
+    "editorial_synopsis": {
+      "text": "A killing in Nairobi brings a family back together and forces it to confront secrets entangled with Kenya’s political history.",
+      "language": "en",
+      "status": "editorial_draft",
+      "source_url": "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/",
+      "reuse_basis": "original editorial wording based on bibliographic or publisher facts"
+    }
+  },
+  {
+    "work_id": "the-dragonfly-sea",
+    "title": "The Dragonfly Sea",
+    "author": "Yvonne Adhiambo Owuor",
+    "person_id": "yvonne-adhiambo-owuor",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q513472"
+    },
+    "search_cache_key": "ol-06",
+    "search_author": "Yvonne Adhiambo Owuor",
+    "author_qid": "Q513472",
+    "wikidata_queries": [
+      "Q109535196"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q513472"
+  },
+  {
+    "work_id": "coming-to-birth",
+    "title": "Coming to Birth",
+    "author": "Marjorie Oludhe Macgoye",
+    "person_id": "marjorie-oludhe-macgoye",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q4358032"
+    },
+    "search_cache_key": "ol-07",
+    "search_author": "Marjorie Oludhe Macgoye",
+    "author_qid": "Q4358032",
+    "wikidata_queries": [
+      "Q125423260"
+    ],
+    "form_source": "https://www.wikidata.org/wiki/Q125423260",
+    "person_evidence": "https://www.wikidata.org/wiki/Q4358032",
+    "bibliography_url": "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=5111"
+  },
+  {
+    "work_id": "going-down-river-road",
+    "title": "Going Down River Road",
+    "author": "Meja Mwangi",
+    "person_id": "meja-mwangi",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q1918860"
+    },
+    "search_cache_key": "ol-08",
+    "search_author": "Meja Mwangi",
+    "author_qid": "Q1918860",
+    "wikidata_queries": [
+      "Q141608696",
+      "Q125686757"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q1918860"
+  },
+  {
+    "work_id": "the-house-of-rust",
+    "title": "The House of Rust",
+    "author": "Khadija Abdalla Bajaber",
+    "person_id": "khadija-abdalla-bajaber",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q55584286"
+    },
+    "search_cache_key": "ol-09",
+    "search_author": "Khadija Abdalla Bajaber",
+    "author_qid": "Q55584286",
+    "wikidata_queries": [
+      "Q132339845"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q55584286"
+  },
+  {
+    "work_id": "the-river-and-the-source",
+    "title": "The River and the Source",
+    "author": "Margaret A. Ogola",
+    "person_id": "margaret-ogola",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://africanbookscollective.com/books/the-river-and-the-source/"
+    },
+    "search_cache_key": "ol-10",
+    "search_author": "Margaret Ogola",
+    "author_aliases": [
+      "Margaret Ogola"
+    ],
+    "bibliography_url": "https://africanbookscollective.com/books/the-river-and-the-source/",
+    "form_source": "https://africanbookscollective.com/books/the-river-and-the-source/",
+    "person_evidence": "https://africanbookscollective.com/books/the-river-and-the-source/",
+    "editorial_synopsis": {
+      "text": "Four generations of Kenyan women navigate changing expectations of family and community.",
+      "language": "en",
+      "status": "editorial_draft",
+      "source_url": "https://africanbookscollective.com/books/the-river-and-the-source/",
+      "reuse_basis": "original editorial wording based on bibliographic or publisher facts"
+    }
+  },
+  {
+    "work_id": "black-star-nairobi",
+    "title": "Black Star Nairobi",
+    "author": "Mũkoma wa Ngũgĩ",
+    "person_id": "mukoma-wa-ngugi",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q6951143"
+    },
+    "search_cache_key": "ol-11",
+    "search_author": "Mukoma wa Ngugi",
+    "author_qid": "Q6951143",
+    "wikidata_queries": [
+      "Q17019582"
+    ],
+    "bibliography_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "form_source": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf",
+    "person_evidence": "https://www.wikidata.org/wiki/Q6951143"
+  },
+  {
+    "work_id": "sauti-ya-dhiki",
+    "title": "Sauti ya dhiki",
+    "author": "Abdilatif Abdalla",
+    "person_id": "abdilatif-abdalla",
+    "form": "poetry",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://journals.sagepub.com/doi/10.1080/03064228308533570"
+    },
+    "search_cache_key": "ol-12",
+    "search_author": "Abdilatif Abdalla",
+    "bibliography_url": "https://ci.nii.ac.jp/ncid/BD05489832",
+    "form_source": "https://ci.nii.ac.jp/ncid/BD05489832",
+    "person_evidence": "https://journals.sagepub.com/doi/10.1080/03064228308533570",
+    "editorial_synopsis": {
+      "text": "Written while Abdilatif Abdalla was imprisoned, this collection of Kiswahili poetry engages with repression and political struggle.",
+      "language": "en",
+      "status": "editorial_draft",
+      "source_url": "https://journals.sagepub.com/doi/10.1080/03064228308533570",
+      "reuse_basis": "original editorial wording based on bibliographic or publisher facts"
+    }
+  },
+  {
+    "work_id": "juices",
+    "title": "Juices",
+    "author": "Jared Angira",
+    "person_id": "jared-angira",
+    "form": "poetry",
+    "scope": {
+      "basis": "kenya_publication",
+      "source_url": "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+    },
+    "search_cache_key": "ol-13",
+    "search_author": "Jared Angira",
+    "bibliography_url": "https://iucat.iu.edu/iuk/1905138",
+    "form_source": "https://iucat.iu.edu/iuk/1905138",
+    "person_evidence": "https://openlibrary.org/authors/OL380756A/Jared_Angira"
+  },
+  {
+    "work_id": "silent-voices",
+    "title": "Silent Voices",
+    "author": "Jared Angira",
+    "person_id": "jared-angira",
+    "form": "poetry",
+    "scope": {
+      "basis": "kenya_linked_author",
+      "source_url": "https://npl.southbankcentre.co.uk/P10311UK/OPAC/Details/Record.aspx?BibCode=40859019"
+    },
+    "search_cache_key": "ol-14",
+    "search_author": "Jared Angira",
+    "title_aliases": [
+      "Silent voices; poems"
+    ],
+    "bibliography_url": "https://library.au.int/silent-voices-poems-10",
+    "form_source": "https://library.au.int/silent-voices-poems-10",
+    "person_evidence": "https://openlibrary.org/authors/OL380756A/Jared_Angira"
+  },
+  {
+    "work_id": "maua-kwenye-jua-la-asubuhi",
+    "title": "Maua kwenye jua la asubuhi",
+    "author": "Kithaka wa Mberia",
+    "person_id": "kithaka-wa-mberia",
+    "form": "poetry",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q123021121"
+    },
+    "search_cache_key": "ol-15",
+    "search_author": "Kithaka wa Mberia",
+    "author_qid": "Q123021121",
+    "wikidata_queries": [
+      "Q90900593"
+    ],
+    "form_source": "https://www.wikidata.org/wiki/Q90900593",
+    "person_evidence": "https://www.wikidata.org/wiki/Q123021121"
+  },
+  {
+    "work_id": "betrayal-in-the-city",
+    "title": "Betrayal in the City",
+    "author": "Francis D. Imbuga",
+    "person_id": "francis-imbuga",
+    "form": "drama",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q5480672"
+    },
+    "search_cache_key": "ol-17",
+    "search_author": "Francis Imbuga",
+    "author_qid": "Q5480672",
+    "wikidata_queries": [
+      "Q125548023"
+    ],
+    "author_aliases": [
+      "F. D. Imbuga",
+      "Francis Imbuga"
+    ],
+    "form_source": "https://openlibrary.org/works/OL3451029W",
+    "person_evidence": "https://www.wikidata.org/wiki/Q5480672"
+  },
+  {
+    "work_id": "siku-njema",
+    "title": "Siku Njema",
+    "author": "Ken Walibora",
+    "person_id": "ken-walibora",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q28124309"
+    },
+    "search_cache_key": "ol-18",
+    "search_author": "Ken Walibora",
+    "author_qid": "Q28124309",
+    "wikidata_queries": [
+      "Q7513978"
+    ],
+    "author_aliases": [
+      "Ken Waliaula"
+    ],
+    "bibliography_url": "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/",
+    "form_source": "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/",
+    "person_evidence": "https://www.wikidata.org/wiki/Q28124309"
+  },
+  {
+    "work_id": "kidagaa-kimemwozea",
+    "title": "Kidagaa Kimemwozea",
+    "author": "Ken Walibora",
+    "person_id": "ken-walibora",
+    "form": "fiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/"
+    },
+    "search_cache_key": "ol-19",
+    "search_author": "Ken Walibora",
+    "author_qid": "Q28124309",
+    "author_aliases": [
+      "Ken Waliaula"
+    ],
+    "bibliography_url": "https://library.daystar.ac.ke/bib/43380",
+    "form_source": "https://library.daystar.ac.ke/bib/43380",
+    "person_evidence": "https://www.wikidata.org/wiki/Q28124309"
+  },
+  {
+    "work_id": "jua-na-upepo",
+    "title": "Jua na Upepo",
+    "author": "Anne Matindi",
+    "person_id": "anne-matindi",
+    "form": "children",
+    "scope": {
+      "basis": "kenya_publication",
+      "source_url": "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
+    },
+    "search_cache_key": "ol-20",
+    "search_author": "Anne Matindi",
+    "title_aliases": [
+      "Jua na upepo, na hadithi nyingine"
+    ],
+    "bibliography_url": "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+    "form_source": "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+    "person_evidence": "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
+  },
+  {
+    "work_id": "greedy-zebra",
+    "title": "Greedy Zebra",
+    "author": "Mwenye Hadithi",
+    "person_id": "mwenye-hadithi",
+    "form": "children",
+    "scope": {
+      "basis": "kenya_linked_author",
+      "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/"
+    },
+    "search_cache_key": "ol-21",
+    "search_author": "Mwenye Hadithi",
+    "bibliography_url": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "form_source": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "person_evidence": "https://www.paperlionltd.com/clients/bruce-hobson/"
+  },
+  {
+    "work_id": "hot-hippo",
+    "title": "Hot Hippo",
+    "author": "Mwenye Hadithi",
+    "person_id": "mwenye-hadithi",
+    "form": "children",
+    "scope": {
+      "basis": "kenya_linked_author",
+      "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/"
+    },
+    "search_cache_key": "ol-22",
+    "search_author": "Mwenye Hadithi",
+    "bibliography_url": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "form_source": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "person_evidence": "https://www.paperlionltd.com/clients/bruce-hobson/"
+  },
+  {
+    "work_id": "tricky-tortoise",
+    "title": "Tricky Tortoise",
+    "author": "Mwenye Hadithi",
+    "person_id": "mwenye-hadithi",
+    "form": "children",
+    "scope": {
+      "basis": "kenya_linked_author",
+      "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/"
+    },
+    "search_cache_key": "ol-23",
+    "search_author": "Mwenye Hadithi",
+    "bibliography_url": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "form_source": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "person_evidence": "https://www.paperlionltd.com/clients/bruce-hobson/"
+  },
+  {
+    "work_id": "laughing-giraffe",
+    "title": "Laughing Giraffe",
+    "author": "Mwenye Hadithi",
+    "person_id": "mwenye-hadithi",
+    "form": "children",
+    "scope": {
+      "basis": "kenya_linked_author",
+      "source_url": "https://www.paperlionltd.com/clients/bruce-hobson/"
+    },
+    "search_cache_key": "ol-24",
+    "search_author": "Mwenye Hadithi",
+    "bibliography_url": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "form_source": "https://www.paperlionltd.com/clients/bruce-hobson/",
+    "person_evidence": "https://www.paperlionltd.com/clients/bruce-hobson/"
+  },
+  {
+    "work_id": "unbowed",
+    "title": "Unbowed",
+    "author": "Wangari Maathai",
+    "person_id": "wangari-maathai",
+    "form": "memoir",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q46795"
+    },
+    "search_cache_key": "ol-26",
+    "search_author": "Wangari Maathai",
+    "author_qid": "Q46795",
+    "wikidata_queries": [
+      "Q7882412"
+    ],
+    "author_aliases": [
+      "Wangari Muta Maathai"
+    ],
+    "bibliography_url": "https://www.greenbeltmovement.org/books/",
+    "form_source": "https://www.greenbeltmovement.org/books/",
+    "person_evidence": "https://www.wikidata.org/wiki/Q46795",
+    "editorial_synopsis": {
+      "text": "Wangari Maathai traces her life from rural Kenya to the grassroots organising that grew into the Green Belt Movement.",
+      "language": "en",
+      "status": "editorial_draft",
+      "source_url": "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/",
+      "reuse_basis": "original editorial wording based on bibliographic or publisher facts"
+    }
+  },
+  {
+    "work_id": "one-day-i-will-write-about-this-place",
+    "title": "One Day I Will Write About This Place",
+    "author": "Binyavanga Wainaina",
+    "person_id": "binyavanga-wainaina",
+    "form": "memoir",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q864094"
+    },
+    "search_cache_key": "ol-27",
+    "search_author": "Binyavanga Wainaina",
+    "author_qid": "Q864094",
+    "wikidata_queries": [
+      "Q57315581"
+    ],
+    "bibliography_url": "https://www.graywolfpress.org/books/one-day-i-will-write-about-place",
+    "form_source": "https://www.graywolfpress.org/books/one-day-i-will-write-about-place",
+    "person_evidence": "https://www.wikidata.org/wiki/Q864094"
+  },
+  {
+    "work_id": "in-the-house-of-the-interpreter",
+    "title": "In the House of the Interpreter",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "memoir",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-28",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q141582963"
+    ],
+    "form_source": "https://ngugiwathiongo.com/",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910"
+  },
+  {
+    "work_id": "dreams-in-a-time-of-war",
+    "title": "Dreams in a Time of War",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "memoir",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-29",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q123824686"
+    ],
+    "form_source": "https://ngugiwathiongo.com/",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910"
+  },
+  {
+    "work_id": "mirrors-of-my-life",
+    "title": "Mirrors of My Life",
+    "author": "Rebeka Njau",
+    "person_id": "rebeka-njau",
+    "form": "memoir",
+    "scope": {
+      "basis": "kenya_linked_author",
+      "source_url": "https://www.bloomsbury.com/uk/author/rebeka-njau/"
+    },
+    "search_cache_key": "ol-30",
+    "search_author": "Rebeka Njau",
+    "form_source": "https://rebekanjau.com/",
+    "person_evidence": "https://www.bloomsbury.com/uk/author/rebeka-njau/",
+    "bibliography_url": "https://rebekanjau.com/"
+  },
+  {
+    "work_id": "the-challenge-for-africa",
+    "title": "The Challenge for Africa",
+    "author": "Wangari Maathai",
+    "person_id": "wangari-maathai",
+    "form": "nonfiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q46795"
+    },
+    "search_cache_key": "ol-31",
+    "search_author": "Wangari Maathai",
+    "author_qid": "Q46795",
+    "wikidata_queries": [
+      "Q42187778",
+      "Q134430393"
+    ],
+    "author_aliases": [
+      "Wangari Muta Maathai"
+    ],
+    "bibliography_url": "https://www.greenbeltmovement.org/books/",
+    "form_source": "https://www.greenbeltmovement.org/books/",
+    "person_evidence": "https://www.wikidata.org/wiki/Q46795",
+    "edition_anchor": {
+      "isbn13": "9780307378095",
+      "source_url": "https://www.penguinrandomhouse.com/books/104883/the-challenge-for-africa-by-wangari-maathai/9780307378095/"
+    }
+  },
+  {
+    "work_id": "replenishing-the-earth",
+    "title": "Replenishing the Earth",
+    "author": "Wangari Maathai",
+    "person_id": "wangari-maathai",
+    "form": "nonfiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q46795"
+    },
+    "search_cache_key": "ol-32",
+    "search_author": "Wangari Maathai",
+    "author_qid": "Q46795",
+    "wikidata_queries": [
+      "Q141201136"
+    ],
+    "author_aliases": [
+      "Wangari Muta Maathai"
+    ],
+    "bibliography_url": "https://www.greenbeltmovement.org/books/",
+    "form_source": "https://www.greenbeltmovement.org/books/",
+    "person_evidence": "https://www.wikidata.org/wiki/Q46795"
+  },
+  {
+    "work_id": "decolonising-the-mind",
+    "title": "Decolonising the Mind",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "nonfiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-33",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q17006875"
+    ],
+    "bibliography_url": "https://ngugiwathiongo.com/decolonising-the-mind/",
+    "form_source": "https://ngugiwathiongo.com/decolonising-the-mind/",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910",
+    "editorial_synopsis": {
+      "text": "Ngũgĩ examines how the choice of language shapes African literature and theatre, drawing on his own practice as a writer.",
+      "language": "en",
+      "status": "editorial_draft",
+      "source_url": "https://ngugiwathiongo.com/decolonising-the-mind/",
+      "reuse_basis": "original editorial wording based on bibliographic or publisher facts"
+    }
+  },
+  {
+    "work_id": "something-torn-and-new",
+    "title": "Something Torn and New",
+    "author": "Ngũgĩ wa Thiong'o",
+    "person_id": "ngugi-wa-thiong-o",
+    "form": "nonfiction",
+    "scope": {
+      "basis": "kenyan_author",
+      "source_url": "https://www.wikidata.org/wiki/Q302910"
+    },
+    "search_cache_key": "ol-34",
+    "search_author": "Ngugi wa Thiong'o",
+    "author_qid": "Q302910",
+    "wikidata_queries": [
+      "Q141582773"
+    ],
+    "title_aliases": [
+      "Something Torn and New: An African Renaissance"
+    ],
+    "form_source": "https://www.wikidata.org/wiki/Q141582773",
+    "person_evidence": "https://www.wikidata.org/wiki/Q302910"
+  }
+]
