@@ -112,3 +112,5 @@ Phase 5A adds an independently reviewable bilingual vocabulary, per-work genre a
 ## Phase 5B.1 independent review checkpoint
 
 The 24 development searches and their historical rankings are frozen. Fifteen prospective reader searches are sealed. Eleven literary-form replacements are available in a separate offline pilot input. The next decision is an independent seven-assertion review and interpretation of the approved-only smoke checks once real decisions exist. Phase 5C and catalog expansion remain pending. [Integrity and form audit](CATALOG_V2_EVALUATION_INTEGRITY.md) · [Approval packet and instructions](CATALOG_V2_APPROVAL_PILOT.md)
+
+Phase 5B.2 designates the sealed A set for open-world discovery and abstention. The positive B set awaits independent authorship and sealing. The seven-ballot worksheet and approved-only smoke command are ready for genuine review. [Protocol and readiness checklist](CATALOG_V2_BALANCED_EVALUATION.md)

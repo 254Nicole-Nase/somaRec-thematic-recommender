@@ -1,0 +1,122 @@
+[
+  {
+    "id": "b01",
+    "query": "",
+    "language": "en",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b02",
+    "query": "",
+    "language": "en",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b03",
+    "query": "",
+    "language": "en",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b04",
+    "query": "",
+    "language": "en",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b05",
+    "query": "",
+    "language": "sw",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b06",
+    "query": "",
+    "language": "sw",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b07",
+    "query": "",
+    "language": "sw",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b08",
+    "query": "",
+    "language": "mixed",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b09",
+    "query": "",
+    "language": "mixed",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  },
+  {
+    "id": "b10",
+    "query": "",
+    "language": "mixed",
+    "intent": "",
+    "kind": "",
+    "author_id": "",
+    "created_on": "",
+    "expected_candidates": [],
+    "potentially_multiple": null,
+    "uncertainty_notes": ""
+  }
+]

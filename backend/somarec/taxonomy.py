@@ -24,7 +24,7 @@ def validate_taxonomy(data):
     categories, aliases = {}, {}
     for row in data["categories"]:
         required = {"id", "dimension", "labels", "aliases", "parents", "status", "provenance", "mappings"}
-        if not isinstance(row, dict) or not required <= row.keys() <= required | {"replaced_by"}:
+        if not isinstance(row, dict) or not required <= row.keys() <= required | {"replaced_by", "pending_labels"}:
             raise ValueError("Invalid category fields")
         if not isinstance(row["labels"], dict) or not isinstance(row["aliases"], dict):
             raise ValueError("Labels and aliases must be keyed by language")
@@ -36,7 +36,11 @@ def validate_taxonomy(data):
         categories[key] = row
         if row["status"] not in {"active", "deprecated"} or not row["provenance"].strip():
             raise ValueError(f"Missing provenance or invalid status: {key}")
-        if not {"en", "sw"} <= row["labels"].keys() or row["aliases"].keys() - row["labels"].keys():
+        pending = row.get("pending_labels", [])
+        if pending not in ([], ["sw"]) or set(pending).intersection(row["labels"]):
+            raise ValueError(f"Invalid pending translation: {key}")
+        if (not {"en", "sw"} <= row["labels"].keys() | set(pending)
+                or row["aliases"].keys() - row["labels"].keys()):
             raise ValueError(f"Missing language label: {key}")
         for lang, label in row["labels"].items():
             names = row["aliases"].get(lang, [])
