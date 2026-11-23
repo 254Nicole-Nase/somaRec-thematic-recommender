@@ -99,3 +99,11 @@ Expansion remains blocked. The [machine-readable gate report](../experiments/cat
 | Workload | Queue size and elapsed review minutes per work. | Time a ten-work review sample. Target median review under or equal to 20 minutes and document cases requiring specialist follow-up. |
 
 The next step is independent review of the queue and ratings, using the same frozen sample. No production integration or dataset expansion is part of this phase.
+
+## Phase 5A controlled classifications and corrections
+
+The same local command now validates the versioned taxonomy, applies the Phase 4 proposals and the fingerprint-bound corrections, and generates independent genre and audience claims. The [design](GENRE_TAXONOMY_DESIGN.md) documents ID, language and deprecation rules. The [editorial findings](CATALOG_V2_CORRECTIONS.md) distinguish source observations, proposed replacements and outstanding questions for all thirteen named works. The figures in the Phase 4 findings and evaluation sections above describe that earlier run.
+
+For a local review, copy the source JSON and use `--taxonomy`, `--assignments`, `--corrections` and `--decisions` to select your files. A reviewer can decide `genres/magical-realism` independently from `genres/coming-of-age-fiction` for the same work. The assertion and its evidence are in the generated profiles. A change to one assignment invalidates a decision for that assertion. If reviewing alternate Phase 4 inputs, supply an empty JSON object for `--corrections` to omit the sample-specific replacement layer. The four-positional-argument Python API retains its Phase 4 behavior. Compare regeneration using the directory diff above, then review `correction_log.json` alongside the worksheets. Store any filled-in worksheets separately before regenerating.
+
+The Phase 5A run returned 53 lexical results over 24 queries. All six known titles ranked first. Both irrelevant controls returned zero results. Controlled assignment lists are outside the diagnostic index. Human relevance judgments remain outstanding.

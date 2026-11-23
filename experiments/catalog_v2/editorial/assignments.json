@@ -1,0 +1,117 @@
+{
+  "petals-of-blood": [
+    {
+      "category_id": "political-fiction",
+      "display": "primary",
+      "reason": "The author frames the novel through political disillusionment and corrupting power.",
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ]
+    }
+  ],
+  "the-river-and-the-source": [
+    {
+      "category_id": "family-saga",
+      "display": "primary",
+      "reason": "Literary scholarship describes the family saga in Ogola’s first two novels; the distributor identifies continuity across generations.",
+      "evidence": [
+        "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/1ee6595f-9e09-4c96-90ca-6c5f4a817ff3/content",
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ]
+    },
+    {
+      "category_id": "historical-fiction",
+      "display": "secondary",
+      "reason": "The University of Nairobi study explicitly treats Ogola’s work as a historical novel in its analysis on page 90.",
+      "evidence": [
+        "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/399bc51f-d8ed-4eab-9239-103b4f3a49b9/content"
+      ]
+    }
+  ],
+  "sauti-ya-dhiki": [
+    {
+      "category_id": "prison-poetry",
+      "display": "primary",
+      "reason": "The study explicitly describes Abdalla’s prison poetry.",
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+      ]
+    }
+  ],
+  "hot-hippo": [
+    {
+      "category_id": "animal-story",
+      "display": "primary",
+      "reason": "The agent lists this title in the African Animal Tales series.",
+      "evidence": [
+        "https://www.paperlionltd.com/clients/bruce-hobson/",
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+      ]
+    },
+    {
+      "category_id": "children",
+      "display": null,
+      "reason": "Publisher categorizes the title for children.",
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+      ]
+    }
+  ],
+  "laughing-giraffe": [
+    {
+      "category_id": "animal-story",
+      "display": "primary",
+      "reason": "The agent lists this title in the African Animal Tales series.",
+      "evidence": [
+        "https://www.paperlionltd.com/clients/bruce-hobson/",
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+      ]
+    },
+    {
+      "category_id": "children",
+      "display": null,
+      "reason": "Publisher categorizes the title for children.",
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+      ]
+    }
+  ],
+  "the-house-of-rust": [
+    {
+      "category_id": "magical-realism",
+      "display": "primary",
+      "reason": "The distributor explicitly describes the novel as magical realist.",
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ]
+    },
+    {
+      "category_id": "coming-of-age-fiction",
+      "display": "secondary",
+      "reason": "The distributor independently describes the coming-of-age genre on the same page.",
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ]
+    }
+  ],
+  "mirrors-of-my-life": [
+    {
+      "category_id": "memoir",
+      "display": "primary",
+      "reason": "The work-specific bibliography or publisher listing identifies this narrative as memoir.",
+      "evidence": [
+        "https://rebekanjau.com/"
+      ]
+    }
+  ],
+  "one-day-i-will-write-about-this-place": [
+    {
+      "category_id": "memoir",
+      "display": "primary",
+      "reason": "The work-specific bibliography or publisher listing identifies this narrative as memoir.",
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ]
+    }
+  ]
+}

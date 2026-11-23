@@ -11,7 +11,7 @@
           "queries": 1
         },
         "sw": {
-          "no_results": 1,
+          "no_results": 2,
           "queries": 9
         }
       },
@@ -19,9 +19,9 @@
       "known_title_at_1": 6,
       "known_title_at_5": 6,
       "known_title_controls": 6,
-      "no_results": 2,
+      "no_results": 3,
       "queries": 24,
-      "returned_count": 54
+      "returned_count": 53
     }
   },
   "human_judgments": "not_collected",
@@ -182,7 +182,7 @@
       "query": "urekebishaji wa injini za trekta"
     }
   ],
-  "review_fingerprint": "94d6cc4831578fe52c66f6bdf63bb7990e6bdd18dd21cdfc7c30ac7fc8d34e14",
+  "review_fingerprint": "5d8d33654f3a04260f6e3a31c87e7cb1cfa26dcea014e839750a3517e6fd5a93",
   "runs": [
     {
       "distinct_authors": 1,
@@ -226,7 +226,7 @@
         {
           "author": "Ngũgĩ wa Thiong'o",
           "explanation": "Matching indexed fields: title",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -442,7 +442,7 @@
         {
           "author": "Yvonne Adhiambo Owuor",
           "explanation": "Matching indexed fields: title",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -467,7 +467,7 @@
         {
           "author": "Khadija Abdalla Bajaber",
           "explanation": "Matching indexed fields: major_subjects, synopsis",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -503,7 +503,7 @@
     },
     {
       "distinct_authors": 5,
-      "distinct_forms": 3,
+      "distinct_forms": 4,
       "eligible_works": 30,
       "query_id": "q07",
       "results": [
@@ -572,13 +572,25 @@
           "work_id": "dust"
         },
         {
-          "author": "Margaret A. Ogola",
-          "explanation": "Matching indexed fields: narrative_setting, major_subjects",
-          "form": "fiction",
+          "author": "Ngũgĩ wa Thiong'o",
+          "explanation": "Matching indexed fields: themes, narrative_setting, mood_tone, major_subjects, synopsis",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
-                "https://africanbookscollective.com/books/the-river-and-the-source/"
+                "https://ngugiwathiongo.com/petals-of-blood/"
+              ],
+              "field": "themes",
+              "matched_tokens": [
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://iiste.org/Journals/index.php/RHSS/article/download/30272/31087",
+                "https://ngugiwathiongo.com/petals-of-blood/"
               ],
               "field": "narrative_setting",
               "matched_tokens": [
@@ -589,11 +601,34 @@
             },
             {
               "evidence": [
-                "https://africanbookscollective.com/books/the-river-and-the-source/"
+                "https://ngugiwathiongo.com/petals-of-blood/"
+              ],
+              "field": "mood_tone",
+              "matched_tokens": [
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://ngugiwathiongo.com/petals-of-blood/"
               ],
               "field": "major_subjects",
               "matched_tokens": [
-                "family"
+                "kenya",
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+              ],
+              "field": "synopsis",
+              "matched_tokens": [
+                "kenya"
               ],
               "origin": "editorial_proposal",
               "status": "needs_review"
@@ -602,8 +637,8 @@
           "ranking_signals": [
             "lexical"
           ],
-          "title": "The River and the Source",
-          "work_id": "the-river-and-the-source"
+          "title": "Petals of Blood",
+          "work_id": "petals-of-blood"
         },
         {
           "author": "Binyavanga Wainaina",
@@ -641,24 +676,14 @@
           "work_id": "one-day-i-will-write-about-this-place"
         },
         {
-          "author": "Ngũgĩ wa Thiong'o",
-          "explanation": "Matching indexed fields: themes, narrative_setting, synopsis",
-          "form": "fiction",
+          "author": "Margaret A. Ogola",
+          "explanation": "Matching indexed fields: narrative_setting, major_subjects",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
-                "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
-              ],
-              "field": "themes",
-              "matched_tokens": [
-                "political"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+                "https://africanbookscollective.com/books/the-river-and-the-source/",
+                "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/399bc51f-d8ed-4eab-9239-103b4f3a49b9/content"
               ],
               "field": "narrative_setting",
               "matched_tokens": [
@@ -669,11 +694,11 @@
             },
             {
               "evidence": [
-                "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+                "https://africanbookscollective.com/books/the-river-and-the-source/"
               ],
-              "field": "synopsis",
+              "field": "major_subjects",
               "matched_tokens": [
-                "kenya"
+                "family"
               ],
               "origin": "editorial_proposal",
               "status": "needs_review"
@@ -682,19 +707,19 @@
           "ranking_signals": [
             "lexical"
           ],
-          "title": "Petals of Blood",
-          "work_id": "petals-of-blood"
+          "title": "The River and the Source",
+          "work_id": "the-river-and-the-source"
         },
         {
           "author": "Abdilatif Abdalla",
-          "explanation": "Matching indexed fields: themes, synopsis",
+          "explanation": "Matching indexed fields: major_subjects, synopsis",
           "form": "poetry",
           "literal_evidence_matches": [
             {
               "evidence": [
                 "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
               ],
-              "field": "themes",
+              "field": "major_subjects",
               "matched_tokens": [
                 "political"
               ],
@@ -791,7 +816,7 @@
         {
           "author": "Margaret A. Ogola",
           "explanation": "Matching indexed fields: themes",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -822,8 +847,8 @@
       "results": [
         {
           "author": "Margaret A. Ogola",
-          "explanation": "Matching indexed fields: themes, major_subjects",
-          "form": "fiction",
+          "explanation": "Matching indexed fields: themes, narrative_setting, major_subjects",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -836,6 +861,18 @@
                 "generations",
                 "social",
                 "women"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://africanbookscollective.com/books/the-river-and-the-source/",
+                "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/399bc51f-d8ed-4eab-9239-103b4f3a49b9/content"
+              ],
+              "field": "narrative_setting",
+              "matched_tokens": [
+                "across"
               ],
               "origin": "editorial_proposal",
               "status": "needs_review"
@@ -886,13 +923,13 @@
     },
     {
       "distinct_authors": 4,
-      "distinct_forms": 2,
+      "distinct_forms": 3,
       "eligible_works": 30,
       "query_id": "q10",
       "results": [
         {
           "author": "Abdilatif Abdalla",
-          "explanation": "Matching indexed fields: primary_genre, literary_form, themes, synopsis",
+          "explanation": "Matching indexed fields: primary_genre, literary_form, major_subjects, synopsis",
           "form": "poetry",
           "literal_evidence_matches": [
             {
@@ -922,7 +959,7 @@
               "evidence": [
                 "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
               ],
-              "field": "themes",
+              "field": "major_subjects",
               "matched_tokens": [
                 "political",
                 "repression"
@@ -949,51 +986,6 @@
           ],
           "title": "Sauti ya dhiki",
           "work_id": "sauti-ya-dhiki"
-        },
-        {
-          "author": "Yvonne Adhiambo Owuor",
-          "explanation": "Matching indexed fields: themes, major_subjects, synopsis",
-          "form": "fiction",
-          "literal_evidence_matches": [
-            {
-              "evidence": [
-                "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
-              ],
-              "field": "themes",
-              "matched_tokens": [
-                "political"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
-              ],
-              "field": "major_subjects",
-              "matched_tokens": [
-                "political"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
-              ],
-              "field": "synopsis",
-              "matched_tokens": [
-                "political"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            }
-          ],
-          "ranking_signals": [
-            "lexical"
-          ],
-          "title": "Dust",
-          "work_id": "dust"
         },
         {
           "author": "Jared Angira",
@@ -1042,17 +1034,39 @@
           "work_id": "silent-voices"
         },
         {
-          "author": "Kithaka wa Mberia",
-          "explanation": "Matching indexed fields: literary_form",
-          "form": "poetry",
+          "author": "Yvonne Adhiambo Owuor",
+          "explanation": "Matching indexed fields: themes, major_subjects, synopsis",
+          "form": "fiction",
           "literal_evidence_matches": [
             {
               "evidence": [
-                "https://www.wikidata.org/wiki/Q90900593"
+                "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
               ],
-              "field": "literary_form",
+              "field": "themes",
               "matched_tokens": [
-                "poetry"
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+              ],
+              "field": "major_subjects",
+              "matched_tokens": [
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+              ],
+              "field": "synopsis",
+              "matched_tokens": [
+                "political"
               ],
               "origin": "editorial_proposal",
               "status": "needs_review"
@@ -1061,15 +1075,60 @@
           "ranking_signals": [
             "lexical"
           ],
-          "title": "Maua kwenye jua la asubuhi",
-          "work_id": "maua-kwenye-jua-la-asubuhi"
+          "title": "Dust",
+          "work_id": "dust"
+        },
+        {
+          "author": "Ngũgĩ wa Thiong'o",
+          "explanation": "Matching indexed fields: themes, mood_tone, major_subjects",
+          "form": "novel",
+          "literal_evidence_matches": [
+            {
+              "evidence": [
+                "https://ngugiwathiongo.com/petals-of-blood/"
+              ],
+              "field": "themes",
+              "matched_tokens": [
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://ngugiwathiongo.com/petals-of-blood/"
+              ],
+              "field": "mood_tone",
+              "matched_tokens": [
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            },
+            {
+              "evidence": [
+                "https://ngugiwathiongo.com/petals-of-blood/"
+              ],
+              "field": "major_subjects",
+              "matched_tokens": [
+                "political"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            }
+          ],
+          "ranking_signals": [
+            "lexical"
+          ],
+          "title": "Petals of Blood",
+          "work_id": "petals-of-blood"
         }
       ],
       "system": "A_lexical"
     },
     {
-      "distinct_authors": 3,
-      "distinct_forms": 3,
+      "distinct_authors": 4,
+      "distinct_forms": 4,
       "eligible_works": 30,
       "query_id": "q11",
       "results": [
@@ -1132,6 +1191,30 @@
           "work_id": "decolonising-the-mind"
         },
         {
+          "author": "Margaret A. Ogola",
+          "explanation": "Matching indexed fields: narrative_setting",
+          "form": "novel",
+          "literal_evidence_matches": [
+            {
+              "evidence": [
+                "https://africanbookscollective.com/books/the-river-and-the-source/",
+                "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/399bc51f-d8ed-4eab-9239-103b4f3a49b9/content"
+              ],
+              "field": "narrative_setting",
+              "matched_tokens": [
+                "colonial"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            }
+          ],
+          "ranking_signals": [
+            "lexical"
+          ],
+          "title": "The River and the Source",
+          "work_id": "the-river-and-the-source"
+        },
+        {
           "author": "Binyavanga Wainaina",
           "explanation": "Matching indexed fields: synopsis",
           "form": "memoir",
@@ -1180,7 +1263,7 @@
         {
           "author": "Ngũgĩ wa Thiong'o",
           "explanation": "Matching indexed fields: primary_genre",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -1248,7 +1331,7 @@
         {
           "author": "Khadija Abdalla Bajaber",
           "explanation": "Matching indexed fields: synopsis",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -1272,81 +1355,22 @@
       "system": "A_lexical"
     },
     {
-      "distinct_authors": 1,
-      "distinct_forms": 1,
+      "distinct_authors": 0,
+      "distinct_forms": 0,
       "eligible_works": 4,
       "query_id": "q13",
-      "results": [
-        {
-          "author": "Anne Matindi",
-          "explanation": "Matching indexed fields: literary_form",
-          "form": "children",
-          "literal_evidence_matches": [
-            {
-              "evidence": [
-                "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
-              ],
-              "field": "literary_form",
-              "matched_tokens": [
-                "hadithi",
-                "watoto"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            }
-          ],
-          "ranking_signals": [
-            "lexical"
-          ],
-          "title": "Jua na Upepo",
-          "work_id": "jua-na-upepo"
-        }
-      ],
+      "results": [],
       "system": "A_lexical"
     },
     {
       "distinct_authors": 4,
-      "distinct_forms": 3,
+      "distinct_forms": 4,
       "eligible_works": 4,
       "query_id": "q14",
       "results": [
         {
-          "author": "Kithaka wa Mberia",
-          "explanation": "Matching indexed fields: literary_form, language",
-          "form": "poetry",
-          "literal_evidence_matches": [
-            {
-              "evidence": [
-                "https://www.wikidata.org/wiki/Q90900593"
-              ],
-              "field": "literary_form",
-              "matched_tokens": [
-                "mashairi"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://openlibrary.org/books/OL3360215M"
-              ],
-              "field": "language",
-              "matched_tokens": [
-                "kiswahili"
-              ],
-              "origin": "automated_candidate",
-              "status": "needs_review"
-            }
-          ],
-          "ranking_signals": [
-            "lexical"
-          ],
-          "title": "Maua kwenye jua la asubuhi",
-          "work_id": "maua-kwenye-jua-la-asubuhi"
-        },
-        {
           "author": "Abdilatif Abdalla",
-          "explanation": "Matching indexed fields: literary_form, major_subjects, language, synopsis",
+          "explanation": "Matching indexed fields: literary_form, language, synopsis",
           "form": "poetry",
           "literal_evidence_matches": [
             {
@@ -1354,17 +1378,6 @@
                 "https://ci.nii.ac.jp/ncid/BD05489832"
               ],
               "field": "literary_form",
-              "matched_tokens": [
-                "mashairi"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
-              ],
-              "field": "major_subjects",
               "matched_tokens": [
                 "mashairi"
               ],
@@ -1401,6 +1414,29 @@
           "work_id": "sauti-ya-dhiki"
         },
         {
+          "author": "Anne Matindi",
+          "explanation": "Matching indexed fields: language",
+          "form": "story collection",
+          "literal_evidence_matches": [
+            {
+              "evidence": [
+                "https://openlibrary.org/books/OL22801465M"
+              ],
+              "field": "language",
+              "matched_tokens": [
+                "kiswahili"
+              ],
+              "origin": "automated_candidate",
+              "status": "needs_review"
+            }
+          ],
+          "ranking_signals": [
+            "lexical"
+          ],
+          "title": "Jua na Upepo",
+          "work_id": "jua-na-upepo"
+        },
+        {
           "author": "Ken Walibora",
           "explanation": "Matching indexed fields: language",
           "form": "fiction",
@@ -1424,13 +1460,13 @@
           "work_id": "kidagaa-kimemwozea"
         },
         {
-          "author": "Anne Matindi",
+          "author": "Kithaka wa Mberia",
           "explanation": "Matching indexed fields: language",
-          "form": "children",
+          "form": "play",
           "literal_evidence_matches": [
             {
               "evidence": [
-                "https://openlibrary.org/books/OL22801465M"
+                "https://openlibrary.org/books/OL3360215M"
               ],
               "field": "language",
               "matched_tokens": [
@@ -1443,8 +1479,8 @@
           "ranking_signals": [
             "lexical"
           ],
-          "title": "Jua na Upepo",
-          "work_id": "jua-na-upepo"
+          "title": "Maua kwenye jua la asubuhi",
+          "work_id": "maua-kwenye-jua-la-asubuhi"
         }
       ],
       "system": "A_lexical"
@@ -1490,7 +1526,7 @@
         {
           "author": "Khadija Abdalla Bajaber",
           "explanation": "Matching indexed fields: narrative_setting, major_subjects, synopsis",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -1536,7 +1572,7 @@
         {
           "author": "Yvonne Adhiambo Owuor",
           "explanation": "Matching indexed fields: title",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -1569,7 +1605,7 @@
         {
           "author": "Margaret A. Ogola",
           "explanation": "Matching indexed fields: literary_form, themes",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
@@ -1603,11 +1639,11 @@
         {
           "author": "Khadija Abdalla Bajaber",
           "explanation": "Matching indexed fields: literary_form, synopsis",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
-                "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+                "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
               ],
               "field": "literary_form",
               "matched_tokens": [
@@ -1635,40 +1671,6 @@
           "work_id": "the-house-of-rust"
         },
         {
-          "author": "Ngũgĩ wa Thiong'o",
-          "explanation": "Matching indexed fields: literary_form, narrative_setting",
-          "form": "fiction",
-          "literal_evidence_matches": [
-            {
-              "evidence": [
-                "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
-              ],
-              "field": "literary_form",
-              "matched_tokens": [
-                "novel"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
-              ],
-              "field": "narrative_setting",
-              "matched_tokens": [
-                "rural"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            }
-          ],
-          "ranking_signals": [
-            "lexical"
-          ],
-          "title": "Petals of Blood",
-          "work_id": "petals-of-blood"
-        },
-        {
           "author": "Wangari Maathai",
           "explanation": "Matching indexed fields: synopsis",
           "form": "memoir",
@@ -1694,11 +1696,11 @@
         {
           "author": "Ken Walibora",
           "explanation": "Matching indexed fields: literary_form",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [
-                "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/"
+                "https://journals.mmust.ac.ke/index.php/jk/article/view/12"
               ],
               "field": "literary_form",
               "matched_tokens": [
@@ -1713,6 +1715,29 @@
           ],
           "title": "Siku Njema",
           "work_id": "siku-njema"
+        },
+        {
+          "author": "Yvonne Adhiambo Owuor",
+          "explanation": "Matching indexed fields: literary_form",
+          "form": "novel",
+          "literal_evidence_matches": [
+            {
+              "evidence": [
+                "https://www.penguinrandomhouse.com/books/545470/the-dragonfly-sea-by-yvonne-adhiambo-owuor/"
+              ],
+              "field": "literary_form",
+              "matched_tokens": [
+                "novel"
+              ],
+              "origin": "editorial_proposal",
+              "status": "needs_review"
+            }
+          ],
+          "ranking_signals": [
+            "lexical"
+          ],
+          "title": "The Dragonfly Sea",
+          "work_id": "the-dragonfly-sea"
         }
       ],
       "system": "A_lexical"
@@ -1750,14 +1775,14 @@
       "system": "A_lexical"
     },
     {
-      "distinct_authors": 2,
+      "distinct_authors": 1,
       "distinct_forms": 1,
       "eligible_works": 4,
       "query_id": "q19",
       "results": [
         {
           "author": "Abdilatif Abdalla",
-          "explanation": "Matching indexed fields: literary_form, themes, major_subjects",
+          "explanation": "Matching indexed fields: literary_form",
           "form": "poetry",
           "literal_evidence_matches": [
             {
@@ -1770,28 +1795,6 @@
               ],
               "origin": "editorial_proposal",
               "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
-              ],
-              "field": "themes",
-              "matched_tokens": [
-                "ukandamizaji"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            },
-            {
-              "evidence": [
-                "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
-              ],
-              "field": "major_subjects",
-              "matched_tokens": [
-                "gerezani"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
             }
           ],
           "ranking_signals": [
@@ -1799,29 +1802,6 @@
           ],
           "title": "Sauti ya dhiki",
           "work_id": "sauti-ya-dhiki"
-        },
-        {
-          "author": "Kithaka wa Mberia",
-          "explanation": "Matching indexed fields: literary_form",
-          "form": "poetry",
-          "literal_evidence_matches": [
-            {
-              "evidence": [
-                "https://www.wikidata.org/wiki/Q90900593"
-              ],
-              "field": "literary_form",
-              "matched_tokens": [
-                "ushairi"
-              ],
-              "origin": "editorial_proposal",
-              "status": "needs_review"
-            }
-          ],
-          "ranking_signals": [
-            "lexical"
-          ],
-          "title": "Maua kwenye jua la asubuhi",
-          "work_id": "maua-kwenye-jua-la-asubuhi"
         }
       ],
       "system": "A_lexical"
@@ -1953,7 +1933,7 @@
             },
             {
               "evidence": [
-                "https://www.graywolfpress.org/books/one-day-i-will-write-about-place"
+                "https://granta.com/products/one-day-i-will-write-about-this-place/"
               ],
               "field": "literary_form",
               "matched_tokens": [
@@ -1974,7 +1954,7 @@
     },
     {
       "distinct_authors": 3,
-      "distinct_forms": 1,
+      "distinct_forms": 2,
       "eligible_works": 30,
       "query_id": "q21",
       "results": [
@@ -2030,7 +2010,7 @@
         {
           "author": "Margaret A. Ogola",
           "explanation": "Matching indexed fields: title",
-          "form": "fiction",
+          "form": "novel",
           "literal_evidence_matches": [
             {
               "evidence": [

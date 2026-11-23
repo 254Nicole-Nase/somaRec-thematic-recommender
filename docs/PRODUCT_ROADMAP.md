@@ -104,3 +104,7 @@ Start with **teachers and book lovers**. Teachers bring whole classes, and book 
 | Copyright complaints | Only host openly licensed / permitted texts; takedown contact on every page |
 | Low engagement | Start with teachers (they bring classes); seed reviews from a book club |
 | Model doesn't handle Kenyan languages beyond Kiswahili | Rely on keyword search plus human tagging for Gikuyu, Dholuo, etc.; evaluate before claiming support |
+
+## Offline Catalog V2 checkpoint
+
+Phase 5A adds an independently reviewable bilingual vocabulary, per-work genre and audience assertions, and source-backed editorial replacements for the frozen sample. Reviewers should check Kiswahili terminology, proposed classifications and unresolved identity questions before deciding the scope of Phase 5B. Expansion remains blocked by the existing editorial and relevance gates. [Taxonomy design](GENRE_TAXONOMY_DESIGN.md) · [Editorial findings](CATALOG_V2_CORRECTIONS.md)

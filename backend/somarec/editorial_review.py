@@ -4,6 +4,7 @@ from collections import Counter
 import re
 
 from .import_preview import digest, public_url
+from .taxonomy import validate_taxonomy
 
 PROFILE_FIELDS = {
     "primary_genre": "Check an authoritative genre designation or have a literature editor classify the work.",
@@ -137,11 +138,16 @@ def literary_profile(work, editions, proposals):
             work["synopsis"]["text"], [work["synopsis"]["source_url"]], origin="editorial_proposal",
             note="Editorial draft in English. Check accuracy and avoid spoilers before approval.",
         )
+    apply_proposals(work["work_id"], profile, proposals)
+    return profile
+
+
+def apply_proposals(work_id, profile, proposals, *, reason=None):
     for field, item in proposals.items():
         if "conflict" in item:
             existing = profile[field]
             if existing["value"] is None:
-                raise ValueError(f"No existing value to flag for {work['work_id']}/{field}.")
+                raise ValueError(f"No existing value to flag for {work_id}/{field}.")
             profile[field] = assertion(
                 existing["value"], existing["evidence"] + item["evidence"], origin=existing["origin"],
                 status="conflicting", note=item["conflict"],
@@ -150,18 +156,51 @@ def literary_profile(work, editions, proposals):
         existing = profile[field]
         if "replaces" in item:
             if existing["value"] is None or item["replaces"] != existing["fingerprint"]:
-                raise ValueError(f"Stale literary replacement for {work['work_id']}/{field}.")
+                raise ValueError(f"Stale literary replacement for {work_id}/{field}.")
         elif existing["value"] is not None:
-            raise ValueError(f"Competing literary proposal for {work['work_id']}/{field}.")
+            raise ValueError(f"Competing literary proposal for {work_id}/{field}.")
         profile[field] = assertion(
-            item["value"], item["evidence"], origin="editorial_proposal", note=PROFILE_FIELDS[field],
+            item["value"], item["evidence"], origin="editorial_proposal", note=reason or PROFILE_FIELDS[field],
         )
-    return profile
 
 
-def build_review(catalog, quality, proposals, decision_rows):
+def controlled_assignments(work_id, entries, categories, decisions):
+    groups = {"genres": [], "audiences": []}
+    seen = set()
+    primary = False
+    for entry in sorted(entries, key=lambda item: item["category_id"]):
+        category_id = entry["category_id"]
+        category = categories.get(category_id)
+        if not category or category["status"] != "active" or category_id in seen:
+            raise ValueError(f"Unknown, repeated or retired assignment: {category_id}")
+        seen.add(category_id)
+        dimension = category["dimension"]
+        if dimension not in {"genre", "audience"}:
+            raise ValueError(f"Unexpected assignment dimension: {dimension}")
+        display = entry["display"]
+        if dimension == "genre":
+            if display not in {"primary", "secondary"} or (display == "primary" and primary):
+                raise ValueError(f"Invalid genre display designation for {work_id}")
+            primary |= display == "primary"
+        elif display is not None:
+            raise ValueError("Audience assignment cannot designate a primary genre")
+        if set(entry) != {"category_id", "display", "evidence", "reason"} or not entry["reason"].strip():
+            raise ValueError("Assignment requires a reason and evidence")
+        value = {"category_id": category_id, "display": display}
+        claim = assertion(value, urls(entry["evidence"]), origin="editorial_proposal", note=entry["reason"])
+        group = "genres" if dimension == "genre" else "audiences"
+        groups[group].append(decide(work_id, f"{group}/{category_id}", claim, decisions))
+    return groups
+
+
+def build_review(catalog, quality, proposals, decision_rows, *, taxonomy=None, assignments=None, corrections=None):
     work_ids = {work["work_id"] for work in catalog["works"]}
     proposals = proposals_index(proposals, work_ids)
+    categories = validate_taxonomy(taxonomy)[0] if taxonomy is not None else {}
+    assignments = assignments or {}
+    corrections = corrections or {}
+    if (assignments.keys() | corrections.keys()) - work_ids:
+        raise ValueError("Unknown work in controlled assignments or corrections")
     decisions = decision_index(decision_rows)
     people = {person["person_id"]: person for person in catalog["people"]}
     editions = {edition["edition_id"]: edition for edition in catalog["editions"]}
@@ -200,6 +239,17 @@ def build_review(catalog, quality, proposals, decision_rows):
             ),
         }
         profile = literary_profile(work, work_editions, proposals.get(wid, {}))
+        for field, correction in corrections.get(wid, {}).items():
+            if set(correction) != {"value", "existing", "evidence", "replaces", "reason"}:
+                raise ValueError(f"Invalid correction for {wid}/{field}")
+            overlay = {key: correction[key] for key in ("value", "evidence", "replaces")}
+            proposals_index({wid: {field: overlay}}, work_ids)
+            if not correction["reason"].strip() or profile[field]["status"] == "conflicting":
+                raise ValueError(f"Unsupported correction or unresolved conflict for {wid}/{field}")
+            if correction["existing"] != profile[field]["value"]:
+                raise ValueError(f"Stale existing value for {wid}/{field}")
+            apply_proposals(wid, profile, {field: overlay}, reason=correction["reason"])
+        controlled = controlled_assignments(wid, assignments.get(wid, []), categories, decisions)
         fields = {key: decide(wid, key, value, decisions) for key, value in fields.items()}
         profile = {key: decide(wid, key, value, decisions) for key, value in profile.items()}
         edition_review = [{
@@ -210,6 +260,7 @@ def build_review(catalog, quality, proposals, decision_rows):
         assertions = list(fields.values()) + list(profile.values()) + [
             value for edition in edition_review for value in edition["fields"].values()
         ]
+        assertions.extend(claim for group in controlled.values() for claim in group)
         missing = [key for key in CRITICAL if profile[key]["status"] == "unknown"]
         conflicts = sum(row["status"] == "conflicting" for row in assertions)
         questions = [f"{key}: {profile[key]['note']}" for key in PROFILE_FIELDS if profile[key]["status"] != "verified"]
@@ -229,7 +280,14 @@ def build_review(catalog, quality, proposals, decision_rows):
             "missing_critical_fields": missing, "questions": questions,
             "status_counts": dict(Counter(row["status"] for row in assertions)),
         })
-        profiles.append({"work_id": wid, "fields": profile})
+        item = {"work_id": wid, "fields": profile}
+        if taxonomy is not None:
+            item.update(taxonomy_version=taxonomy["version"], **controlled)
+            queue[-1]["classification_review"] = {
+                group: [f"{group}/{claim['value']['category_id']}" for claim in claims]
+                for group, claims in controlled.items()
+            }
+        profiles.append(item)
     if decisions:
         raise ValueError("Decisions refer to unknown works or fields.")
     queue.sort(key=lambda row: (row["priority"], -len(row["missing_critical_fields"]), row["work_id"]))

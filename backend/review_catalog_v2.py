@@ -112,6 +112,9 @@ def main():
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--proposals", type=Path, default=INPUTS / "proposals.json")
     parser.add_argument("--decisions", type=Path, default=INPUTS / "decisions.json")
+    parser.add_argument("--taxonomy", type=Path, default=INPUTS / "taxonomy.v1.json")
+    parser.add_argument("--assignments", type=Path, default=INPUTS / "assignments.json")
+    parser.add_argument("--corrections", type=Path, default=INPUTS / "corrections.json")
     parser.add_argument("--queries", type=Path, default=INPUTS / "queries.json")
     parser.add_argument("--model-dir", type=Path, help="Optional local Sentence Transformers directory")
     parser.add_argument("--e5-prefix", action="store_true")
@@ -119,7 +122,10 @@ def main():
     parser.add_argument("--measure", action="store_true", help="Also record non-reproducible runtime measurements")
     args = parser.parse_args()
     catalog, quality = (load_json(SAMPLE / filename) for filename in ("sample.json", "quality.json"))
-    review = build_review(catalog, quality, load_json(args.proposals), load_json(args.decisions))
+    corrections = load_json(args.corrections)
+    review = build_review(catalog, quality, load_json(args.proposals), load_json(args.decisions),
+                         taxonomy=load_json(args.taxonomy), assignments=load_json(args.assignments),
+                         corrections=corrections)
     started = perf_counter()
     try:
         encoder = LocalModel(args.model_dir, e5_prefix=args.e5_prefix) if args.model_dir else None
@@ -152,6 +158,14 @@ def main():
     } for row in review["queue"]))
     save_json(out / "evaluation.json", report)
     save_json(out / "quality_gates.json", gate_report(review, report))
+    correction_log = []
+    for profile in review["profiles"]:
+        wid = profile["work_id"]
+        for field, proposal in sorted(corrections.get(wid, {}).items()):
+            claim = profile["fields"][field]
+            correction_log.append({"work_id": wid, "field": field, **proposal,
+                                   "status": claim["status"], "fingerprint": claim["fingerprint"]})
+    save_json(out / "correction_log.json", correction_log)
     worksheets(report, out)
     if args.measure:
         import resource

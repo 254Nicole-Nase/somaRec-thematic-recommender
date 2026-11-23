@@ -8,6 +8,10 @@
   "queue": [
     {
       "author": "Marjorie Oludhe Macgoye",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [],
       "fields": {
         "author": {
@@ -118,6 +122,10 @@
     },
     {
       "author": "Meja Mwangi",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [],
       "fields": {
         "author": {
@@ -230,6 +238,10 @@
     },
     {
       "author": "Yvonne Adhiambo Owuor",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [],
       "fields": {
         "author": {
@@ -316,7 +328,7 @@
       "priority": 1,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: Publisher identifies Owuor’s novel. The Wikidata work candidate and both legacy links remain pending.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -346,6 +358,10 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL43755498M",
@@ -1090,6 +1106,10 @@
     },
     {
       "author": "Francis D. Imbuga",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL13212044M",
@@ -1471,6 +1491,14 @@
     },
     {
       "author": "Mwenye Hadithi",
+      "classification_review": {
+        "audiences": [
+          "audiences/children"
+        ],
+        "genres": [
+          "genres/animal-story"
+        ]
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL51571185M",
@@ -1948,7 +1976,7 @@
       "priority": 1,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: Hachette classifies this illustrated title as a picture storybook.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -1970,7 +1998,7 @@
       },
       "status_counts": {
         "conflicting": 2,
-        "needs_review": 39,
+        "needs_review": 41,
         "unknown": 8
       },
       "title": "Hot Hippo",
@@ -1978,6 +2006,10 @@
     },
     {
       "author": "Wangari Maathai",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL24262961M",
@@ -2218,6 +2250,10 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL47019099M",
@@ -2879,6 +2915,10 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL59041461M",
@@ -3536,6 +3576,12 @@
     },
     {
       "author": "Binyavanga Wainaina",
+      "classification_review": {
+        "audiences": [],
+        "genres": [
+          "genres/memoir"
+        ]
+      },
       "edition_reviews": [],
       "fields": {
         "author": {
@@ -3608,7 +3654,7 @@
       "priority": 1,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: Retain the form and replace the earlier Graywolf URL with Granta’s attributable listing and memoir description.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -3635,7 +3681,7 @@
       },
       "status_counts": {
         "conflicting": 1,
-        "needs_review": 7,
+        "needs_review": 8,
         "unknown": 5
       },
       "title": "One Day I Will Write About This Place",
@@ -3643,6 +3689,10 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL34733781M",
@@ -4295,6 +4345,13 @@
     },
     {
       "author": "Margaret A. Ogola",
+      "classification_review": {
+        "audiences": [],
+        "genres": [
+          "genres/family-saga",
+          "genres/historical-fiction"
+        ]
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL1267994M",
@@ -4417,9 +4474,9 @@
       "priority": 1,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: The distributor identifies the form explicitly.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
-        "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
+        "narrative_setting: The Nairobi study identifies the periods and communities on page 90; the distributor identifies the initial Luo setting. Neither claim requires a generation count.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
         "major_subjects: Check what the work materially covers using a reliable attributable source.",
         "language: These are edition languages. Confirm them against each manifestation.",
@@ -4444,7 +4501,7 @@
       },
       "status_counts": {
         "conflicting": 1,
-        "needs_review": 15,
+        "needs_review": 17,
         "unknown": 3
       },
       "title": "The River and the Source",
@@ -4452,6 +4509,10 @@
     },
     {
       "author": "Wangari Maathai",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL46965690M",
@@ -5318,6 +5379,10 @@
     },
     {
       "author": "Ken Walibora",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [],
       "fields": {
         "author": {
@@ -5398,7 +5463,7 @@
       "priority": 2,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: Literary scholarship identifies Walibora’s work as a riwaya.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -5432,6 +5497,10 @@
     },
     {
       "author": "Mũkoma wa Ngũgĩ",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL28961508M",
@@ -5748,6 +5817,10 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL37074008M",
@@ -6274,6 +6347,10 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL27491246M",
@@ -6590,6 +6667,10 @@
     },
     {
       "author": "Anne Matindi",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL22801465M",
@@ -6732,7 +6813,7 @@
       "priority": 2,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: The library gives the expanded title including other stories; the linked edition records the same subtitle.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -6760,6 +6841,10 @@
     },
     {
       "author": "Jared Angira",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL4927528M",
@@ -6997,6 +7082,10 @@
     },
     {
       "author": "Ken Walibora",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL25362197M",
@@ -7152,6 +7241,14 @@
     },
     {
       "author": "Mwenye Hadithi",
+      "classification_review": {
+        "audiences": [
+          "audiences/children"
+        ],
+        "genres": [
+          "genres/animal-story"
+        ]
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL36186806M",
@@ -7366,7 +7463,7 @@
       "priority": 2,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: Hachette classifies this illustrated title as a picture storybook.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -7386,7 +7483,7 @@
         "wikidata_title_author_candidates": []
       },
       "status_counts": {
-        "needs_review": 18,
+        "needs_review": 20,
         "unknown": 7
       },
       "title": "Laughing Giraffe",
@@ -7394,6 +7491,10 @@
     },
     {
       "author": "Kithaka wa Mberia",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL3360215M",
@@ -7538,7 +7639,7 @@
       "priority": 2,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: The distributor bibliography calls this work tamthilia; the university record identifies the play version.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -7569,6 +7670,12 @@
     },
     {
       "author": "Rebeka Njau",
+      "classification_review": {
+        "audiences": [],
+        "genres": [
+          "genres/memoir"
+        ]
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL44058306M",
@@ -7733,7 +7840,7 @@
         "wikidata_title_author_candidates": []
       },
       "status_counts": {
-        "needs_review": 12,
+        "needs_review": 13,
         "unknown": 7
       },
       "title": "Mirrors of My Life",
@@ -7741,6 +7848,10 @@
     },
     {
       "author": "Wangari Maathai",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL24815611M",
@@ -7902,6 +8013,10 @@
     },
     {
       "author": "Jared Angira",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL5449331M",
@@ -8074,6 +8189,10 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL61062775M",
@@ -8364,6 +8483,10 @@
     },
     {
       "author": "Yvonne Adhiambo Owuor",
+      "classification_review": {
+        "audiences": [],
+        "genres": []
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL38844610M",
@@ -8873,6 +8996,12 @@
     },
     {
       "author": "Ngũgĩ wa Thiong'o",
+      "classification_review": {
+        "audiences": [],
+        "genres": [
+          "genres/political-fiction"
+        ]
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL30586750M",
@@ -9431,11 +9560,11 @@
       "priority": 3,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
-        "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
-        "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
-        "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
-        "major_subjects: Check what the work materially covers using a reliable attributable source.",
+        "literary_form: The author calls the work a novel.",
+        "themes: The author description and attributed Sunday Times review support these readings.",
+        "narrative_setting: The study identifies the Ilmorog community; the author establishes the historical context.",
+        "mood_tone: The author site limits suspense to the investigation and cites criticism describing the wider political register.",
+        "major_subjects: Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject.",
         "language: These are edition languages. Confirm them against each manifestation.",
         "original_language: Verify the original language independently of any translation or edition.",
         "synopsis: Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
@@ -9460,7 +9589,7 @@
         ]
       },
       "status_counts": {
-        "needs_review": 54,
+        "needs_review": 55,
         "unknown": 1
       },
       "title": "Petals of Blood",
@@ -9468,6 +9597,12 @@
     },
     {
       "author": "Abdilatif Abdalla",
+      "classification_review": {
+        "audiences": [],
+        "genres": [
+          "genres/prison-poetry"
+        ]
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL5182139M",
@@ -9608,10 +9743,10 @@
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
         "literary_form: Check the publisher, author bibliography or a library authority for the form.",
-        "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+        "themes: The study analyses polyphony during imprisonment. The translated repression tags duplicated one concept.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
-        "major_subjects: Check what the work materially covers using a reliable attributable source.",
+        "major_subjects: The abstract connects imprisonment with sedition and political authority. Prison poetry belongs in classification.",
         "language: These are edition languages. Confirm them against each manifestation.",
         "original_language: Verify the original language independently of any translation or edition.",
         "synopsis: Editorial draft in English. Check accuracy and avoid spoilers before approval.",
@@ -9627,7 +9762,7 @@
         "wikidata_title_author_candidates": []
       },
       "status_counts": {
-        "needs_review": 16,
+        "needs_review": 17,
         "unknown": 3
       },
       "title": "Sauti ya dhiki",
@@ -9635,6 +9770,13 @@
     },
     {
       "author": "Khadija Abdalla Bajaber",
+      "classification_review": {
+        "audiences": [],
+        "genres": [
+          "genres/coming-of-age-fiction",
+          "genres/magical-realism"
+        ]
+      },
       "edition_reviews": [
         {
           "edition_id": "ol:OL32478788M",
@@ -9779,7 +9921,7 @@
       "priority": 3,
       "questions": [
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
-        "literary_form: Check the publisher, author bibliography or a library authority for the form.",
+        "literary_form: The distributor labels this a novel.",
         "themes: Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
         "narrative_setting: Check a synopsis or literary source that explicitly identifies the setting.",
         "mood_tone: Use a documented literary assessment or authorized reading, then review in context.",
@@ -9804,7 +9946,7 @@
         ]
       },
       "status_counts": {
-        "needs_review": 17,
+        "needs_review": 19,
         "unknown": 2
       },
       "title": "The House of Rust",

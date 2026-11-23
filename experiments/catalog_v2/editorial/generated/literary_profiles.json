@@ -1,6 +1,7 @@
 {
   "profiles": [
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -89,9 +90,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "a-grain-of-wheat"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -174,9 +178,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "betrayal-in-the-city"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -258,9 +265,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "black-star-nairobi"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [],
@@ -337,9 +347,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "coming-to-birth"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -440,9 +453,12 @@
           ]
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "decolonising-the-mind"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -527,9 +543,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "dreams-in-a-time-of-war"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -633,9 +652,12 @@
           ]
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "dust"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [],
@@ -712,9 +734,26 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "going-down-river-road"
     },
     {
+      "audiences": [
+        {
+          "evidence": [
+            "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+          ],
+          "fingerprint": "d94c3350a24111878669a2091773e5246b3784d95c5966ab7d1748b96c8f3006",
+          "note": "Publisher categorizes the title for children.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "children",
+            "display": null
+          }
+        }
+      ],
       "fields": {
         "language": {
           "evidence": [
@@ -735,13 +774,13 @@
         },
         "literary_form": {
           "evidence": [
-            "https://www.paperlionltd.com/clients/bruce-hobson/"
+            "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
           ],
-          "fingerprint": "06ca1d97f7bb541a02bf4708e9ce06f9dd3f96b3c3da4aab87eaa9b1027f7ebe",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "040e0929e94295029c5fefe1e91db4ce32171f3ee53ab7ce820ae04ef2dd0210",
+          "note": "Hachette classifies this illustrated title as a picture storybook.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "children"
+          "value": "picture book"
         },
         "major_subjects": {
           "evidence": [],
@@ -800,9 +839,27 @@
           "value": null
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/",
+            "https://www.paperlionltd.com/clients/bruce-hobson/"
+          ],
+          "fingerprint": "f102b0c010594c1fa75f78647d5f401d65f5025869b0f0887b9a84ff3775af23",
+          "note": "The agent lists this title in the African Animal Tales series.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "animal-story",
+            "display": "primary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "hot-hippo"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -884,9 +941,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "in-the-house-of-the-interpreter"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -902,13 +962,14 @@
         },
         "literary_form": {
           "evidence": [
-            "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
+            "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+            "https://openlibrary.org/books/OL22801465M"
           ],
-          "fingerprint": "81fc2bff0b2f929aa6c12cd404d4bf53f7b724e24fb01eefcc9fde09c300f4c4",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "35f3d9d72804732b526e3090c1d5a68b5fa6313b385c4456ea643110ffcb1db3",
+          "note": "The library gives the expanded title including other stories; the linked edition records the same subtitle.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "children"
+          "value": "story collection"
         },
         "major_subjects": {
           "evidence": [],
@@ -967,9 +1028,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "jua-na-upepo"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1051,9 +1115,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "juices"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1134,9 +1201,26 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "kidagaa-kimemwozea"
     },
     {
+      "audiences": [
+        {
+          "evidence": [
+            "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+          ],
+          "fingerprint": "51a34bee3f59630d21335f8990b61f2f2e59c54a8ae3eab6730fbb38c762a9ca",
+          "note": "Publisher categorizes the title for children.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "children",
+            "display": null
+          }
+        }
+      ],
       "fields": {
         "language": {
           "evidence": [
@@ -1153,13 +1237,13 @@
         },
         "literary_form": {
           "evidence": [
-            "https://www.paperlionltd.com/clients/bruce-hobson/"
+            "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
           ],
-          "fingerprint": "06ca1d97f7bb541a02bf4708e9ce06f9dd3f96b3c3da4aab87eaa9b1027f7ebe",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "1a643605283437849e2d55c85bfcaeab28f2b820994aa49b1665d3c6ab07fd10",
+          "note": "Hachette classifies this illustrated title as a picture storybook.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "children"
+          "value": "picture book"
         },
         "major_subjects": {
           "evidence": [],
@@ -1218,9 +1302,27 @@
           "value": null
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/",
+            "https://www.paperlionltd.com/clients/bruce-hobson/"
+          ],
+          "fingerprint": "e24a8722d6c7b80af0c37802b1f7911f922cfee3a86b9817c68c864b63e99b7e",
+          "note": "The agent lists this title in the African Animal Tales series.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "animal-story",
+            "display": "primary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "laughing-giraffe"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1236,13 +1338,14 @@
         },
         "literary_form": {
           "evidence": [
-            "https://www.wikidata.org/wiki/Q90900593"
+            "https://africanbookscollective.com/books/doa/",
+            "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
           ],
-          "fingerprint": "292a54ab281fdc9aa0f452eeab9d635dcc4a4c3f6e3e2b4a7ab7f8d50421caae",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "a43c0e55b36470072a1e79dbfb90686e7cd5901a67f0eac5663f22ebd322cc48",
+          "note": "The distributor bibliography calls this work tamthilia; the university record identifies the play version.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "poetry"
+          "value": "play"
         },
         "major_subjects": {
           "evidence": [],
@@ -1301,9 +1404,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "maua-kwenye-jua-la-asubuhi"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1384,9 +1490,26 @@
           "value": null
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://rebekanjau.com/"
+          ],
+          "fingerprint": "c66fe9c342194c95e6de054aa48d9ce7923f40e3deb4337d0b99733e607781c5",
+          "note": "The work-specific bibliography or publisher listing identifies this narrative as memoir.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "memoir",
+            "display": "primary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "mirrors-of-my-life"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [],
@@ -1398,10 +1521,10 @@
         },
         "literary_form": {
           "evidence": [
-            "https://www.graywolfpress.org/books/one-day-i-will-write-about-place"
+            "https://granta.com/products/one-day-i-will-write-about-this-place/"
           ],
-          "fingerprint": "c72b6c5b28ff66986510c4e0155faa3042c9ac194665a6d47e8f3816a188e672",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "e22a7baa352ca6ab36c667e36092b495a37acee05acfb6ee04fd0bc30ccb3ab6",
+          "note": "Retain the form and replace the earlier Graywolf URL with Granta’s attributable listing and memoir description.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": "memoir"
@@ -1471,9 +1594,26 @@
           "value": null
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://granta.com/products/one-day-i-will-write-about-this-place/"
+          ],
+          "fingerprint": "563fb1f018f1f09e5d4e895e8fa68fb2ce5864dbfd3a3efdf264d5e9c9e5fc17",
+          "note": "The work-specific bibliography or publisher listing identifies this narrative as memoir.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "memoir",
+            "display": "primary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "one-day-i-will-write-about-this-place"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1495,49 +1635,51 @@
         },
         "literary_form": {
           "evidence": [
-            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+            "https://ngugiwathiongo.com/petals-of-blood/"
           ],
-          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "ba582064d056f316b2c03b7ab5daef23ba765130b0e9eab5fa7e04c8da34a4a8",
+          "note": "The author calls the work a novel.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "fiction"
+          "value": "novel"
         },
         "major_subjects": {
           "evidence": [
-            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+            "https://ngugiwathiongo.com/petals-of-blood/"
           ],
-          "fingerprint": "21e5eab5cca251174db24eacfe971e269fae31c48c06d9354347b4ac01723cb9",
-          "note": "Check what the work materially covers using a reliable attributable source.",
+          "fingerprint": "a1825fefd42303488666f5860c8fa174d4119cbfdb03b9bc7ca6ce11fcb18b22",
+          "note": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
             "murder investigation",
-            "foreign ownership"
+            "political leadership in independent Kenya"
           ]
         },
         "mood_tone": {
           "evidence": [
-            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+            "https://ngugiwathiongo.com/petals-of-blood/"
           ],
-          "fingerprint": "1cf89f466f2b19001619f2473ab0e594f2be657e7d26596b305f723bb7b2cd58",
-          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "fingerprint": "2f6ea52917f712db23deb57c9a12ed0b7a0fc820d2104364d77e5ebd1a534d33",
+          "note": "The author site limits suspense to the investigation and cites criticism describing the wider political register.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
-            "suspenseful"
+            "suspense in the murder inquiry",
+            "impassioned political critique"
           ]
         },
         "narrative_setting": {
           "evidence": [
-            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+            "https://iiste.org/Journals/index.php/RHSS/article/download/30272/31087",
+            "https://ngugiwathiongo.com/petals-of-blood/"
           ],
-          "fingerprint": "28ff940867a4142a2e7f090778ee6b4ffd34e100c7200d39bf3807624dcda6c0",
-          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "fingerprint": "538343b770aee2f50e72e30bc213fa6c71c8d253fe27af9476b9cbac76ed5bf0",
+          "note": "The study identifies the Ilmorog community; the author establishes the historical context.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
-            "rural Kenya after independence"
+            "Ilmorog, Kenya after independence"
           ]
         },
         "original_language": {
@@ -1570,21 +1712,38 @@
         },
         "themes": {
           "evidence": [
-            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+            "https://ngugiwathiongo.com/petals-of-blood/"
           ],
-          "fingerprint": "2e0df1f60af05378223a433e9c72e19397bf55bed4332ad91c2a4908e0b608f5",
-          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "fingerprint": "255504936aa208d2e5eada7e7549c7e9e5b7f2b7ecc7f19c3d213f71a11ae678",
+          "note": "The author description and attributed Sunday Times review support these readings.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
             "political disillusionment",
-            "leadership and public trust"
+            "corruption of power"
           ]
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://ngugiwathiongo.com/petals-of-blood/"
+          ],
+          "fingerprint": "6fec881e140bf6ea65445d1b2272b8cd778463d86b43c791d935b8f65e7d9f63",
+          "note": "The author frames the novel through political disillusionment and corrupting power.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "political-fiction",
+            "display": "primary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "petals-of-blood"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1665,9 +1824,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "replenishing-the-earth"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1695,13 +1857,13 @@
           "evidence": [
             "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
           ],
-          "fingerprint": "7f9ebc08f60a3ef7eb30d6a0701423a88af0cacda6695fac9cd8ebd1764750e9",
-          "note": "Check what the work materially covers using a reliable attributable source.",
+          "fingerprint": "dbd67efcb80af04cf0863e7f9e80c0ad931be587f4d67f75f68387cf6d5fabe4",
+          "note": "The abstract connects imprisonment with sedition and political authority. Prison poetry belongs in classification.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
             "imprisonment",
-            "mashairi ya gerezani"
+            "political repression"
           ]
         },
         "mood_tone": {
@@ -1752,20 +1914,35 @@
           "evidence": [
             "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
           ],
-          "fingerprint": "55869781685ff092de8c884a1a94dbe7ebbc5c9aaaf33284cea4badb5bf7c9f1",
-          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "fingerprint": "e2df885c33abee7d95e9be44f3f3b2cb3d034e57f8f6ad769eb30d8f903a27f1",
+          "note": "The study analyses polyphony during imprisonment. The translated repression tags duplicated one concept.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
-            "political repression",
-            "ukandamizaji wa kisiasa",
             "voice under confinement"
           ]
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+          ],
+          "fingerprint": "90c9736aea2a3ca898a575b268fb9a022acfddb3dee881301d66b0d42dc88904",
+          "note": "The study explicitly describes Abdalla’s prison poetry.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "prison-poetry",
+            "display": "primary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "sauti-ya-dhiki"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [],
@@ -1777,13 +1954,13 @@
         },
         "literary_form": {
           "evidence": [
-            "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/"
+            "https://journals.mmust.ac.ke/index.php/jk/article/view/12"
           ],
-          "fingerprint": "9b1b5b700c17cec9aa2526f8d3cf3b0f59311d715b05d389eebd1dd30ee1e466",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "a19707df47d3b7e0cc281e690b68fc8ad06285201bf058d56ccc114c18c1ddc4",
+          "note": "Literary scholarship identifies Walibora’s work as a riwaya.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "fiction"
+          "value": "novel"
         },
         "major_subjects": {
           "evidence": [],
@@ -1842,9 +2019,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "siku-njema"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -1925,9 +2105,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "silent-voices"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -2009,9 +2192,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "something-torn-and-new"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -2093,9 +2279,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "the-challenge-for-africa"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [],
@@ -2107,13 +2296,13 @@
         },
         "literary_form": {
           "evidence": [
-            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+            "https://www.penguinrandomhouse.com/books/545470/the-dragonfly-sea-by-yvonne-adhiambo-owuor/"
           ],
-          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "1dbd58f1c0a60ab063d0af55be7972fc8f32fb7b78e0414fb4f7b65d8d744550",
+          "note": "Publisher identifies Owuor’s novel. The Wikidata work candidate and both legacy links remain pending.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "fiction"
+          "value": "novel"
         },
         "major_subjects": {
           "evidence": [],
@@ -2172,9 +2361,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "the-dragonfly-sea"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -2190,13 +2382,13 @@
         },
         "literary_form": {
           "evidence": [
-            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
           ],
-          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "84dec8c2f59876902945f2be665c6f5a942ae4b483b6489d45463f4736ca6a20",
+          "note": "The distributor labels this a novel.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "fiction"
+          "value": "novel"
         },
         "major_subjects": {
           "evidence": [
@@ -2273,9 +2465,39 @@
           ]
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+          ],
+          "fingerprint": "18cf7ff3c466168d436d9cc7a253588bcf125c1bd3e19fc97a89eba40b45afba",
+          "note": "The distributor independently describes the coming-of-age genre on the same page.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "coming-of-age-fiction",
+            "display": "secondary"
+          }
+        },
+        {
+          "evidence": [
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+          ],
+          "fingerprint": "40965459d18abaf68eebe897724ebbd13f7faa32578ca0a1984a20780d4f8e88",
+          "note": "The distributor explicitly describes the novel as magical realist.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "magical-realism",
+            "display": "primary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "the-house-of-rust"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -2293,11 +2515,11 @@
           "evidence": [
             "https://africanbookscollective.com/books/the-river-and-the-source/"
           ],
-          "fingerprint": "a9ffbfcc84c616def2fce6c5eb8f66fdad871386977d0b04870753a6c3655399",
-          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "fingerprint": "05bfabfddfdc63616a12cd02c0a537cdac5538afce217ff54773b46723bf0446",
+          "note": "The distributor identifies the form explicitly.",
           "origin": "editorial_proposal",
           "status": "needs_review",
-          "value": "fiction"
+          "value": "novel"
         },
         "major_subjects": {
           "evidence": [
@@ -2322,14 +2544,16 @@
         },
         "narrative_setting": {
           "evidence": [
-            "https://africanbookscollective.com/books/the-river-and-the-source/"
+            "https://africanbookscollective.com/books/the-river-and-the-source/",
+            "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/399bc51f-d8ed-4eab-9239-103b4f3a49b9/content"
           ],
-          "fingerprint": "244251bf711ae92b5432380b602d43daa37f82561f8109c4c9e7b9b877941cef",
-          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "fingerprint": "10a2eba4d6870202b1ba24fc2dc07497f857b78f548ff804fb8c42386f98e805",
+          "note": "The Nairobi study identifies the periods and communities on page 90; the distributor identifies the initial Luo setting. Neither claim requires a generation count.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
-            "Luo communities in Kenya"
+            "Kenya across precolonial, colonial and post-independence periods",
+            "Luo and Kikuyu communities"
           ]
         },
         "original_language": {
@@ -2374,9 +2598,40 @@
           ]
         }
       },
+      "genres": [
+        {
+          "evidence": [
+            "https://africanbookscollective.com/books/the-river-and-the-source/",
+            "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/1ee6595f-9e09-4c96-90ca-6c5f4a817ff3/content"
+          ],
+          "fingerprint": "f40aa61f1cda2bd351aa5bd964b956f0d48bf6e231a943388614e356a201518c",
+          "note": "Literary scholarship describes the family saga in Ogola’s first two novels; the distributor identifies continuity across generations.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "family-saga",
+            "display": "primary"
+          }
+        },
+        {
+          "evidence": [
+            "https://erepository.uonbi.ac.ke/server/api/core/bitstreams/399bc51f-d8ed-4eab-9239-103b4f3a49b9/content"
+          ],
+          "fingerprint": "f2187518bd44f128535541b4f8d6603398fb5f44a66d77674d157299a5a3e329",
+          "note": "The University of Nairobi study explicitly treats Ogola’s work as a historical novel in its analysis on page 90.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "historical-fiction",
+            "display": "secondary"
+          }
+        }
+      ],
+      "taxonomy_version": "1.0.0",
       "work_id": "the-river-and-the-source"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -2464,9 +2719,12 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "the-river-between"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -2574,9 +2832,12 @@
           ]
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "unbowed"
     },
     {
+      "audiences": [],
       "fields": {
         "language": {
           "evidence": [
@@ -2663,6 +2924,8 @@
           "value": null
         }
       },
+      "genres": [],
+      "taxonomy_version": "1.0.0",
       "work_id": "weep-not-child"
     }
   ],
