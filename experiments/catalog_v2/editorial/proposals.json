@@ -1,0 +1,274 @@
+{
+  "petals-of-blood": {
+    "primary_genre": {
+      "value": "literary fiction",
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+      ]
+    },
+    "themes": {
+      "value": [
+        "political disillusionment",
+        "leadership and public trust"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+      ]
+    },
+    "narrative_setting": {
+      "value": [
+        "rural Kenya after independence"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+      ]
+    },
+    "mood_tone": {
+      "value": [
+        "suspenseful"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "murder investigation",
+        "foreign ownership"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+      ]
+    },
+    "synopsis": {
+      "value": "A murder inquiry brings four lives under scrutiny and opens onto wider disillusionment with leadership in independent Kenya.",
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+      ]
+    }
+  },
+  "dust": {
+    "primary_genre": {
+      "value": "literary fiction",
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ]
+    },
+    "themes": {
+      "value": [
+        "family secrets",
+        "political violence"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ]
+    },
+    "narrative_setting": {
+      "value": [
+        "Kenya"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "family history",
+        "the legacy of political violence"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ]
+    }
+  },
+  "the-river-and-the-source": {
+    "primary_genre": {
+      "value": "contemporary fiction",
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ]
+    },
+    "themes": {
+      "value": [
+        "women across generations",
+        "social change"
+      ],
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ]
+    },
+    "narrative_setting": {
+      "value": [
+        "Luo communities in Kenya"
+      ],
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "family life",
+        "changing social expectations"
+      ],
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ]
+    },
+    "synopsis": {
+      "conflict": "The distributor page gives both three and four generations. Check the work with a literature editor and use neutral wording until the discrepancy is settled.",
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ]
+    }
+  },
+  "sauti-ya-dhiki": {
+    "primary_genre": {
+      "value": "prison poetry",
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+      ]
+    },
+    "themes": {
+      "value": [
+        "political repression",
+        "ukandamizaji wa kisiasa",
+        "voice under confinement"
+      ],
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "imprisonment",
+        "mashairi ya gerezani"
+      ],
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+      ]
+    }
+  },
+  "unbowed": {
+    "primary_genre": {
+      "value": "environmental memoir",
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+      ]
+    },
+    "themes": {
+      "value": [
+        "environmental activism",
+        "grassroots organizing"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+      ]
+    },
+    "narrative_setting": {
+      "value": [
+        "Kenya"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "Green Belt Movement",
+        "tree planting",
+        "women’s organizing"
+      ],
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+      ]
+    }
+  },
+  "decolonising-the-mind": {
+    "primary_genre": {
+      "value": "literary criticism",
+      "evidence": [
+        "https://ngugiwathiongo.com/decolonising-the-mind/"
+      ]
+    },
+    "themes": {
+      "value": [
+        "linguistic decolonization",
+        "cultural identity"
+      ],
+      "evidence": [
+        "https://ngugiwathiongo.com/decolonising-the-mind/"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "language in African literature",
+        "African theatre"
+      ],
+      "evidence": [
+        "https://ngugiwathiongo.com/decolonising-the-mind/"
+      ]
+    }
+  },
+  "the-house-of-rust": {
+    "primary_genre": {
+      "value": "magical realism",
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ]
+    },
+    "themes": {
+      "value": [
+        "coming of age"
+      ],
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ]
+    },
+    "narrative_setting": {
+      "value": [
+        "Mombasa, Kenya"
+      ],
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "sea voyage",
+        "Swahili culture",
+        "Hadhrami diaspora"
+      ],
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ]
+    },
+    "synopsis": {
+      "value": "A girl from Mombasa sets out to find her father at sea. Her journey is told through the Swahili and Hadhrami worlds of the Kenyan coast.",
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ]
+    }
+  },
+  "one-day-i-will-write-about-this-place": {
+    "primary_genre": {
+      "value": "coming-of-age memoir",
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ]
+    },
+    "major_subjects": {
+      "value": [
+        "growing up in Kenya"
+      ],
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ]
+    },
+    "synopsis": {
+      "value": "Binyavanga Wainaina recalls growing up in Kenya and finding his voice as a writer, with family and language shaping the story.",
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Feasibility of content-aware recommendations
 
-No retrieval model, excerpt corpus or full-text corpus was built in this phase. The 30-work prototype tests bibliographic evidence and supplies five draft synopses. It cannot measure ranking quality.
+The Phase 3 prototype did not build a retrieval model or ingest text. Phase 4 adds a [metadata-only offline evaluation](CATALOG_V2_EDITORIAL.md). Its lexical diagnostics have no human relevance judgments. Excerpt and full-text experiments remain future work.
 
 | Approach | Representation | Likely advantage and primary risk |
 | --- | --- | --- |

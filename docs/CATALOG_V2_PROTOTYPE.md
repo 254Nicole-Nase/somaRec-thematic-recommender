@@ -1,6 +1,6 @@
 # Catalog V2 prototype and comparative quality report
 
-Run and reviewed on 23 November 2026. The sample is a local research dataset kept under [experiments/catalog_v2](../experiments/catalog_v2), separate from the production catalog. See the [source and licensing review](CATALOG_V2_SOURCES.md), [data model and roadmap](CATALOG_V2_DESIGN.md), and [recommendation feasibility study](CATALOG_V2_RECOMMENDATIONS.md).
+Run and reviewed on 23 November 2026. The sample is a local research dataset kept under [experiments/catalog_v2](../experiments/catalog_v2), separate from the production catalog. See the [source and licensing review](CATALOG_V2_SOURCES.md), [data model and roadmap](CATALOG_V2_DESIGN.md), and [recommendation feasibility study](CATALOG_V2_RECOMMENDATIONS.md). Phase 4 adds an [editorial queue and offline evaluation](CATALOG_V2_EDITORIAL.md) without changing the snapshot.
 
 ## Reproduce the sample
 

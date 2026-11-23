@@ -1,0 +1,2670 @@
+{
+  "profiles": [
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL13673139M",
+            "https://openlibrary.org/books/OL14458897M",
+            "https://openlibrary.org/books/OL17134780M",
+            "https://openlibrary.org/books/OL22244130M",
+            "https://openlibrary.org/books/OL22589200M",
+            "https://openlibrary.org/books/OL25238395M",
+            "https://openlibrary.org/books/OL25238396M",
+            "https://openlibrary.org/books/OL32101051M",
+            "https://openlibrary.org/books/OL43755498M"
+          ],
+          "fingerprint": "ac1ab645c4e1ca08b26f84d050ffc6d50cdfeacc6a4ec9dcf82358d8b5e833bb",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "a-grain-of-wheat"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL19946974M",
+            "https://openlibrary.org/books/OL45304471M",
+            "https://openlibrary.org/books/OL4712665M"
+          ],
+          "fingerprint": "babf9269ac4fe2424ffece1f7fd238952787cd89a156532683a3670f373fc56a",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://openlibrary.org/works/OL3451029W"
+          ],
+          "fingerprint": "b85113ff551fe55235204ac9b8e92464c7c691eebdde7852d552c20d392246da",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "drama"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "betrayal-in-the-city"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL26185860M",
+            "https://openlibrary.org/books/OL35501728M"
+          ],
+          "fingerprint": "caf8e0371e54fe8ef05f32af622bdfecab766bceb0816be419d6fb348a63c833",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "black-star-nairobi"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [],
+          "fingerprint": "7b89deb59f4c10dff2ada8aecd32dfa4e91f225cfe65cb4a209550c14472a354",
+          "note": "Verify language on the exact edition. Do not infer the original language from an edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.wikidata.org/wiki/Q125423260"
+          ],
+          "fingerprint": "d7211d6a03dac5ecfe298e98536103a689458924971cbb01dadbb1a8a34d4212",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "coming-to-birth"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL22147032M",
+            "https://openlibrary.org/books/OL2711888M",
+            "https://openlibrary.org/books/OL34733781M",
+            "https://openlibrary.org/books/OL34754724M",
+            "https://openlibrary.org/books/OL48115396M",
+            "https://openlibrary.org/books/OL8281826M",
+            "https://openlibrary.org/books/OL9431439M"
+          ],
+          "fingerprint": "45304b3c9346387e955c63f420d7c71b30a51793f458ea9e420d5c8ea3332980",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://ngugiwathiongo.com/decolonising-the-mind/"
+          ],
+          "fingerprint": "af0c64abd320f609f8575986299ef8f8f28b1aed4b643d9718fd1b78330b11ea",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "nonfiction"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://ngugiwathiongo.com/decolonising-the-mind/"
+          ],
+          "fingerprint": "1260628608e73af8bd59f9b1c77c2fd8022215007245152f02dc386b30e44765",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "language in African literature",
+            "African theatre"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://ngugiwathiongo.com/decolonising-the-mind/"
+          ],
+          "fingerprint": "09fbb08347a203b9d5daa89dd588abc025ce691dfa79b9cc78b5962904b10e10",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "literary criticism"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://ngugiwathiongo.com/decolonising-the-mind/"
+          ],
+          "fingerprint": "e3d85a756753eaa6b14279dc0ea6a67e9cab0f3db175f1e9b72f205cc2ec783a",
+          "note": "Editorial draft in English. Check accuracy and avoid spoilers before approval.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "Ngũgĩ examines how the choice of language shapes African literature and theatre, drawing on his own practice as a writer."
+        },
+        "themes": {
+          "evidence": [
+            "https://ngugiwathiongo.com/decolonising-the-mind/"
+          ],
+          "fingerprint": "6779c244d90e48eb5648299d093b0b8ea4b0ee46090d08a359b6876ddaabf728",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "linguistic decolonization",
+            "cultural identity"
+          ]
+        }
+      },
+      "work_id": "decolonising-the-mind"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL24525247M",
+            "https://openlibrary.org/books/OL24547115M",
+            "https://openlibrary.org/books/OL35769247M",
+            "https://openlibrary.org/books/OL37074008M",
+            "https://openlibrary.org/books/OL40383723M"
+          ],
+          "fingerprint": "ca949de808318e0a2dd89444c7ec57d487aeaaf3d1aa6c11c01ed743fe562070",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://ngugiwathiongo.com/"
+          ],
+          "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "memoir"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "dreams-in-a-time-of-war"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL27154696M",
+            "https://openlibrary.org/books/OL28272050M",
+            "https://openlibrary.org/books/OL30967420M",
+            "https://openlibrary.org/books/OL34623455M",
+            "https://openlibrary.org/books/OL35508594M",
+            "https://openlibrary.org/books/OL38844610M"
+          ],
+          "fingerprint": "6faa9dea003309e2f6fca4332a802c32aaaefecde77760a9ae488fc27929dee6",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://openlibrary.org/works/OL19974522W"
+          ],
+          "fingerprint": "b1666031ab80211b754203cd8b2057e9c014d42c07f2fad0e0cbcad00f1965b1",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+          ],
+          "fingerprint": "806c59d0b7c4009e5995d9824fe74469d28fdbda34e0841476ef813dabd7bd02",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "family history",
+            "the legacy of political violence"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+          ],
+          "fingerprint": "eb6937536ebbcf596aca4ee278ff747c3eae00c5e33bcb2ff565a692dac4a472",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "Kenya"
+          ]
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+          ],
+          "fingerprint": "c389b38e7fab4ca2cd5e4a43aa1ec2670b2ff97df15ac255c8334ffffe1045b7",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "literary fiction"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+          ],
+          "fingerprint": "7f3a40b2f423b70b9c171364fab7f2b939e4c1d34e8b5c794af32fc4727934ce",
+          "note": "Editorial draft in English. Check accuracy and avoid spoilers before approval.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "A killing in Nairobi brings a family back together and forces it to confront secrets entangled with Kenya’s political history."
+        },
+        "themes": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+          ],
+          "fingerprint": "3f1d4aa92c7de35375994e2d52a8d38f21b095442bb32a882b567c6aa6cc73a7",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "family secrets",
+            "political violence"
+          ]
+        }
+      },
+      "work_id": "dust"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [],
+          "fingerprint": "7b89deb59f4c10dff2ada8aecd32dfa4e91f225cfe65cb4a209550c14472a354",
+          "note": "Verify language on the exact edition. Do not infer the original language from an edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "going-down-river-road"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL17221612M",
+            "https://openlibrary.org/books/OL17512648M",
+            "https://openlibrary.org/books/OL23242823M",
+            "https://openlibrary.org/books/OL2707574M",
+            "https://openlibrary.org/books/OL51571185M",
+            "https://openlibrary.org/books/OL9611401M"
+          ],
+          "fingerprint": "5b5c48ba6551f0e36795fb73b2e72b222b51a9b7ba9e38ff83f700fed210d969",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.paperlionltd.com/clients/bruce-hobson/"
+          ],
+          "fingerprint": "06ca1d97f7bb541a02bf4708e9ce06f9dd3f96b3c3da4aab87eaa9b1027f7ebe",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "children"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "hot-hippo"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL25283289M",
+            "https://openlibrary.org/books/OL28504957M"
+          ],
+          "fingerprint": "068d90227883db0fe7087d14d1929722a58fc4489a460f998d4488a7598eede0",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://ngugiwathiongo.com/"
+          ],
+          "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "memoir"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "in-the-house-of-the-interpreter"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL22801465M"
+          ],
+          "fingerprint": "5f8fe05922a275e35e966f9156a9bcdb905d478ebfb7c9239700d167ba098438",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "swa"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330"
+          ],
+          "fingerprint": "81fc2bff0b2f929aa6c12cd404d4bf53f7b724e24fb01eefcc9fde09c300f4c4",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "children"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "jua-na-upepo"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL13772229M",
+            "https://openlibrary.org/books/OL4927528M"
+          ],
+          "fingerprint": "2f1a48ca399840ae1b88cac9bf3ed882e8036f825f8b1e0617b07dffb6c81946",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://iucat.iu.edu/iuk/1905138"
+          ],
+          "fingerprint": "890267796d56a6a8c2befeb2d5a1372fd13854e82008113bfbd0d200a2278dbb",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "poetry"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "juices"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL25362197M"
+          ],
+          "fingerprint": "feccfe182fc2f4a3e8816479657be8959f504629bad018ba04b918a5e7fc01b2",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "swa"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://library.daystar.ac.ke/bib/43380"
+          ],
+          "fingerprint": "a380cc65d91c68d660384157f1e661a34ab52e78de66f87ce3ec289134c6f1db",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "kidagaa-kimemwozea"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL25185107M",
+            "https://openlibrary.org/books/OL36186806M"
+          ],
+          "fingerprint": "e6bfac506fecc61dd80cdc7d6bab1186e701254b4395f1098c0d0b282d74c356",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.paperlionltd.com/clients/bruce-hobson/"
+          ],
+          "fingerprint": "06ca1d97f7bb541a02bf4708e9ce06f9dd3f96b3c3da4aab87eaa9b1027f7ebe",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "children"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "laughing-giraffe"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL3360215M"
+          ],
+          "fingerprint": "87b74d661e9236ebb45bbc8094683fae4660b6ff4c1818162aafab3c42eb38e2",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "swa"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.wikidata.org/wiki/Q90900593"
+          ],
+          "fingerprint": "292a54ab281fdc9aa0f452eeab9d635dcc4a4c3f6e3e2b4a7ab7f8d50421caae",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "poetry"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "maua-kwenye-jua-la-asubuhi"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL44058306M"
+          ],
+          "fingerprint": "e0944df7385f1ab48c7c7ec7f9cca0aa0ed2f0311e6107140d7ac37c770a15a5",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://rebekanjau.com/"
+          ],
+          "fingerprint": "deebb17bee1ebf315de11af40e3acb15d3311744c101caeb97869b93e41c0021",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "memoir"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "mirrors-of-my-life"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [],
+          "fingerprint": "7b89deb59f4c10dff2ada8aecd32dfa4e91f225cfe65cb4a209550c14472a354",
+          "note": "Verify language on the exact edition. Do not infer the original language from an edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.graywolfpress.org/books/one-day-i-will-write-about-place"
+          ],
+          "fingerprint": "c72b6c5b28ff66986510c4e0155faa3042c9ac194665a6d47e8f3816a188e672",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "memoir"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://granta.com/products/one-day-i-will-write-about-this-place/"
+          ],
+          "fingerprint": "40f5e3b5a2ddfa53316f7dc6a9a648103e4349411e6a8d494098f4ead78982e6",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "growing up in Kenya"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://granta.com/products/one-day-i-will-write-about-this-place/"
+          ],
+          "fingerprint": "1f33db42788610e722289fb2312c7ffb62cdc72d276b0ddd2255b9871fc44932",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "coming-of-age memoir"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://granta.com/products/one-day-i-will-write-about-this-place/"
+          ],
+          "fingerprint": "5694189218695a9ec1644be35c33d38ab61f51707ceb6f768968762d40cc2c0c",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "Binyavanga Wainaina recalls growing up in Kenya and finding his voice as a writer, with family and language shaping the story."
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "one-day-i-will-write-about-this-place"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL15447854M",
+            "https://openlibrary.org/books/OL17728444M",
+            "https://openlibrary.org/books/OL21418433M",
+            "https://openlibrary.org/books/OL21487687M",
+            "https://openlibrary.org/books/OL30586750M",
+            "https://openlibrary.org/books/OL33560255M",
+            "https://openlibrary.org/books/OL44208085M"
+          ],
+          "fingerprint": "2ade83208177cdf9ec8c5562297ef8e6ee4906cf8b0cfe35dba30ed4670ed506",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+          ],
+          "fingerprint": "21e5eab5cca251174db24eacfe971e269fae31c48c06d9354347b4ac01723cb9",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "murder investigation",
+            "foreign ownership"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+          ],
+          "fingerprint": "1cf89f466f2b19001619f2473ab0e594f2be657e7d26596b305f723bb7b2cd58",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "suspenseful"
+          ]
+        },
+        "narrative_setting": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+          ],
+          "fingerprint": "28ff940867a4142a2e7f090778ee6b4ffd34e100c7200d39bf3807624dcda6c0",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "rural Kenya after independence"
+          ]
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+          ],
+          "fingerprint": "89ae86385aeb2a6444d9148e752be859f00a849bc1ac1bc7e7028072f4009983",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "literary fiction"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+          ],
+          "fingerprint": "cc238c657e207aa3d0881a680eb1a0437d1b5acdb01e3a9d32f586f0d2711aea",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "A murder inquiry brings four lives under scrutiny and opens onto wider disillusionment with leadership in independent Kenya."
+        },
+        "themes": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/295517/petals-of-blood-by-ngugi-wa-thiongo-introduction-by-moses-isegawa-series-editor-chinua-achebe/"
+          ],
+          "fingerprint": "2e0df1f60af05378223a433e9c72e19397bf55bed4332ad91c2a4908e0b608f5",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "political disillusionment",
+            "leadership and public trust"
+          ]
+        }
+      },
+      "work_id": "petals-of-blood"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL24815611M"
+          ],
+          "fingerprint": "66293199a4ef57125a744de0ddf7f72c37b39f9cdbb3ab7b99aff9e5b1c6c0f8",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.greenbeltmovement.org/books/"
+          ],
+          "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "nonfiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "replenishing-the-earth"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL5182139M"
+          ],
+          "fingerprint": "13b1991cae560d5c38c9cd39816a52745dab378d007bd2217429bb1840a47798",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "swa"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://ci.nii.ac.jp/ncid/BD05489832"
+          ],
+          "fingerprint": "8ae376e7fb5f8a942c8ed5ce16edf0f2d7cab2dba59821f55cb5bd9edde97bdb",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "poetry"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+          ],
+          "fingerprint": "7f9ebc08f60a3ef7eb30d6a0701423a88af0cacda6695fac9cd8ebd1764750e9",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "imprisonment",
+            "mashairi ya gerezani"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+          ],
+          "fingerprint": "6134652a3f76979018d343f71da4ade351a1ce29f5fa280f07c04ccfe20a0f53",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "prison poetry"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://journals.sagepub.com/doi/10.1080/03064228308533570"
+          ],
+          "fingerprint": "38c1f04909824b5231e47c2458bff25899ec6419ac3830d17efdf9706a2d0494",
+          "note": "Editorial draft in English. Check accuracy and avoid spoilers before approval.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "Written while Abdilatif Abdalla was imprisoned, this collection of Kiswahili poetry engages with repression and political struggle."
+        },
+        "themes": {
+          "evidence": [
+            "https://erepository.kibu.ac.ke/items/ae187c4a-26fb-4c7d-868b-c9374bc1206e"
+          ],
+          "fingerprint": "55869781685ff092de8c884a1a94dbe7ebbc5c9aaaf33284cea4badb5bf7c9f1",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "political repression",
+            "ukandamizaji wa kisiasa",
+            "voice under confinement"
+          ]
+        }
+      },
+      "work_id": "sauti-ya-dhiki"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [],
+          "fingerprint": "7b89deb59f4c10dff2ada8aecd32dfa4e91f225cfe65cb4a209550c14472a354",
+          "note": "Verify language on the exact edition. Do not infer the original language from an edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.longhornpublishers.com/blog/tamasha-ya-kiswahili/"
+          ],
+          "fingerprint": "9b1b5b700c17cec9aa2526f8d3cf3b0f59311d715b05d389eebd1dd30ee1e466",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "siku-njema"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL5449331M"
+          ],
+          "fingerprint": "e742f3af691c3fbb0f4d8e1bb2a8a25a25d74df3a5d191cde15d531a64584610",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://library.au.int/silent-voices-poems-10"
+          ],
+          "fingerprint": "cf8ad6821acdee7343eced5e9f118d22cb19e5eb88237d197b735f25f4daba80",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "poetry"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "silent-voices"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL22684578M",
+            "https://openlibrary.org/books/OL29593128M"
+          ],
+          "fingerprint": "4e74e165ecceb89d915760228eb5cb26c96cfb58fd876d2e40663360af4272c1",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.wikidata.org/wiki/Q141582773"
+          ],
+          "fingerprint": "20863ab6e2662cb647204b097e09709b0265f82192d031f5622b0a8efa74eacf",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "nonfiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "something-torn-and-new"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL22560880M",
+            "https://openlibrary.org/books/OL24262961M"
+          ],
+          "fingerprint": "059e84500900d085d34bc9813c4a1bc985b01489296f21a37a0c0805c9b05797",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.greenbeltmovement.org/books/"
+          ],
+          "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "nonfiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "the-challenge-for-africa"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [],
+          "fingerprint": "7b89deb59f4c10dff2ada8aecd32dfa4e91f225cfe65cb4a209550c14472a354",
+          "note": "Verify language on the exact edition. Do not infer the original language from an edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "the-dragonfly-sea"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL32478788M"
+          ],
+          "fingerprint": "575f5180947085f50920f78a1a4dc62fcf862e97bc7cf716add59204cba03166",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+          ],
+          "fingerprint": "f858fafbc8bb39531a505091b8b60e4c660709b9ba6b1b1bdb5c76d18d64a555",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "sea voyage",
+            "Swahili culture",
+            "Hadhrami diaspora"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+          ],
+          "fingerprint": "539cb556d52208a46f45dd3d4f26fcc52ae5c00a45d4751c6a6c3be4db036549",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "Mombasa, Kenya"
+          ]
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+          ],
+          "fingerprint": "8894b90c67087786753bdfe502b185284b4fb70aa677c9c7673d716fb7d24bed",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "magical realism"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+          ],
+          "fingerprint": "5a7bddb3c692bfdc71c604d12b836efa4549678b2b21a327875fdd030a850b06",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "A girl from Mombasa sets out to find her father at sea. Her journey is told through the Swahili and Hadhrami worlds of the Kenyan coast."
+        },
+        "themes": {
+          "evidence": [
+            "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+          ],
+          "fingerprint": "59d0273a19b60755c835e36539ac2d590220b5c761a62ab4252386561bdc73c5",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "coming of age"
+          ]
+        }
+      },
+      "work_id": "the-house-of-rust"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL1267994M"
+          ],
+          "fingerprint": "ebd8bcb720a485ccd6eb82e326c756a536c252b01d9d6756f7bb92a9beea34a7",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://africanbookscollective.com/books/the-river-and-the-source/"
+          ],
+          "fingerprint": "a9ffbfcc84c616def2fce6c5eb8f66fdad871386977d0b04870753a6c3655399",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://africanbookscollective.com/books/the-river-and-the-source/"
+          ],
+          "fingerprint": "091e485d500b799a3a463f5449801bcb1f32ad1847d0383e61d333b9d2b6e002",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "family life",
+            "changing social expectations"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [
+            "https://africanbookscollective.com/books/the-river-and-the-source/"
+          ],
+          "fingerprint": "244251bf711ae92b5432380b602d43daa37f82561f8109c4c9e7b9b877941cef",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "Luo communities in Kenya"
+          ]
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://africanbookscollective.com/books/the-river-and-the-source/"
+          ],
+          "fingerprint": "ca1089b94176628e8299c0215f8b22c2daa8ca4cc7f397a77baca1e10d23036e",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "contemporary fiction"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://africanbookscollective.com/books/the-river-and-the-source/"
+          ],
+          "fingerprint": "e0b72c9b747c03f0e5c16dd9cd487bd5ae1d486681f8727c30da3e9f030d0dd4",
+          "note": "The distributor page gives both three and four generations. Check the work with a literature editor and use neutral wording until the discrepancy is settled.",
+          "origin": "editorial_proposal",
+          "status": "conflicting",
+          "value": "Four generations of Kenyan women navigate changing expectations of family and community."
+        },
+        "themes": {
+          "evidence": [
+            "https://africanbookscollective.com/books/the-river-and-the-source/"
+          ],
+          "fingerprint": "3fe311f5fbd70f9f9b5f3c5adac2bb5188bb2ec32d7d861c30882bf798ed1479",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "women across generations",
+            "social change"
+          ]
+        }
+      },
+      "work_id": "the-river-and-the-source"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL13536548M",
+            "https://openlibrary.org/books/OL18348508M",
+            "https://openlibrary.org/books/OL18963611M",
+            "https://openlibrary.org/books/OL19774431M",
+            "https://openlibrary.org/books/OL19984696M",
+            "https://openlibrary.org/books/OL22433616M",
+            "https://openlibrary.org/books/OL23317454M",
+            "https://openlibrary.org/books/OL47019099M"
+          ],
+          "fingerprint": "083258cc075634d9523cb372961d8b109b59938da4ae3496938a3e074b75a0e8",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "the-river-between"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL15606734M",
+            "https://openlibrary.org/books/OL23189567M",
+            "https://openlibrary.org/books/OL24296609M",
+            "https://openlibrary.org/books/OL28432936M",
+            "https://openlibrary.org/books/OL38212002M",
+            "https://openlibrary.org/books/OL40344008M",
+            "https://openlibrary.org/books/OL40381431M",
+            "https://openlibrary.org/books/OL9652384M",
+            "https://openlibrary.org/books/OL9819535M"
+          ],
+          "fingerprint": "9e7b32691d47ed8b9cf4de6d6d68d3e0999e30acdcf8e1714ed5264f2ae10e80",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://www.greenbeltmovement.org/books/"
+          ],
+          "fingerprint": "6277633241e1c34f0d47a4fcdf38c3480f9a171a3ce3c2f3882605e6731a8fd4",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "memoir"
+        },
+        "major_subjects": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+          ],
+          "fingerprint": "a4bd8add8e32677f407b5410eb8ef73b95bc8f78f6b31742e9f9ef65278b4459",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "Green Belt Movement",
+            "tree planting",
+            "women’s organizing"
+          ]
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+          ],
+          "fingerprint": "b9ba14e065b2f12aa156f137f7a759c21b30b7e1ae71001579c7a2fd73a3afde",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "Kenya"
+          ]
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+          ],
+          "fingerprint": "f9831e3bf4eed8d75418099aafcd9e8598464a4392967d8d659ac4831c6fd1b5",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "environmental memoir"
+        },
+        "synopsis": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+          ],
+          "fingerprint": "6aa1383723efe22e1682e6d6d128e08371d22e5cbaf4398accc26fdbbb56e59c",
+          "note": "Editorial draft in English. Check accuracy and avoid spoilers before approval.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "Wangari Maathai traces her life from rural Kenya to the grassroots organising that grew into the Green Belt Movement."
+        },
+        "themes": {
+          "evidence": [
+            "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+          ],
+          "fingerprint": "1dbd484bade31b599777291ea247a2977d5f3aee50b005e167166791c101d722",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": [
+            "environmental activism",
+            "grassroots organizing"
+          ]
+        }
+      },
+      "work_id": "unbowed"
+    },
+    {
+      "fields": {
+        "language": {
+          "evidence": [
+            "https://openlibrary.org/books/OL18174304M",
+            "https://openlibrary.org/books/OL25237962M",
+            "https://openlibrary.org/books/OL25237963M",
+            "https://openlibrary.org/books/OL40363904M",
+            "https://openlibrary.org/books/OL43100799M",
+            "https://openlibrary.org/books/OL48110831M",
+            "https://openlibrary.org/books/OL59041461M"
+          ],
+          "fingerprint": "b176cde44bf1975aa99d85abc77801e8ffb9a2e0d2224e220d100c2ef8838b3a",
+          "note": "These are edition languages. Confirm them against each manifestation.",
+          "origin": "automated_candidate",
+          "status": "needs_review",
+          "value": [
+            "eng"
+          ]
+        },
+        "literary_form": {
+          "evidence": [
+            "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+          ],
+          "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+          "note": "Check the publisher, author bibliography or a library authority for the form.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": "fiction"
+        },
+        "major_subjects": {
+          "evidence": [],
+          "fingerprint": "3a271015ece4ff6b72bc3b94026238d68f2ff93862845f5f0e55846fbc6671ab",
+          "note": "Check what the work materially covers using a reliable attributable source.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "mood_tone": {
+          "evidence": [],
+          "fingerprint": "0fe445b0a5c041cf1ffb41bc0a75a41b5daacfc8cc3aed329cf91c5a44d6efd6",
+          "note": "Use a documented literary assessment or authorized reading, then review in context.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "narrative_setting": {
+          "evidence": [],
+          "fingerprint": "5e6fcd4d9686715344ab700257945883b83b83ed08b8632ac51132291b241c30",
+          "note": "Check a synopsis or literary source that explicitly identifies the setting.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "original_language": {
+          "evidence": [],
+          "fingerprint": "a96cbdea941b95b4f4719c8e049a63eb321c1b0507c84bfda93cf6964261304c",
+          "note": "Verify the original language independently of any translation or edition.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "primary_genre": {
+          "evidence": [],
+          "fingerprint": "464c411e42b692e94a0a3466163e832014929ad904e9b00a2548baec64ba60c3",
+          "note": "Check an authoritative genre designation or have a literature editor classify the work.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "synopsis": {
+          "evidence": [],
+          "fingerprint": "42733a7639e99959b8bba278eb9c842e67dd5c7832862e714ce1da3f32362901",
+          "note": "Write an original, spoiler-safe introduction from verified facts and have an editor check it.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        },
+        "themes": {
+          "evidence": [],
+          "fingerprint": "2efe180b7d9cda7436245cffa24f53465fac998b30d0d376fa373d8e94e9b855",
+          "note": "Use an authorized reading, reliable literary scholarship or a detailed attributable synopsis.",
+          "origin": null,
+          "status": "unknown",
+          "value": null
+        }
+      },
+      "work_id": "weep-not-child"
+    }
+  ],
+  "version": 1
+}

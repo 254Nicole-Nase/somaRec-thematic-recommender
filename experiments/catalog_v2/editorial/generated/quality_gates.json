@@ -1,0 +1,64 @@
+{
+  "automated": {
+    "edition_candidates": 97,
+    "populated_assertions_have_evidence": true,
+    "queries": 24,
+    "works": 30,
+    "works_missing_critical_fields": 23,
+    "works_with_conflict": 13,
+    "works_with_draft_synopses_including_conflicts": 8
+  },
+  "basis": "Protocol requires independent review, relevance judgments and a workload pilot.",
+  "criteria": [
+    {
+      "automated": "Zero untriaged cross-work identity or identifier conflicts.",
+      "gate": "identity",
+      "human": "Verify exact title, authorship and work identity for 100% of publishable works."
+    },
+    {
+      "automated": "Validate checksums and report all competing edition IDs.",
+      "gate": "editions",
+      "human": "Verify at least one edition for 90% of works; independently document editions without an ISBN."
+    },
+    {
+      "automated": "Count missing required fields and hold conflicting values.",
+      "gate": "literary_metadata",
+      "human": "At least 90% have approved genre, form, themes, subjects, language and a spoiler-safe synopsis."
+    },
+    {
+      "automated": "100% of populated assertions carry public evidence references.",
+      "gate": "provenance",
+      "human": "Check evidence supports each approved field and document reuse basis."
+    },
+    {
+      "automated": "Report conflicting work keys, ISBNs and all legacy UUID candidates.",
+      "gate": "duplicate_detection",
+      "human": "Zero unresolved identity conflicts in the proposed release subset; review any legacy map separately."
+    },
+    {
+      "automated": "Known-title top-five at least 95%; report weak and empty result sets.",
+      "gate": "relevance",
+      "human": "At least two raters on 20 discovery queries; 80% have a relevant top-three result, 90% of explanations are supported, and zero severe spoilers."
+    },
+    {
+      "automated": "Slice coverage and empty results by query and edition language.",
+      "gate": "multilingual",
+      "human": "Verify at least five Kiswahili works and use at least six Kiswahili discovery queries; target 70% relevant top-three within that slice."
+    },
+    {
+      "automated": "Count queue items and record elapsed review minutes per work.",
+      "gate": "editorial_workload",
+      "human": "Time a ten-work review pilot; target a median of 20 minutes or less and document escalations."
+    }
+  ],
+  "expansion_ready": false,
+  "human": {
+    "editorial_minutes_measured": null,
+    "relevance_judgments": "not_collected",
+    "works_with_all_required_literary_fields_verified": 0,
+    "works_with_verified_identity": 0,
+    "works_with_verified_kiswahili_edition_language": 0,
+    "works_with_verified_language_and_isbn_on_an_edition": 0
+  },
+  "version": 1
+}
