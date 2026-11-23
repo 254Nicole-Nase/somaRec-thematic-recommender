@@ -1,0 +1,122 @@
+[
+  {
+    "id": "h01",
+    "query": "What could my book club read about siblings who stop speaking after an inheritance?",
+    "language": "en",
+    "kind": "theme",
+    "intent": "Estrangement following an inheritance",
+    "rationale": "A club wants an ethical dilemma with several viewpoints."
+  },
+  {
+    "id": "h02",
+    "query": "Natafuta kitabu kuhusu mtu anayerudi nyumbani baada ya kuishi ughaibuni kwa muda mrefu.",
+    "language": "sw",
+    "kind": "theme",
+    "intent": "Read about returning from the diaspora",
+    "rationale": "A reader returning home wants a recognizable experience."
+  },
+  {
+    "id": "h03",
+    "query": "Any fiction kuhusu madeni na presha ya kumtunza kila mtu nyumbani?",
+    "language": "mixed",
+    "kind": "theme",
+    "intent": "Debt and obligations to extended family",
+    "rationale": "A reader wants to discuss the cost of supporting relatives."
+  },
+  {
+    "id": "h04",
+    "query": "Is there a book told through letters between people who never meet?",
+    "language": "en",
+    "kind": "literary_interest",
+    "intent": "Epistolary storytelling",
+    "rationale": "A librarian is planning a display about unusual narrative structures."
+  },
+  {
+    "id": "h05",
+    "query": "Ningependa vichekesho vya kuigiza na marafiki bila kuhitaji waigizaji wengi.",
+    "language": "sw",
+    "kind": "genre",
+    "intent": "A comedy for a small cast",
+    "rationale": "An amateur group is looking for a feasible reading."
+  },
+  {
+    "id": "h06",
+    "query": "What could I read aloud to a six-year-old who is nervous about starting school?",
+    "language": "en",
+    "kind": "literary_interest",
+    "intent": "Reassuring read-aloud for a child",
+    "rationale": "A caregiver is preparing for the first day of school."
+  },
+  {
+    "id": "h07",
+    "query": "Kuna hadithi yenye fumbo ambalo mtoto na mzazi wanaweza kulitatua pamoja?",
+    "language": "sw",
+    "kind": "literary_interest",
+    "intent": "A puzzle for shared adult–child reading",
+    "rationale": "A parent wants the child to participate actively."
+  },
+  {
+    "id": "h08",
+    "query": "I’m looking for sci-fi ya Afrika Mashariki, especially a future shaped by drought.",
+    "language": "mixed",
+    "kind": "genre",
+    "intent": "Speculative fiction about adapting to drought",
+    "rationale": "A speculative-fiction reader wants a regional recommendation."
+  },
+  {
+    "id": "h09",
+    "query": "I’d like a story where most of the action happens on a night train.",
+    "language": "en",
+    "kind": "literary_interest",
+    "intent": "An enclosed overnight railway setting",
+    "rationale": "A reader enjoyed the intimacy of a single-setting story."
+  },
+  {
+    "id": "h10",
+    "query": "Ningependa kusoma kuhusu maisha ya kila siku katika kambi ya wakimbizi.",
+    "language": "sw",
+    "kind": "literary_interest",
+    "intent": "Everyday life in a refugee camp",
+    "rationale": "A reading group wants a sustained sense of place."
+  },
+  {
+    "id": "h11",
+    "query": "Something yenye ucheshi lakini bado itanifanya nifikirie?",
+    "language": "mixed",
+    "kind": "ambiguous",
+    "intent": "Humor with substance, form unspecified",
+    "rationale": "A browser knows the desired feeling more clearly than the genre."
+  },
+  {
+    "id": "h12",
+    "query": "What would you give someone who wants to feel less alone after retiring?",
+    "language": "en",
+    "kind": "ambiguous",
+    "intent": "Companionship during a life transition",
+    "rationale": "A gift buyer is open to several literary forms."
+  },
+  {
+    "id": "h13",
+    "query": "Ni kitabu gani kinaonyesha urafiki unaojengwa kati ya watu wenye ulemavu?",
+    "language": "sw",
+    "kind": "theme",
+    "intent": "Friendship between disabled people",
+    "rationale": "A reader seeks relationships centered on disabled characters."
+  },
+  {
+    "id": "h14",
+    "query": "Natafuta graphic novel for a teenager learning how to draw comics.",
+    "language": "mixed",
+    "kind": "genre",
+    "intent": "Graphic narrative for a teen artist",
+    "rationale": "A young illustrator wants examples of visual storytelling."
+  },
+  {
+    "id": "h15",
+    "query": "Has anyone written a diary of working shifts in a Kenyan hospital?",
+    "language": "en",
+    "kind": "literary_interest",
+    "intent": "First-person diary of hospital shift work",
+    "rationale": "A trainee nurse wants to compare everyday working experiences."
+  }
+]
