@@ -116,13 +116,13 @@ def markdown(plan):
     return "\n".join(lines).rstrip() + "\n"
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--candidate", required=True, type=Path, help="Local public catalog CSV or JSON array")
     parser.add_argument("--baseline", required=True, type=Path, help="Local baseline CSV or JSON snapshot")
     parser.add_argument("--review", type=Path, help="Local JSON review manifest")
     parser.add_argument("--output-dir", required=True, type=Path)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     try:
         baseline, baseline_sha = read_input(args.baseline)
         dependencies = curated_fields = None

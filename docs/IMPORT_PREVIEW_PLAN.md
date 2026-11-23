@@ -4,9 +4,9 @@
 
 ## Scope and sequence
 
-**Implemented in Phase 2.** The offline CLI compares a candidate catalog with a saved local baseline and produces field-level JSON and Markdown reports. It handles reviewed metadata, verified UUID continuity, possible duplicates and evidence conflicts. The [operator guide](IMPORT_PREVIEW.md) has the input contract, regression examples and 490-book demonstration. The legacy uploader remains separate.
+**Implemented in Phase 2.** The offline CLI compares a candidate catalog with a saved local baseline and produces field-level JSON and Markdown reports. It handles reviewed metadata, verified UUID continuity, possible duplicates and evidence conflicts. The [operator guide](IMPORT_PREVIEW.md) has the input contract, regression examples and 490-book demonstration. Phase 4 retired the legacy uploader write path and retained snapshot-only preview compatibility.
 
-**Future work.** Disable the legacy write option in a reviewed change. A remote staging reader, transactionally applying an approved plan, checking reader-level collisions and executing duplicate merges each need their own implementation and review. The current preview can report sanitized aggregate dependency counts from its input snapshot.
+**Future work.** A remote staging reader, transactionally applying an approved plan, checking reader-level collisions and executing duplicate merges each need their own implementation and review. The current preview can report sanitized aggregate dependency counts from its input snapshot.
 
 [Current uploader](https://github.com/254Nicole-Nase/somaRec-thematic-recommender/blob/5f91be8/backend/upload_books_to_supabase.py#L34) · [Audit](DATA_PIPELINE_AUDIT.md)
 
