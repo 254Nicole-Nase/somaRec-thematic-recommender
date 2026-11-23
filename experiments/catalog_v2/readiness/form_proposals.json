@@ -1,0 +1,125 @@
+{
+  "a-grain-of-wheat": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://penguinrandomhousehighereducation.com/book/?isbn=9780143106760"
+      ],
+      "reason": "Penguin identifies the work as a novel in its listing for the Gurnah-introduction edition."
+    }
+  },
+  "betrayal-in-the-city": {
+    "literary_form": {
+      "existing": "drama",
+      "value": "play",
+      "replaces": "b85113ff551fe55235204ac9b8e92464c7c691eebdde7852d552c20d392246da",
+      "evidence": [
+        "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-MARCdetail.pl?biblionumber=4939"
+      ],
+      "reason": "Pwani University transcribes the subtitle a play and credits Francis Imbuga in MARC 245 for the 1976 Nairobi publication."
+    }
+  },
+  "black-star-nairobi": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://einaudi.cornell.edu/discover/people/mukoma-wa-ngugi"
+      ],
+      "reason": "Cornell lists this specific title among Mũkoma wa Ngũgĩ’s novels."
+    }
+  },
+  "coming-to-birth": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "d7211d6a03dac5ecfe298e98536103a689458924971cbb01dadbb1a8a34d4212",
+      "evidence": [
+        "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=5111"
+      ],
+      "reason": "Pwani University assigns Bildungsromane (coming-of-age novels) to Macgoye’s named work in the 1996 edition record."
+    }
+  },
+  "decolonising-the-mind": {
+    "literary_form": {
+      "existing": "nonfiction",
+      "value": "essay collection",
+      "replaces": "af0c64abd320f609f8575986299ef8f8f28b1aed4b643d9718fd1b78330b11ea",
+      "evidence": [
+        "https://ngugiwathiongo.com/decolonising-the-mind/"
+      ],
+      "reason": "The author bibliography identifies the collection and names its four essays. The single-essay taxonomy ID would be imprecise."
+    }
+  },
+  "dust": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "b1666031ab80211b754203cd8b2057e9c014d42c07f2fad0e0cbcad00f1965b1",
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ],
+      "reason": "The publisher’s listing for Owuor includes attributed reviews explicitly calling Dust a novel."
+    }
+  },
+  "going-down-river-road": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://erepository.uonbi.ac.ke/bitstream/handle/11295/18435/ABSTRACT.pdf?sequence=2"
+      ],
+      "reason": "The University of Nairobi research abstract identifies the 1976 work as Mwangi’s fourth novel."
+    }
+  },
+  "kidagaa-kimemwozea": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "a380cc65d91c68d660384157f1e661a34ab52e78de66f87ce3ec289134c6f1db",
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/4330c1b9-110a-401a-8727-fca14318495e"
+      ],
+      "reason": "Kibabii University’s school edition record names Walibora and repeatedly identifies this work as a riwaya."
+    }
+  },
+  "the-river-between": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://ngugiwathiongo.com/the-river-between/"
+      ],
+      "reason": "The author bibliography reproduces a Guardian review identifying this work as a novel."
+    }
+  },
+  "weep-not-child": {
+    "literary_form": {
+      "existing": "fiction",
+      "value": "novel",
+      "replaces": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "evidence": [
+        "https://ngugiwathiongo.com/weep-not-child/"
+      ],
+      "reason": "The author bibliography identifies the 1964 work as his first novel."
+    }
+  },
+  "something-torn-and-new": {
+    "literary_form": {
+      "existing": "nonfiction",
+      "value": "essay collection",
+      "replaces": "20863ab6e2662cb647204b097e09709b0265f82192d031f5622b0a8efa74eacf",
+      "evidence": [
+        "https://www.publishersweekly.com/978-0-465-00946-6",
+        "https://ngugiwathiongo.com/something-torn-and-new/",
+        "https://cfas.howard.edu/articles/introduction"
+      ],
+      "reason": "The contemporary Publishers Weekly review identifies the volume as essays based on lectures. The author bibliography corroborates title and identity. Howard University’s reading guide identifies the work’s four lecture-based parts."
+    }
+  }
+}

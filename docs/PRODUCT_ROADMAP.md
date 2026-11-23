@@ -108,3 +108,7 @@ Start with **teachers and book lovers**. Teachers bring whole classes, and book 
 ## Offline Catalog V2 checkpoint
 
 Phase 5A adds an independently reviewable bilingual vocabulary, per-work genre and audience assertions, and source-backed editorial replacements for the frozen sample. Reviewers should check Kiswahili terminology, proposed classifications and unresolved identity questions before deciding the scope of Phase 5B. Expansion remains blocked by the existing editorial and relevance gates. [Taxonomy design](GENRE_TAXONOMY_DESIGN.md) · [Editorial findings](CATALOG_V2_CORRECTIONS.md)
+
+## Phase 5B.1 independent review checkpoint
+
+The 24 development searches and their historical rankings are frozen. Fifteen prospective reader searches are sealed. Eleven literary-form replacements are available in a separate offline pilot input. The next decision is an independent seven-assertion review and interpretation of the approved-only smoke checks once real decisions exist. Phase 5C and catalog expansion remain pending. [Integrity and form audit](CATALOG_V2_EVALUATION_INTEGRITY.md) · [Approval packet and instructions](CATALOG_V2_APPROVAL_PILOT.md)

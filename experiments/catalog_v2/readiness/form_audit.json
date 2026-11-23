@@ -1,0 +1,947 @@
+[
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://penguinrandomhousehighereducation.com/book/?isbn=9780143106760"
+      ],
+      "fingerprint": "642924b8625ba26b74059f9da3f6077bd61f422ea439053d4cfed2364e2fe858",
+      "note": "Penguin identifies the work as a novel in its listing for the Gurnah-introduction edition.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://penguinrandomhousehighereducation.com/book/?isbn=9780143106760"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "Penguin identifies the work as a novel in its listing for the Gurnah-introduction edition.",
+    "title": "A Grain of Wheat",
+    "work_id": "a-grain-of-wheat"
+  },
+  {
+    "author": "Francis D. Imbuga",
+    "candidate": {
+      "evidence": [
+        "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-MARCdetail.pl?biblionumber=4939"
+      ],
+      "fingerprint": "a6b867f8523265cbd26629ca9a839d225ac154e20249be9f5bb3837e1ea91336",
+      "note": "Pwani University transcribes the subtitle a play and credits Francis Imbuga in MARC 245 for the 1976 Nairobi publication.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "play"
+    },
+    "evidence": [
+      "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-MARCdetail.pl?biblionumber=4939"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://openlibrary.org/works/OL3451029W"
+      ],
+      "fingerprint": "b85113ff551fe55235204ac9b8e92464c7c691eebdde7852d552c20d392246da",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "drama"
+    },
+    "reason": "Pwani University transcribes the subtitle a play and credits Francis Imbuga in MARC 245 for the 1976 Nairobi publication.",
+    "title": "Betrayal in the City",
+    "work_id": "betrayal-in-the-city"
+  },
+  {
+    "author": "Mũkoma wa Ngũgĩ",
+    "candidate": {
+      "evidence": [
+        "https://einaudi.cornell.edu/discover/people/mukoma-wa-ngugi"
+      ],
+      "fingerprint": "08e963643ceb05d6110770bb2dc2e192a2dd6ea0585f4ce0bf7b612c159227d3",
+      "note": "Cornell lists this specific title among Mũkoma wa Ngũgĩ’s novels.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://einaudi.cornell.edu/discover/people/mukoma-wa-ngugi"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "Cornell lists this specific title among Mũkoma wa Ngũgĩ’s novels.",
+    "title": "Black Star Nairobi",
+    "work_id": "black-star-nairobi"
+  },
+  {
+    "author": "Marjorie Oludhe Macgoye",
+    "candidate": {
+      "evidence": [
+        "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=5111"
+      ],
+      "fingerprint": "b2e857532e7e42fc507d39a313662df02700df0241a2638f1e3e1869c7df22fa",
+      "note": "Pwani University assigns Bildungsromane (coming-of-age novels) to Macgoye’s named work in the 1996 edition record.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://maktaba.pu.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=5111"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://www.wikidata.org/wiki/Q125423260"
+      ],
+      "fingerprint": "d7211d6a03dac5ecfe298e98536103a689458924971cbb01dadbb1a8a34d4212",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "Pwani University assigns Bildungsromane (coming-of-age novels) to Macgoye’s named work in the 1996 edition record.",
+    "title": "Coming to Birth",
+    "work_id": "coming-to-birth"
+  },
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://ngugiwathiongo.com/decolonising-the-mind/"
+      ],
+      "fingerprint": "28b53b309af3a8a18b7114e32c1ba4a2b99b586b5e1673cd6c32c472e213f0e7",
+      "note": "The author bibliography identifies the collection and names its four essays. The single-essay taxonomy ID would be imprecise.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "essay collection"
+    },
+    "evidence": [
+      "https://ngugiwathiongo.com/decolonising-the-mind/"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://ngugiwathiongo.com/decolonising-the-mind/"
+      ],
+      "fingerprint": "af0c64abd320f609f8575986299ef8f8f28b1aed4b643d9718fd1b78330b11ea",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "reason": "The author bibliography identifies the collection and names its four essays. The single-essay taxonomy ID would be imprecise.",
+    "title": "Decolonising the Mind",
+    "work_id": "decolonising-the-mind"
+  },
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://ngugiwathiongo.com/"
+      ],
+      "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "evidence": [
+      "https://ngugiwathiongo.com/",
+      "https://www.penguin.co.nz/books/a-grain-of-wheat-9780141186993"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://ngugiwathiongo.com/"
+      ],
+      "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "reason": "Penguin’s author biography names this work among Ngũgĩ’s memoirs.",
+    "title": "Dreams in a Time of War",
+    "work_id": "dreams-in-a-time-of-war"
+  },
+  {
+    "author": "Yvonne Adhiambo Owuor",
+    "candidate": {
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+      ],
+      "fingerprint": "f4a7ac2de25f7b077f034e002b901dc0184f2849a29f0744a1b555c947bb928c",
+      "note": "The publisher’s listing for Owuor includes attributed reviews explicitly calling Dust a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://www.penguinrandomhouse.com/books/220122/dust-by-yvonne-adhiambo-owuor/"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://openlibrary.org/works/OL19974522W"
+      ],
+      "fingerprint": "b1666031ab80211b754203cd8b2057e9c014d42c07f2fad0e0cbcad00f1965b1",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "The publisher’s listing for Owuor includes attributed reviews explicitly calling Dust a novel.",
+    "title": "Dust",
+    "work_id": "dust"
+  },
+  {
+    "author": "Meja Mwangi",
+    "candidate": {
+      "evidence": [
+        "https://erepository.uonbi.ac.ke/bitstream/handle/11295/18435/ABSTRACT.pdf?sequence=2"
+      ],
+      "fingerprint": "cc237595823a047f2596c3eb8c72a8883ded0e9efd13513f108a961b1581adc0",
+      "note": "The University of Nairobi research abstract identifies the 1976 work as Mwangi’s fourth novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://erepository.uonbi.ac.ke/bitstream/handle/11295/18435/ABSTRACT.pdf?sequence=2"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "The University of Nairobi research abstract identifies the 1976 work as Mwangi’s fourth novel.",
+    "title": "Going Down River Road",
+    "work_id": "going-down-river-road"
+  },
+  {
+    "author": "Mwenye Hadithi",
+    "candidate": {
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+      ],
+      "fingerprint": "040e0929e94295029c5fefe1e91db4ce32171f3ee53ab7ce820ae04ef2dd0210",
+      "note": "Hachette classifies this illustrated title as a picture storybook.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "picture book"
+    },
+    "evidence": [
+      "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+      ],
+      "fingerprint": "040e0929e94295029c5fefe1e91db4ce32171f3ee53ab7ce820ae04ef2dd0210",
+      "note": "Hachette classifies this illustrated title as a picture storybook.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "picture book"
+    },
+    "reason": "Hachette classifies the identified paperback as a picture storybook.",
+    "title": "Hot Hippo",
+    "work_id": "hot-hippo"
+  },
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://ngugiwathiongo.com/"
+      ],
+      "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "evidence": [
+      "https://ngugiwathiongo.com/",
+      "https://www.penguin.co.nz/books/a-grain-of-wheat-9780141186993"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://ngugiwathiongo.com/"
+      ],
+      "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "reason": "Penguin’s author biography names this work among Ngũgĩ’s memoirs.",
+    "title": "In the House of the Interpreter",
+    "work_id": "in-the-house-of-the-interpreter"
+  },
+  {
+    "author": "Anne Matindi",
+    "candidate": {
+      "evidence": [
+        "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+        "https://openlibrary.org/books/OL22801465M"
+      ],
+      "fingerprint": "35f3d9d72804732b526e3090c1d5a68b5fa6313b385c4456ea643110ffcb1db3",
+      "note": "The library gives the expanded title including other stories; the linked edition records the same subtitle.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "story collection"
+    },
+    "evidence": [
+      "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+      "https://openlibrary.org/books/OL22801465M"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+        "https://openlibrary.org/books/OL22801465M"
+      ],
+      "fingerprint": "35f3d9d72804732b526e3090c1d5a68b5fa6313b385c4456ea643110ffcb1db3",
+      "note": "The library gives the expanded title including other stories; the linked edition records the same subtitle.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "story collection"
+    },
+    "reason": "UEAB lists the several stories in the contents of the Matindi volume.",
+    "title": "Jua na Upepo",
+    "work_id": "jua-na-upepo"
+  },
+  {
+    "author": "Jared Angira",
+    "candidate": {
+      "evidence": [
+        "https://iucat.iu.edu/iuk/1905138"
+      ],
+      "fingerprint": "890267796d56a6a8c2befeb2d5a1372fd13854e82008113bfbd0d200a2278dbb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "evidence": [
+      "https://iucat.iu.edu/iuk/1905138"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://iucat.iu.edu/iuk/1905138"
+      ],
+      "fingerprint": "890267796d56a6a8c2befeb2d5a1372fd13854e82008113bfbd0d200a2278dbb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "reason": "Indiana University identifies Jared Angira and transcribes the subtitle [poems]. Two 1970 edition records still need reconciliation.",
+    "title": "Juices",
+    "work_id": "juices"
+  },
+  {
+    "author": "Ken Walibora",
+    "candidate": {
+      "evidence": [
+        "https://erepository.kibu.ac.ke/items/4330c1b9-110a-401a-8727-fca14318495e"
+      ],
+      "fingerprint": "9e8262e616b2f1700d472b1ec588b74446a8a3437db354cea27748ba24a4faeb",
+      "note": "Kibabii University’s school edition record names Walibora and repeatedly identifies this work as a riwaya.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://erepository.kibu.ac.ke/items/4330c1b9-110a-401a-8727-fca14318495e"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://library.daystar.ac.ke/bib/43380"
+      ],
+      "fingerprint": "a380cc65d91c68d660384157f1e661a34ab52e78de66f87ce3ec289134c6f1db",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "Kibabii University’s school edition record names Walibora and repeatedly identifies this work as a riwaya.",
+    "title": "Kidagaa Kimemwozea",
+    "work_id": "kidagaa-kimemwozea"
+  },
+  {
+    "author": "Mwenye Hadithi",
+    "candidate": {
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+      ],
+      "fingerprint": "1a643605283437849e2d55c85bfcaeab28f2b820994aa49b1665d3c6ab07fd10",
+      "note": "Hachette classifies this illustrated title as a picture storybook.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "picture book"
+    },
+    "evidence": [
+      "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+      ],
+      "fingerprint": "1a643605283437849e2d55c85bfcaeab28f2b820994aa49b1665d3c6ab07fd10",
+      "note": "Hachette classifies this illustrated title as a picture storybook.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "picture book"
+    },
+    "reason": "Hachette classifies the identified paperback as a picture storybook.",
+    "title": "Laughing Giraffe",
+    "work_id": "laughing-giraffe"
+  },
+  {
+    "author": "Kithaka wa Mberia",
+    "candidate": {
+      "evidence": [
+        "https://africanbookscollective.com/books/doa/",
+        "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
+      ],
+      "fingerprint": "a43c0e55b36470072a1e79dbfb90686e7cd5901a67f0eac5663f22ebd322cc48",
+      "note": "The distributor bibliography calls this work tamthilia; the university record identifies the play version.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "play"
+    },
+    "evidence": [
+      "https://africanbookscollective.com/books/doa/",
+      "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://africanbookscollective.com/books/doa/",
+        "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
+      ],
+      "fingerprint": "a43c0e55b36470072a1e79dbfb90686e7cd5901a67f0eac5663f22ebd322cc48",
+      "note": "The distributor bibliography calls this work tamthilia; the university record identifies the play version.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "play"
+    },
+    "reason": "The distributor's bibliography designates the work tamthilia. The author independently identifies the 2004 play in a scholarly personal account. Distinguish book and video versions.",
+    "title": "Maua kwenye jua la asubuhi",
+    "work_id": "maua-kwenye-jua-la-asubuhi"
+  },
+  {
+    "author": "Rebeka Njau",
+    "candidate": {
+      "evidence": [
+        "https://rebekanjau.com/"
+      ],
+      "fingerprint": "deebb17bee1ebf315de11af40e3acb15d3311744c101caeb97869b93e41c0021",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "evidence": [
+      "https://rebekanjau.com/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://rebekanjau.com/"
+      ],
+      "fingerprint": "deebb17bee1ebf315de11af40e3acb15d3311744c101caeb97869b93e41c0021",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "reason": "Rebeka Njau’s bibliography identifies her memoir by title.",
+    "title": "Mirrors of My Life",
+    "work_id": "mirrors-of-my-life"
+  },
+  {
+    "author": "Binyavanga Wainaina",
+    "candidate": {
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ],
+      "fingerprint": "e22a7baa352ca6ab36c667e36092b495a37acee05acfb6ee04fd0bc30ccb3ab6",
+      "note": "Retain the form and replace the earlier Graywolf URL with Granta’s attributable listing and memoir description.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "evidence": [
+      "https://granta.com/products/one-day-i-will-write-about-this-place/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ],
+      "fingerprint": "e22a7baa352ca6ab36c667e36092b495a37acee05acfb6ee04fd0bc30ccb3ab6",
+      "note": "Retain the form and replace the earlier Graywolf URL with Granta’s attributable listing and memoir description.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "reason": "Granta’s listing includes a work-specific review calling Wainaina’s book a memoir.",
+    "title": "One Day I Will Write About This Place",
+    "work_id": "one-day-i-will-write-about-this-place"
+  },
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "fingerprint": "ba582064d056f316b2c03b7ab5daef23ba765130b0e9eab5fa7e04c8da34a4a8",
+      "note": "The author calls the work a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://ngugiwathiongo.com/petals-of-blood/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "fingerprint": "ba582064d056f316b2c03b7ab5daef23ba765130b0e9eab5fa7e04c8da34a4a8",
+      "note": "The author calls the work a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "reason": "The author's work page identifies this title as a novel. This ballot covers form alone.",
+    "title": "Petals of Blood",
+    "work_id": "petals-of-blood"
+  },
+  {
+    "author": "Wangari Maathai",
+    "candidate": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "evidence": [
+      "https://www.greenbeltmovement.org/books/",
+      "https://www.penguinrandomhouse.com/books/200491/replenishing-the-earth-by-wangari-maathai/"
+    ],
+    "field": "literary_form",
+    "finding": "unresolved",
+    "original": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "reason": "The publisher identifies spiritual and environmental concerns. A contents page or bibliographic designation is needed to distinguish guide, reflections or essay collection.",
+    "title": "Replenishing the Earth",
+    "work_id": "replenishing-the-earth"
+  },
+  {
+    "author": "Abdilatif Abdalla",
+    "candidate": {
+      "evidence": [
+        "https://ci.nii.ac.jp/ncid/BD05489832"
+      ],
+      "fingerprint": "8ae376e7fb5f8a942c8ed5ce16edf0f2d7cab2dba59821f55cb5bd9edde97bdb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "evidence": [
+      "https://ci.nii.ac.jp/ncid/BD05489832"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://ci.nii.ac.jp/ncid/BD05489832"
+      ],
+      "fingerprint": "8ae376e7fb5f8a942c8ed5ce16edf0f2d7cab2dba59821f55cb5bd9edde97bdb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "reason": "CiNii describes poems in Swahili for the 2012 revised edition; the linked 1973 edition is a separate manifestation. Check the title-case variation.",
+    "title": "Sauti ya dhiki",
+    "work_id": "sauti-ya-dhiki"
+  },
+  {
+    "author": "Ken Walibora",
+    "candidate": {
+      "evidence": [
+        "https://journals.mmust.ac.ke/index.php/jk/article/view/12"
+      ],
+      "fingerprint": "a19707df47d3b7e0cc281e690b68fc8ad06285201bf058d56ccc114c18c1ddc4",
+      "note": "Literary scholarship identifies Walibora’s work as a riwaya.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://journals.mmust.ac.ke/index.php/jk/article/view/12"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://journals.mmust.ac.ke/index.php/jk/article/view/12"
+      ],
+      "fingerprint": "a19707df47d3b7e0cc281e690b68fc8ad06285201bf058d56ccc114c18c1ddc4",
+      "note": "Literary scholarship identifies Walibora’s work as a riwaya.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "reason": "The comparative study identifies Walibora’s work as a riwaya.",
+    "title": "Siku Njema",
+    "work_id": "siku-njema"
+  },
+  {
+    "author": "Jared Angira",
+    "candidate": {
+      "evidence": [
+        "https://library.au.int/silent-voices-poems-10"
+      ],
+      "fingerprint": "cf8ad6821acdee7343eced5e9f118d22cb19e5eb88237d197b735f25f4daba80",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "evidence": [
+      "https://library.au.int/silent-voices-poems-10"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://library.au.int/silent-voices-poems-10"
+      ],
+      "fingerprint": "cf8ad6821acdee7343eced5e9f118d22cb19e5eb88237d197b735f25f4daba80",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "reason": "The African Union library transcribes Silent voices: poems and identifies the Heinemann edition.",
+    "title": "Silent Voices",
+    "work_id": "silent-voices"
+  },
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://cfas.howard.edu/articles/introduction",
+        "https://ngugiwathiongo.com/something-torn-and-new/",
+        "https://www.publishersweekly.com/978-0-465-00946-6"
+      ],
+      "fingerprint": "bc381db88086350050c63e1cea9b39f8e72c0b35ca774f6f529d1cfb1e3aa450",
+      "note": "The contemporary Publishers Weekly review identifies the volume as essays based on lectures. The author bibliography corroborates title and identity. Howard University’s reading guide identifies the work’s four lecture-based parts.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "essay collection"
+    },
+    "evidence": [
+      "https://cfas.howard.edu/articles/introduction",
+      "https://ngugiwathiongo.com/something-torn-and-new/",
+      "https://www.publishersweekly.com/978-0-465-00946-6"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://www.wikidata.org/wiki/Q141582773"
+      ],
+      "fingerprint": "20863ab6e2662cb647204b097e09709b0265f82192d031f5622b0a8efa74eacf",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "reason": "The contemporary Publishers Weekly review identifies the volume as essays based on lectures. The author bibliography corroborates title and identity. Howard University’s reading guide identifies the work’s four lecture-based parts.",
+    "title": "Something Torn and New",
+    "work_id": "something-torn-and-new"
+  },
+  {
+    "author": "Wangari Maathai",
+    "candidate": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "evidence": [
+      "https://www.greenbeltmovement.org/books/",
+      "https://www.penguinrandomhouse.com/books/104883/the-challenge-for-africa-by-wangari-maathai/9780307390288/"
+    ],
+    "field": "literary_form",
+    "finding": "unresolved",
+    "original": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "reason": "The publisher describes an argument about development. Check the contents or a form-specific authority record before calling it a collection or another narrower form.",
+    "title": "The Challenge for Africa",
+    "work_id": "the-challenge-for-africa"
+  },
+  {
+    "author": "Yvonne Adhiambo Owuor",
+    "candidate": {
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/545470/the-dragonfly-sea-by-yvonne-adhiambo-owuor/"
+      ],
+      "fingerprint": "1dbd58f1c0a60ab063d0af55be7972fc8f32fb7b78e0414fb4f7b65d8d744550",
+      "note": "Publisher identifies Owuor’s novel. The Wikidata work candidate and both legacy links remain pending.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://www.penguinrandomhouse.com/books/545470/the-dragonfly-sea-by-yvonne-adhiambo-owuor/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/545470/the-dragonfly-sea-by-yvonne-adhiambo-owuor/"
+      ],
+      "fingerprint": "1dbd58f1c0a60ab063d0af55be7972fc8f32fb7b78e0414fb4f7b65d8d744550",
+      "note": "Publisher identifies Owuor’s novel. The Wikidata work candidate and both legacy links remain pending.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "reason": "Owuor’s publisher identifies the novel. Both legacy candidates and the empty edition list remain open.",
+    "title": "The Dragonfly Sea",
+    "work_id": "the-dragonfly-sea"
+  },
+  {
+    "author": "Khadija Abdalla Bajaber",
+    "candidate": {
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ],
+      "fingerprint": "84dec8c2f59876902945f2be665c6f5a942ae4b483b6489d45463f4736ca6a20",
+      "note": "The distributor labels this a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ],
+      "fingerprint": "84dec8c2f59876902945f2be665c6f5a942ae4b483b6489d45463f4736ca6a20",
+      "note": "The distributor labels this a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "reason": "The Macmillan listing explicitly designates Bajaber’s work a novel.",
+    "title": "The House of Rust",
+    "work_id": "the-house-of-rust"
+  },
+  {
+    "author": "Margaret A. Ogola",
+    "candidate": {
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ],
+      "fingerprint": "05bfabfddfdc63616a12cd02c0a537cdac5538afce217ff54773b46723bf0446",
+      "note": "The distributor identifies the form explicitly.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://africanbookscollective.com/books/the-river-and-the-source/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ],
+      "fingerprint": "05bfabfddfdc63616a12cd02c0a537cdac5538afce217ff54773b46723bf0446",
+      "note": "The distributor identifies the form explicitly.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "reason": "African Books Collective identifies Ogola’s novel. The synopsis dispute is separate.",
+    "title": "The River and the Source",
+    "work_id": "the-river-and-the-source"
+  },
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://ngugiwathiongo.com/the-river-between/"
+      ],
+      "fingerprint": "fbd53e1e2793964faa682587727636299ca54a6e6d6f51c62cc39a9e8ed00d95",
+      "note": "The author bibliography reproduces a Guardian review identifying this work as a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://ngugiwathiongo.com/the-river-between/"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "The author bibliography reproduces a Guardian review identifying this work as a novel.",
+    "title": "The River Between",
+    "work_id": "the-river-between"
+  },
+  {
+    "author": "Wangari Maathai",
+    "candidate": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "6277633241e1c34f0d47a4fcdf38c3480f9a171a3ce3c2f3882605e6731a8fd4",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "evidence": [
+      "https://www.greenbeltmovement.org/books/",
+      "https://www.penguinrandomhouse.com/books/104884/unbowed-by-wangari-maathai/"
+    ],
+    "field": "literary_form",
+    "finding": "retained",
+    "original": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "6277633241e1c34f0d47a4fcdf38c3480f9a171a3ce3c2f3882605e6731a8fd4",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "reason": "The publisher’s edition identifies the book as Unbowed: A Memoir.",
+    "title": "Unbowed",
+    "work_id": "unbowed"
+  },
+  {
+    "author": "Ngũgĩ wa Thiong'o",
+    "candidate": {
+      "evidence": [
+        "https://ngugiwathiongo.com/weep-not-child/"
+      ],
+      "fingerprint": "7855658d641787a02db23f39a8fe6cef0c6e8bd5a834c4c9c2f91c7cef16848d",
+      "note": "The author bibliography identifies the 1964 work as his first novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "evidence": [
+      "https://ngugiwathiongo.com/weep-not-child/"
+    ],
+    "field": "literary_form",
+    "finding": "replacement proposed",
+    "original": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "reason": "The author bibliography identifies the 1964 work as his first novel.",
+    "title": "Weep Not, Child",
+    "work_id": "weep-not-child"
+  }
+]
