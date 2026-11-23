@@ -29,7 +29,7 @@ python backend/catalog_v2.py \
   --build /tmp/catalog-v2-refreshed
 ```
 
-The adapter serializes requests with at least 1.1 seconds between them and pauses requests to a provider after a rate limit response. Capture writes the recorded issues and exits nonzero if a request fails. Offline build rejects a snapshot that came from a different manifest and exits nonzero for cross-work identifier collisions. Compare snapshots before replacing frozen outputs.
+The adapter serializes requests with at least 1.1 seconds between them and pauses requests to a provider after a rate limit response. Capture writes the recorded issues and exits nonzero if a request fails. Offline build rejects a snapshot that came from a different manifest. For unresolved cross-work identifier or title collisions it writes the quality report only and exits nonzero. Use a fresh output directory for each run. Compare snapshots before replacing frozen outputs.
 
 ## Observed results
 

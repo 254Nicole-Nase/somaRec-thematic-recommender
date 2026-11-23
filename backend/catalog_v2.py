@@ -156,8 +156,10 @@ def capture_snapshot(seeds, source, captured_on):
 
 def export(catalog, quality, out):
     out.mkdir(parents=True, exist_ok=True)
-    save_json(out / "sample.json", catalog)
     save_json(out / "quality.json", quality)
+    if quality["cross_work_identifier_collisions"] or quality["cross_work_title_candidates"]:
+        return 1
+    save_json(out / "sample.json", catalog)
     with (out / "sample.csv").open("w", encoding="utf-8", newline="") as stream:
         fields = ("work_id", "title", "author", "form", "review_status", "edition_count", "languages", "source_urls")
         writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
@@ -171,6 +173,7 @@ def export(catalog, quality, out):
                 "edition_count": row["v2_editions"], "languages": "|".join(row["v2_languages"]),
                 "source_urls": "|".join(work["source_fields"]["title"]),
             })
+    return 0
 
 
 def main():
@@ -205,9 +208,11 @@ def main():
     catalog, findings = build_catalog(seeds, snapshot)
     with (ROOT / "backend" / "data" / "catalog.csv").open(encoding="utf-8", newline="") as legacy:
         quality = compare_legacy(catalog, findings, list(csv.DictReader(legacy)))
-    export(catalog, quality, args.build)
+    status = export(catalog, quality, args.build)
     print(json.dumps(quality["counts"], sort_keys=True))
-    return int(bool(quality["cross_work_identifier_collisions"]))
+    if status:
+        print("Work identity conflicts need review. Only the quality report was written.")
+    return status
 
 
 if __name__ == "__main__":

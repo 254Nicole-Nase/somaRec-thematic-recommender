@@ -32,6 +32,7 @@
     "works": 30
   },
   "cross_work_identifier_collisions": {},
+  "cross_work_title_candidates": [],
   "duplicate_edition_candidates": {
     "9780143106692": [
       "ol:OL25237962M",

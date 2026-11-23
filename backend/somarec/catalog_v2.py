@@ -208,11 +208,14 @@ def compare_legacy(catalog, findings, legacy):
     editions = {edition["edition_id"]: edition for edition in catalog["editions"]}
     comparison, isbn_claims, provider_claims = [], defaultdict(set), defaultdict(set)
     isbn_edition_claims = defaultdict(set)
+    title_claims = defaultdict(set)
     for work in catalog["works"]:
         person = people[work["contributors"][0]["person_id"]]
         names = {fold_key(name) for name in [person["name"], *person["aliases"]]}
         titles = {re.sub(r"^the ", "", fold_key(title))
                   for title in [work["title"], *work["title_aliases"]]}
+        for title in titles:
+            title_claims[(person["person_id"], title)].add(work["work_id"])
         matches = [
             row for row in legacy
             if re.sub(r"^the ", "", fold_key(row["title"])) in titles and fold_key(row["author"]) in names
@@ -254,6 +257,10 @@ def compare_legacy(catalog, findings, legacy):
         "cross_work_identifier_collisions": {
             key: sorted(ids) for key, ids in {**isbn_claims, **provider_claims}.items() if len(ids) > 1
         },
+        "cross_work_title_candidates": [
+            {"person_id": person_id, "normalized_title": title, "work_ids": sorted(ids)}
+            for (person_id, title), ids in sorted(title_claims.items()) if len(ids) > 1
+        ],
         "duplicate_edition_candidates": {
             key: sorted(ids) for key, ids in isbn_edition_claims.items() if len(ids) > 1
         },

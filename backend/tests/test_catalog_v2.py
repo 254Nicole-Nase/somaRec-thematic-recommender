@@ -117,3 +117,16 @@ def test_editions_keep_parent_language_and_isbn_separate():
     assert works[0]["translation_of"] is None
     assert works[1]["languages"] == []
     assert works[1]["isbn13"] is None
+
+
+def test_cross_work_collisions_only_emit_quality_report(real_inputs, tmp_path):
+    catalog, findings = build_catalog(*real_inputs)
+    first = catalog["works"][0]
+    catalog["works"].append({
+        **first, "work_id": "separate-fixture-work", "title": f"The {first['title']}", "edition_ids": [],
+    })
+    quality = compare_legacy(catalog, findings, [])
+    assert quality["cross_work_identifier_collisions"]
+    assert quality["cross_work_title_candidates"][0]["work_ids"] == ["petals-of-blood", "separate-fixture-work"]
+    assert export(catalog, quality, tmp_path) == 1
+    assert {path.name for path in tmp_path.iterdir()} == {"quality.json"}
