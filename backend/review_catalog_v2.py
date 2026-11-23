@@ -3,6 +3,7 @@
 import argparse
 import csv
 import json
+from hashlib import sha256
 from pathlib import Path
 from time import perf_counter
 
@@ -10,6 +11,8 @@ from catalog_v2 import SAMPLE, load_json, save_json
 from somarec.catalog_evaluation import LocalModel, evaluate
 from somarec.editorial_review import build_review
 from somarec.import_preview import digest
+from somarec.field_search import Vocabulary
+from somarec.retrieval_comparison import comparison
 
 INPUTS = SAMPLE / "editorial"
 
@@ -122,9 +125,18 @@ def main():
     parser.add_argument("--measure", action="store_true", help="Also record non-reproducible runtime measurements")
     args = parser.parse_args()
     catalog, quality = (load_json(SAMPLE / filename) for filename in ("sample.json", "quality.json"))
+    taxonomy = load_json(args.taxonomy)
+    queries = load_json(args.queries)
+    baseline_dir = (INPUTS / "baselines").resolve()
+    if args.output_dir.resolve().is_relative_to(baseline_dir):
+        parser.error("Baseline snapshots are read-only.")
+    baseline_bytes = (baseline_dir / "fa10c736/evaluation.json").read_bytes()
+    if sha256(baseline_bytes).hexdigest() != "e90a047794c62f26b475de484bbb3b053c0f684b4d1e2373292723f0276005e3":
+        parser.error("Phase 5A baseline checksum mismatch.")
+    baseline = json.loads(baseline_bytes)
     corrections = load_json(args.corrections)
     review = build_review(catalog, quality, load_json(args.proposals), load_json(args.decisions),
-                         taxonomy=load_json(args.taxonomy), assignments=load_json(args.assignments),
+                         taxonomy=taxonomy, assignments=load_json(args.assignments),
                          corrections=corrections)
     started = perf_counter()
     try:
@@ -132,7 +144,7 @@ def main():
     except (ImportError, OSError, ValueError) as error:
         parser.error(f"Local semantic model could not be loaded: {error}")
     load_ms = (perf_counter() - started) * 1000 if encoder else None
-    report, runtime = evaluate(review, load_json(args.queries), encoder, dense_cutoff=args.dense_cutoff,
+    report, runtime = evaluate(review, queries, encoder, taxonomy=taxonomy, dense_cutoff=args.dense_cutoff,
                                model_name=args.model_dir.name if args.model_dir else None)
     report["review_fingerprint"] = digest(review)
     if encoder:
@@ -157,6 +169,15 @@ def main():
         "questions": " | ".join(row["questions"]),
     } for row in review["queue"]))
     save_json(out / "evaluation.json", report)
+    approved, _ = evaluate(review, queries, mode="approved_only", taxonomy=taxonomy)
+    approved["review_fingerprint"] = report["review_fingerprint"]
+    save_json(out / "evaluation_approved_only.json", approved)
+    for result in (report, approved):
+        save_json(out / f"comparison_{result['mode']}.json", comparison(baseline, result))
+    vocabulary = Vocabulary(taxonomy)
+    save_json(out / "form_reconciliation.json", [
+        {"work_id": p["work_id"], **vocabulary.reconcile(p["fields"]["literary_form"])} for p in review["profiles"]
+    ])
     save_json(out / "quality_gates.json", gate_report(review, report))
     correction_log = []
     for profile in review["profiles"]:

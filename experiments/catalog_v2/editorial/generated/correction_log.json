@@ -81,20 +81,22 @@
   },
   {
     "evidence": [
-      "https://ngugiwathiongo.com/petals-of-blood/"
+      "https://ngugiwathiongo.com/petals-of-blood/",
+      "https://www.journals.codesria.org/index.php/ad/en/article/download/1995/2044/5041"
     ],
     "existing": [
       "murder investigation",
       "foreign ownership"
     ],
     "field": "major_subjects",
-    "fingerprint": "a1825fefd42303488666f5860c8fa174d4119cbfdb03b9bc7ca6ce11fcb18b22",
-    "reason": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject.",
+    "fingerprint": "fc65ea3c9942435765dbdcb19bed07e3b7152406a04b63ca49ea0a1c640ff0d8",
+    "reason": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject. A CODESRIA study traces changes from subsistence agriculture to industry and financial dependence.",
     "replaces": "21e5eab5cca251174db24eacfe971e269fae31c48c06d9354347b4ac01723cb9",
     "status": "needs_review",
     "value": [
       "murder investigation",
-      "political leadership in independent Kenya"
+      "political leadership in independent Kenya",
+      "economic transformation of a rural community"
     ],
     "work_id": "petals-of-blood"
   },
@@ -125,12 +127,13 @@
       "rural Kenya after independence"
     ],
     "field": "narrative_setting",
-    "fingerprint": "538343b770aee2f50e72e30bc213fa6c71c8d253fe27af9476b9cbac76ed5bf0",
-    "reason": "The study identifies the Ilmorog community; the author establishes the historical context.",
+    "fingerprint": "77b456603b1e55da9fe9d14dc7aff73a5e1a6ffc57936d134b5c80aac02c6efd",
+    "reason": "The study identifies the Ilmorog community; the author establishes the historical context. The same study describes its rural community becoming an industrial town.",
     "replaces": "28ff940867a4142a2e7f090778ee6b4ffd34e100c7200d39bf3807624dcda6c0",
     "status": "needs_review",
     "value": [
-      "Ilmorog, Kenya after independence"
+      "Ilmorog, Kenya after independence",
+      "rural village developing into an industrial town"
     ],
     "work_id": "petals-of-blood"
   },

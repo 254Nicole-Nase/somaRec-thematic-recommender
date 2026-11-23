@@ -1,0 +1,692 @@
+{
+  "diagnostics": {
+    "A_lexical": {
+      "by_language": {
+        "en": {
+          "no_results": 14,
+          "queries": 14
+        },
+        "mixed": {
+          "no_results": 1,
+          "queries": 1
+        },
+        "sw": {
+          "no_results": 9,
+          "queries": 9
+        }
+      },
+      "irrelevant_controls_with_results": 0,
+      "known_title_at_1": 0,
+      "known_title_at_5": 0,
+      "known_title_controls": 6,
+      "no_results": 24,
+      "queries": 24,
+      "returned_count": 0
+    }
+  },
+  "human_judgments": "not_collected",
+  "index_scope": "Evidence-bearing assertions eligible under the selected policy",
+  "mode": "approved_only",
+  "queries": [
+    {
+      "id": "q01",
+      "kind": "known_title",
+      "language": "en",
+      "query": "Dust",
+      "target": "dust"
+    },
+    {
+      "id": "q02",
+      "kind": "known_title",
+      "language": "en",
+      "query": "Petals of Blood",
+      "target": "petals-of-blood"
+    },
+    {
+      "id": "q03",
+      "kind": "known_title",
+      "language": "sw",
+      "query": "Sauti ya Dhiki",
+      "target": "sauti-ya-dhiki"
+    },
+    {
+      "id": "q04",
+      "kind": "known_title",
+      "language": "sw",
+      "query": "Kidagaa kimemwozea",
+      "target": "kidagaa-kimemwozea"
+    },
+    {
+      "id": "q05",
+      "kind": "known_title",
+      "language": "en",
+      "query": "Unbowed Wangari Maathai",
+      "target": "unbowed"
+    },
+    {
+      "id": "q06",
+      "kind": "known_title",
+      "language": "en",
+      "query": "The Dragonfly Sea",
+      "target": "the-dragonfly-sea"
+    },
+    {
+      "id": "q07",
+      "kind": "theme",
+      "language": "en",
+      "query": "family secrets and political violence in Kenya"
+    },
+    {
+      "id": "q08",
+      "kind": "theme",
+      "language": "en",
+      "query": "grassroots environmental activism and women organizing"
+    },
+    {
+      "id": "q09",
+      "kind": "theme",
+      "language": "en",
+      "query": "women and social change across generations"
+    },
+    {
+      "id": "q10",
+      "kind": "theme",
+      "language": "en",
+      "query": "prison poetry and political repression"
+    },
+    {
+      "id": "q11",
+      "kind": "theme",
+      "language": "en",
+      "query": "colonial language and African literary identity"
+    },
+    {
+      "id": "q12",
+      "kind": "genre",
+      "language": "en",
+      "query": "Kenyan memoirs about growing up"
+    },
+    {
+      "id": "q13",
+      "kind": "genre",
+      "language": "sw",
+      "query": "hadithi za watoto",
+      "work_language": "swa"
+    },
+    {
+      "id": "q14",
+      "kind": "genre",
+      "language": "sw",
+      "query": "mashairi ya Kiswahili",
+      "work_language": "swa"
+    },
+    {
+      "id": "q15",
+      "kind": "genre",
+      "language": "sw",
+      "query": "tamthilia kuhusu uongozi"
+    },
+    {
+      "id": "q16",
+      "kind": "literary_interest",
+      "language": "en",
+      "query": "novels about Mombasa and sea voyages"
+    },
+    {
+      "id": "q17",
+      "kind": "literary_interest",
+      "language": "en",
+      "query": "Kenyan novel about economic change in a rural village"
+    },
+    {
+      "id": "q18",
+      "kind": "theme",
+      "language": "sw",
+      "query": "riwaya kuhusu familia na mabadiliko ya jamii",
+      "work_language": "swa"
+    },
+    {
+      "id": "q19",
+      "kind": "theme",
+      "language": "sw",
+      "query": "ushairi wa gerezani na ukandamizaji",
+      "work_language": "swa"
+    },
+    {
+      "id": "q20",
+      "kind": "literary_interest",
+      "language": "mixed",
+      "query": "memoir kuhusu mazingira"
+    },
+    {
+      "id": "q21",
+      "kind": "ambiguous",
+      "language": "en",
+      "query": "the river"
+    },
+    {
+      "id": "q22",
+      "kind": "ambiguous",
+      "language": "sw",
+      "query": "sauti"
+    },
+    {
+      "id": "q23",
+      "kind": "irrelevant",
+      "language": "en",
+      "query": "orbital mechanics for spacecraft propulsion"
+    },
+    {
+      "id": "q24",
+      "kind": "irrelevant",
+      "language": "sw",
+      "query": "urekebishaji wa injini za trekta"
+    }
+  ],
+  "review_fingerprint": "726b6273e84ec5565865a8a7d65502ce46cda3281355d86517833aaf888cb16e",
+  "runs": [
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "dust"
+        ]
+      },
+      "query_id": "q01",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "blood",
+          "petals"
+        ]
+      },
+      "query_id": "q02",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "dhiki",
+          "sauti"
+        ]
+      },
+      "query_id": "q03",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "kidagaa",
+          "kimemwozea"
+        ]
+      },
+      "query_id": "q04",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "maathai",
+          "unbowed",
+          "wangari"
+        ]
+      },
+      "query_id": "q05",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "dragonfly",
+          "sea"
+        ]
+      },
+      "query_id": "q06",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "kenya"
+        ],
+        "required": [],
+        "terms": [
+          "family",
+          "kenya",
+          "political",
+          "secrets",
+          "violence"
+        ]
+      },
+      "query_id": "q07",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "activism",
+          "environment",
+          "grassroots",
+          "organizing",
+          "women"
+        ]
+      },
+      "query_id": "q08",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "across",
+          "change",
+          "generations",
+          "social",
+          "women"
+        ]
+      },
+      "query_id": "q09",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "genre",
+            "prison-poetry"
+          ]
+        ],
+        "terms": [
+          "political",
+          "repression"
+        ]
+      },
+      "query_id": "q10",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "african",
+          "colonial",
+          "identity",
+          "language",
+          "literary"
+        ]
+      },
+      "query_id": "q11",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "kenya"
+        ],
+        "required": [
+          [
+            "genre",
+            "memoir"
+          ]
+        ],
+        "terms": [
+          "growing",
+          "kenya",
+          "up"
+        ]
+      },
+      "query_id": "q12",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "audience",
+            "children"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": [
+          "story"
+        ]
+      },
+      "query_id": "q13",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "form",
+            "poetry"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": []
+      },
+      "query_id": "q14",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "form",
+            "play"
+          ]
+        ],
+        "terms": [
+          "leadership"
+        ]
+      },
+      "query_id": "q15",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "mombasa"
+        ],
+        "required": [
+          [
+            "form",
+            "novel"
+          ]
+        ],
+        "terms": [
+          "mombasa",
+          "sea",
+          "voyage"
+        ]
+      },
+      "query_id": "q16",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [
+          "kenya",
+          "rural",
+          "village"
+        ],
+        "required": [
+          [
+            "form",
+            "novel"
+          ]
+        ],
+        "terms": [
+          "change",
+          "economic",
+          "kenya",
+          "rural",
+          "village"
+        ]
+      },
+      "query_id": "q17",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "form",
+            "novel"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": [
+          "change",
+          "family",
+          "social"
+        ]
+      },
+      "query_id": "q18",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "genre",
+            "prison-poetry"
+          ],
+          [
+            "language",
+            "swa"
+          ]
+        ],
+        "terms": [
+          "repression"
+        ]
+      },
+      "query_id": "q19",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [
+          [
+            "genre",
+            "memoir"
+          ]
+        ],
+        "terms": [
+          "environment"
+        ]
+      },
+      "query_id": "q20",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "river"
+        ]
+      },
+      "query_id": "q21",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "sauti"
+        ]
+      },
+      "query_id": "q22",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "mechanics",
+          "orbital",
+          "propulsion",
+          "spacecraft"
+        ]
+      },
+      "query_id": "q23",
+      "results": [],
+      "system": "A_lexical"
+    },
+    {
+      "distinct_authors": 0,
+      "distinct_forms": 0,
+      "eligible_works": 0,
+      "interpretation": {
+        "exact_identity": false,
+        "place_terms": [],
+        "required": [],
+        "terms": [
+          "injini",
+          "trekta",
+          "urekebishaji"
+        ]
+      },
+      "query_id": "q24",
+      "results": [],
+      "system": "A_lexical"
+    }
+  ],
+  "semantic_configuration": null,
+  "systems": {
+    "A_lexical": "ran",
+    "B_semantic": "not_run_no_local_model",
+    "C_hybrid": "not_run_no_local_model"
+  },
+  "version": 1
+}

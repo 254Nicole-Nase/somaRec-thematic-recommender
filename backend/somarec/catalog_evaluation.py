@@ -8,19 +8,13 @@ from time import perf_counter
 
 import numpy as np
 
-from .bm25 import BM25
+import json
+
+from .field_search import FieldIndex, Vocabulary, permitted, words
 from .text import fold_key, tokenize
 
 STOP = set("a an and are about by for i in is of on or the to want with ya wa za na katika".split())
-FORM_LABELS = {
-    "fiction": "fiction novel riwaya",
-    "poetry": "poetry poems mashairi ushairi",
-    "children": "children picture book watoto hadithi",
-    "memoir": "memoir autobiography kumbukumbu wasifu",
-    "nonfiction": "nonfiction non-fiction",
-    "drama": "drama play tamthilia",
-}
-LANGUAGE_CODES = {"eng": "English", "swa": "Kiswahili", "kik": "Gĩkũyũ", "luo": "Dholuo", "fra": "French"}
+TAXONOMY = Path(__file__).resolve().parents[2] / "experiments/catalog_v2/editorial/taxonomy.v1.json"
 SYSTEMS = ("A_lexical", "B_semantic", "C_hybrid")
 
 
@@ -28,29 +22,58 @@ def terms(value):
     return set(tokenize(value)) - STOP
 
 
-def searchable(review):
-    profiles = {row["work_id"]: row["fields"] for row in review["profiles"]}
+def searchable(review, mode="diagnostic", vocabulary=None):
+    vocabulary = vocabulary or Vocabulary(json.loads(TAXONOMY.read_text()))
+    profiles = {row["work_id"]: row for row in review["profiles"]}
     documents = []
     for row in sorted(review["queue"], key=lambda row: row["work_id"]):
-        fields = {
-            **{field: row["fields"][field] for field in ("title", "author")},
-            **profiles[row["work_id"]],
-        }
-        text_fields = {}
-        for name, value in fields.items():
-            if value["status"] not in {"verified", "needs_review"} or value["value"] is None:
+        wid = row["work_id"]
+        profile = profiles[wid]
+        candidates = {**profile["fields"], **{f: row["fields"][f] for f in ("title", "author")}}
+        fields, text_fields, concepts = {}, {}, {}
+
+        def register(dim, key, field, claim):
+            existing = concepts.get((dim, key))
+            # Prefer a reviewed source first, then the explicit controlled assignment.
+            if (not existing or (claim["status"] == "verified" and existing[1]["status"] != "verified")
+                    or (claim["status"] == existing[1]["status"] and field.startswith(("genres/", "audiences/")))):
+                concepts[dim, key] = (field, claim)
+
+        for field, claim in candidates.items():
+            if not permitted(claim, mode, wid, field):
                 continue
-            content = value["value"]
-            if name == "literary_form":
-                content = FORM_LABELS.get(content, content)
-            if name == "language":
-                content = [LANGUAGE_CODES.get(code, code) for code in content]
-            text_fields[name] = " ".join(content) if isinstance(content, list) else content
+            value = claim["value"]
+            fields[field] = claim
+            text_fields[field] = " ".join(value) if isinstance(value, list) else value
+            if field == "language":
+                for code in value:
+                    register("language", code, field, claim)
+            if field == "literary_form" and value == "drama":
+                register("legacy_form", "drama", field, claim)
+            if field in {"literary_form", "primary_genre"}:
+                # Some legacy 'forms' are exact genre labels (memoir, fiction).
+                options = vocabulary.phrases.get(tuple(words(value)), set())
+                if len(options) == 1:
+                    dim, key = next(iter(options))
+                    if dim == "genre" or (dim == "form" and field == "literary_form"):
+                        register(dim, key, field, claim)
+        for edition in row["edition_reviews"]:
+            prefix = "edition/" + edition["edition_id"] + "/"
+            link, lang = (edition["fields"][key] for key in ("work_id", "languages"))
+            if (link["value"] == wid and permitted(link, mode, wid, prefix + "work_id")
+                    and permitted(lang, mode, wid, prefix + "languages")):
+                for code in lang["value"]:
+                    register("language", code, prefix + "languages", lang)
+        for group, dim in (("genres", "genre"), ("audiences", "audience")):
+            for claim in profile.get(group, []):
+                key = claim["value"]["category_id"]
+                field = group + "/" + key
+                if permitted(claim, mode, wid, field):
+                    register(dim, key, field, claim)
         documents.append({
-            "work_id": row["work_id"], "title": row["title"], "author": row["author"],
-            "form": profiles[row["work_id"]]["literary_form"]["value"],
-            "languages": fields["language"]["value"] if "language" in text_fields else [],
-            "fields": fields, "text_fields": text_fields,
+            "work_id": wid, "title": text_fields.get("title", wid), "author": text_fields.get("author"),
+            "form": text_fields.get("literary_form"), "fields": fields,
+            "text_fields": text_fields, "concepts": concepts,
         })
     return documents
 
@@ -73,24 +96,16 @@ def validate_queries(queries, documents):
         seen.add(query["id"])
 
 
-def describe(doc, query, ranking_signals):
-    query_terms = terms(query)
-    matched = []
-    for name, text in doc["text_fields"].items():
-        overlap = sorted(query_terms & terms(text))
-        if overlap:
-            field = doc["fields"][name]
-            matched.append({
-                "field": name, "matched_tokens": overlap, "status": field["status"],
-                "origin": field["origin"], "evidence": field["evidence"],
-            })
+def describe(doc, matches, signals, score):
+    labels = {"needs_review": "Provisional", "verified": "Verified"}
+    parts = [f"{labels[item['status']]} {item['kind']} in {item['field']} ({', '.join(item['matched_tokens'])})"
+             for item in matches]
     return {
         "work_id": doc["work_id"], "title": doc["title"], "author": doc["author"], "form": doc["form"],
-        "ranking_signals": ranking_signals, "literal_evidence_matches": matched,
-        "explanation": (
-            "Matching indexed fields: " + ", ".join(match["field"] for match in matched)
-            if matched else "Semantic similarity only. A literary explanation needs human review."
-        ),
+        "ranking_signals": signals, "literal_evidence_matches": matches, "lexical_score": round(score, 6),
+        "match_status": ("needs_review" if any(m["status"] == "needs_review" for m in matches)
+                         else "verified" if matches else "unknown"),
+        "explanation": " / ".join(parts) or "Vector similarity only; no lexical evidence for a literary connection.",
     }
 
 
@@ -109,14 +124,16 @@ def rank(scores, valid_indices, documents, cutoff, preferred=()):
     )
 
 
-def evaluate(review, queries, encoder=None, *, dense_cutoff=0.30, model_name=None):
+def evaluate(review, queries, encoder=None, *, dense_cutoff=0.30, model_name=None,
+             mode="diagnostic", taxonomy=None):
     if not -1 <= dense_cutoff <= 1:
         raise ValueError("Dense cutoff must be a cosine value between -1 and 1.")
-    documents = searchable(review)
+    vocabulary = Vocabulary(taxonomy if taxonomy is not None else json.loads(TAXONOMY.read_text()))
+    documents = searchable(review, mode, vocabulary)
     validate_queries(queries, documents)
     texts = [" ".join(doc["text_fields"].values()) for doc in documents]
     start = perf_counter()
-    index = BM25(texts)
+    index = FieldIndex(documents, vocabulary)
     lexical_index_ms = (perf_counter() - start) * 1000
     timings = {system: [] for system in SYSTEMS}
     vectors, dense_index_ms = None, None
@@ -127,11 +144,8 @@ def evaluate(review, queries, encoder=None, *, dense_cutoff=0.30, model_name=Non
     runs = []
     for query in queries:
         text = query["query"]
-        indices = [i for i, doc in enumerate(documents)
-                   if not query.get("work_language") or query["work_language"] in doc["languages"]]
         query_start = perf_counter()
-        scores = index.scores(" ".join(sorted(terms(text))))
-        exact = {i for i in indices if fold_key(documents[i]["text_fields"].get("title")) == fold_key(text)}
+        intent, scores, indices, exact, details = index.search(query)
         lexical = rank(scores, indices, documents, 0, exact)
         timings[SYSTEMS[0]].append((perf_counter() - query_start) * 1000)
         rankings = {SYSTEMS[0]: lexical}
@@ -158,15 +172,15 @@ def evaluate(review, queries, encoder=None, *, dense_cutoff=0.30, model_name=Non
                     signals.append("lexical")
                 if (system != SYSTEMS[0]) and i in rankings[SYSTEMS[1]]:
                     signals.append("semantic")
-                hits.append(describe(documents[i], text, signals))
+                hits.append(describe(documents[i], details[i], signals, scores[i]))
             runs.append({
                 "query_id": query["id"], "system": system, "results": hits,
-                "eligible_works": len(indices), "distinct_authors": len({row["author"] for row in hits}),
+                "interpretation": intent, "eligible_works": len(indices), "distinct_authors": len({row["author"] for row in hits}),
                 "distinct_forms": len({row["form"] for row in hits if row["form"]}),
             })
     report = {
         "version": 1, "queries": queries, "human_judgments": "not_collected",
-        "index_scope": "nonconflicting catalog candidates and editorial proposals",
+        "mode": mode, "index_scope": "Evidence-bearing assertions eligible under the selected policy",
         "systems": {
             SYSTEMS[0]: "ran", SYSTEMS[1]: "ran" if vectors is not None else "not_run_no_local_model",
             SYSTEMS[2]: "ran" if vectors is not None else "not_run_no_local_model",

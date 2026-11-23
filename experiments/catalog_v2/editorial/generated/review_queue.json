@@ -6668,7 +6668,9 @@
     {
       "author": "Anne Matindi",
       "classification_review": {
-        "audiences": [],
+        "audiences": [
+          "audiences/children"
+        ],
         "genres": []
       },
       "edition_reviews": [
@@ -6833,7 +6835,7 @@
         "wikidata_title_author_candidates": []
       },
       "status_counts": {
-        "needs_review": 11,
+        "needs_review": 12,
         "unknown": 8
       },
       "title": "Jua na Upepo",
@@ -9562,9 +9564,9 @@
         "primary_genre: Check an authoritative genre designation or have a literature editor classify the work.",
         "literary_form: The author calls the work a novel.",
         "themes: The author description and attributed Sunday Times review support these readings.",
-        "narrative_setting: The study identifies the Ilmorog community; the author establishes the historical context.",
+        "narrative_setting: The study identifies the Ilmorog community; the author establishes the historical context. The same study describes its rural community becoming an industrial town.",
         "mood_tone: The author site limits suspense to the investigation and cites criticism describing the wider political register.",
-        "major_subjects: Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject.",
+        "major_subjects: Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject. A CODESRIA study traces changes from subsistence agriculture to industry and financial dependence.",
         "language: These are edition languages. Confirm them against each manifestation.",
         "original_language: Verify the original language independently of any translation or edition.",
         "synopsis: Write an original, spoiler-safe introduction from verified facts and have an editor check it.",

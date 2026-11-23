@@ -107,3 +107,7 @@ The same local command now validates the versioned taxonomy, applies the Phase 4
 For a local review, copy the source JSON and use `--taxonomy`, `--assignments`, `--corrections` and `--decisions` to select your files. A reviewer can decide `genres/magical-realism` independently from `genres/coming-of-age-fiction` for the same work. The assertion and its evidence are in the generated profiles. A change to one assignment invalidates a decision for that assertion. If reviewing alternate Phase 4 inputs, supply an empty JSON object for `--corrections` to omit the sample-specific replacement layer. The four-positional-argument Python API retains its Phase 4 behavior. Compare regeneration using the directory diff above, then review `correction_log.json` alongside the worksheets. Store any filled-in worksheets separately before regenerating.
 
 The Phase 5A run returned 53 lexical results over 24 queries. All six known titles ranked first. Both irrelevant controls returned zero results. Controlled assignment lists are outside the diagnostic index. Human relevance judgments remain outstanding.
+
+## Phase 5B offline evaluation
+
+The review command now emits separate diagnostic and approved-only lexical evaluations, a per-work form reconciliation and comparisons to the immutable Phase 5A artifact. The figures above refer to earlier phases. See the [retrieval protocol](CATALOG_V2_FIELD_RETRIEVAL.md) and [per-query findings](CATALOG_V2_SEARCH_REGRESSIONS.md) for the current experiment.

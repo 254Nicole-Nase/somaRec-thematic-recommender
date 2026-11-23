@@ -113,5 +113,15 @@
         "https://granta.com/products/one-day-i-will-write-about-this-place/"
       ]
     }
+  ],
+  "jua-na-upepo": [
+    {
+      "category_id": "children",
+      "display": null,
+      "reason": "The Finnish national library identifies the Matindi/Mdoe illustrated Swahili edition as children’s literature (lastenkirjallisuus, barnlitteratur). No age band is specified.",
+      "evidence": [
+        "https://kansalliskirjasto.finna.fi/Record/fikka.5933380"
+      ]
+    }
   ]
 }

@@ -21,13 +21,15 @@
       ],
       "value": [
         "murder investigation",
-        "political leadership in independent Kenya"
+        "political leadership in independent Kenya",
+        "economic transformation of a rural community"
       ],
       "replaces": "21e5eab5cca251174db24eacfe971e269fae31c48c06d9354347b4ac01723cb9",
       "evidence": [
-        "https://ngugiwathiongo.com/petals-of-blood/"
+        "https://ngugiwathiongo.com/petals-of-blood/",
+        "https://www.journals.codesria.org/index.php/ad/en/article/download/1995/2044/5041"
       ],
-      "reason": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject."
+      "reason": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject. A CODESRIA study traces changes from subsistence agriculture to industry and financial dependence."
     },
     "themes": {
       "existing": [
@@ -49,14 +51,15 @@
         "rural Kenya after independence"
       ],
       "value": [
-        "Ilmorog, Kenya after independence"
+        "Ilmorog, Kenya after independence",
+        "rural village developing into an industrial town"
       ],
       "replaces": "28ff940867a4142a2e7f090778ee6b4ffd34e100c7200d39bf3807624dcda6c0",
       "evidence": [
         "https://ngugiwathiongo.com/petals-of-blood/",
         "https://iiste.org/Journals/index.php/RHSS/article/download/30272/31087"
       ],
-      "reason": "The study identifies the Ilmorog community; the author establishes the historical context."
+      "reason": "The study identifies the Ilmorog community; the author establishes the historical context. The same study describes its rural community becoming an industrial town."
     },
     "literary_form": {
       "existing": "fiction",

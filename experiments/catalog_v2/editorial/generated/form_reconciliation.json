@@ -1,0 +1,454 @@
+[
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "a-grain-of-wheat"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://openlibrary.org/works/OL3451029W"
+      ],
+      "fingerprint": "b85113ff551fe55235204ac9b8e92464c7c691eebdde7852d552c20d392246da",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "drama"
+    },
+    "work_id": "betrayal-in-the-city"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "black-star-nairobi"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://www.wikidata.org/wiki/Q125423260"
+      ],
+      "fingerprint": "d7211d6a03dac5ecfe298e98536103a689458924971cbb01dadbb1a8a34d4212",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "coming-to-birth"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://ngugiwathiongo.com/decolonising-the-mind/"
+      ],
+      "fingerprint": "af0c64abd320f609f8575986299ef8f8f28b1aed4b643d9718fd1b78330b11ea",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "work_id": "decolonising-the-mind"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://ngugiwathiongo.com/"
+      ],
+      "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "work_id": "dreams-in-a-time-of-war"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://openlibrary.org/works/OL19974522W"
+      ],
+      "fingerprint": "b1666031ab80211b754203cd8b2057e9c014d42c07f2fad0e0cbcad00f1965b1",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "dust"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "going-down-river-road"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "picture-book",
+    "source_assertion": {
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-hot-hippo/9780340413913/"
+      ],
+      "fingerprint": "040e0929e94295029c5fefe1e91db4ce32171f3ee53ab7ce820ae04ef2dd0210",
+      "note": "Hachette classifies this illustrated title as a picture storybook.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "picture book"
+    },
+    "work_id": "hot-hippo"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://ngugiwathiongo.com/"
+      ],
+      "fingerprint": "15f43027df7e99d02693404ef4e3b5189e400ef6ffd721eacb074f236da7f859",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "work_id": "in-the-house-of-the-interpreter"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "story-collection",
+    "source_assertion": {
+      "evidence": [
+        "https://opac.ueab.ac.ke/cgi-bin/koha/opac-detail.pl?biblionumber=28330",
+        "https://openlibrary.org/books/OL22801465M"
+      ],
+      "fingerprint": "35f3d9d72804732b526e3090c1d5a68b5fa6313b385c4456ea643110ffcb1db3",
+      "note": "The library gives the expanded title including other stories; the linked edition records the same subtitle.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "story collection"
+    },
+    "work_id": "jua-na-upepo"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "poetry",
+    "source_assertion": {
+      "evidence": [
+        "https://iucat.iu.edu/iuk/1905138"
+      ],
+      "fingerprint": "890267796d56a6a8c2befeb2d5a1372fd13854e82008113bfbd0d200a2278dbb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "work_id": "juices"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://library.daystar.ac.ke/bib/43380"
+      ],
+      "fingerprint": "a380cc65d91c68d660384157f1e661a34ab52e78de66f87ce3ec289134c6f1db",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "kidagaa-kimemwozea"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "picture-book",
+    "source_assertion": {
+      "evidence": [
+        "https://www.hachette.co.uk/titles/mwenye-hadithi/african-animal-tales-laughing-giraffe/9780340945209/"
+      ],
+      "fingerprint": "1a643605283437849e2d55c85bfcaeab28f2b820994aa49b1665d3c6ab07fd10",
+      "note": "Hachette classifies this illustrated title as a picture storybook.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "picture book"
+    },
+    "work_id": "laughing-giraffe"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "play",
+    "source_assertion": {
+      "evidence": [
+        "https://africanbookscollective.com/books/doa/",
+        "https://erepository.uonbi.ac.ke/items/2437b3d7-bbe7-4687-8c3d-990020b65d1d/full"
+      ],
+      "fingerprint": "a43c0e55b36470072a1e79dbfb90686e7cd5901a67f0eac5663f22ebd322cc48",
+      "note": "The distributor bibliography calls this work tamthilia; the university record identifies the play version.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "play"
+    },
+    "work_id": "maua-kwenye-jua-la-asubuhi"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://rebekanjau.com/"
+      ],
+      "fingerprint": "deebb17bee1ebf315de11af40e3acb15d3311744c101caeb97869b93e41c0021",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "work_id": "mirrors-of-my-life"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://granta.com/products/one-day-i-will-write-about-this-place/"
+      ],
+      "fingerprint": "e22a7baa352ca6ab36c667e36092b495a37acee05acfb6ee04fd0bc30ccb3ab6",
+      "note": "Retain the form and replace the earlier Graywolf URL with Granta’s attributable listing and memoir description.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "work_id": "one-day-i-will-write-about-this-place"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "novel",
+    "source_assertion": {
+      "evidence": [
+        "https://ngugiwathiongo.com/petals-of-blood/"
+      ],
+      "fingerprint": "ba582064d056f316b2c03b7ab5daef23ba765130b0e9eab5fa7e04c8da34a4a8",
+      "note": "The author calls the work a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "work_id": "petals-of-blood"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "work_id": "replenishing-the-earth"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "poetry",
+    "source_assertion": {
+      "evidence": [
+        "https://ci.nii.ac.jp/ncid/BD05489832"
+      ],
+      "fingerprint": "8ae376e7fb5f8a942c8ed5ce16edf0f2d7cab2dba59821f55cb5bd9edde97bdb",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "work_id": "sauti-ya-dhiki"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "novel",
+    "source_assertion": {
+      "evidence": [
+        "https://journals.mmust.ac.ke/index.php/jk/article/view/12"
+      ],
+      "fingerprint": "a19707df47d3b7e0cc281e690b68fc8ad06285201bf058d56ccc114c18c1ddc4",
+      "note": "Literary scholarship identifies Walibora’s work as a riwaya.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "work_id": "siku-njema"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "poetry",
+    "source_assertion": {
+      "evidence": [
+        "https://library.au.int/silent-voices-poems-10"
+      ],
+      "fingerprint": "cf8ad6821acdee7343eced5e9f118d22cb19e5eb88237d197b735f25f4daba80",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "poetry"
+    },
+    "work_id": "silent-voices"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://www.wikidata.org/wiki/Q141582773"
+      ],
+      "fingerprint": "20863ab6e2662cb647204b097e09709b0265f82192d031f5622b0a8efa74eacf",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "work_id": "something-torn-and-new"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "baa11cc4b276f98df7c74d10a41ef61e1d39515b937f1b8aa660b0fb0564b17a",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "nonfiction"
+    },
+    "work_id": "the-challenge-for-africa"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "novel",
+    "source_assertion": {
+      "evidence": [
+        "https://www.penguinrandomhouse.com/books/545470/the-dragonfly-sea-by-yvonne-adhiambo-owuor/"
+      ],
+      "fingerprint": "1dbd58f1c0a60ab063d0af55be7972fc8f32fb7b78e0414fb4f7b65d8d744550",
+      "note": "Publisher identifies Owuor’s novel. The Wikidata work candidate and both legacy links remain pending.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "work_id": "the-dragonfly-sea"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "novel",
+    "source_assertion": {
+      "evidence": [
+        "https://academic.macmillan.com/academictrade/9781644450680/thehouseofrust/"
+      ],
+      "fingerprint": "84dec8c2f59876902945f2be665c6f5a942ae4b483b6489d45463f4736ca6a20",
+      "note": "The distributor labels this a novel.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "work_id": "the-house-of-rust"
+  },
+  {
+    "basis": "exact form label or alias",
+    "normalized_form": "novel",
+    "source_assertion": {
+      "evidence": [
+        "https://africanbookscollective.com/books/the-river-and-the-source/"
+      ],
+      "fingerprint": "05bfabfddfdc63616a12cd02c0a537cdac5538afce217ff54773b46723bf0446",
+      "note": "The distributor identifies the form explicitly.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "novel"
+    },
+    "work_id": "the-river-and-the-source"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "the-river-between"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://www.greenbeltmovement.org/books/"
+      ],
+      "fingerprint": "6277633241e1c34f0d47a4fcdf38c3480f9a171a3ce3c2f3882605e6731a8fd4",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "memoir"
+    },
+    "work_id": "unbowed"
+  },
+  {
+    "basis": "No unique equivalent in the form dimension; retain the legacy value.",
+    "normalized_form": null,
+    "source_assertion": {
+      "evidence": [
+        "https://nai.uu.se/download/18.7d64009619390148984e91f9/1734530683565/fiction-kenya-2024-dec.pdf"
+      ],
+      "fingerprint": "51a289664f599713f0eea8b2faf2f6b089fa963f0259bdefba8fb5ce11be2935",
+      "note": "Check the publisher, author bibliography or a library authority for the form.",
+      "origin": "editorial_proposal",
+      "status": "needs_review",
+      "value": "fiction"
+    },
+    "work_id": "weep-not-child"
+  }
+]

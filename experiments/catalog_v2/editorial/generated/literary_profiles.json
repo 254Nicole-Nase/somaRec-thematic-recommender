@@ -946,7 +946,21 @@
       "work_id": "in-the-house-of-the-interpreter"
     },
     {
-      "audiences": [],
+      "audiences": [
+        {
+          "evidence": [
+            "https://kansalliskirjasto.finna.fi/Record/fikka.5933380"
+          ],
+          "fingerprint": "9117acf6f63a6d9e94d85bfca36b98c4cdc230797e810018b6e5372ce30f48e0",
+          "note": "The Finnish national library identifies the Matindi/Mdoe illustrated Swahili edition as children’s literature (lastenkirjallisuus, barnlitteratur). No age band is specified.",
+          "origin": "editorial_proposal",
+          "status": "needs_review",
+          "value": {
+            "category_id": "children",
+            "display": null
+          }
+        }
+      ],
       "fields": {
         "language": {
           "evidence": [
@@ -1645,15 +1659,17 @@
         },
         "major_subjects": {
           "evidence": [
-            "https://ngugiwathiongo.com/petals-of-blood/"
+            "https://ngugiwathiongo.com/petals-of-blood/",
+            "https://www.journals.codesria.org/index.php/ad/en/article/download/1995/2044/5041"
           ],
-          "fingerprint": "a1825fefd42303488666f5860c8fa174d4119cbfdb03b9bc7ca6ce11fcb18b22",
-          "note": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject.",
+          "fingerprint": "fc65ea3c9942435765dbdcb19bed07e3b7152406a04b63ca49ea0a1c640ff0d8",
+          "note": "Foreign ownership describes the brewery. The author highlights leadership failures as the wider subject. A CODESRIA study traces changes from subsistence agriculture to industry and financial dependence.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
             "murder investigation",
-            "political leadership in independent Kenya"
+            "political leadership in independent Kenya",
+            "economic transformation of a rural community"
           ]
         },
         "mood_tone": {
@@ -1674,12 +1690,13 @@
             "https://iiste.org/Journals/index.php/RHSS/article/download/30272/31087",
             "https://ngugiwathiongo.com/petals-of-blood/"
           ],
-          "fingerprint": "538343b770aee2f50e72e30bc213fa6c71c8d253fe27af9476b9cbac76ed5bf0",
-          "note": "The study identifies the Ilmorog community; the author establishes the historical context.",
+          "fingerprint": "77b456603b1e55da9fe9d14dc7aff73a5e1a6ffc57936d134b5c80aac02c6efd",
+          "note": "The study identifies the Ilmorog community; the author establishes the historical context. The same study describes its rural community becoming an industrial town.",
           "origin": "editorial_proposal",
           "status": "needs_review",
           "value": [
-            "Ilmorog, Kenya after independence"
+            "Ilmorog, Kenya after independence",
+            "rural village developing into an industrial town"
           ]
         },
         "original_language": {
